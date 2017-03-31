@@ -1,31 +1,51 @@
-<?php
-$to = 'damianpumar@gmail.com';
-$subject = 'Message From Personal Website';
-$from =  $_REQUEST['email'];
- 
-// To send HTML mail, the Content-type header must be set
-$headers  = 'MIME-Version: 1.0' . "\r\n";
-$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
- 
-// Create email headers
-$headers .= 'From: '.$from."\r\n".
-    'Reply-To: '.$from."\r\n" .
-    'X-Mailer: PHP/' . phpversion();
- 
-// Compose a simple HTML email message
-$message = '<html><body>';
-$message .= '<h1 style="color:#f40;">Hi Jane!</h1>';
-$message .= '<p style="color:#080;font-size:18px;"></p>';
-$message .= 'Name:';
-$message .= $_REQUEST['name'];
-$message .= 'Message:';
-$message .= $_REQUEST['message'];
-$message .= '</body></html>';
- 
-// Sending email
-if(mail($to, $subject, $message, $headers)){
-    echo 'Your mail has been sent successfully.';
-} else{
-    echo 'Unable to send email. Please try again.';
+<?php 
+$errors = '';
+$myemail = 'yourname@website.com';//<-----Put Your email address here.
+if(empty($_POST['name'])  || 
+   empty($_POST['email']) || 
+   empty($_POST['message']))
+{
+    $errors .= "\n Error: all fields are required";
 }
+
+$name = $_POST['name']; 
+$email_address = $_POST['email']; 
+$message = $_POST['message']; 
+
+if (!preg_match(
+"/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", 
+$email_address))
+{
+    $errors .= "\n Error: Invalid email address";
+}
+
+if( empty($errors))
+{
+	$to = $myemail; 
+	$email_subject = "Contact form submission: $name";
+	$email_body = "You have received a new message. ".
+	" Here are the details:\n Name: $name \n Email: $email_address \n Message \n $message"; 
+	
+	$headers = "From: $myemail\n"; 
+	$headers .= "Reply-To: $email_address";
+	
+	mail($to,$email_subject,$email_body,$headers);
+	//redirect to the 'thank you' page
+	header('Location: contact-form-thank-you.html');
+} 
 ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html>
+<head>
+	<title>Contact form handler</title>
+</head>
+
+<body>
+<!-- This page is displayed only if there is some error -->
+<?php
+echo nl2br($errors);
+?>
+
+
+</body>
+</html>
