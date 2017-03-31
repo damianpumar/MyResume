@@ -1,27 +1,32 @@
 <?php
-$to = 'maryjane@email.com';
-$subject = 'Marriage Proposal';
-$from = 'peterparker@email.com';
- 
-// To send HTML mail, the Content-type header must be set
-$headers  = 'MIME-Version: 1.0' . "\r\n";
-$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
- 
-// Create email headers
-$headers .= 'From: '.$user_email."\r\n".
-    'Reply-To: '.$user_email."\r\n" .
-    'X-Mailer: PHP/' . phpversion();
- 
-// Compose a simple HTML email message
-$message = '<html><body>';
-$message .= '<h1 style="color:#f40;">Hi Jane!</h1>';
-$message .= '<p style="color:#080;font-size:18px;">Will you marry me?</p>';
-$message .= '</body></html>';
- 
-// Sending email
-if(mail($to, $subject, $message, $headers)){
-    echo 'Your mail has been sent successfully.';
-} else{
-    echo 'Unable to send email. Please try again.';
-}
+//if "email" variable is filled out, send email
+  if (isset($_REQUEST['email']))  {
+  
+  //Email information
+  $admin_email = "damianpumar@gmail.com";
+  $email = $_REQUEST['email'];
+  $subject = $_REQUEST['name'];
+  $comment = $_REQUEST['message'];
+  
+  //send email
+  mail($admin_email, "$subject", $comment, "From:" . $email);
+  
+  //Email response
+  echo "Thank you for contacting us!";
+  }
+  
+  //if "email" variable is not filled out, display the form
+  else  {
+?>
+
+ <form method="post">
+  Email: <input name="email" type="text" /><br />
+  Subject: <input name="name" type="text" /><br />
+  Message:<br />
+  <textarea name="message" rows="15" cols="40"></textarea><br />
+  <input type="submit" value="Submit" />
+  </form>
+  
+<?php
+  }
 ?>
