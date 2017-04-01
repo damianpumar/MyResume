@@ -1,51 +1,31 @@
 <?php 
-$errors = '';
-$myemail = 'yourname@website.com';//<-----Put Your email address here.
-if(empty($_POST['name'])  || 
-   empty($_POST['email']) || 
-   empty($_POST['message']))
-{
-    $errors .= "\n Error: all fields are required";
-}
+if(isset($_POST['submit'])){
+    $to = "damianpumar@gmail.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $name = $_POST['name'];
+    $subject = "Contact from personal Web site.";
+    $message = $name . " wrote the following:" . "\n\n" . $_POST['message'];
 
-$name = $_POST['name']; 
-$email_address = $_POST['email']; 
-$message = $_POST['message']; 
-
-if (!preg_match(
-"/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", 
-$email_address))
-{
-    $errors .= "\n Error: Invalid email address";
-}
-
-if( empty($errors))
-{
-	$to = $myemail;
-	$email_subject = "Contact form submission: $name";
-	$email_body = "You have received a new message. ".
-	" Here are the details:\n Name: $name \n Email: $email_address \n Message \n $message"; 
-	
-	$headers = "From: $myemail\n"; 
-	$headers .= "Reply-To: $email_address";
-	
-	mail($to,$email_subject,$email_body,$headers);
-	//redirect to the 'thank you' page
-	header('Location: contact-form-thank-you.html');
-} 
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
 ?>
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-    <html>
 
-    <head>
-        <title>Contact form handler</title>
-    </head>
+// <!DOCTYPE html>
+// <head>
+// <title>Form submission</title>
+// </head>
+// <body>
 
-    <body>
-        <!-- This page is displayed only if there is some error -->
-        <?php
-echo nl2br($errors);
-?>
-    </body>
+// <form action="" method="post">
+// Name: <input type="text" name="name"><br>
+// Email: <input type="text" name="email"><br>
+// Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
+// <input type="submit" name="submit" value="Submit">
+// </form>
 
-    </html>
+// </body>
+// </html> 
