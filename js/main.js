@@ -276,11 +276,12 @@ var portfolioKeyword;
                 var map = new google.maps.Map(mapElement, mapOptions);
                 //CREATE A CUSTOM PIN ICON
                 // var marker_image = marker_image;
-                var pinIcon = new google.maps.MarkerImage(null, null, null, null, new google.maps.Size(120, 90));
+                // var pinIcon = new google.maps.MarkerImage(null, null, null, null, new google.maps.Size(120, 90));
                 var marker = new google.maps.Marker({
                     position: new google.maps.LatLng(latitude, longitude)
                     , map: map
-                    , icon: pinIcon
+                        //, icon: pinIcon
+                        
                     , title: 'Hey, I am here'
                 });
             }
