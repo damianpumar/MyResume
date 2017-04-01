@@ -153,12 +153,9 @@ var portfolioKeyword;
                 // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
                 var mapOptions = {
                     // How zoomed in you want the map to start at (always required)
-                    zoom: zoom
-                    , // disable zoom controls
-                    disableDefaultUI: true
-                    , // The latitude and longitude to center the map (always required)
-                    center: new google.maps.LatLng(latitude, longitude)
-                    , // How you would like to style the map. 
+                    zoom: zoom, // disable zoom controls
+                    disableDefaultUI: true, // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(latitude, longitude), // How you would like to style the map. 
                     // This is where you would paste any style found on Snazzy Maps.
                     styles: [{
                         "featureType": "administrative.locality"
@@ -272,7 +269,7 @@ var portfolioKeyword;
                 };
                 // Get the HTML DOM element that will contain your map 
                 // We are using a div with id="map" seen below in the <body>
-                var mapElement = document.getElementById('map-canvas');
+                /*var mapElement = document.getElementById('map-canvas');
                 //var mapElement = $('#map-canvas');
                 //var myLatlng = new google.maps.LatLng(mapElement.data("latitude"),mapElement.data("longitude"));
                 // Create the Google Map using our element and options defined above
@@ -285,7 +282,7 @@ var portfolioKeyword;
                     , map: map
                     , icon: pinIcon
                     , title: 'Hey, I am here'
-                });
+                });*/
             }
         }
         // ------------------------------
@@ -728,10 +725,8 @@ var portfolioKeyword;
                 , 'OAnimation': 'oAnimationEnd'
                 , 'msAnimation': 'MSAnimationEnd'
                 , 'animation': 'animationend'
-            }
-            , // animation end event name
-            animEndEventName = animEndEventNames[Modernizr.prefixed('animation')]
-            , // support css animations
+            }, // animation end event name
+            animEndEventName = animEndEventNames[Modernizr.prefixed('animation')], // support css animations
             support = Modernizr.cssanimations;
         // init()
         function init() {
