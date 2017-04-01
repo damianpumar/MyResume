@@ -292,27 +292,36 @@ var portfolioKeyword;
         var contactForm = $('#contact-form');
         var $alert = $('.site-alert');
         var $submit = contactForm.find('.submit');
-        contactForm.submit(function () {
+        contactForm.submit(function (event) {
+            event.preventDefault();
+            sendEmail(contactForm);
+        });
+
+        function sendEmail(contactForm) {
             if (contactForm.valid()) {
                 NProgress.start();
                 $submit.addClass("active loading");
-                var formValues = contactForm.serialize();
-                $.post(contactForm.attr('action'), formValues, function (data) {
-                    if (data == 'success') {
-                        contactForm.clearForm();
+                $.ajax({
+                    url: contactForm.attr('action')
+                    , type: contactForm.attr('method')
+                    , dataType: 'html'
+                    , data: contactForm.serialize()
+                    , success: function (data) {
+                        contactForm.clearForm()
                     }
-                    else {
-                        $alert.addClass('error');
+                    , error: function (textStatus, errorThrown) {
+                        $alert.addClass('error')
                     }
-                    NProgress.done();
-                    $alert.show();
-                    setTimeout(function () {
-                        $alert.hide();
-                    }, 6000)
+                    , complete: function () {
+                        NProgress.done();
+                        $alert.show();
+                        setTimeout(function () {
+                            $alert.hide();
+                        }, 6000)
+                    }
                 });
-            }
-            return false
-        });
+            };
+        };
         $.fn.clearForm = function () { 
             return this.each(function () {  
                 var type = this.type
