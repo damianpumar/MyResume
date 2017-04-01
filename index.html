@@ -995,7 +995,7 @@
                         <!-- section-title -->
                         <!-- .contact-form -->
                         <div class="contact-form">
-                            <form id="contact-form" class="validate-form" method="post" action="email/send-html-email.php">
+                            <form id="contact-form" class="validate-form" method="POST" action="//formspree.io/damianpumar@gmail.com">
                                 <!-- enter mail subject here -->
                                 <!--                      <input type="hidden" name="subject" id="subject" value="You have a new message from Photographer!">-->
                                 <p>
@@ -1003,7 +1003,7 @@
                                     <input type="text" name="name" id="name" class="required"> </p>
                                 <p>
                                     <label for="email">EMAIL</label>
-                                    <input type="text" name="email" id="email" class="required email"> </p>
+                                    <input type="text" name="_replyto" id="email" class="required email"> </p>
                                 <p class="antispam">Leave this empty if you are a human :
                                     <br />
                                     <input name="url" /> </p>
@@ -1015,6 +1015,10 @@
                                     <button class="submit button" type="submit">Send</button>
                                 </p>
                             </form>
+                            <form action="https://formspree.io/damianpumar@gmail.com" method="POST">
+                                <input type="text" name="name">
+                                <input type="email" name="_replyto">
+                                <input type="submit" value="Send"> </form>
                         </div>
                         <!-- .contact-form -->
                         <!-- GOOGLE MAP -->
