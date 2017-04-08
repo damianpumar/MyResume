@@ -307,7 +307,7 @@ var portfolioKeyword;
                     , dataType: "JSON"
                     , crossDomain: true
                     , contentType: 'application/json; charset=utf-8'
-                    , data: contactForm.serialize()
+                    , data: JSON.stringify(contactForm.serializeObject())
                     , success: function (data) {
                         contactForm.clearForm()
                     }
@@ -323,6 +323,22 @@ var portfolioKeyword;
                     }
                 });
             };
+        };
+        $.fn.serializeObject = function () {
+            var o = {};
+            var a = this.serializeArray();
+            $.each(a, function () {
+                if (o[this.name] !== undefined) {
+                    if (!o[this.name].push) {
+                        o[this.name] = [o[this.name]];
+                    }
+                    o[this.name].push(this.value || '');
+                }
+                else {
+                    o[this.name] = this.value || '';
+                }
+            });
+            return o;
         };
         $.fn.clearForm = function () { 
             return this.each(function () {  
