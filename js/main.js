@@ -305,6 +305,7 @@ var portfolioKeyword;
                     url: contactForm.attr('action')
                     , type: contactForm.attr('method')
                     , dataType: "JSON"
+                    , crossDomain: true
                     , contentType: 'application/json; charset=utf-8'
                     , data: contactForm.serialize()
                     , success: function (data) {
