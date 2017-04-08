@@ -307,9 +307,11 @@ var portfolioKeyword;
                     , dataType: "text"
                     , contentType: 'application/json; charset=utf-8'
                     , data: contactForm.serialize()
-                    , then: function (data) {
-                        if (data.Success) contactForm.clearForm()
-                        else $alert.addClass('error')
+                    , success: function (data) {
+                        contactForm.clearForm()
+                    }
+                    , error: function (textStatus, errorThrown) {
+                        $alert.addClass('error')
                     }
                     , complete: function () {
                         NProgress.done();
