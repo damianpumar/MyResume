@@ -304,7 +304,7 @@ var portfolioKeyword;
                 $.ajax({
                     url: contactForm.attr('action')
                     , type: contactForm.attr('method')
-                    , dataType: "jsonp"
+                    , dataType: "JSON"
                     , contentType: 'application/json; charset=utf-8'
                     , data: contactForm.serialize()
                     , success: function (data) {
