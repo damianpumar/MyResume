@@ -1,10 +1,3 @@
-/*
-	Name: Empathy
-	Description: Responsive HTML5 vCard Template
-	Version: 1.0.1
-	Author: pixelwars
-*/
-/* global variables */
 var classicLayout = false;
 var portfolioKeyword;
 (function ($) {
@@ -23,6 +16,7 @@ var portfolioKeyword;
             letterInterval: 60
             , textInterval: 3000
         });
+
         // ------------------------------
         // ------------------------------
         // HEADER FUNCTIONS
@@ -1100,5 +1094,14 @@ var portfolioKeyword;
     window.nextPage = function (index) {
         return new PageTransitions.nextPage(index);
     };
+
+    function snackbarLoad() {
+        var snackbar = document.getElementById("snackbar")
+        snackbar.className = "show";
+        window.setTimeout(function(){ snackbar.className = "hide" }, 6000);
+    };
+
+    //SnackBar Loader
+    window.setTimeout(snackbarLoad, 3000);
     // ------------------------------
 })(jQuery);

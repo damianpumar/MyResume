@@ -4532,3 +4532,59 @@
  .tooltip:hover .tooltiptext {
      visibility: visible;
  }
+
+ #snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #1c262b;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 85%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+/*SnackBar*/
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s;
+    animation: fadein 0.5s;
+}
+
+#snackbar.hide {
+    -webkit-animation: fadeout 1s 2.5s;
+    animation: fadeout 1s 2.5s;
+    visibility: hidden;
+}
+
+#snackbar a {
+     color: #fff;
+     font-family: "Montserrat", serif;
+     font-size: 0.8em;
+ }
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
