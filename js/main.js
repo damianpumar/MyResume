@@ -1,9 +1,9 @@
 var classicLayout = false;
 var portfolioKeyword;
-(function ($) {
+(function($) {
     "use strict";
     /* DOCUMENT LOAD */
-    $(function () {
+    $(function() {
         // ------------------------------
         // start loader
         showLoader();
@@ -13,18 +13,18 @@ var portfolioKeyword;
         var typist;
         typist = document.querySelector("#typist-element");
         new Typist(typist, {
-            letterInterval: 60
-            , textInterval: 3000
+            letterInterval: 60,
+            textInterval: 3000
         });
 
         // ------------------------------
         // ------------------------------
         // HEADER FUNCTIONS
-        $('.search-toggle').on("click", function () {
+        $('.search-toggle').on("click", function() {
             $('html').toggleClass('is-search-toggled-on');
             $(".search-box input").trigger("focus");
         });
-        $('.menu-toggle').on("click", function () {
+        $('.menu-toggle').on("click", function() {
             $('html').toggleClass('is-menu-toggled-on');
         });
         // ------------------------------
@@ -49,31 +49,29 @@ var portfolioKeyword;
             if (classicLayout) { // CLASSIC LAYOUT
                 $('html').addClass('classic-layout');
                 setActivePage();
-                $.address.change(function () {
+                $.address.change(function() {
                     setActivePage();
                     $('html').removeClass('is-menu-toggled-on');
                 });
-            }
-            else { // MODERN LAYOUT
+            } else { // MODERN LAYOUT
                 $('html').addClass('modern-layout');
-                $.address.change(function () {
+                $.address.change(function() {
                     setActivePage();
                     $('html').removeClass('is-menu-toggled-on');
                 });
             }
             // don't change hash tag if isAnimating
-            $('.nav-menu a').on("click", function () {
+            $('.nav-menu a').on("click", function() {
                 if (window.isAnimating) {
                     return false;
                 }
             });
             // FULL BROWSER BACK BUTTON SUPPORT 
-            $.address.change(function () {
+            $.address.change(function() {
                 var detailUrl = giveDetailUrl();
                 if (detailUrl != -1) {
                     showProjectDetails(detailUrl);
-                }
-                else {
+                } else {
                     if ($.address.path().indexOf("/" + portfolioKeyword) != -1) {
                         hideProjectDetails(true, false);
                     }
@@ -88,15 +86,14 @@ var portfolioKeyword;
         // ------------------------------
         // PORTFOLIO DETAILS
         // Show details
-        $(".one-page-layout a.ajax").live('click', function () {
+        $(".one-page-layout a.ajax").live('click', function() {
             var url = $(this).attr('href');
             var baseUrl = $.address.baseURL();
             if (url.indexOf(baseUrl) !== -1) { // full url
                 var total = url.length;
                 detailUrl = url.slice(baseUrl.length + 1, total);
                 $.address.path('/' + detailUrl);
-            }
-            else { // relative url
+            } else { // relative url
                 detailUrl = url;
                 $.address.path(portfolioKeyword + '/' + detailUrl);
             }
@@ -107,7 +104,7 @@ var portfolioKeyword;
         // FORM VALIDATION
         // comment form validation fix
         $('#commentform').addClass('validate-form');
-        $('#commentform').find('input,textarea').each(function (index, element) {
+        $('#commentform').find('input,textarea').each(function(index, element) {
             if ($(this).attr('aria-required') === "true") {
                 $(this).addClass('required');
             }
@@ -117,7 +114,7 @@ var portfolioKeyword;
         });
         // validate form
         if ($('.validate-form').length) {
-            $('.validate-form').each(function () {
+            $('.validate-form').each(function() {
                 $(this).validate();
             });
         }
@@ -152,9 +149,9 @@ var portfolioKeyword;
                     center: new google.maps.LatLng(latitude, longitude), // How you would like to style the map. 
                     // This is where you would paste any style found on Snazzy Maps.
                     styles: [{
-                        "featureType": "administrative.locality"
-                        , "elementType": "all"
-                        , "stylers": [{
+                        "featureType": "administrative.locality",
+                        "elementType": "all",
+                        "stylers": [{
                             "hue": "#2c2e33"
                         }, {
                             "saturation": 7
@@ -164,9 +161,9 @@ var portfolioKeyword;
                             "visibility": "on"
                         }]
                     }, {
-                        "featureType": "landscape"
-                        , "elementType": "all"
-                        , "stylers": [{
+                        "featureType": "landscape",
+                        "elementType": "all",
+                        "stylers": [{
                             "hue": "#ffffff"
                         }, {
                             "saturation": -100
@@ -176,9 +173,9 @@ var portfolioKeyword;
                             "visibility": "simplified"
                         }]
                     }, {
-                        "featureType": "poi"
-                        , "elementType": "all"
-                        , "stylers": [{
+                        "featureType": "poi",
+                        "elementType": "all",
+                        "stylers": [{
                             "hue": "#ffffff"
                         }, {
                             "saturation": -100
@@ -188,9 +185,9 @@ var portfolioKeyword;
                             "visibility": "off"
                         }]
                     }, {
-                        "featureType": "road"
-                        , "elementType": "geometry"
-                        , "stylers": [{
+                        "featureType": "road",
+                        "elementType": "geometry",
+                        "stylers": [{
                             "hue": "#bbc0c4"
                         }, {
                             "saturation": -93
@@ -200,9 +197,9 @@ var portfolioKeyword;
                             "visibility": "simplified"
                         }]
                     }, {
-                        "featureType": "road"
-                        , "elementType": "labels"
-                        , "stylers": [{
+                        "featureType": "road",
+                        "elementType": "labels",
+                        "stylers": [{
                             "hue": "#bbc0c4"
                         }, {
                             "saturation": -93
@@ -212,9 +209,9 @@ var portfolioKeyword;
                             "visibility": "on"
                         }]
                     }, {
-                        "featureType": "road.arterial"
-                        , "elementType": "labels"
-                        , "stylers": [{
+                        "featureType": "road.arterial",
+                        "elementType": "labels",
+                        "stylers": [{
                             "hue": "#bbc0c4"
                         }, {
                             "saturation": -93
@@ -224,9 +221,9 @@ var portfolioKeyword;
                             "visibility": "simplified"
                         }]
                     }, {
-                        "featureType": "road.local"
-                        , "elementType": "geometry"
-                        , "stylers": [{
+                        "featureType": "road.local",
+                        "elementType": "geometry",
+                        "stylers": [{
                             "hue": "#e9ebed"
                         }, {
                             "saturation": -90
@@ -236,9 +233,9 @@ var portfolioKeyword;
                             "visibility": "simplified"
                         }]
                     }, {
-                        "featureType": "transit"
-                        , "elementType": "all"
-                        , "stylers": [{
+                        "featureType": "transit",
+                        "elementType": "all",
+                        "stylers": [{
                             "hue": "#e9ebed"
                         }, {
                             "saturation": 10
@@ -248,9 +245,9 @@ var portfolioKeyword;
                             "visibility": "on"
                         }]
                     }, {
-                        "featureType": "water"
-                        , "elementType": "all"
-                        , "stylers": [{
+                        "featureType": "water",
+                        "elementType": "all",
+                        "stylers": [{
                             "hue": "#e9ebed"
                         }, {
                             "saturation": -78
@@ -272,11 +269,12 @@ var portfolioKeyword;
                 // var marker_image = marker_image;
                 // var pinIcon = new google.maps.MarkerImage(null, null, null, null, new google.maps.Size(120, 90));
                 var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(latitude, longitude)
-                    , map: map
+                    position: new google.maps.LatLng(latitude, longitude),
+                    map: map
                         //, icon: pinIcon
-                        
-                    , title: 'Hey, I am here'
+
+                    ,
+                    title: 'Hey, I am here'
                 });
             }
         }
@@ -286,7 +284,7 @@ var portfolioKeyword;
         var contactForm = $('#contact-form');
         var $alert = $('.site-alert');
         var $submit = contactForm.find('.submit');
-        contactForm.submit(function (event) {
+        contactForm.submit(function(event) {
             event.preventDefault();
             sendEmail(contactForm);
         });
@@ -296,48 +294,47 @@ var portfolioKeyword;
                 NProgress.start();
                 $submit.addClass("active loading");
                 $.ajax({
-                    url: contactForm.attr('action')
-                    , type: contactForm.attr('method')
-                    , dataType: "JSON"
-                    , crossDomain: true
-                    , contentType: 'application/json; charset=utf-8'
-                    , data: JSON.stringify(contactForm.serializeObject())
-                    , success: function (data) {
+                    url: contactForm.attr('action'),
+                    type: contactForm.attr('method'),
+                    dataType: "JSON",
+                    crossDomain: true,
+                    contentType: 'application/json; charset=utf-8',
+                    data: JSON.stringify(contactForm.serializeObject()),
+                    success: function(data) {
                         contactForm.clearForm()
-                    }
-                    , error: function (textStatus, errorThrown) {
+                    },
+                    error: function(textStatus, errorThrown) {
                         $alert.addClass('error')
-                    }
-                    , complete: function () {
+                    },
+                    complete: function() {
                         NProgress.done();
                         $alert.show();
-                        setTimeout(function () {
+                        setTimeout(function() {
                             $alert.hide();
                         }, 6000)
                     }
                 });
             };
         };
-        $.fn.serializeObject = function () {
+        $.fn.serializeObject = function() {
             var o = {};
             var a = this.serializeArray();
-            $.each(a, function () {
+            $.each(a, function() {
                 if (o[this.name] !== undefined) {
                     if (!o[this.name].push) {
                         o[this.name] = [o[this.name]];
                     }
                     o[this.name].push(this.value || '');
-                }
-                else {
+                } else {
                     o[this.name] = this.value || '';
                 }
             });
             return o;
         };
-        $.fn.clearForm = function () { 
-            return this.each(function () {  
-                var type = this.type
-                    , tag = this.tagName.toLowerCase();  
+        $.fn.clearForm = function() { 
+            return this.each(function() {  
+                var type = this.type,
+                    tag = this.tagName.toLowerCase();  
                 if (tag == 'form')    return $(':input', this).clearForm();  
                 if (type == 'text' || type == 'password' || tag == 'textarea' || type == 'email')    this.value = '';  
                 else if (type == 'checkbox' || type == 'radio')    this.checked = false;  
@@ -349,11 +346,11 @@ var portfolioKeyword;
         /* SOCIAL FEED WIDGET */
         var socialFeed = $('.social-feed');
         if (socialFeed.length) {
-            socialFeed.each(function () {
+            socialFeed.each(function() {
                 $(this).socialstream({
-                    socialnetwork: $(this).data("social-network")
-                    , limit: $(this).data("limit")
-                    , username: $(this).data("username")
+                    socialnetwork: $(this).data("social-network"),
+                    limit: $(this).data("limit"),
+                    username: $(this).data("username")
                 });
             });
         }
@@ -361,12 +358,12 @@ var portfolioKeyword;
         // ------------------------------
         // PARALLAX BG VIDEO
         var video_parallax = $(".home-section");
-        video_parallax.each(function (index, element) {
+        video_parallax.each(function(index, element) {
             if ($(this).data('parallax-video')) {
                 $(this).jarallax({
-                    speed: 0
-                    , zIndex: 1
-                    , videoSrc: $(this).data('parallax-video')
+                    speed: 0,
+                    zIndex: 1,
+                    videoSrc: $(this).data('parallax-video')
                 });
             }
         });
@@ -374,7 +371,7 @@ var portfolioKeyword;
     });
     // DOCUMENT READY
     // WINDOW ONLOAD
-    window.onload = function () {
+    window.onload = function() {
         hideLoader();
     };
     // WINDOW ONLOAD	
@@ -394,16 +391,15 @@ var portfolioKeyword;
         // ------------------------------
         // ------------------------------
         // TABS
-        $('.tabs').each(function () {
+        $('.tabs').each(function() {
             if (!$(this).find('.tab-titles li a.active').length) {
                 $(this).find('.tab-titles li:first-child a').addClass('active');
                 $(this).find('.tab-content > div:first-child').show();
-            }
-            else {
+            } else {
                 $(this).find('.tab-content > div').eq($(this).find('.tab-titles li a.active').parent().index()).show();
             }
         });
-        $('.tabs .tab-titles li a').on("click", function () {
+        $('.tabs .tab-titles li a').on("click", function() {
             if ($(this).hasClass('active')) {
                 return;
             }
@@ -417,12 +413,11 @@ var portfolioKeyword;
         // TOGGLES
         var toggleSpeed = 300;
         $('.toggle h4.active + .toggle-content').show();
-        $('.toggle h4').on("click", function () {
+        $('.toggle h4').on("click", function() {
             if ($(this).hasClass('active')) {
                 $(this).removeClass('active');
                 $(this).next('.toggle-content').stop(true, true).slideUp(toggleSpeed);
-            }
-            else {
+            } else {
                 $(this).addClass('active');
                 $(this).next('.toggle-content').stop(true, true).slideDown(toggleSpeed);
                 //accordion
@@ -457,10 +452,10 @@ var portfolioKeyword;
     function setupMasonry() {
         var masonry = $('.masonry, .gallery');
         if (masonry.length) {
-            masonry.each(function (index, el) {
+            masonry.each(function(index, el) {
                 // call isotope
                 refreshMasonry();
-                $(el).imagesLoaded(function () {
+                $(el).imagesLoaded(function() {
                     $(el).isotope({
                         layoutMode: $(el).data('layout') ? $(el).data('layout') : 'masonry'
                     });
@@ -471,7 +466,7 @@ var portfolioKeyword;
                     // filters
                     var filters = $(el).siblings('.filters');
                     if (filters.length) {
-                        filters.find('a').on("click", function () {
+                        filters.find('a').on("click", function() {
                             var selector = $(this).attr('data-filter');
                             $(el).isotope({
                                 filter: selector
@@ -484,7 +479,7 @@ var portfolioKeyword;
             }); //each
         }
     }
-    $(window).on('resize debouncedresize', function () {
+    $(window).on('resize debouncedresize', function() {
         refreshMasonry();
     });
     // ------------------------------
@@ -493,7 +488,7 @@ var portfolioKeyword;
     function refreshMasonry() {
         var masonry = $('.masonry');
         if (masonry.length) {
-            masonry.each(function (index, el) {
+            masonry.each(function(index, el) {
                 // check if isotope initialized
                 if ($(el).data('isotope')) {
                     var itemW = $(el).data('item-width');
@@ -501,7 +496,7 @@ var portfolioKeyword;
                     var items = $(el).children('.hentry');
                     var columns = Math.round(containerW / itemW);
                     // set the widths (%) for each of item
-                    items.each(function (index, element) {
+                    items.each(function(index, element) {
                         var multiplier = $(this).hasClass('x2') && columns > 1 ? 2 : 1;
                         var itemRealWidth = (Math.floor(containerW / columns) * 100 / containerW) * multiplier;
                         $(this).css('width', itemRealWidth + '%');
@@ -522,60 +517,59 @@ var portfolioKeyword;
     // LIGHTBOX - applied to porfolio and gallery post format
     function setupLightbox() {
         if ($(".lightbox, .gallery").length) {
-            $('.media-box, .gallery').each(function (index, element) {
+            $('.media-box, .gallery').each(function(index, element) {
                 var $media_box = $(this);
                 $media_box.magnificPopup({
-                    delegate: '.lightbox, .gallery-item a'
-                    , type: 'image'
-                    , image: {
+                    delegate: '.lightbox, .gallery-item a',
+                    type: 'image',
+                    image: {
                         markup: '<div class="mfp-figure">' + '<div class="mfp-close"></div>' + '<div class="mfp-img"></div>' + '</div>' + '<div class="mfp-bottom-bar">' + '<div class="mfp-title"></div>' + '<div class="mfp-counter"></div>' + '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
                         cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor. 
                         verticalFit: true, // Fits image in area vertically
                         tError: '<a href="%url%">The image</a> could not be loaded.' // Error message
-                    }
-                    , gallery: {
-                        enabled: true
-                        , tCounter: '<span class="mfp-counter">%curr% / %total%</span>' // markup of counter
-                    }
-                    , iframe: {
+                    },
+                    gallery: {
+                        enabled: true,
+                        tCounter: '<span class="mfp-counter">%curr% / %total%</span>' // markup of counter
+                    },
+                    iframe: {
                         markup: '<div class="mfp-iframe-scaler">' + '<div class="mfp-close"></div>' + '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' + '<div class="mfp-title">Some caption</div>' + '</div>'
-                    }
-                    , mainClass: 'mfp-zoom-in'
-                    , tLoading: ''
-                    , removalDelay: 300, //delay removal by X to allow out-animation
+                    },
+                    mainClass: 'mfp-zoom-in',
+                    tLoading: '',
+                    removalDelay: 300, //delay removal by X to allow out-animation
                     callbacks: {
-                        markupParse: function (template, values, item) {
+                        markupParse: function(template, values, item) {
                             var title = "";
                             if (item.el.parents('.gallery-item').length) {
                                 title = item.el.parents('.gallery-item').find('.gallery-caption').text();
-                            }
-                            else {
+                            } else {
                                 title = item.el.attr('title') == undefined ? "" : item.el.attr('title');
                             }
                             //return title;
                             values.title = title;
-                        }
-                        , imageLoadComplete: function () {
+                        },
+                        imageLoadComplete: function() {
                             var self = this;
-                            setTimeout(function () {
+                            setTimeout(function() {
                                 self.wrap.addClass('mfp-image-loaded');
                             }, 16);
-                        }
-                        , close: function () {
+                        },
+                        close: function() {
                             this.wrap.removeClass('mfp-image-loaded');
-                        }
-                        , beforeAppend: function () {
+                        },
+                        beforeAppend: function() {
                             var self = this;
-                            this.content.find('iframe').on('load', function () {
-                                setTimeout(function () {
+                            this.content.find('iframe').on('load', function() {
+                                setTimeout(function() {
                                     self.wrap.addClass('mfp-image-loaded');
                                 }, 16);
                             });
                         }
-                    }
-                    , closeBtnInside: false
-                    , closeOnContentClick: true
-                    , midClick: true
+                    },
+                    closeBtnInside: false,
+                    closeOnContentClick: true,
+                    midClick: true
                 });
             });
         }
@@ -584,7 +578,7 @@ var portfolioKeyword;
     // ------------------------------
     // FILL PROGRESS BARS
     function fillBars() {
-        $('.bar').each(function () {
+        $('.bar').each(function() {
             var bar = $(this);
             var percent = bar.attr('data-percent');
             bar.find('.progress').css('width', percent + '%').html('<span>' + percent + '</span>');
@@ -600,10 +594,10 @@ var portfolioKeyword;
         var p = $('.p-overlay:not(.active)').first();
         pActive = $('.p-overlay.active');
         // ajax : fill data
-        p.empty().load(url + ' .portfolio-single', function () {
+        p.empty().load(url + ' .portfolio-single', function() {
             NProgress.set(0.5);
             // wait for images to be loaded
-            p.imagesLoaded(function () {
+            p.imagesLoaded(function() {
                 // for galleries in ajax pulled content
                 setupMasonry();
                 if (pActive.length) {
@@ -616,8 +610,7 @@ var portfolioKeyword;
                 setup();
                 if (classicLayout) {
                     p.show();
-                }
-                else {
+                } else {
                     p.removeClass('animate-in animate-out').addClass('animate-in').show();
                 }
                 p.addClass('active');
@@ -639,10 +632,9 @@ var portfolioKeyword;
         pActive.removeClass('active');
         if (classicLayout) {
             pActive.hide().empty();
-        }
-        else {
+        } else {
             pActive.removeClass('animate-in animate-out').addClass('animate-out').show();
-            setTimeout(function () {
+            setTimeout(function() {
                 pActive.hide().removeClass('animate-out').empty();
             }, 10)
         }
@@ -654,8 +646,7 @@ var portfolioKeyword;
         if (address.indexOf("/" + portfolioKeyword + "/") != -1 && address.length > portfolioKeyword.length + 2) {
             var total = address.length;
             detailUrl = address.slice(portfolioKeyword.length + 2, total);
-        }
-        else {
+        } else {
             detailUrl = -1;
         }
         return detailUrl;
@@ -682,28 +673,24 @@ var portfolioKeyword;
             path = firstPage.slice(2, firstPage.length);
             if (classicLayout) {
                 $('#' + path).addClass('page-current').siblings().removeClass('page-current');
-            }
-            else {
+            } else {
                 $('#' + path).addClass('page-current');
             }
             setCurrentMenuItem();
             //$.address.path(path);
             return false;
-        }
-        else { // show page change animation
+        } else { // show page change animation
             // change page only if url doesn't target portfolio single page
             if (giveDetailUrl() == -1) {
                 if (classicLayout) {
                     $('#' + path).addClass('page-current').siblings().removeClass('page-current');
                     setCurrentMenuItem();
-                }
-                else {
+                } else {
                     if (!($('.page-current').length)) { // first load - don't animate page change
                         $('#' + path).addClass('page-current');
                         current = $('#' + path).index();
                         setCurrentMenuItem();
-                    }
-                    else { // animate page change
+                    } else { // animate page change
                         //console.log(giveDetailUrl());
                         PageTransitions.nextPage($('#' + path).index());
                     }
@@ -714,7 +701,7 @@ var portfolioKeyword;
         } */
         // refresh masonry layouts
         refreshMasonry();
-        setTimeout(function () {
+        setTimeout(function() {
             refreshMasonry();
         }, 100);
     }
@@ -735,18 +722,18 @@ var portfolioKeyword;
     window.prevAnimation = $('html').data("prev-animation");
     window.randomize = $('html').data("random-animation");
     window.isAnimating = false;
-    var PageTransitions = (function () {
-        var $main = $('#main')
-            , $pages = $main.children('.pt-page')
-            , $menuLinks = $('.nav-menu a')
-            , animcursor = 1
-            , endCurrPage = false
-            , endNextPage = false
-            , animEndEventNames = {
-                'WebkitAnimation': 'webkitAnimationEnd'
-                , 'OAnimation': 'oAnimationEnd'
-                , 'msAnimation': 'MSAnimationEnd'
-                , 'animation': 'animationend'
+    var PageTransitions = (function() {
+        var $main = $('#main'),
+            $pages = $main.children('.pt-page'),
+            $menuLinks = $('.nav-menu a'),
+            animcursor = 1,
+            endCurrPage = false,
+            endNextPage = false,
+            animEndEventNames = {
+                'WebkitAnimation': 'webkitAnimationEnd',
+                'OAnimation': 'oAnimationEnd',
+                'msAnimation': 'MSAnimationEnd',
+                'animation': 'animationend'
             }, // animation end event name
             animEndEventName = animEndEventNames[Modernizr.prefixed('animation')], // support css animations
             support = Modernizr.cssanimations;
@@ -781,283 +768,283 @@ var portfolioKeyword;
             current = nextPageIndex;
             var $nextPage = $pages.eq(current).addClass('page-current');
             switch (animation) {
-            case 1:
-                outClass = 'pt-page-moveToLeft';
-                inClass = 'pt-page-moveFromRight';
-                break;
-            case 2:
-                outClass = 'pt-page-moveToRight';
-                inClass = 'pt-page-moveFromLeft';
-                break;
-            case 3:
-                outClass = 'pt-page-moveToTop';
-                inClass = 'pt-page-moveFromBottom';
-                break;
-            case 4:
-                outClass = 'pt-page-moveToBottom';
-                inClass = 'pt-page-moveFromTop';
-                break;
-            case 5:
-                outClass = 'pt-page-fade';
-                inClass = 'pt-page-moveFromRight pt-page-ontop';
-                break;
-            case 6:
-                outClass = 'pt-page-fade';
-                inClass = 'pt-page-moveFromLeft pt-page-ontop';
-                break;
-            case 7:
-                outClass = 'pt-page-fade';
-                inClass = 'pt-page-moveFromBottom pt-page-ontop';
-                break;
-            case 8:
-                outClass = 'pt-page-fade';
-                inClass = 'pt-page-moveFromTop pt-page-ontop';
-                break;
-            case 9:
-                outClass = 'pt-page-moveToLeftFade';
-                inClass = 'pt-page-moveFromRightFade';
-                break;
-            case 10:
-                outClass = 'pt-page-moveToRightFade';
-                inClass = 'pt-page-moveFromLeftFade';
-                break;
-            case 11:
-                outClass = 'pt-page-moveToTopFade';
-                inClass = 'pt-page-moveFromBottomFade';
-                break;
-            case 12:
-                outClass = 'pt-page-moveToBottomFade';
-                inClass = 'pt-page-moveFromTopFade';
-                break;
-            case 13:
-                outClass = 'pt-page-moveToLeftEasing pt-page-ontop';
-                inClass = 'pt-page-moveFromRight';
-                break;
-            case 14:
-                outClass = 'pt-page-moveToRightEasing pt-page-ontop';
-                inClass = 'pt-page-moveFromLeft';
-                break;
-            case 15:
-                outClass = 'pt-page-moveToTopEasing pt-page-ontop';
-                inClass = 'pt-page-moveFromBottom';
-                break;
-            case 16:
-                outClass = 'pt-page-moveToBottomEasing pt-page-ontop';
-                inClass = 'pt-page-moveFromTop';
-                break;
-            case 17:
-                outClass = 'pt-page-scaleDown';
-                inClass = 'pt-page-moveFromRight pt-page-ontop';
-                break;
-            case 18:
-                outClass = 'pt-page-scaleDown';
-                inClass = 'pt-page-moveFromLeft pt-page-ontop';
-                break;
-            case 19:
-                outClass = 'pt-page-scaleDown';
-                inClass = 'pt-page-moveFromBottom pt-page-ontop';
-                break;
-            case 20:
-                outClass = 'pt-page-scaleDown';
-                inClass = 'pt-page-moveFromTop pt-page-ontop';
-                break;
-            case 21:
-                outClass = 'pt-page-scaleDown';
-                inClass = 'pt-page-scaleUpDown pt-page-delay300';
-                break;
-            case 22:
-                outClass = 'pt-page-scaleDownUp';
-                inClass = 'pt-page-scaleUp pt-page-delay300';
-                break;
-            case 23:
-                outClass = 'pt-page-moveToLeft pt-page-ontop';
-                inClass = 'pt-page-scaleUp';
-                break;
-            case 24:
-                outClass = 'pt-page-moveToRight pt-page-ontop';
-                inClass = 'pt-page-scaleUp';
-                break;
-            case 25:
-                outClass = 'pt-page-moveToTop pt-page-ontop';
-                inClass = 'pt-page-scaleUp';
-                break;
-            case 26:
-                outClass = 'pt-page-moveToBottom pt-page-ontop';
-                inClass = 'pt-page-scaleUp';
-                break;
-            case 27:
-                outClass = 'pt-page-scaleDownCenter';
-                inClass = 'pt-page-scaleUpCenter pt-page-delay400';
-                break;
-            case 28:
-                outClass = 'pt-page-rotateRightSideFirst';
-                inClass = 'pt-page-moveFromRight pt-page-delay200 pt-page-ontop';
-                break;
-            case 29:
-                outClass = 'pt-page-rotateLeftSideFirst';
-                inClass = 'pt-page-moveFromLeft pt-page-delay200 pt-page-ontop';
-                break;
-            case 30:
-                outClass = 'pt-page-rotateTopSideFirst';
-                inClass = 'pt-page-moveFromTop pt-page-delay200 pt-page-ontop';
-                break;
-            case 31:
-                outClass = 'pt-page-rotateBottomSideFirst';
-                inClass = 'pt-page-moveFromBottom pt-page-delay200 pt-page-ontop';
-                break;
-            case 32:
-                outClass = 'pt-page-flipOutRight';
-                inClass = 'pt-page-flipInLeft pt-page-delay500';
-                break;
-            case 33:
-                outClass = 'pt-page-flipOutLeft';
-                inClass = 'pt-page-flipInRight pt-page-delay500';
-                break;
-            case 34:
-                outClass = 'pt-page-flipOutTop';
-                inClass = 'pt-page-flipInBottom pt-page-delay500';
-                break;
-            case 35:
-                outClass = 'pt-page-flipOutBottom';
-                inClass = 'pt-page-flipInTop pt-page-delay500';
-                break;
-            case 36:
-                outClass = 'pt-page-rotateFall pt-page-ontop';
-                inClass = 'pt-page-scaleUp';
-                break;
-            case 37:
-                outClass = 'pt-page-rotateOutNewspaper';
-                inClass = 'pt-page-rotateInNewspaper pt-page-delay500';
-                break;
-            case 38:
-                outClass = 'pt-page-rotatePushLeft';
-                inClass = 'pt-page-moveFromRight';
-                break;
-            case 39:
-                outClass = 'pt-page-rotatePushRight';
-                inClass = 'pt-page-moveFromLeft';
-                break;
-            case 40:
-                outClass = 'pt-page-rotatePushTop';
-                inClass = 'pt-page-moveFromBottom';
-                break;
-            case 41:
-                outClass = 'pt-page-rotatePushBottom';
-                inClass = 'pt-page-moveFromTop';
-                break;
-            case 42:
-                outClass = 'pt-page-rotatePushLeft';
-                inClass = 'pt-page-rotatePullRight pt-page-delay180';
-                break;
-            case 43:
-                outClass = 'pt-page-rotatePushRight';
-                inClass = 'pt-page-rotatePullLeft pt-page-delay180';
-                break;
-            case 44:
-                outClass = 'pt-page-rotatePushTop';
-                inClass = 'pt-page-rotatePullBottom pt-page-delay180';
-                break;
-            case 45:
-                outClass = 'pt-page-rotatePushBottom';
-                inClass = 'pt-page-rotatePullTop pt-page-delay180';
-                break;
-            case 46:
-                outClass = 'pt-page-rotateFoldLeft';
-                inClass = 'pt-page-moveFromRightFade';
-                break;
-            case 47:
-                outClass = 'pt-page-rotateFoldRight';
-                inClass = 'pt-page-moveFromLeftFade';
-                break;
-            case 48:
-                outClass = 'pt-page-rotateFoldTop';
-                inClass = 'pt-page-moveFromBottomFade';
-                break;
-            case 49:
-                outClass = 'pt-page-rotateFoldBottom';
-                inClass = 'pt-page-moveFromTopFade';
-                break;
-            case 50:
-                outClass = 'pt-page-moveToRightFade';
-                inClass = 'pt-page-rotateUnfoldLeft';
-                break;
-            case 51:
-                outClass = 'pt-page-moveToLeftFade';
-                inClass = 'pt-page-rotateUnfoldRight';
-                break;
-            case 52:
-                outClass = 'pt-page-moveToBottomFade';
-                inClass = 'pt-page-rotateUnfoldTop';
-                break;
-            case 53:
-                outClass = 'pt-page-moveToTopFade';
-                inClass = 'pt-page-rotateUnfoldBottom';
-                break;
-            case 54:
-                outClass = 'pt-page-rotateRoomLeftOut pt-page-ontop';
-                inClass = 'pt-page-rotateRoomLeftIn';
-                break;
-            case 55:
-                outClass = 'pt-page-rotateRoomRightOut pt-page-ontop';
-                inClass = 'pt-page-rotateRoomRightIn';
-                break;
-            case 56:
-                outClass = 'pt-page-rotateRoomTopOut pt-page-ontop';
-                inClass = 'pt-page-rotateRoomTopIn';
-                break;
-            case 57:
-                outClass = 'pt-page-rotateRoomBottomOut pt-page-ontop';
-                inClass = 'pt-page-rotateRoomBottomIn';
-                break;
-            case 58:
-                outClass = 'pt-page-rotateCubeLeftOut pt-page-ontop';
-                inClass = 'pt-page-rotateCubeLeftIn';
-                break;
-            case 59:
-                outClass = 'pt-page-rotateCubeRightOut pt-page-ontop';
-                inClass = 'pt-page-rotateCubeRightIn';
-                break;
-            case 60:
-                outClass = 'pt-page-rotateCubeTopOut pt-page-ontop';
-                inClass = 'pt-page-rotateCubeTopIn';
-                break;
-            case 61:
-                outClass = 'pt-page-rotateCubeBottomOut pt-page-ontop';
-                inClass = 'pt-page-rotateCubeBottomIn';
-                break;
-            case 62:
-                outClass = 'pt-page-rotateCarouselLeftOut pt-page-ontop';
-                inClass = 'pt-page-rotateCarouselLeftIn';
-                break;
-            case 63:
-                outClass = 'pt-page-rotateCarouselRightOut pt-page-ontop';
-                inClass = 'pt-page-rotateCarouselRightIn';
-                break;
-            case 64:
-                outClass = 'pt-page-rotateCarouselTopOut pt-page-ontop';
-                inClass = 'pt-page-rotateCarouselTopIn';
-                break;
-            case 65:
-                outClass = 'pt-page-rotateCarouselBottomOut pt-page-ontop';
-                inClass = 'pt-page-rotateCarouselBottomIn';
-                break;
-            case 66:
-                outClass = 'pt-page-rotateSidesOut';
-                inClass = 'pt-page-rotateSidesIn pt-page-delay200';
-                break;
-            case 67:
-                outClass = 'pt-page-rotateSlideOut';
-                inClass = 'pt-page-rotateSlideIn';
-                break;
+                case 1:
+                    outClass = 'pt-page-moveToLeft';
+                    inClass = 'pt-page-moveFromRight';
+                    break;
+                case 2:
+                    outClass = 'pt-page-moveToRight';
+                    inClass = 'pt-page-moveFromLeft';
+                    break;
+                case 3:
+                    outClass = 'pt-page-moveToTop';
+                    inClass = 'pt-page-moveFromBottom';
+                    break;
+                case 4:
+                    outClass = 'pt-page-moveToBottom';
+                    inClass = 'pt-page-moveFromTop';
+                    break;
+                case 5:
+                    outClass = 'pt-page-fade';
+                    inClass = 'pt-page-moveFromRight pt-page-ontop';
+                    break;
+                case 6:
+                    outClass = 'pt-page-fade';
+                    inClass = 'pt-page-moveFromLeft pt-page-ontop';
+                    break;
+                case 7:
+                    outClass = 'pt-page-fade';
+                    inClass = 'pt-page-moveFromBottom pt-page-ontop';
+                    break;
+                case 8:
+                    outClass = 'pt-page-fade';
+                    inClass = 'pt-page-moveFromTop pt-page-ontop';
+                    break;
+                case 9:
+                    outClass = 'pt-page-moveToLeftFade';
+                    inClass = 'pt-page-moveFromRightFade';
+                    break;
+                case 10:
+                    outClass = 'pt-page-moveToRightFade';
+                    inClass = 'pt-page-moveFromLeftFade';
+                    break;
+                case 11:
+                    outClass = 'pt-page-moveToTopFade';
+                    inClass = 'pt-page-moveFromBottomFade';
+                    break;
+                case 12:
+                    outClass = 'pt-page-moveToBottomFade';
+                    inClass = 'pt-page-moveFromTopFade';
+                    break;
+                case 13:
+                    outClass = 'pt-page-moveToLeftEasing pt-page-ontop';
+                    inClass = 'pt-page-moveFromRight';
+                    break;
+                case 14:
+                    outClass = 'pt-page-moveToRightEasing pt-page-ontop';
+                    inClass = 'pt-page-moveFromLeft';
+                    break;
+                case 15:
+                    outClass = 'pt-page-moveToTopEasing pt-page-ontop';
+                    inClass = 'pt-page-moveFromBottom';
+                    break;
+                case 16:
+                    outClass = 'pt-page-moveToBottomEasing pt-page-ontop';
+                    inClass = 'pt-page-moveFromTop';
+                    break;
+                case 17:
+                    outClass = 'pt-page-scaleDown';
+                    inClass = 'pt-page-moveFromRight pt-page-ontop';
+                    break;
+                case 18:
+                    outClass = 'pt-page-scaleDown';
+                    inClass = 'pt-page-moveFromLeft pt-page-ontop';
+                    break;
+                case 19:
+                    outClass = 'pt-page-scaleDown';
+                    inClass = 'pt-page-moveFromBottom pt-page-ontop';
+                    break;
+                case 20:
+                    outClass = 'pt-page-scaleDown';
+                    inClass = 'pt-page-moveFromTop pt-page-ontop';
+                    break;
+                case 21:
+                    outClass = 'pt-page-scaleDown';
+                    inClass = 'pt-page-scaleUpDown pt-page-delay300';
+                    break;
+                case 22:
+                    outClass = 'pt-page-scaleDownUp';
+                    inClass = 'pt-page-scaleUp pt-page-delay300';
+                    break;
+                case 23:
+                    outClass = 'pt-page-moveToLeft pt-page-ontop';
+                    inClass = 'pt-page-scaleUp';
+                    break;
+                case 24:
+                    outClass = 'pt-page-moveToRight pt-page-ontop';
+                    inClass = 'pt-page-scaleUp';
+                    break;
+                case 25:
+                    outClass = 'pt-page-moveToTop pt-page-ontop';
+                    inClass = 'pt-page-scaleUp';
+                    break;
+                case 26:
+                    outClass = 'pt-page-moveToBottom pt-page-ontop';
+                    inClass = 'pt-page-scaleUp';
+                    break;
+                case 27:
+                    outClass = 'pt-page-scaleDownCenter';
+                    inClass = 'pt-page-scaleUpCenter pt-page-delay400';
+                    break;
+                case 28:
+                    outClass = 'pt-page-rotateRightSideFirst';
+                    inClass = 'pt-page-moveFromRight pt-page-delay200 pt-page-ontop';
+                    break;
+                case 29:
+                    outClass = 'pt-page-rotateLeftSideFirst';
+                    inClass = 'pt-page-moveFromLeft pt-page-delay200 pt-page-ontop';
+                    break;
+                case 30:
+                    outClass = 'pt-page-rotateTopSideFirst';
+                    inClass = 'pt-page-moveFromTop pt-page-delay200 pt-page-ontop';
+                    break;
+                case 31:
+                    outClass = 'pt-page-rotateBottomSideFirst';
+                    inClass = 'pt-page-moveFromBottom pt-page-delay200 pt-page-ontop';
+                    break;
+                case 32:
+                    outClass = 'pt-page-flipOutRight';
+                    inClass = 'pt-page-flipInLeft pt-page-delay500';
+                    break;
+                case 33:
+                    outClass = 'pt-page-flipOutLeft';
+                    inClass = 'pt-page-flipInRight pt-page-delay500';
+                    break;
+                case 34:
+                    outClass = 'pt-page-flipOutTop';
+                    inClass = 'pt-page-flipInBottom pt-page-delay500';
+                    break;
+                case 35:
+                    outClass = 'pt-page-flipOutBottom';
+                    inClass = 'pt-page-flipInTop pt-page-delay500';
+                    break;
+                case 36:
+                    outClass = 'pt-page-rotateFall pt-page-ontop';
+                    inClass = 'pt-page-scaleUp';
+                    break;
+                case 37:
+                    outClass = 'pt-page-rotateOutNewspaper';
+                    inClass = 'pt-page-rotateInNewspaper pt-page-delay500';
+                    break;
+                case 38:
+                    outClass = 'pt-page-rotatePushLeft';
+                    inClass = 'pt-page-moveFromRight';
+                    break;
+                case 39:
+                    outClass = 'pt-page-rotatePushRight';
+                    inClass = 'pt-page-moveFromLeft';
+                    break;
+                case 40:
+                    outClass = 'pt-page-rotatePushTop';
+                    inClass = 'pt-page-moveFromBottom';
+                    break;
+                case 41:
+                    outClass = 'pt-page-rotatePushBottom';
+                    inClass = 'pt-page-moveFromTop';
+                    break;
+                case 42:
+                    outClass = 'pt-page-rotatePushLeft';
+                    inClass = 'pt-page-rotatePullRight pt-page-delay180';
+                    break;
+                case 43:
+                    outClass = 'pt-page-rotatePushRight';
+                    inClass = 'pt-page-rotatePullLeft pt-page-delay180';
+                    break;
+                case 44:
+                    outClass = 'pt-page-rotatePushTop';
+                    inClass = 'pt-page-rotatePullBottom pt-page-delay180';
+                    break;
+                case 45:
+                    outClass = 'pt-page-rotatePushBottom';
+                    inClass = 'pt-page-rotatePullTop pt-page-delay180';
+                    break;
+                case 46:
+                    outClass = 'pt-page-rotateFoldLeft';
+                    inClass = 'pt-page-moveFromRightFade';
+                    break;
+                case 47:
+                    outClass = 'pt-page-rotateFoldRight';
+                    inClass = 'pt-page-moveFromLeftFade';
+                    break;
+                case 48:
+                    outClass = 'pt-page-rotateFoldTop';
+                    inClass = 'pt-page-moveFromBottomFade';
+                    break;
+                case 49:
+                    outClass = 'pt-page-rotateFoldBottom';
+                    inClass = 'pt-page-moveFromTopFade';
+                    break;
+                case 50:
+                    outClass = 'pt-page-moveToRightFade';
+                    inClass = 'pt-page-rotateUnfoldLeft';
+                    break;
+                case 51:
+                    outClass = 'pt-page-moveToLeftFade';
+                    inClass = 'pt-page-rotateUnfoldRight';
+                    break;
+                case 52:
+                    outClass = 'pt-page-moveToBottomFade';
+                    inClass = 'pt-page-rotateUnfoldTop';
+                    break;
+                case 53:
+                    outClass = 'pt-page-moveToTopFade';
+                    inClass = 'pt-page-rotateUnfoldBottom';
+                    break;
+                case 54:
+                    outClass = 'pt-page-rotateRoomLeftOut pt-page-ontop';
+                    inClass = 'pt-page-rotateRoomLeftIn';
+                    break;
+                case 55:
+                    outClass = 'pt-page-rotateRoomRightOut pt-page-ontop';
+                    inClass = 'pt-page-rotateRoomRightIn';
+                    break;
+                case 56:
+                    outClass = 'pt-page-rotateRoomTopOut pt-page-ontop';
+                    inClass = 'pt-page-rotateRoomTopIn';
+                    break;
+                case 57:
+                    outClass = 'pt-page-rotateRoomBottomOut pt-page-ontop';
+                    inClass = 'pt-page-rotateRoomBottomIn';
+                    break;
+                case 58:
+                    outClass = 'pt-page-rotateCubeLeftOut pt-page-ontop';
+                    inClass = 'pt-page-rotateCubeLeftIn';
+                    break;
+                case 59:
+                    outClass = 'pt-page-rotateCubeRightOut pt-page-ontop';
+                    inClass = 'pt-page-rotateCubeRightIn';
+                    break;
+                case 60:
+                    outClass = 'pt-page-rotateCubeTopOut pt-page-ontop';
+                    inClass = 'pt-page-rotateCubeTopIn';
+                    break;
+                case 61:
+                    outClass = 'pt-page-rotateCubeBottomOut pt-page-ontop';
+                    inClass = 'pt-page-rotateCubeBottomIn';
+                    break;
+                case 62:
+                    outClass = 'pt-page-rotateCarouselLeftOut pt-page-ontop';
+                    inClass = 'pt-page-rotateCarouselLeftIn';
+                    break;
+                case 63:
+                    outClass = 'pt-page-rotateCarouselRightOut pt-page-ontop';
+                    inClass = 'pt-page-rotateCarouselRightIn';
+                    break;
+                case 64:
+                    outClass = 'pt-page-rotateCarouselTopOut pt-page-ontop';
+                    inClass = 'pt-page-rotateCarouselTopIn';
+                    break;
+                case 65:
+                    outClass = 'pt-page-rotateCarouselBottomOut pt-page-ontop';
+                    inClass = 'pt-page-rotateCarouselBottomIn';
+                    break;
+                case 66:
+                    outClass = 'pt-page-rotateSidesOut';
+                    inClass = 'pt-page-rotateSidesIn pt-page-delay200';
+                    break;
+                case 67:
+                    outClass = 'pt-page-rotateSlideOut';
+                    inClass = 'pt-page-rotateSlideIn';
+                    break;
             }
-            $currPage.addClass(outClass).on(animEndEventName, function () {
+            $currPage.addClass(outClass).on(animEndEventName, function() {
                 $currPage.off(animEndEventName);
                 endCurrPage = true;
                 if (endNextPage) {
                     onEndAnimation($currPage, $nextPage);
                 }
             });
-            $nextPage.addClass(inClass).on(animEndEventName, function () {
+            $nextPage.addClass(inClass).on(animEndEventName, function() {
                 $nextPage.off(animEndEventName);
                 endNextPage = true;
                 if (endCurrPage) {
@@ -1087,21 +1074,35 @@ var portfolioKeyword;
         }
         init();
         return {
-            init: init
-            , nextPage: nextPage
+            init: init,
+            nextPage: nextPage
         };
     })();
-    window.nextPage = function (index) {
+
+    window.nextPage = function(index) {
         return new PageTransitions.nextPage(index);
     };
 
     function snackbarLoad() {
         var snackbar = document.getElementById("snackbar")
         snackbar.className = "show";
-        window.setTimeout(function(){ snackbar.className = "hide" }, 6000);
+        window.setTimeout(function() {
+            snackbar.className = "hide"
+        }, 6000);
     };
 
     //SnackBar Loader
     window.setTimeout(snackbarLoad, 3000);
+
+    (function setHoursWorked() {
+        var startWork = new Date(2011, 1, 1, 0, 0);
+        var now = new Date();
+        var daysDifference = now.getTime() - startWork.getTime();
+        var yearsDifference = now.getYear() - startWork.getYear();
+        var hoursNotWorked = ((2 * 24 * 4 * 12) + 15) * yearsDifference //2 days * 24 hours per day * month * 12 month per year i not work and 15 days vacation
+        var hoursWorked = ((daysDifference / (1000 * 60 * 60 * 24) * 24) / 2.1) - hoursNotWorked
+        var hoursWorkedMask = Math.trunc(hoursWorked).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        $('#hoursWorked').text(hoursWorkedMask + ' Working Hours');
+    })();
     // ------------------------------
 })(jQuery);
