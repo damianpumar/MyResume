@@ -1,9 +1,9 @@
 var classicLayout = false;
 var portfolioKeyword;
-(function($) {
+(function ($) {
     "use strict";
     /* DOCUMENT LOAD */
-    $(function() {
+    $(function () {
         // ------------------------------
         // start loader
         showLoader();
@@ -20,11 +20,11 @@ var portfolioKeyword;
         // ------------------------------
         // ------------------------------
         // HEADER FUNCTIONS
-        $('.search-toggle').on("click", function() {
+        $('.search-toggle').on("click", function () {
             $('html').toggleClass('is-search-toggled-on');
             $(".search-box input").trigger("focus");
         });
-        $('.menu-toggle').on("click", function() {
+        $('.menu-toggle').on("click", function () {
             $('html').toggleClass('is-menu-toggled-on');
         });
         // ------------------------------
@@ -49,25 +49,25 @@ var portfolioKeyword;
             if (classicLayout) { // CLASSIC LAYOUT
                 $('html').addClass('classic-layout');
                 setActivePage();
-                $.address.change(function() {
+                $.address.change(function () {
                     setActivePage();
                     $('html').removeClass('is-menu-toggled-on');
                 });
             } else { // MODERN LAYOUT
                 $('html').addClass('modern-layout');
-                $.address.change(function() {
+                $.address.change(function () {
                     setActivePage();
                     $('html').removeClass('is-menu-toggled-on');
                 });
             }
             // don't change hash tag if isAnimating
-            $('.nav-menu a').on("click", function() {
+            $('.nav-menu a').on("click", function () {
                 if (window.isAnimating) {
                     return false;
                 }
             });
             // FULL BROWSER BACK BUTTON SUPPORT 
-            $.address.change(function() {
+            $.address.change(function () {
                 var detailUrl = giveDetailUrl();
                 if (detailUrl != -1) {
                     showProjectDetails(detailUrl);
@@ -86,7 +86,7 @@ var portfolioKeyword;
         // ------------------------------
         // PORTFOLIO DETAILS
         // Show details
-        $(".one-page-layout a.ajax").live('click', function() {
+        $(".one-page-layout a.ajax").live('click', function () {
             var url = $(this).attr('href');
             var baseUrl = $.address.baseURL();
             if (url.indexOf(baseUrl) !== -1) { // full url
@@ -104,7 +104,7 @@ var portfolioKeyword;
         // FORM VALIDATION
         // comment form validation fix
         $('#commentform').addClass('validate-form');
-        $('#commentform').find('input,textarea').each(function(index, element) {
+        $('#commentform').find('input,textarea').each(function (index, element) {
             if ($(this).attr('aria-required') === "true") {
                 $(this).addClass('required');
             }
@@ -114,7 +114,7 @@ var portfolioKeyword;
         });
         // validate form
         if ($('.validate-form').length) {
-            $('.validate-form').each(function() {
+            $('.validate-form').each(function () {
                 $(this).validate();
             });
         }
@@ -132,150 +132,152 @@ var portfolioKeyword;
         */
         // When the window has finished loading create our google map below
         var mapCanvas = $('#map-canvas');
-        if (mapCanvas.length) {
-            google.maps.event.addDomListener(window, 'load', initializeMap);
 
-            function initializeMap() {
-                var latitude = mapCanvas.data("latitude");
-                var longitude = mapCanvas.data("longitude");
-                var zoom = mapCanvas.data("zoom");
-                // var marker_image = mapCanvas.data("marker-image");
-                // Basic options for a simple Google Map
-                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-                var mapOptions = {
-                    // How zoomed in you want the map to start at (always required)
-                    zoom: zoom, // disable zoom controls
-                    disableDefaultUI: true, // The latitude and longitude to center the map (always required)
-                    center: new google.maps.LatLng(latitude, longitude), // How you would like to style the map. 
-                    // This is where you would paste any style found on Snazzy Maps.
-                    styles: [{
-                        "featureType": "administrative.locality",
-                        "elementType": "all",
-                        "stylers": [{
-                            "hue": "#2c2e33"
+
+        function initializeMap() {
+            var latitude = mapCanvas.data("latitude");
+            var longitude = mapCanvas.data("longitude");
+            var zoom = mapCanvas.data("zoom");
+            // var marker_image = mapCanvas.data("marker-image");
+            // Basic options for a simple Google Map
+            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            var mapOptions = {
+                // How zoomed in you want the map to start at (always required)
+                zoom: zoom, // disable zoom controls
+                disableDefaultUI: true, // The latitude and longitude to center the map (always required)
+                center: new google.maps.LatLng(latitude, longitude), // How you would like to style the map. 
+                // This is where you would paste any style found on Snazzy Maps.
+                styles: [{
+                    "featureType": "administrative.locality",
+                    "elementType": "all",
+                    "stylers": [{
+                        "hue": "#2c2e33"
                         }, {
-                            "saturation": 7
+                        "saturation": 7
                         }, {
-                            "lightness": 19
+                        "lightness": 19
                         }, {
-                            "visibility": "on"
+                        "visibility": "on"
                         }]
                     }, {
-                        "featureType": "landscape",
-                        "elementType": "all",
-                        "stylers": [{
-                            "hue": "#ffffff"
+                    "featureType": "landscape",
+                    "elementType": "all",
+                    "stylers": [{
+                        "hue": "#ffffff"
                         }, {
-                            "saturation": -100
+                        "saturation": -100
                         }, {
-                            "lightness": 100
+                        "lightness": 100
                         }, {
-                            "visibility": "simplified"
+                        "visibility": "simplified"
                         }]
                     }, {
-                        "featureType": "poi",
-                        "elementType": "all",
-                        "stylers": [{
-                            "hue": "#ffffff"
+                    "featureType": "poi",
+                    "elementType": "all",
+                    "stylers": [{
+                        "hue": "#ffffff"
                         }, {
-                            "saturation": -100
+                        "saturation": -100
                         }, {
-                            "lightness": 100
+                        "lightness": 100
                         }, {
-                            "visibility": "off"
+                        "visibility": "off"
                         }]
                     }, {
-                        "featureType": "road",
-                        "elementType": "geometry",
-                        "stylers": [{
-                            "hue": "#bbc0c4"
+                    "featureType": "road",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "hue": "#bbc0c4"
                         }, {
-                            "saturation": -93
+                        "saturation": -93
                         }, {
-                            "lightness": 31
+                        "lightness": 31
                         }, {
-                            "visibility": "simplified"
+                        "visibility": "simplified"
                         }]
                     }, {
-                        "featureType": "road",
-                        "elementType": "labels",
-                        "stylers": [{
-                            "hue": "#bbc0c4"
+                    "featureType": "road",
+                    "elementType": "labels",
+                    "stylers": [{
+                        "hue": "#bbc0c4"
                         }, {
-                            "saturation": -93
+                        "saturation": -93
                         }, {
-                            "lightness": 31
+                        "lightness": 31
                         }, {
-                            "visibility": "on"
+                        "visibility": "on"
                         }]
                     }, {
-                        "featureType": "road.arterial",
-                        "elementType": "labels",
-                        "stylers": [{
-                            "hue": "#bbc0c4"
+                    "featureType": "road.arterial",
+                    "elementType": "labels",
+                    "stylers": [{
+                        "hue": "#bbc0c4"
                         }, {
-                            "saturation": -93
+                        "saturation": -93
                         }, {
-                            "lightness": -2
+                        "lightness": -2
                         }, {
-                            "visibility": "simplified"
+                        "visibility": "simplified"
                         }]
                     }, {
-                        "featureType": "road.local",
-                        "elementType": "geometry",
-                        "stylers": [{
-                            "hue": "#e9ebed"
+                    "featureType": "road.local",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "hue": "#e9ebed"
                         }, {
-                            "saturation": -90
+                        "saturation": -90
                         }, {
-                            "lightness": -8
+                        "lightness": -8
                         }, {
-                            "visibility": "simplified"
+                        "visibility": "simplified"
                         }]
                     }, {
-                        "featureType": "transit",
-                        "elementType": "all",
-                        "stylers": [{
-                            "hue": "#e9ebed"
+                    "featureType": "transit",
+                    "elementType": "all",
+                    "stylers": [{
+                        "hue": "#e9ebed"
                         }, {
-                            "saturation": 10
+                        "saturation": 10
                         }, {
-                            "lightness": 69
+                        "lightness": 69
                         }, {
-                            "visibility": "on"
+                        "visibility": "on"
                         }]
                     }, {
-                        "featureType": "water",
-                        "elementType": "all",
-                        "stylers": [{
-                            "hue": "#e9ebed"
+                    "featureType": "water",
+                    "elementType": "all",
+                    "stylers": [{
+                        "hue": "#e9ebed"
                         }, {
-                            "saturation": -78
+                        "saturation": -78
                         }, {
-                            "lightness": 67
+                        "lightness": 67
                         }, {
-                            "visibility": "simplified"
+                        "visibility": "simplified"
                         }]
                     }]
-                };
-                // Get the HTML DOM element that will contain your map 
-                // We are using a div with id="map" seen below in the <body>
-                var mapElement = document.getElementById('map-canvas');
-                //var mapElement = $('#map-canvas');
-                //var myLatlng = new google.maps.LatLng(mapElement.data("latitude"),mapElement.data("longitude"));
-                // Create the Google Map using our element and options defined above
-                var map = new google.maps.Map(mapElement, mapOptions);
-                //CREATE A CUSTOM PIN ICON
-                // var marker_image = marker_image;
-                // var pinIcon = new google.maps.MarkerImage(null, null, null, null, new google.maps.Size(120, 90));
-                var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(latitude, longitude),
-                    map: map
-                        //, icon: pinIcon
-
+            };
+            // Get the HTML DOM element that will contain your map 
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('map-canvas');
+            //var mapElement = $('#map-canvas');
+            //var myLatlng = new google.maps.LatLng(mapElement.data("latitude"),mapElement.data("longitude"));
+            // Create the Google Map using our element and options defined above
+            var map = new google.maps.Map(mapElement, mapOptions);
+            //CREATE A CUSTOM PIN ICON
+            // var marker_image = marker_image;
+            // var pinIcon = new google.maps.MarkerImage(null, null, null, null, new google.maps.Size(120, 90));
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(latitude, longitude),
+                map: map
+                    //, icon: pinIcon
                     ,
-                    title: 'Hey, I am here'
-                });
+                title: 'Hey, I am here'
+            });
+
+
+            if (mapCanvas.length) {
+                google.maps.event.addDomListener(window, 'load', initializeMap);
             }
         }
         // ------------------------------
@@ -284,7 +286,7 @@ var portfolioKeyword;
         var contactForm = $('#contact-form');
         var $alert = $('.site-alert');
         var $submit = contactForm.find('.submit');
-        contactForm.submit(function(event) {
+        contactForm.submit(function (event) {
             event.preventDefault();
             sendEmail(contactForm);
         });
@@ -300,26 +302,26 @@ var portfolioKeyword;
                     crossDomain: true,
                     contentType: 'application/json; charset=utf-8',
                     data: JSON.stringify(contactForm.serializeObject()),
-                    success: function(data) {
+                    success: function (data) {
                         contactForm.clearForm()
                     },
-                    error: function(textStatus, errorThrown) {
+                    error: function (textStatus, errorThrown) {
                         $alert.addClass('error')
                     },
-                    complete: function() {
+                    complete: function () {
                         NProgress.done();
                         $alert.show();
-                        setTimeout(function() {
+                        setTimeout(function () {
                             $alert.hide();
                         }, 6000)
                     }
                 });
             };
         };
-        $.fn.serializeObject = function() {
+        $.fn.serializeObject = function () {
             var o = {};
             var a = this.serializeArray();
-            $.each(a, function() {
+            $.each(a, function () {
                 if (o[this.name] !== undefined) {
                     if (!o[this.name].push) {
                         o[this.name] = [o[this.name]];
@@ -331,8 +333,8 @@ var portfolioKeyword;
             });
             return o;
         };
-        $.fn.clearForm = function() { 
-            return this.each(function() {  
+        $.fn.clearForm = function () { 
+            return this.each(function () {  
                 var type = this.type,
                     tag = this.tagName.toLowerCase();  
                 if (tag == 'form')    return $(':input', this).clearForm();  
@@ -346,7 +348,7 @@ var portfolioKeyword;
         /* SOCIAL FEED WIDGET */
         var socialFeed = $('.social-feed');
         if (socialFeed.length) {
-            socialFeed.each(function() {
+            socialFeed.each(function () {
                 $(this).socialstream({
                     socialnetwork: $(this).data("social-network"),
                     limit: $(this).data("limit"),
@@ -358,7 +360,7 @@ var portfolioKeyword;
         // ------------------------------
         // PARALLAX BG VIDEO
         var video_parallax = $(".home-section");
-        video_parallax.each(function(index, element) {
+        video_parallax.each(function (index, element) {
             if ($(this).data('parallax-video')) {
                 $(this).jarallax({
                     speed: 0,
@@ -371,7 +373,7 @@ var portfolioKeyword;
     });
     // DOCUMENT READY
     // WINDOW ONLOAD
-    window.onload = function() {
+    window.onload = function () {
         hideLoader();
     };
     // WINDOW ONLOAD	
@@ -391,7 +393,7 @@ var portfolioKeyword;
         // ------------------------------
         // ------------------------------
         // TABS
-        $('.tabs').each(function() {
+        $('.tabs').each(function () {
             if (!$(this).find('.tab-titles li a.active').length) {
                 $(this).find('.tab-titles li:first-child a').addClass('active');
                 $(this).find('.tab-content > div:first-child').show();
@@ -399,7 +401,7 @@ var portfolioKeyword;
                 $(this).find('.tab-content > div').eq($(this).find('.tab-titles li a.active').parent().index()).show();
             }
         });
-        $('.tabs .tab-titles li a').on("click", function() {
+        $('.tabs .tab-titles li a').on("click", function () {
             if ($(this).hasClass('active')) {
                 return;
             }
@@ -413,7 +415,7 @@ var portfolioKeyword;
         // TOGGLES
         var toggleSpeed = 300;
         $('.toggle h4.active + .toggle-content').show();
-        $('.toggle h4').on("click", function() {
+        $('.toggle h4').on("click", function () {
             if ($(this).hasClass('active')) {
                 $(this).removeClass('active');
                 $(this).next('.toggle-content').stop(true, true).slideUp(toggleSpeed);
@@ -452,10 +454,10 @@ var portfolioKeyword;
     function setupMasonry() {
         var masonry = $('.masonry, .gallery');
         if (masonry.length) {
-            masonry.each(function(index, el) {
+            masonry.each(function (index, el) {
                 // call isotope
                 refreshMasonry();
-                $(el).imagesLoaded(function() {
+                $(el).imagesLoaded(function () {
                     $(el).isotope({
                         layoutMode: $(el).data('layout') ? $(el).data('layout') : 'masonry'
                     });
@@ -466,7 +468,7 @@ var portfolioKeyword;
                     // filters
                     var filters = $(el).siblings('.filters');
                     if (filters.length) {
-                        filters.find('a').on("click", function() {
+                        filters.find('a').on("click", function () {
                             var selector = $(this).attr('data-filter');
                             $(el).isotope({
                                 filter: selector
@@ -479,7 +481,7 @@ var portfolioKeyword;
             }); //each
         }
     }
-    $(window).on('resize debouncedresize', function() {
+    $(window).on('resize debouncedresize', function () {
         refreshMasonry();
     });
     // ------------------------------
@@ -488,7 +490,7 @@ var portfolioKeyword;
     function refreshMasonry() {
         var masonry = $('.masonry');
         if (masonry.length) {
-            masonry.each(function(index, el) {
+            masonry.each(function (index, el) {
                 // check if isotope initialized
                 if ($(el).data('isotope')) {
                     var itemW = $(el).data('item-width');
@@ -496,7 +498,7 @@ var portfolioKeyword;
                     var items = $(el).children('.hentry');
                     var columns = Math.round(containerW / itemW);
                     // set the widths (%) for each of item
-                    items.each(function(index, element) {
+                    items.each(function (index, element) {
                         var multiplier = $(this).hasClass('x2') && columns > 1 ? 2 : 1;
                         var itemRealWidth = (Math.floor(containerW / columns) * 100 / containerW) * multiplier;
                         $(this).css('width', itemRealWidth + '%');
@@ -517,7 +519,7 @@ var portfolioKeyword;
     // LIGHTBOX - applied to porfolio and gallery post format
     function setupLightbox() {
         if ($(".lightbox, .gallery").length) {
-            $('.media-box, .gallery').each(function(index, element) {
+            $('.media-box, .gallery').each(function (index, element) {
                 var $media_box = $(this);
                 $media_box.magnificPopup({
                     delegate: '.lightbox, .gallery-item a',
@@ -539,7 +541,7 @@ var portfolioKeyword;
                     tLoading: '',
                     removalDelay: 300, //delay removal by X to allow out-animation
                     callbacks: {
-                        markupParse: function(template, values, item) {
+                        markupParse: function (template, values, item) {
                             var title = "";
                             if (item.el.parents('.gallery-item').length) {
                                 title = item.el.parents('.gallery-item').find('.gallery-caption').text();
@@ -549,19 +551,19 @@ var portfolioKeyword;
                             //return title;
                             values.title = title;
                         },
-                        imageLoadComplete: function() {
+                        imageLoadComplete: function () {
                             var self = this;
-                            setTimeout(function() {
+                            setTimeout(function () {
                                 self.wrap.addClass('mfp-image-loaded');
                             }, 16);
                         },
-                        close: function() {
+                        close: function () {
                             this.wrap.removeClass('mfp-image-loaded');
                         },
-                        beforeAppend: function() {
+                        beforeAppend: function () {
                             var self = this;
-                            this.content.find('iframe').on('load', function() {
-                                setTimeout(function() {
+                            this.content.find('iframe').on('load', function () {
+                                setTimeout(function () {
                                     self.wrap.addClass('mfp-image-loaded');
                                 }, 16);
                             });
@@ -578,7 +580,7 @@ var portfolioKeyword;
     // ------------------------------
     // FILL PROGRESS BARS
     function fillBars() {
-        $('.bar').each(function() {
+        $('.bar').each(function () {
             var bar = $(this);
             var percent = bar.attr('data-percent');
             bar.find('.progress').css('width', percent + '%').html('<span>' + percent + '</span>');
@@ -594,10 +596,10 @@ var portfolioKeyword;
         var p = $('.p-overlay:not(.active)').first();
         pActive = $('.p-overlay.active');
         // ajax : fill data
-        p.empty().load(url + ' .portfolio-single', function() {
+        p.empty().load(url + ' .portfolio-single', function () {
             NProgress.set(0.5);
             // wait for images to be loaded
-            p.imagesLoaded(function() {
+            p.imagesLoaded(function () {
                 // for galleries in ajax pulled content
                 setupMasonry();
                 if (pActive.length) {
@@ -634,7 +636,7 @@ var portfolioKeyword;
             pActive.hide().empty();
         } else {
             pActive.removeClass('animate-in animate-out').addClass('animate-out').show();
-            setTimeout(function() {
+            setTimeout(function () {
                 pActive.hide().removeClass('animate-out').empty();
             }, 10)
         }
@@ -701,7 +703,7 @@ var portfolioKeyword;
         } */
         // refresh masonry layouts
         refreshMasonry();
-        setTimeout(function() {
+        setTimeout(function () {
             refreshMasonry();
         }, 100);
     }
@@ -722,7 +724,7 @@ var portfolioKeyword;
     window.prevAnimation = $('html').data("prev-animation");
     window.randomize = $('html').data("random-animation");
     window.isAnimating = false;
-    var PageTransitions = (function() {
+    var PageTransitions = (function () {
         var $main = $('#main'),
             $pages = $main.children('.pt-page'),
             $menuLinks = $('.nav-menu a'),
@@ -1037,14 +1039,14 @@ var portfolioKeyword;
                     inClass = 'pt-page-rotateSlideIn';
                     break;
             }
-            $currPage.addClass(outClass).on(animEndEventName, function() {
+            $currPage.addClass(outClass).on(animEndEventName, function () {
                 $currPage.off(animEndEventName);
                 endCurrPage = true;
                 if (endNextPage) {
                     onEndAnimation($currPage, $nextPage);
                 }
             });
-            $nextPage.addClass(inClass).on(animEndEventName, function() {
+            $nextPage.addClass(inClass).on(animEndEventName, function () {
                 $nextPage.off(animEndEventName);
                 endNextPage = true;
                 if (endCurrPage) {
@@ -1079,16 +1081,19 @@ var portfolioKeyword;
         };
     })();
 
-    window.nextPage = function(index) {
+    window.nextPage = function (index) {
         return new PageTransitions.nextPage(index);
     };
 
     function snackbarLoad() {
-        var snackbar = document.getElementById("snackbar")
-        snackbar.className = "show";
-        window.setTimeout(function() {
-            snackbar.className = "hide"
-        }, 6000);
+        var snackbar = document.getElementById("snackbar");
+
+        if (snackbar) {
+            snackbar.className = "show";
+            window.setTimeout(function () {
+                snackbar.className = "hide"
+            }, 6000);
+        }
     };
 
     //SnackBar Loader
