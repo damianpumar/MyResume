@@ -133,7 +133,6 @@ var portfolioKeyword;
         // When the window has finished loading create our google map below
         var mapCanvas = $('#map-canvas');
 
-
         function initializeMap() {
             var latitude = mapCanvas.data("latitude");
             var longitude = mapCanvas.data("longitude");
