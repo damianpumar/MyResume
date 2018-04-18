@@ -133,6 +133,12 @@ var portfolioKeyword;
         // When the window has finished loading create our google map below
         var mapCanvas = $('#map-canvas');
 
+        if (mapCanvas.length) {
+            google.maps.event.addDomListener(window, 'load', initializeMap);
+
+        }
+
+
         function initializeMap() {
             var latitude = mapCanvas.data("latitude");
             var longitude = mapCanvas.data("longitude");
@@ -273,11 +279,6 @@ var portfolioKeyword;
                     ,
                 title: 'Hey, I am here'
             });
-
-
-            if (mapCanvas.length) {
-                google.maps.event.addDomListener(window, 'load', initializeMap);
-            }
         }
         // ------------------------------
         // ------------------------------
