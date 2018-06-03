@@ -20,6 +20,13 @@ var utilities = {
         $('#hoursWorked').text(hoursWorkedMask + ' Working Hours');
     },
 
+    initializeAge: function initializeAge() {
+        var birthday = new Date(1991, 11, 6, 0, 0);
+        var ageDifMs = Date.now() - birthday.getTime();
+        var ageDate = new Date(ageDifMs);
+        $('#age').text(ageDate.getFullYear() - 1970 + ' years old');
+    },
+
     // initializeLightBox: () => {
     //     if ($(".lightbox, .gallery").length) {
     //         $('.media-box, .gallery').each(function (index, element) {

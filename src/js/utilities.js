@@ -12,10 +12,10 @@ export const utilities = {
     },
 
     initializeAge: () => {
-        var birthday = new Date(1991, 11, 06);
+        var birthday = new Date(1991, 11, 6, 0, 0);
         var ageDifMs = Date.now() - birthday.getTime();
         var ageDate = new Date(ageDifMs);
-        $('#age').text(ageDate.getFullYear() - birthday.getFullYear() + ' years old');
+        $('#age').text(ageDate.getFullYear() - 1970 + ' years old');
     },
 
     // initializeLightBox: () => {
