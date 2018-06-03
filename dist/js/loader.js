@@ -1,0 +1,21 @@
+/*!
+ * FullCoders v1.18.0117.1 (https://www.fullcoders.com)
+ * Copyright 2018 FullCoders
+ * Licensed under MIT (https://gitlab.com/fullcoders/NewMyResume)
+ */
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+var loader = {
+
+    show: function show() {
+        NProgress.start();
+    },
+
+    hide: function hide() {
+        NProgress.done();
+    }
+};
+
+exports.loader = loader;
