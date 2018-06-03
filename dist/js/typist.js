@@ -3,21 +3,4 @@
  * Copyright 2018 FullCoders
  * Licensed under MIT (https://gitlab.com/fullcoders/NewMyResume)
  */
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-var typist = {
-
-    initialize: function initialize() {
-
-        var typist = document.querySelector("#typist-element");
-
-        new Typist(typist, {
-            letterInterval: 60,
-            textInterval: 3000
-        });
-    }
-};
-
-exports.typist = typist;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var typist={initialize:function(){var t=document.querySelector("#typist-element");new Typist(t,{letterInterval:60,textInterval:3e3})}};exports.typist=typist;

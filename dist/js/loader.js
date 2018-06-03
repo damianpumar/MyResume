@@ -3,19 +3,4 @@
  * Copyright 2018 FullCoders
  * Licensed under MIT (https://gitlab.com/fullcoders/NewMyResume)
  */
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-var loader = {
-
-    show: function show() {
-        NProgress.start();
-    },
-
-    hide: function hide() {
-        NProgress.done();
-    }
-};
-
-exports.loader = loader;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var loader={show:function(){NProgress.start()},hide:function(){NProgress.done()}};exports.loader=loader;
