@@ -1,3 +1,8 @@
+// The magic number: 31557600000 is 24 * 3600 * 365.25 * 1000 
+// Which is the length of a year, the length of a year is 365 days and 6 hours 
+// which is 0.25 day.
+const maginNumber = 31557600000;
+
 export const utilities = {
 
     initializeHoursWorked: () => {
@@ -12,10 +17,10 @@ export const utilities = {
     },
 
     initializeAge: () => {
-        var birthday = new Date(1991, 11, 6, 0, 0);
-        var ageDifMs = Date.now() - birthday.getTime();
-        var ageDate = new Date(ageDifMs);
-        $('#age').text(ageDate.getFullYear() - 1970 + ' years old');
+        var birthday = Date.parse('1991/11/06');
+        var age = ~~((Date.now() - birthday) / (maginNumber));
+
+        $('#age').text(age + ' years old');
     },
 
     // initializeLightBox: () => {
