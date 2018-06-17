@@ -12,6 +12,7 @@ export const maps = {
             var longitude = mapCanvas.data("longitude");
             var zoom = mapCanvas.data("zoom");
             var mapOptions = {
+                zoom: zoom,
                 disableDefaultUI: true,
                 center: new google.maps.LatLng(latitude, longitude),
                 styles: [{
