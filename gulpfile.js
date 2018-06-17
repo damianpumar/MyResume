@@ -45,7 +45,7 @@ let tasks = {
         min: () => cssClean({ compatibility: 'ie8' }),
     },
     javascript: {
-        src: 'src/js/*.js',
+        src: 'src/js/main.js',
         dest: 'dist/js',
         banner: true,
         fun: () => rollup({ plugins: [babel()] }, 'cjs').on('error', e => console.log(e.message)),

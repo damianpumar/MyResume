@@ -7,10 +7,12 @@ import { header } from './header'
 import { responsive } from './responsive'
 import { form } from './form';
 import { email } from './email';
+import { maps } from './maps'
 
 export const initializer = {
     initialize: () => {
         loader.show();
+        maps.intialize();
         utilities.initializeFillBars();
         header.initialize();
         responsive.initialize();
