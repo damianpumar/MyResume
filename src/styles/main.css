@@ -2908,10 +2908,8 @@
  
  .contact-form,
  .nf-form-cont {
-     position: relative;
      margin: 1.6em auto 3em auto;
-     max-width: 600px;
-     overflow: auto;
+     height: 30em;
  }
  
  .contact-form p {

@@ -1,7 +1,7 @@
 export const form = {
     applyValidators: () => {
-        $('#commentform').addClass('validate-form');
-        $('#commentform').find('input,textarea').each(function (index, element) {
+        $('#contact-form').addClass('validate-form');
+        $('#contact-form').find('input,textarea').each(function (index, element) {
             if ($(this).attr('aria-required') === "true") {
                 $(this).addClass('required');
             }
@@ -12,7 +12,20 @@ export const form = {
 
         if ($('.validate-form').length) {
             $('.validate-form').each(function () {
-                $(this).validate();
+                    $(this).validate({
+                    ignore: ".ignore",
+                    rules: {
+                        "hiddenRecaptcha": {
+                            required: function () {
+                                if (grecaptcha.getResponse() == '') {
+                                    return true;
+                                } else {
+                                    return false;
+                                }
+                            }
+                        }
+                    }
+                });
             });
         }
     }
