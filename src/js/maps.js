@@ -128,6 +128,7 @@ export const maps = {
 
             var mapElement = document.getElementById('map-canvas');
             var map = new google.maps.Map(mapElement, mapOptions);
+            map.panBy(0, 50);
             var marker = new google.maps.Marker({
                 position: new google.maps.LatLng(latitude, longitude),
                 map: map,
