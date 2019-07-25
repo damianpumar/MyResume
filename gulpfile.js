@@ -128,6 +128,7 @@ gulp.task("release", ["clean"], function() {
 
 gulp.task("dev", ["build"], function() {
   gulp.watch("src/styles/main.css", ["styles"]);
+  gulp.watch("src/styles/768.css", ["styles"]);
   gulp.watch("src/js/*.js", ["javascript"]);
   gulp.watch("src/**/*.html", ["html"]);
   gulp.watch("src/images/**/*", ["images"]);

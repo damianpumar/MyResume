@@ -448,7 +448,7 @@
     }
     /* SECTION TITLE */
     .section-title {
-        margin: 4.4em 0 2.4em;
+        margin: 3em 0 2em;
     }
     /* HOME */
     .home-section .content > div {
@@ -473,7 +473,7 @@
 @media screen and (min-width: 1660px) {
     /* SECTION TITLE */
     .section-title {
-        margin: 6em 0 3em;
+        margin: 3em 0 2em;
     }
     /* FILTERS */
     .filters {
