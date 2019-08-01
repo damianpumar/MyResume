@@ -65,6 +65,10 @@ let tasks = {
   vendorCSS: {
     src: "src/styles/**/*",
     dest: "dist/css"
+  },
+  appCache: {
+    src: "src/manifest.appcache",
+    dest: "dist"
   }
 };
 
@@ -112,13 +116,17 @@ gulp.task("vendorCSS", function() {
   return createTask("vendorCSS");
 });
 
+gulp.task("appCache", function() {
+  return createTask("appCache");
+});
+
 gulp.task("clean", function() {
   return del("dist/**/*");
 });
 
 gulp.task("css", gulpSequence("vendorCSS", "styles"));
 
-gulp.task("build", ["html", "css", "vendorJS", "javascript", "images"]);
+gulp.task("build", ["html", "css", "vendorJS", "javascript", "images", "appCache"]);
 
 gulp.task("release", ["clean"], function() {
   isRelease = true;
@@ -132,6 +140,7 @@ gulp.task("dev", ["build"], function() {
   gulp.watch("src/js/*.js", ["javascript"]);
   gulp.watch("src/**/*.html", ["html"]);
   gulp.watch("src/images/**/*", ["images"]);
+  gulp.watch("src/manifest.appcache", ["appCache"]);
 
   startServer();
 });
