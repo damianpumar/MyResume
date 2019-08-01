@@ -16,7 +16,7 @@ jobs:
       - run:
           name: Clean old files
           command: |
-            rm -rf .
+            rm -rf *
       - run:
           name: Pase dist into workdir
           command: |
