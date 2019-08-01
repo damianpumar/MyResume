@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Instal node packages
+          name: Install node packages
           command: |
              npm install
              npm run build
@@ -20,12 +20,14 @@ jobs:
             git clone --depth 1 https://${GITHUB_TOKEN}@github.com/damianpumar/damianpumar.github.io.git
       - run:
           name: Clean old files
+          working_directory: ~/workdir
           command: |
             rm -rf *
       - run:
           name: Pase dist into workdir
+          working_directory: ~/repo
           command: |
-            cp -a ~/repo/dist/. ~/workdir
+            cp -a dist/. ~/workdir
       - deploy:
           name: Trigger docs deployment
           working_directory: ~/workdir
