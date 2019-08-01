@@ -22,12 +22,14 @@ jobs:
           name: Clean old files
           working_directory: ~/workdir
           command: |
-            rm -rf *
+            rm -rf * !(.git)
+            ls
       - run:
-          name: Pase dist into workdir
+          name: Copy dist into workdir
           working_directory: ~/repo
           command: |
             cp -a dist/. ~/workdir
+            ls ~/workdir
       - deploy:
           name: Trigger docs deployment
           working_directory: ~/workdir
