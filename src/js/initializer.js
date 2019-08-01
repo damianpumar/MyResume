@@ -11,6 +11,7 @@ import { maps } from './maps'
 
 export const initializer = {
     initialize: () => {
+        utilities.loadImagesAsync();
         loader.show();
         maps.intialize();
         utilities.initializeFillBars();
