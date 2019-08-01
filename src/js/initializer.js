@@ -8,6 +8,7 @@ import { responsive } from './responsive'
 import { form } from './form';
 import { email } from './email';
 import { maps } from './maps'
+import { snackBar } from './snackBar'
 
 export const initializer = {
     initialize: () => {
@@ -20,5 +21,6 @@ export const initializer = {
         form.applyValidators();
         email.initialize();
         page.initialize();
+        snackBar.initialize();
     }
 }
