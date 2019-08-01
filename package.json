@@ -6,11 +6,11 @@
   "author": "FullCoders",
   "license": {
     "type": "MIT",
-    "url": "https://gitlab.com/fullcoders/NewMyResume"
+    "url": "https://github.com/damianpumar/MyResume"
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/fullcoders/NewMyResume.git"
+    "url": "https://github.com/damianpumar/MyResume.git"
   },
   "scripts": {
     "build": "gulp build",
