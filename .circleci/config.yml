@@ -22,7 +22,12 @@ jobs:
           name: Clean old files
           working_directory: ~/workdir
           command: |
-            rm -rf * !(.git)
+            ls 
+            rm -rf *.html
+            rm -rf css
+            rm -rf images
+            rm -rf js
+            rm -rf *.appcache
             ls
       - run:
           name: Copy dist into workdir
