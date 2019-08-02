@@ -1,25 +1,22 @@
 export const snackBar = {
+  initialize: () => {
+    var snackBarWasShown = $.cookie("_sbSW");
 
-    initialize: () => {
+    if (!snackBarWasShown) {
+      var snackbar = document.getElementById("snackbar");
 
-    	var snackBarWasShown = $.cookie("_sbSW") 
+      if (snackbar) {
+        snackbar.className = "show";
+        window.setTimeout(function() {
+          snackbar.className = "hide";
+        }, 6000);
 
-		if(!snackBarWasShown) {
-	        var snackbar = document.getElementById("snackbar");
+        var expireDate = new Date();
 
-	        if (snackbar) {
-	            snackbar.className = "show";
-	            window.setTimeout(function () {
-	                snackbar.className = "hide"
-	            }, 6000);
+        expireDate.setDate(expireDate.getDate() + 2);
 
-				var expireDate = new Date;
-
-      			expireDate.setDate(expireDate.getDate() + 2);
-
-	            $.cookie("_sbSW", "true", { path: '/', expires: expireDate });
-	        }
-    	}
+        $.cookie("_sbSW", "true", { path: "/", expires: expireDate });
+      }
     }
-
-}
+  }
+};

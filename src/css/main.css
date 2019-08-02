@@ -109,7 +109,7 @@
      font-family: "Montserrat", serif;
  }
  /* FONTELLO ICONS */
- 
+
  .social li a,
  .toggle h4:before,
  .selector:before,
@@ -120,7 +120,6 @@
      font-family: fontello;
      font-style: normal;
      font-weight: 400;
-     speak: none;
      display: inline-block;
      text-decoration: inherit;
      text-align: center;
@@ -1670,8 +1669,13 @@
      font-size: 14px;
  }
  /* SOCIAL */
- 
- .social {
+
+ .social-menu ul li {
+     width:25%;
+     padding-left: 0.4em; 
+}
+
+.social {
      padding: 0;
      margin: 2em 0 4em 0;
      list-style: none;
@@ -1937,7 +1941,7 @@
  }
  
  .social li a.instagram:hover {
-     background-color: #3f729b;
+     background-color: #e4405f;
  }
  
  .social li a.stack-overflow:hover {

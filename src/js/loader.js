@@ -1,10 +1,9 @@
 export const loader = {
+  show: () => {
+    NProgress.start();
+  },
 
-    show: () => {
-        NProgress.start();
-    },
-
-    hide: () => {
-        NProgress.done();
-    }
-}
+  hide: () => {
+    NProgress.done();
+  }
+};
