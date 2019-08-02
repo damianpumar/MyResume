@@ -10,7 +10,7 @@ const gulp = require("gulp"),
   size = require("gulp-size"),
   nunjucksRender = require("gulp-nunjucks-render"),
   header = require("gulp-header"),
-  manifest = require("gulp-manifest"),
+  manifest = require("gulp-manifest")
   pkg = require("./package.json");
 
 let isRelease = false;
@@ -131,7 +131,7 @@ gulp.task("clean", function() {
 
 gulp.task("css", gulpSequence("vendorCSS", "styles"));
 
-gulp.task("build", ["html", "css", "vendorJS", "javascript", "images", "appCache"]);
+gulp.task("build", gulpSequence("html", "css", "vendorJS", "javascript", "images", "appCache"));
 
 gulp.task("release", ["clean"], function() {
   isRelease = true;
