@@ -10,6 +10,7 @@ const gulp = require("gulp"),
   size = require("gulp-size"),
   nunjucksRender = require("gulp-nunjucks-render"),
   header = require("gulp-header"),
+  manifest = require("gulp-manifest"),
   pkg = require("./package.json");
 
 let isRelease = false;
@@ -39,10 +40,10 @@ let tasks = {
   },
   styles: {
     src: [
-      "src/styles/main.css",
-      "src/styles/animations.css",
-      "src/styles/align.css",
-      "src/styles/768.css"
+      "src/css/main.css",
+      "src/css/animations.css",
+      "src/css/align.css",
+      "src/css/768.css"
     ],
     dest: "dist/css",
     banner: true,
@@ -63,12 +64,8 @@ let tasks = {
     dest: "dist/js/vendor"
   },
   vendorCSS: {
-    src: "src/styles/**/*",
+    src: "src/css/**/*",
     dest: "dist/css"
-  },
-  appCache: {
-    src: "src/manifest.appcache",
-    dest: "dist"
   }
 };
 
@@ -116,8 +113,16 @@ gulp.task("vendorCSS", function() {
   return createTask("vendorCSS");
 });
 
-gulp.task("appCache", function() {
-  return createTask("appCache");
+gulp.task('appCache', function(){
+  gulp.src(['dist/**/*'])
+    .pipe(manifest({
+      hash: true,
+      preferOnline: true,
+      network: ['http://*', 'https://*', '*'],
+      filename: "manifest.appcache",
+      exclude: "manifest.appcache"
+     }))
+    .pipe(gulp.dest("dist"));
 });
 
 gulp.task("clean", function() {
@@ -134,13 +139,18 @@ gulp.task("release", ["clean"], function() {
   return gulp.start(["build"]);
 });
 
+gulp.task("release-preview", ["clean"], function() {
+  isRelease = true;
+
+  return gulp.start("dev");
+});
+
 gulp.task("dev", ["build"], function() {
-  gulp.watch("src/styles/main.css", ["styles"]);
-  gulp.watch("src/styles/768.css", ["styles"]);
+  gulp.watch("src/css/main.css", ["styles"]);
+  gulp.watch("src/css/768.css", ["styles"]);
   gulp.watch("src/js/*.js", ["javascript"]);
   gulp.watch("src/**/*.html", ["html"]);
   gulp.watch("src/images/**/*", ["images"]);
-  gulp.watch("src/manifest.appcache", ["appCache"]);
 
   startServer();
 });

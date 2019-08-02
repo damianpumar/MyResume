@@ -16,6 +16,7 @@
     "build": "gulp build",
     "clean": "gulp clean",
     "release": "gulp release",
+    "release-preview": "gulp release-preview",
     "dev": "gulp dev"
   },
   "devDependencies": {
@@ -31,6 +32,7 @@
     "gulp-htmlmin": "4.0.0",
     "gulp-imagemin": "4.1.0",
     "gulp-less": "3.*",
+    "gulp-manifest": "^0.1.1",
     "gulp-nunjucks-render": "2.2.2",
     "gulp-rename": "1.2.2",
     "gulp-sequence": "1.0.0",
