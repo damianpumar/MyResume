@@ -1,5 +1,4 @@
 /* TABLETS */
-
 @media screen and (min-width: 768px) {
     /* TYPOGRAPHY */
     h1 {
@@ -281,6 +280,9 @@
         max-width: 100%;
         width: 100%;
     }
+    .g-recaptcha {
+        transform: scale(1.2);
+    }
 }
 
 
@@ -334,6 +336,22 @@
     }
 }
 
+@media (max-width: 1024px){
+ .content {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px){
+ .content {
+     position: relative;
+     text-align: left;
+   }
+}
 
 /* DESKTOPS MEDIUM */
 
@@ -436,6 +454,9 @@
     .client img {
         max-height: 66px;
     }
+    .g-recaptcha {
+        transform: scale(1);
+    }
 }
 
 
@@ -478,5 +499,8 @@
     /* FILTERS */
     .filters {
         margin: 2em 0;
+    }
+    .content {
+        height: 100%;
     }
 }
