@@ -10,7 +10,7 @@ jobs:
           name: Install node packages
           command: |
              npm install
-             npm run build
+             npm run release
              ls
       - run:
           name: Clone Public domain
