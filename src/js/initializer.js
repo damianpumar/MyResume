@@ -1,4 +1,3 @@
-import { mansonry } from "./masonry";
 import { loader } from "./loader";
 import { utilities } from "./utilities";
 import { page } from "./pageTransition";
@@ -22,5 +21,8 @@ export const initializer = {
     email.initialize();
     page.initialize();
     snackBar.initialize();
+    typist.initialize();
+    utilities.initializeHoursWorked();
+    utilities.initializeAge();
   }
 };

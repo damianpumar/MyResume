@@ -1,22 +1,31 @@
 export const snackBar = {
   initialize: () => {
-    var snackBarWasShown = $.cookie("_sbSW");
+    $(window).load(function() {
+      window.setTimeout(show, 2000);
+    });
 
-    if (!snackBarWasShown) {
-      var snackbar = document.getElementById("snackbar");
+    function show() {
+      // var snackBarWasShown = $.cookie("_sbSW");
 
-      if (snackbar) {
-        snackbar.className = "show";
-        window.setTimeout(function() {
-          snackbar.className = "hide";
-        }, 6000);
+      // if (!snackBarWasShown) {
+      var snackbar = $("#snackbar");
 
-        var expireDate = new Date();
+      // if (snackbar) {
+      snackbar.fadeIn("slow");
 
-        expireDate.setDate(expireDate.getDate() + 2);
+      window.setTimeout(function() {
+        snackbar.fadeOut();
+      }, 6000);
 
-        $.cookie("_sbSW", "true", { path: "/", expires: expireDate });
-      }
+      $("#snackbar a").click(function() {
+        snackbar.fadeOut();
+      });
+
+      var expireDate = new Date();
+
+      expireDate.setDate(expireDate.getDate() + 2);
+
+      // $.cookie("_sbSW", "true", { path: "/", expires: expireDate });
     }
   }
 };

@@ -5,6 +5,7 @@
     transform-origin: 0 0;
   }
 }
+
 @media screen and (min-width: 768px) {
   /* TYPOGRAPHY */
   h1 {
@@ -288,7 +289,6 @@
 }
 
 /* DESKTOPS OLD */
-
 @media screen and (min-width: 992px) {
   /* SECTION TITLE */
   .section-title {
@@ -337,6 +337,7 @@
   }
 }
 
+/* IPAD PRO */
 @media (max-width: 1024px) {
   .content {
     position: absolute;
@@ -345,17 +346,39 @@
     right: 0;
     width: 100%;
   }
+  #snackbar {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 20px;
+  }
 }
 
+/* IPAD */
 @media (max-width: 768px) {
   .content {
     position: relative;
     text-align: left;
   }
+  #snackbar {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+  }
+}
+
+/* PHONES */
+@media (max-width: 768px) {
+  #snackbar {
+    position: absolute;
+    padding: 5px;
+    right: 5px;
+    bottom: 5px;
+    font-size: 15px;
+  }
 }
 
 /* DESKTOPS MEDIUM */
-
 @media screen and (min-width: 1200px) {
   /* TYPOGRAPHY */
   h1 {
