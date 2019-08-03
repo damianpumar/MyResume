@@ -1,3 +1,5 @@
+import { page } from "./pageTransition";
+
 export const snackBar = {
   initialize: () => {
     $(window).load(function() {
@@ -17,8 +19,8 @@ export const snackBar = {
         snackbar.fadeOut();
       }, 6000);
 
-      $("#snackbar a").click(function() {
-        snackbar.fadeOut();
+      $("#snackbar a").click(function(e) {
+        snackbar.hide();
       });
 
       var expireDate = new Date();
