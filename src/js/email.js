@@ -52,6 +52,7 @@ export const email = {
     };
     $.fn.clearForm = function() {
       grecaptcha.reset();
+      $(".contact-form #name").focus();
 
       return this.each(function() {
         var type = this.type,
