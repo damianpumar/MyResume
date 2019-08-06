@@ -51,6 +51,8 @@ export const email = {
       return o;
     };
     $.fn.clearForm = function() {
+      grecaptcha.reset();
+
       return this.each(function() {
         var type = this.type,
           tag = this.tagName.toLowerCase();
