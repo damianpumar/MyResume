@@ -1,25 +1,38 @@
+import { page } from "./pageTransition";
+
 export const snackBar = {
+  initialize: () => {
+    $(window).load(function() {
+      window.setTimeout(show, 2000);
+    });
+  }
+};
+function show() {
+  var snackBarWasShown = $.cookie("_sbSW");
 
-    initialize: () => {
+  if (snackBarWasShown) return;
 
-    	var snackBarWasShown = $.cookie("_sbSW") 
+  var snackbar = $("#snackbar");
 
-		if(!snackBarWasShown) {
-	        var snackbar = document.getElementById("snackbar");
+  if (!snackbar) return;
 
-	        if (snackbar) {
-	            snackbar.className = "show";
-	            window.setTimeout(function () {
-	                snackbar.className = "hide"
-	            }, 6000);
+  snackbar.fadeIn("slow");
 
-				var expireDate = new Date;
+  window.setTimeout(function() {
+    snackbar.fadeOut();
+  }, 6000);
 
-      			expireDate.setDate(expireDate.getDate() + 2);
+  hideWhenClicked(snackbar);
+}
+function hideWhenClicked(snackbar) {
+  $("#snackbar a").click(function(e) {
+    snackbar.hide();
 
-	            $.cookie("_sbSW", "true", { path: '/', expires: expireDate });
-	        }
-    	}
-    }
-
+    saveCookies();
+  });
+}
+function saveCookies() {
+  var expireDate = new Date();
+  expireDate.setDate(expireDate.getDate() + 2);
+  $.cookie("_sbSW", "true", { path: "/", expires: expireDate });
 }

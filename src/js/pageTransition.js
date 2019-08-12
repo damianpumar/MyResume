@@ -177,12 +177,6 @@ export const page = {
                 }
             }
         }
-
-        // mansonry.refresh();
-
-        // setTimeout(function () {
-        //     mansonry.refresh();
-        // }, 100);
     },
 
     nextPage: (nextPageIndex) => {
@@ -523,5 +517,8 @@ export const page = {
         var evt = new CustomEvent('pageChanged', { detail: path });
 
         window.dispatchEvent(evt);
+    },
+    changePage: path => {
+        
     }
 }

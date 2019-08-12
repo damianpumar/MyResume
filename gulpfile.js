@@ -15,11 +15,12 @@ const gulp = require("gulp"),
 
 let isRelease = false;
 
-// Set the banner content
+let date = new Date();
+
 const banner = [
   "/*!\n",
-  " * <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n",
-  " * Copyright " + new Date().getFullYear(),
+  " * <%= pkg.title %> v."+ date.getDay() +"."+date.getMonth()+"."+date.getFullYear()+"+ (<%= pkg.homepage %>)\n",
+  " * Copyright " + date.getFullYear(),
   " <%= pkg.author %>\n",
   " * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n",
   " */\n",
@@ -131,12 +132,12 @@ gulp.task("clean", function() {
 
 gulp.task("css", gulpSequence("vendorCSS", "styles"));
 
-gulp.task("build", gulpSequence("html", "css", "vendorJS", "javascript", "images", "appCache"));
+gulp.task("build", gulpSequence("clean", "html", "css", "vendorJS", "javascript", "images"));
 
 gulp.task("release", ["clean"], function() {
   isRelease = true;
 
-  return gulp.start(["build"]);
+  return gulp.start(gulpSequence("build", "appCache"));
 });
 
 gulp.task("release-preview", ["clean"], function() {

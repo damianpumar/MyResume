@@ -12,16 +12,20 @@
       <div class="nav-menu">
         <ul>
           <li>
-            <a href="#/home"> <i class="pe-7s-home"></i>Home</a>
+            <a href="#/home" tabindex="-1"> <i class="pe-7s-home"></i>Home</a>
           </li>
           <li>
-            <a href="#/about"> <i class="pe-7s-user"></i>About Me</a>
+            <a href="#/about" tabindex="-1">
+              <i class="pe-7s-user"></i>About Me</a
+            >
           </li>
           <li>
-            <a href="#/resume"> <i class="pe-7s-id"></i>Resume</a>
+            <a href="#/resume" tabindex="-1"> <i class="pe-7s-id"></i>Resume</a>
           </li>
           <li>
-            <a href="#/contact"> <i class="pe-7s-call"></i>Contact</a>
+            <a href="#/contact" tabindex="-1">
+              <i class="pe-7s-call"></i>Contact</a
+            >
           </li>
         </ul>
       </div>
@@ -39,41 +43,9 @@
       </form>
     </div>
     <div class="header-bottom">
-      <ul class="social">
-        <li>
-            <a class="facebook" href="https://www.facebook.com/damian.pumar" target="_blank"></a>
-        </li>
-        <li>
-          <a
-            class="instagram"
-            href="https://www.instagram.com/damianpumar"
-            target="_blank"
-          ></a>
-        </li>
-        <li>
-            <a class="twitter" href="https://twitter.com/damianpumar" target="_blank"></a>
-        </li>
-        <br>
-        <li>
-          <a
-            class="github"
-            href="https://github.com/damianpumar"
-            target="_blank"
-          ></a>
-        </li>
-        <li>
-          <a
-            class="linkedin"
-            href="https://www.linkedin.com/in/damianpumar"
-            target="_blank"
-          ></a>
-        </li>
-        <li>
-          <a class="skype" href="skype:damian.pumar?userinfo"></a>
-        </li>
-      </ul>
+      {% include "src/partials/social.html" %}
       <div class="copy-text">
-        <p><abbr title="v.2.8.19">&copy; 2019 DP</abbr></p>
+        <p><abbr title="v.3.8.19">&copy; 2019 DP</abbr></p>
       </div>
     </div>
   </div>

@@ -109,7 +109,7 @@
      font-family: "Montserrat", serif;
  }
  /* FONTELLO ICONS */
- 
+
  .social li a,
  .toggle h4:before,
  .selector:before,
@@ -120,7 +120,6 @@
      font-family: fontello;
      font-style: normal;
      font-weight: 400;
-     speak: none;
      display: inline-block;
      text-decoration: inherit;
      text-align: center;
@@ -766,7 +765,6 @@
  .content {
      position: relative;
      text-align: left;
-     height: 100%;
  }
  
  .content > div {
@@ -1057,11 +1055,12 @@
  }
  
  .header .social li a {
+     padding-left: 0.4em; 
      font-size: 14px;
      height: auto;
      border: 0;
      line-height: 22px;
-     width: 18px;
+     width: 30px;
      margin: 0;
      border-radius: 4px;
      float: none;
@@ -1671,8 +1670,7 @@
      font-size: 14px;
  }
  /* SOCIAL */
- 
- .social {
+.social {
      padding: 0;
      margin: 2em 0 4em 0;
      list-style: none;
@@ -1938,7 +1936,7 @@
  }
  
  .social li a.instagram:hover {
-     background-color: #3f729b;
+     background-color: #e4405f;
  }
  
  .social li a.stack-overflow:hover {
@@ -4531,21 +4529,6 @@
      visibility: visible;
  }
 
- #snackbar {
-    visibility: hidden;
-    min-width: 250px;
-    margin-left: -8em;
-    background-color: #1c262b;
-    text-align: center;
-    border-radius: 2px;
-    padding: 16px;
-    position: fixed;
-    z-index: 1;
-    left: 85%;
-    bottom: 30px;
-    font-size: 17px;
-}
-
 /*Frame responsive*/
 .myIframe {
     position: relative;
@@ -4565,6 +4548,19 @@
 }
 
 /*SnackBar*/
+#snackbar {
+    position: fixed;    
+    right:2em;
+    bottom: 2em;
+    display:none;
+    min-width: 250px;
+    background-color: #1c262b;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    z-index:999999 !important;
+    font-size: 17px;
+}
 
 #snackbar.show {
     visibility: visible;

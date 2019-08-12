@@ -1,26 +1,16 @@
-import { loader } from './loader'
-import { utilities } from './utilities'
-import { page } from './pageTransition'
-import { maps } from './maps'
-import { typist } from './typist'
-import { snackBar } from './snackBar';
-import { initializer } from './initializer';
+import { loader } from "./loader";
+import { page } from "./pageTransition";
+import { initializer } from "./initializer";
 
-(function ($) {
-    "use strict";
-    initializer.initialize();
+(function($) {
+  "use strict";
+  initializer.initialize();
 
-    window.onload = function () {
-        loader.hide();
-        utilities.initializeHoursWorked();
-        utilities.initializeAge();
-        typist.initialize();
-        maps.intialize();
-    };
+  $(window).load(function() {
+    loader.hide();
+  });
 
-    window.nextPage = function (index) {
-        return new page.nextPage(index);
-    };
-
-    window.setTimeout(snackBar.initialize, 3000);
+  window.nextPage = function(index) {
+    return new page.nextPage(index);
+  };
 })(jQuery);

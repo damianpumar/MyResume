@@ -1,97 +1,99 @@
 <section id="contact" class="pt-page page-layout light-text">
-    <div class="content">
-        <div class="layout-medium">
-            <h1 class="page-title">
-                <i class="pe-7s-call"></i>contact me
-            </h1>
-            <div class="section-title center">
-                <h2>
-                    <i>Let's Socialize</i>
-                </h2>
-            </div>
-            <ul class="social">
-                <li>
-                    <a class="facebook" href="https://www.facebook.com/damian.pumar" target="_blank"></a>
-                </li>
-                <li>
-                    <a class="instagram" href="https://www.instagram.com/damianpumar" target="_blank"></a>
-                </li>
-                <li>
-                    <a class="twitter" href="https://twitter.com/damianpumar" target="_blank"></a>
-                </li>
-                <li>
-                    <a class="github" href="https://github.com/damianpumar" target="_blank"></a>
-                </li>
-                <li>
-                    <a class="linkedin" href="https://www.linkedin.com/in/damianpumar" target="_blank"></a>
-                </li>
-                <li>
-                    <a class="skype" href="skype:damian.pumar?userinfo"></a>
-                </li>
-            </ul>
-            <div class="section-title center">
-                <h2>
-                    <i>Reach Me</i>
-                </h2>
-            </div>
-            <div class="row">
-                <div class="col-xs-6 col-sm-3">
-                    <!-- fun-fact -->
-                    <div class="fun-fact">
-                        <i class="pe-7s-map-marker"></i>
-                        <h4>Barcelona, Spain</h4>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-3">
-                    <div class="fun-fact">
-                        <i class="pe-7s-call"></i>
-                        <h4>+34 664 109 973</h4>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-3">
-                    <div class="fun-fact ">
-                        <i class="pe-7s-mail"></i>
-                        <h4>damianpumar @ gmail.com</h4>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-3">
-                    <!-- fun-fact -->
-                    <div class="fun-fact">
-                        <i class="pe-7s-check"></i>
-                        <h4>Freelance Available</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="section-title center ">
-                <h2>
-                    <i>Drop Me A Line</i>
-                </h2>
-            </div>
-            <div class="contact-form">
-                <form id="contact-form" class="validate-form" action="https://server.fullcoders.com/EmailMagic/email/send/LPGScT8HA4D7JJ0DvLC2"
-                    method="post">
-                    <p>
-                        <label for="name">NAME</label>
-                        <input type="text" name="name" id="name" class="required">
-                    </p>
-                    <p>
-                        <label for="email">EMAIL</label>
-                        <input type="text" name="email" id="email" class="required email">
-                    </p>
-                    <p>
-                        <label for="message">MESSAGE</label>
-                        <textarea name="message" id="message" class="required"></textarea>
-                    </p>
-                        <div class="g-recaptcha" data-sitekey="6Leo-nwUAAAAANpXPCGJb0v5m55-frxjzIZS9SYV"></div>
-                        <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
-                    <p>
-                    <button class="submit button" type="submit">Send</button>
-                </p>
-                </form>
-            </div>
-            <div class="map ">
-                <div data-latitude="41.3948976" data-longitude="2.0787276" data-zoom="6" id="map-canvas" class="map-canvas"></div>
-            </div>
+  <div class="content">
+    <div class="layout-medium">
+      <h1 class="page-title"><i class="pe-7s-call"></i>contact me</h1>
+      <div class="section-title center">
+        <h2>
+          <i>Let's Socialize</i>
+        </h2>
+      </div>
+      {% include "src/partials/social.html" %}
+      <div class="section-title center">
+        <h2>
+          <i>Reach Me</i>
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 col-sm-3">
+          <!-- fun-fact -->
+          <div class="fun-fact">
+            <i class="pe-7s-map-marker"></i>
+            <h4>Barcelona, Spain</h4>
+          </div>
         </div>
+        <div class="col-xs-6 col-sm-3">
+          <div class="fun-fact">
+            <i class="pe-7s-call"></i>
+            <h4>+34 664 109 973</h4>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <div class="fun-fact ">
+            <i class="pe-7s-mail"></i>
+            <h4>damianpumar @ gmail.com</h4>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <!-- fun-fact -->
+          <div class="fun-fact">
+            <i class="pe-7s-check"></i>
+            <h4>Freelance Available</h4>
+          </div>
+        </div>
+      </div>
+      <div class="section-title center ">
+        <h2>
+          <i>Drop Me A Line</i>
+        </h2>
+      </div>
+      <div class="contact-form">
+        <form
+          id="contact-form"
+          class="validate-form"
+          action="https://server.fullcoders.com/EmailMagic/email/send/LPGScT8HA4D7JJ0DvLC2"
+          method="post"
+        >
+          <p>
+            <label for="name">NAME</label>
+            <input type="text" name="name" id="name" class="required" />
+          </p>
+          <p>
+            <label for="email">EMAIL</label>
+            <input type="text" name="email" id="email" class="required email" />
+          </p>
+          <p>
+            <label for="message">MESSAGE</label>
+            <textarea name="message" id="message" class="required"></textarea>
+          </p>
+          <div class="col-md-12 col-sm-12">
+            <div class="row">
+              <div
+                class="g-recaptcha"
+                data-sitekey="6Leo-nwUAAAAANpXPCGJb0v5m55-frxjzIZS9SYV"
+              ></div>
+              <input
+                type="hidden"
+                class="hiddenRecaptcha required"
+                name="hiddenRecaptcha"
+                id="hiddenRecaptcha"
+                style="height:0px;"
+              />
+            </div>
+          </div>
+          <p>
+            <button class="submit button" type="submit">Send</button>
+          </p>
+        </form>
+      </div>
+      <div class="map ">
+        <div
+          data-latitude="41.3948976"
+          data-longitude="2.0787276"
+          data-zoom="6"
+          id="map-canvas"
+          class="map-canvas"
+        ></div>
+      </div>
     </div>
+  </div>
 </section>
