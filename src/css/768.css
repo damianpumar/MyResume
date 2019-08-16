@@ -288,30 +288,6 @@
   }
 }
 
-/* IPAD */
-@media (max-width: 768px) {
-  .content {
-    position: relative;
-    text-align: left;
-  }
-  #snackbar {
-    position: absolute;
-    right: 5px;
-    bottom: 5px;
-  }
-}
-
-/* PHONES */
-@media (max-width: 768px) {
-  #snackbar {
-    position: absolute;
-    padding: 5px;
-    right: 5px;
-    bottom: 5px;
-    font-size: 15px;
-  }
-}
-
 /* DESKTOPS OLD */
 @media screen and (min-width: 992px) {
   /* SECTION TITLE */
@@ -375,6 +351,30 @@
     right: 10px;
     bottom: 10px;
     font-size: 20px;
+  }
+}
+
+/* IPAD */
+@media (max-width: 768px) {
+  .content {
+    position: relative;
+    text-align: left;
+  }
+  #snackbar {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+  }
+}
+
+/* PHONES */
+@media (max-width: 768px) {
+  #snackbar {
+    position: absolute;
+    padding: 5px;
+    right: 5px;
+    bottom: 5px;
+    font-size: 15px;
   }
 }
 
@@ -517,8 +517,13 @@
   .filters {
     margin: 2em 0;
   }
-
   .content {
     height: 100%;
   }
+
+  .contact-form,
+  .nf-form-cont {
+     margin: 1.6em auto auto auto;
+     height: 30em;
+ }
 }
