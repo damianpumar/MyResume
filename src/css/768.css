@@ -517,4 +517,8 @@
   .filters {
     margin: 2em 0;
   }
+
+  .content {
+    height: 100%;
+  }
 }
