@@ -1086,7 +1086,7 @@
  }
  
  .home-section .content > div {
-     font-size: 140%;
+     font-size: 2em;
      text-align: center;
      position: absolute;
      bottom: 0;
@@ -1103,6 +1103,7 @@
  
  .has-bg-img {
      background-size: cover;
+     background-position: center;
  }
  
  .home-section h2,
@@ -4548,7 +4549,7 @@
     border-radius: 2px;
     padding: 16px;
     z-index:999999 !important;
-    font-size: 17px;
+    font-size: 0.8em;
 }
 
 #snackbar.show {
@@ -4566,7 +4567,6 @@
 #snackbar a {
      color: #fff;
      font-family: "Montserrat", serif;
-     font-size: 0.8em;
  }
 
 @-webkit-keyframes fadein {

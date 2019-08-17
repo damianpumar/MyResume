@@ -180,9 +180,6 @@
     margin: 3em 0;
   }
   /* PAGE : HOME */
-  .home-section .content > div {
-    font-size: 150%;
-  }
   .home-section h2,
   .home-section h3 {
     line-height: 1;
@@ -342,7 +339,6 @@
   .content {
     position: absolute;
     top: 0;
-    bottom: 0;
     right: 0;
     width: 100%;
   }
@@ -350,7 +346,10 @@
     position: absolute;
     right: 10px;
     bottom: 10px;
-    font-size: 20px;
+    font-size: 1.4em;
+  }
+  .home-section .content > div {
+    font-size: 3em;
   }
 }
 
@@ -363,17 +362,41 @@
     position: absolute;
     right: 5px;
     bottom: 5px;
+    font-size: 1.2em;
+  }
+  .home-section .content > div {
+    font-size: 2.5em;
   }
 }
 
-/* PHONES */
-@media (max-width: 768px) {
+/* Iphone X */
+@media (max-width: 375px) {
   #snackbar {
-    position: absolute;
-    padding: 5px;
-    right: 5px;
-    bottom: 5px;
-    font-size: 15px;
+    font-size: 0.8em;
+  }
+  .home-section .content > div {
+    font-size: 1.7em;
+  }
+}
+
+/* Iphone 6 */
+@media (max-width: 414px) {
+  #snackbar {
+    font-size: 0.8em;
+  }
+  .home-section .content > div {
+    font-size: 1.8em;
+  }
+}
+
+/* Iphone 6 */
+@media (max-width: 320px) {
+  #snackbar {
+    font-size: 0.5em;
+    min-width: 100px;
+  }
+  .home-section .content > div {
+    font-size: 1.4em;
   }
 }
 
