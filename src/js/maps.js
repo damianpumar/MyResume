@@ -9,11 +9,12 @@ export const maps = {
     function initializeMap() {
       var latitude = mapCanvas.data("latitude");
       var longitude = mapCanvas.data("longitude");
+      var position = new google.maps.LatLng(latitude, longitude);
       var zoom = mapCanvas.data("zoom");
       var mapOptions = {
         zoom: zoom,
         disableDefaultUI: true,
-        center: new google.maps.LatLng(latitude, longitude),
+        center: position,
         styles: [
           {
             featureType: "administrative.locality",
@@ -183,10 +184,9 @@ export const maps = {
       var mapElement = document.getElementById("map-canvas");
       var map = new google.maps.Map(mapElement, mapOptions);
       map.panBy(0, 50);
-      var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(latitude, longitude),
-        map: map,
-        title: "Hey, I am here"
+      new google.maps.Marker({
+        position: position,
+        map: map
       });
     }
   }

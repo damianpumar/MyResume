@@ -1105,17 +1105,6 @@
      background-size: cover;
  }
  
- .has-bg-img .content:before {
-     content: "";
-     position: absolute;
-     top: 0;
-     right: 0;
-     bottom: 0;
-     left: 0;
-     z-index: 10;
-     background: rgba(98, 115, 117, 0.25);
- }
- 
  .home-section h2,
  .home-section h3,
  .home-section h4 {

@@ -11,13 +11,21 @@ export const utilities = {
     Array.from(objects).map(item => {
       const img = new Image();
 
+      function applySrc(src) {
+        return item.nodeName === "IMG"
+          ? (item.src = src)
+          : (item.style.backgroundImage = `url(${src})`);
+      }
+
+      if (item.dataset.lowSrc) {
+        applySrc(item.dataset.lowSrc);
+      }
+
       img.src = item.dataset.src;
 
       img.onload = () => {
         item.classList.remove("asyncImage");
-        return item.nodeName === "IMG"
-          ? (item.src = item.dataset.src)
-          : (item.style.backgroundImage = `url(${item.dataset.src})`);
+        return applySrc(item.dataset.src);
       };
     });
   },
