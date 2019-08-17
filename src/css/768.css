@@ -357,7 +357,6 @@
 /* IPAD */
 @media (max-width: 768px) {
   .content {
-    position: relative;
     text-align: left;
   }
   #snackbar {
