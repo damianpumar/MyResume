@@ -4537,7 +4537,7 @@
     height: 100%;
 }
 
-/*SnackBar*/
+/* SnackBar */
 #snackbar {
     position: fixed;    
     right:2em;
@@ -4552,21 +4552,13 @@
     font-size: 0.8em;
 }
 
-#snackbar.show {
-    visibility: visible;
-    -webkit-animation: fadein 0.5s;
-    animation: fadein 0.5s;
-}
-
-#snackbar.hide {
-    -webkit-animation: fadeout 1s 2.5s;
-    animation: fadeout 1s 2.5s;
-    visibility: hidden;
-}
-
-#snackbar a {
+#snackbar {
      color: #fff;
      font-family: "Montserrat", serif;
+ }
+
+ #snackbar:hover { 
+    background-color: #2c373c;
  }
 
 @-webkit-keyframes fadein {
