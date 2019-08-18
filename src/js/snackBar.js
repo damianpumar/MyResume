@@ -1,5 +1,3 @@
-import { page } from "./pageTransition";
-
 export const snackBar = {
   initialize: () => {
     $(window).load(function() {
@@ -12,7 +10,7 @@ function show() {
 
   if (snackBarWasShown) return;
 
-  var snackbar = $("#snackbar");
+  var snackbar = $(".snackbar");
 
   if (!snackbar) return;
 
@@ -25,7 +23,7 @@ function show() {
   hideWhenClicked(snackbar);
 }
 function hideWhenClicked(snackbar) {
-  $("#snackbar a").click(function(e) {
+  $(".snackbar").click(function(e) {
     snackbar.hide();
 
     saveCookies();

@@ -342,7 +342,7 @@
     right: 0;
     width: 100%;
   }
-  #snackbar {
+  .snackbar {
     position: absolute;
     right: 10px;
     bottom: 10px;
@@ -358,7 +358,7 @@
   .content {
     text-align: left;
   }
-  #snackbar {
+  .snackbar {
     position: absolute;
     right: 5px;
     bottom: 5px;
@@ -369,9 +369,9 @@
   }
 }
 
-/* Iphone X */
+/* IPHONE X */
 @media (max-width: 375px) {
-  #snackbar {
+  .snackbar {
     font-size: 0.8em;
   }
   .home-section .content > div {
@@ -379,9 +379,9 @@
   }
 }
 
-/* Iphone 6 */
+/* IPHONE 6 */
 @media (max-width: 414px) {
-  #snackbar {
+  .snackbar {
     font-size: 0.8em;
   }
   .home-section .content > div {
@@ -389,9 +389,9 @@
   }
 }
 
-/* Iphone 6 */
+/* IPHONE SE */
 @media (max-width: 320px) {
-  #snackbar {
+  .snackbar {
     font-size: 0.5em;
     min-width: 100px;
   }

@@ -4538,7 +4538,7 @@
 }
 
 /* SnackBar */
-#snackbar {
+.snackbar {
     position: fixed;    
     right:2em;
     bottom: 2em;
@@ -4552,14 +4552,14 @@
     font-size: 0.8em;
 }
 
-#snackbar {
+.snackbar {
      color: #fff;
      font-family: "Montserrat", serif;
- }
+}
 
- #snackbar:hover { 
+.snackbar:hover { 
     background-color: #2c373c;
- }
+}
 
 @-webkit-keyframes fadein {
     from {bottom: 0; opacity: 0;} 
