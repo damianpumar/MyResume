@@ -8,6 +8,7 @@ import { form } from "./form";
 import { email } from "./email";
 import { maps } from "./maps";
 import { snackBar } from "./snackBar";
+import { filter } from "./filter";
 
 export const initializer = {
   initialize: () => {
@@ -24,5 +25,6 @@ export const initializer = {
     typist.initialize();
     utilities.initializeHoursWorked();
     utilities.initializeAge();
+    filter.initialize();
   }
 };
