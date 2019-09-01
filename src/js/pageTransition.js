@@ -79,13 +79,16 @@ export const page = {
         $.address.path("/" + detailUrl);
       } else {
         detailUrl = url;
-        $.address.path(portfolioKeyword + "/" + detailUrl);
+        $.address.path(portfolioKeyword + "/" + detailUrl.replace(".html", ""));
       }
       return false;
     });
   },
+
   showProjectDetails: url => {
     loader.show();
+    if (!url.includes(".html")) url += ".html";
+
     var p = $(".p-overlay:not(.active)").first();
     pActive = $(".p-overlay.active");
 
@@ -111,6 +114,10 @@ export const page = {
             .show();
         }
         p.addClass("active");
+      });
+
+      $(".back").each(function(index, el) {
+        $(el).attr("href", window.location.origin + "#portfolio");
       });
     });
   },

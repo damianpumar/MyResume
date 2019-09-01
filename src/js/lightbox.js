@@ -15,15 +15,15 @@ export const lightbox = {
               '<div class="mfp-bottom-bar">' +
               '<div class="mfp-title"></div>' +
               '<div class="mfp-counter"></div>' +
-              "</div>", // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
+              "</div>",
 
-            cursor: "mfp-zoom-out-cur", // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
-            verticalFit: true, // Fits image in area vertically
-            tError: '<a href="%url%">The image</a> could not be loaded.' // Error message
+            cursor: "mfp-zoom-out-cur",
+            verticalFit: true,
+            tError: '<a href="%url%">The image</a> could not be loaded.'
           },
           gallery: {
             enabled: true,
-            tCounter: '<span class="mfp-counter">%curr% / %total%</span>' // markup of counter
+            tCounter: '<span class="mfp-counter">%curr% / %total%</span>'
           },
           iframe: {
             markup:
@@ -35,7 +35,7 @@ export const lightbox = {
           },
           mainClass: "mfp-zoom-in",
           tLoading: "",
-          removalDelay: 300, //delay removal by X to allow out-animation
+          removalDelay: 300,
           callbacks: {
             markupParse: function(template, values, item) {
               var title = "";
@@ -50,7 +50,6 @@ export const lightbox = {
                     ? ""
                     : item.el.attr("title");
               }
-              //return title;
               values.title = title;
             },
             imageLoadComplete: function() {
