@@ -10,8 +10,8 @@ const gulp = require("gulp"),
   size = require("gulp-size"),
   nunjucksRender = require("gulp-nunjucks-render"),
   header = require("gulp-header"),
-  manifest = require("gulp-manifest")
-  pkg = require("./package.json");
+  manifest = require("gulp-manifest");
+pkg = require("./package.json");
 
 let isRelease = false;
 
@@ -19,7 +19,13 @@ let date = new Date();
 
 const banner = [
   "/*!\n",
-  " * <%= pkg.title %> v."+ date.getDay() +"."+date.getMonth()+"."+date.getFullYear()+"+ (<%= pkg.homepage %>)\n",
+  " * <%= pkg.title %> v." +
+    date.getDay() +
+    "." +
+    date.getMonth() +
+    "." +
+    date.getFullYear() +
+    "+ (<%= pkg.homepage %>)\n",
   " * Copyright " + date.getFullYear(),
   " <%= pkg.author %>\n",
   " * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n",
@@ -67,6 +73,12 @@ let tasks = {
   vendorCSS: {
     src: "src/css/**/*",
     dest: "dist/css"
+  },
+  portfolio: {
+    src: "src/portfolio/**/*",
+    dest: "dist",
+    fun: nunjucksRender,
+    min: () => htmlmin({ collapseWhitespace: true, removeComments: true })
   }
 };
 
@@ -114,15 +126,22 @@ gulp.task("vendorCSS", function() {
   return createTask("vendorCSS");
 });
 
-gulp.task('appCache', function(){
-  gulp.src(['dist/**/*'])
-    .pipe(manifest({
-      hash: true,
-      preferOnline: true,
-      network: ['http://*', 'https://*', '*'],
-      filename: "manifest.appcache",
-      exclude: "manifest.appcache"
-     }))
+gulp.task("portfolio", function() {
+  return createTask("portfolio");
+});
+
+gulp.task("appCache", function() {
+  gulp
+    .src(["dist/**/*"])
+    .pipe(
+      manifest({
+        hash: true,
+        preferOnline: true,
+        network: ["http://*", "https://*", "*"],
+        filename: "manifest.appcache",
+        exclude: "manifest.appcache"
+      })
+    )
     .pipe(gulp.dest("dist"));
 });
 
@@ -132,7 +151,18 @@ gulp.task("clean", function() {
 
 gulp.task("css", gulpSequence("vendorCSS", "styles"));
 
-gulp.task("build", gulpSequence("clean", "html", "css", "vendorJS", "javascript", "images"));
+gulp.task(
+  "build",
+  gulpSequence(
+    "clean",
+    "html",
+    "portfolio",
+    "css",
+    "vendorJS",
+    "javascript",
+    "images"
+  )
+);
 
 gulp.task("release", ["clean"], function() {
   isRelease = true;
@@ -150,7 +180,7 @@ gulp.task("dev", ["build"], function() {
   gulp.watch("src/css/main.css", ["styles"]);
   gulp.watch("src/css/768.css", ["styles"]);
   gulp.watch("src/js/*.js", ["javascript"]);
-  gulp.watch("src/**/*.html", ["html"]);
+  gulp.watch("src/**/*.html", ["html", "portfolio"]);
   gulp.watch("src/images/**/*", ["images"]);
 
   startServer();

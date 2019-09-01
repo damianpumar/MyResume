@@ -1,5 +1,4 @@
 import { loader } from "./loader";
-import { page } from "./pageTransition";
 import { initializer } from "./initializer";
 
 (function($) {

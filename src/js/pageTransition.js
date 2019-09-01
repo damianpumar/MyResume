@@ -1,3 +1,7 @@
+import { loader } from "./loader";
+import { masonry } from "./masonry";
+import { lightbox } from "./lightbox";
+
 var current = 0;
 var classicLayout = false;
 var inClass, outClass, portfolioKeyword, pActive;
@@ -57,7 +61,7 @@ export const page = {
       $.address.change(function() {
         var detailUrl = page.giveDetailUrl();
         if (detailUrl != -1) {
-          showProjectDetails(detailUrl);
+          page.showProjectDetails(detailUrl);
         } else {
           if ($.address.path().indexOf("/" + portfolioKeyword) != -1) {
             page.hideProjectDetails(true, false);
@@ -79,34 +83,134 @@ export const page = {
       }
       return false;
     });
+  },
+  showProjectDetails: url => {
+    loader.show();
+    var p = $(".p-overlay:not(.active)").first();
+    pActive = $(".p-overlay.active");
 
-    function showProjectDetails(url) {
-      showLoader();
-      var p = $(".p-overlay:not(.active)").first();
-      pActive = $(".p-overlay.active");
+    p.empty().load(url + " .portfolio-single", function() {
+      NProgress.set(0.5);
 
-      p.empty().load(url + " .portfolio-single", function() {
-        NProgress.set(0.5);
+      p.imagesLoaded(function() {
+        masonry.setup();
 
-        p.imagesLoaded(function() {
-          if (pActive.length) {
-            page.hideProjectDetails();
-          }
-          hideLoader();
-          $("html").addClass("p-overlay-on");
-          $("body").scrollTop(0);
+        if (pActive.length) {
+          page.hideProjectDetails();
+        }
+        loader.hide();
+        $("html").addClass("p-overlay-on");
+        $("body").scrollTop(0);
 
-          setup();
-          if (classicLayout) {
-            p.show();
-          } else {
-            p.removeClass("animate-in animate-out")
-              .addClass("animate-in")
-              .show();
-          }
-          p.addClass("active");
-        });
+        page.setup();
+        if (classicLayout) {
+          p.show();
+        } else {
+          p.removeClass("animate-in animate-out")
+            .addClass("animate-in")
+            .show();
+        }
+        p.addClass("active");
       });
+    });
+  },
+
+  setup: () => {
+    masonry.setup();
+
+    lightbox.setup();
+
+    $(".tabs").each(function() {
+      if (!$(this).find(".tab-titles li a.active").length) {
+        $(this)
+          .find(".tab-titles li:first-child a")
+          .addClass("active");
+        $(this)
+          .find(".tab-content > div:first-child")
+          .show();
+      } else {
+        $(this)
+          .find(".tab-content > div")
+          .eq(
+            $(this)
+              .find(".tab-titles li a.active")
+              .parent()
+              .index()
+          )
+          .show();
+      }
+    });
+
+    $(".tabs .tab-titles li a").on("click", function() {
+      if ($(this).hasClass("active")) {
+        return;
+      }
+      $(this)
+        .parent()
+        .siblings()
+        .find("a")
+        .removeClass("active");
+      $(this).addClass("active");
+      $(this)
+        .parents(".tabs")
+        .find(".tab-content > div")
+        .hide()
+        .eq(
+          $(this)
+            .parent()
+            .index()
+        )
+        .show();
+      return false;
+    });
+    var toggleSpeed = 300;
+    $(".toggle h4.active + .toggle-content").show();
+
+    $(".toggle h4").on("click", function() {
+      if ($(this).hasClass("active")) {
+        $(this).removeClass("active");
+        $(this)
+          .next(".toggle-content")
+          .stop(true, true)
+          .slideUp(toggleSpeed);
+      } else {
+        $(this).addClass("active");
+        $(this)
+          .next(".toggle-content")
+          .stop(true, true)
+          .slideDown(toggleSpeed);
+
+        //accordion
+        if (
+          $(this)
+            .parents(".toggle-group")
+            .hasClass("accordion")
+        ) {
+          $(this)
+            .parent()
+            .siblings()
+            .find("h4")
+            .removeClass("active");
+          $(this)
+            .parent()
+            .siblings()
+            .find(".toggle-content")
+            .stop(true, true)
+            .slideUp(toggleSpeed);
+        }
+      }
+      return false;
+    });
+    if ($("iframe,video").length) {
+      $("html").fitVids();
+    }
+    $(
+      "select:not([multiple]), input:checkbox, input:radio, input:file"
+    ).uniform();
+    var ua = navigator.userAgent.toLowerCase();
+    var isAndroid = ua.indexOf("android") > -1;
+    if (isAndroid) {
+      $("html").addClass("android");
     }
   },
 
