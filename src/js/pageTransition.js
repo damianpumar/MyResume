@@ -4,7 +4,7 @@ import { lightbox } from "./lightbox";
 
 var current = 0;
 var classicLayout = false;
-var inClass, outClass, portfolioKeyword, pActive;
+var inClass, outClass, portfolioKeyword, portfolioActive;
 window.nextAnimation = $("html").data("next-animation");
 window.prevAnimation = $("html").data("prev-animation");
 window.randomize = $("html").data("random-animation");
@@ -74,12 +74,10 @@ export const page = {
       var url = $(this).attr("href");
       var baseUrl = $.address.baseURL();
       if (url.indexOf(baseUrl) !== -1) {
-        var total = url.length;
-        detailUrl = url.slice(baseUrl.length + 1, total);
+        detailUrl = url.slice(baseUrl.length + 1);
         $.address.path("/" + detailUrl);
       } else {
-        detailUrl = url;
-        $.address.path(portfolioKeyword + "/" + detailUrl.replace(".html", ""));
+        $.address.path(portfolioKeyword + "/" + url.replace(".html", ""));
       }
       return false;
     });
@@ -89,31 +87,34 @@ export const page = {
     loader.show();
     if (!url.includes(".html")) url += ".html";
 
-    var p = $(".p-overlay:not(.active)").first();
-    pActive = $(".p-overlay.active");
+    var portfolio = $(".p-overlay:not(.active)").first();
+    portfolioActive = $(".p-overlay.active");
 
-    p.empty().load(url + " .portfolio-single", function() {
+    portfolio.empty().load(url + " .portfolio-single", function() {
       NProgress.set(0.5);
 
-      p.imagesLoaded(function() {
+      portfolio.imagesLoaded(function() {
         masonry.setup();
 
-        if (pActive.length) {
+        if (portfolioActive.length) {
           page.hideProjectDetails();
         }
+
         loader.hide();
         $("html").addClass("p-overlay-on");
         $("body").scrollTop(0);
 
         page.setup();
+
         if (classicLayout) {
-          p.show();
+          portfolio.show();
         } else {
-          p.removeClass("animate-in animate-out")
+          portfolio
+            .removeClass("animate-in animate-out")
             .addClass("animate-in")
             .show();
         }
-        p.addClass("active");
+        portfolio.addClass("active");
       });
 
       $(".back").each(function(index, el) {
@@ -187,7 +188,6 @@ export const page = {
           .stop(true, true)
           .slideDown(toggleSpeed);
 
-        //accordion
         if (
           $(this)
             .parents(".toggle-group")
@@ -225,26 +225,26 @@ export const page = {
     $("body").scrollTop(0);
 
     if (forever) {
-      pActive = $(".p-overlay.active");
+      portfolioActive = $(".p-overlay.active");
       $("html").removeClass("p-overlay-on");
       if (!safeClose) {
         $.address.path(portfolioKeyword);
       }
     }
-    pActive.removeClass("active");
+
+    portfolioActive.removeClass("active");
+
     if (classicLayout) {
-      pActive.hide().empty();
+      portfolioActive.hide().empty();
     } else {
-      pActive
+      portfolioActive
         .removeClass("animate-in animate-out")
         .addClass("animate-out")
-        .show();
-      setTimeout(function() {
-        pActive
-          .hide()
-          .removeClass("animate-out")
-          .empty();
-      }, 10);
+        .removeClass("active")
+        .fadeOut()
+        .empty();
+
+      $("html").removeClass("p-overlay-on");
     }
   },
 
@@ -649,6 +649,5 @@ export const page = {
     var evt = new CustomEvent("pageChanged", { detail: path });
 
     window.dispatchEvent(evt);
-  },
-  changePage: path => {}
+  }
 };
