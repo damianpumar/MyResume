@@ -1366,6 +1366,10 @@
  .size-full {
      width: 70em;
  }
+
+ .rounded {
+     border-radius: 20px;
+ }
  
  .fun-fact {
      padding-right: 1em;
