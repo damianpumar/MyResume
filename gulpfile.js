@@ -130,6 +130,11 @@ gulp.task("portfolio", function() {
   return createTask("portfolio");
 });
 
+gulp.task("robots", function() {
+  gulp.src("src/robots.txt")
+  .pipe(gulp.dest("dist"))
+})
+
 gulp.task("appCache", function() {
   gulp
     .src(["dist/**/*"])
@@ -167,7 +172,7 @@ gulp.task(
 gulp.task("release", ["clean"], function() {
   isRelease = true;
 
-  return gulp.start(gulpSequence("build", "appCache"));
+  return gulp.start(gulpSequence("build", "appCache", "robots"));
 });
 
 gulp.task("release-preview", ["clean"], function() {
