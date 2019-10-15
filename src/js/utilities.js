@@ -72,5 +72,45 @@ export const utilities = {
         initialized = true;
       }
     });
+  },
+
+  getOtherServer: () => {
+    const gitHubServer = "https://damianpumar.github.io";
+    const ownServer= "https://damianpumar.com";
+    return window.location.href.includes("github") ? ownServer : gitHubServer;
+  },
+
+  printStamp: () => {
+    const whereILive = $("#contact .fun-fact h4")[0].innerHTML;
+    const myName = "【﻿Ｄａｍｉáｎ Ｐｕｍａｒ】";
+    const myLastJob = $(".event p")[1].innerHTML.trim();
+    const otherServer = utilities.getOtherServer();
+
+    console.log(myName);
+    console.log(`I live in ${ whereILive }`);
+    console.log(myLastJob);
+    console.log("Code: https://github.com/damianpumar/myresume");
+    console.log(`Other server: ${otherServer}`);
+    utilities.printSocialLinks();
+  },
+
+  printSocialLinks: () => {
+
+    const unique = (value, index, self) => {
+      return self.indexOf(value) === index
+    };
+
+    const socialLinks = [];
+
+    $(".social a").each(function(){
+      const link =$(this).attr("href")
+      if(link.includes("http")){
+        socialLinks.push(link);
+      }
+    });
+      
+    socialLinks.filter(unique).forEach(function(link) {
+      console.log(`• ${link}`);
+    })
   }
 };
