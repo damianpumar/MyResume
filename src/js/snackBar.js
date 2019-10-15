@@ -6,7 +6,7 @@ export const snackBar = {
   }
 };
 function show() {
-  var snackBarWasShown = $.cookie("_sbSW");
+  var snackBarWasShown = window.localStorage.getItem("_sbSW");
 
   if (snackBarWasShown) return;
 
@@ -26,11 +26,6 @@ function hideWhenClicked(snackbar) {
   $(".snackbar").click(function(e) {
     snackbar.hide();
 
-    saveCookies();
+    window.localStorage.setItem("_sbSW", "true");
   });
-}
-function saveCookies() {
-  var expireDate = new Date();
-  expireDate.setDate(expireDate.getDate() + 2);
-  $.cookie("_sbSW", "true", { path: "/", expires: expireDate });
 }
