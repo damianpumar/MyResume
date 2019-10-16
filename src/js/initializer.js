@@ -25,7 +25,7 @@ export const initializer = {
     typist.initialize();
     utilities.initializeHoursWorked();
     utilities.initializeAge();
-    utilities.printStamp();
+    utilities.initializeStamp();
     masonry.initialize();
   }
 };

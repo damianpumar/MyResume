@@ -74,10 +74,10 @@ export const utilities = {
     });
   },
 
-  getOtherServer: () => {
-    const gitHubServer = "https://damianpumar.github.io";
-    const ownServer= "https://damianpumar.com";
-    return window.location.href.includes("github") ? ownServer : gitHubServer;
+  initializeStamp: () => {
+    $(window).load(function() {
+      utilities.printStamp();
+    });
   },
 
   printStamp: () => {
@@ -112,5 +112,11 @@ export const utilities = {
     socialLinks.filter(unique).forEach(function(link) {
       console.log(`• ${link}`);
     })
+  },
+
+  getOtherServer: () => {
+    const gitHubServer = "https://damianpumar.github.io";
+    const ownServer= "https://damianpumar.com";
+    return window.location.href.includes("github") ? ownServer : gitHubServer;
   }
 };
