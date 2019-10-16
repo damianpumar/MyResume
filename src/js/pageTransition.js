@@ -26,6 +26,10 @@ var $main = $("#main"),
 //-------------------
 export const page = {
   initialize: () => {
+    window.nextPage = function(index) {
+      return new page.nextPage(index);
+    };
+
     if ($("html").hasClass("one-page-layout")) {
       portfolioKeyword = $("section.portfolio").attr("id");
 

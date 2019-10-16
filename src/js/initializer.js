@@ -13,7 +13,7 @@ import { masonry } from "./masonry";
 export const initializer = {
   initialize: () => {
     utilities.loadImagesAsync();
-    loader.show();
+    loader.initialize();
     maps.intialize();
     utilities.initializeFillBars();
     header.initialize();
