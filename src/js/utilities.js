@@ -76,6 +76,7 @@ export const utilities = {
 
   initializeStamp: () => {
     $(window).load(function() {
+      console.clear();
       utilities.printStamp();
     });
   },
@@ -86,6 +87,7 @@ export const utilities = {
     const myLastJob = $(".event p")[1].innerHTML.trim();
     const otherServer = utilities.getOtherServer();
 
+    console.log("Sorry, I cleared console because I wanted show you this message below")
     console.log(myName);
     console.log(`I live in ${ whereILive }`);
     console.log(myLastJob);
