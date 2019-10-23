@@ -76,7 +76,7 @@ let tasks = {
   },
   portfolio: {
     src: "src/portfolio/**/*",
-    dest: "dist",
+    dest: "dist/portfolio",
     fun: nunjucksRender,
     min: () => htmlmin({ collapseWhitespace: true, removeComments: true })
   }
@@ -200,5 +200,5 @@ function startServer() {
   app.use(logger());
   app.use(serve("./dist"));
   app.listen(8080);
-  console.log("Listening on port 8080");
+  console.log("Listening on http://localhost:8080");
 }

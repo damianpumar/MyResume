@@ -2,38 +2,14 @@
   <a class="menu-toggle toggle-link"></a>
   <h1 class="site-title mobile-title">Damián Pumar</h1>
   <div class="header-wrap">
-    <img src="images/site/avatar.jpg" alt="avatar" />
+    <img src="/images/site/avatar.jpg" alt="avatar" />
     <h1 class="site-title">Damián Pumar</h1>
     <nav
       id="primary-navigation"
       class="site-navigation primary-navigation"
       role="navigation"
     >
-      <div class="nav-menu">
-        <ul>
-          <li>
-            <a href="#/home" tabindex="-1"> <i class="pe-7s-home"></i>Home</a>
-          </li>
-          <li>
-            <a href="#/about" tabindex="-1">
-              <i class="pe-7s-user"></i>About Me</a
-            >
-          </li>
-          <li>
-            <a href="#/resume" tabindex="-1"> <i class="pe-7s-id"></i>Resume</a>
-          </li>
-          <li>
-            <a href="#/portfolio" tabindex="-1">
-              <i class="pe-7s-glasses"></i>Portfolio</a
-            >
-          </li>
-          <li>
-            <a href="#/contact" tabindex="-1">
-              <i class="pe-7s-call"></i>Contact</a
-            >
-          </li>
-        </ul>
-      </div>
+      {% include "src/partials/menu.html" %}
     </nav>
     <div class="header-search">
       <form role="search" method="get" id="search-form" action="#">

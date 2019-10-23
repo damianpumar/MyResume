@@ -82,6 +82,10 @@ export const utilities = {
   },
 
   printStamp: () => {
+    if(window.location.href.includes("portfolio/")){
+      return;
+    }
+
     const whereILive = $("#contact .fun-fact h4")[0].innerHTML;
     const myName = "【﻿Ｄａｍｉáｎ Ｐｕｍａｒ】";
     const myLastJob = $(".event p")[1].innerHTML.trim();

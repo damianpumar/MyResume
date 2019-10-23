@@ -94,7 +94,7 @@ export const page = {
     var portfolio = $(".p-overlay:not(.active)").first();
     portfolioActive = $(".p-overlay.active");
 
-    portfolio.empty().load(url + " .portfolio-single", function() {
+    portfolio.empty().load("/portfolio/" + url + " .portfolio-single", function() {
       NProgress.set(0.5);
 
       portfolio.imagesLoaded(function() {
