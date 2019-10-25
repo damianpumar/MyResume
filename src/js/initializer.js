@@ -26,6 +26,7 @@ export const initializer = {
     utilities.initializeHoursWorked();
     utilities.initializeAge();
     utilities.initializeStamp();
+    utilities.loadDownloadeableResume();
     masonry.initialize();
   }
 };

@@ -2273,10 +2273,10 @@
  input[type=button] i,
  button i,
  a.button i {
-     display: inline;
-     line-height: 1;
+     display: inline !important;
+     line-height: 1 !important;
      font-size: 16px;
-     font-weight: bold;
+     font-weight: bold !important;
      margin-right: .4em;
      margin-left: -0.35em;
      margin-bottom: -1em;
@@ -4533,6 +4533,17 @@
 
 .snackbar:hover { 
     background-color: #2c373c;
+}
+
+.photo-resume {
+     width: 120px; 
+     height: 120px;  
+     float: right;
+     margin-top: -10em;
+}
+
+.photo-resume img {
+  border-radius: 10% 10% 0% 0%;
 }
 
 @-webkit-keyframes fadein {

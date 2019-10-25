@@ -6,6 +6,7 @@
   }
 }
 
+/* NOT MOBILE */
 @media screen and (min-width: 768px) {
   /* TYPOGRAPHY */
   h1 {
@@ -353,8 +354,11 @@
   }
 }
 
-/* IPAD */
+/* INCLUDE ALL MOBILE  */
 @media (max-width: 768px) {
+  #download-resume {
+    display: none;
+  }
   .content {
     text-align: left;
   }
