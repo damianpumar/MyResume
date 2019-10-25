@@ -127,37 +127,28 @@ export const utilities = {
   },
 
   loadDownloadeableResume: () => {
-    let downloadButton = $("#download-resume");
-    let additionalInformation = $("#for-resume");
+    let additionalInformation = $(".only-for-cv-paper");
     additionalInformation.hide();
     let cv = $("#cv");
     let resume = $('#resume');
     cv.css('background-color', resume.css('background-color'));
-    downloadButton.click(()=> {
+
+    var opt = {
+      filename:     'Damián Pumar - Resume',
+      image:        { type: 'jpeg', quality: 0.98 },
+      jsPDF:        { unit: 'cm', format: 'a4', orientation: 'landscape' },
+      pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+    };
+
+    $("#download-resume").click(()=> {
       $.blockUI({ message: '<h5>Creating CV...</h5>' });
       additionalInformation.show();
-      var HTML_Width = cv.width();
-      var HTML_Height = cv.height();
-      var top_left_margin = 15;
-      var PDF_Width = HTML_Width + (top_left_margin * 2);
-      var PDF_Height = (PDF_Width * 1.5) + (top_left_margin * 2);
-      var canvas_image_width = HTML_Width;
-      var canvas_image_height = HTML_Height;
 
-      var totalPDFPages = Math.ceil(HTML_Height / PDF_Height) - 1;
-
-      html2canvas(cv[0]).then(function (canvas) {
-          var imgData = canvas.toDataURL("image/jpeg", 1.0);
-          var pdf = new jsPDF('p', 'pt', [PDF_Width, PDF_Height]);
-          pdf.addImage(imgData, 'JPG', top_left_margin, top_left_margin, canvas_image_width, canvas_image_height);
-          for (var i = 1; i <= totalPDFPages; i++) { 
-              pdf.addPage(PDF_Width, PDF_Height);
-              pdf.addImage(imgData, 'JPG', top_left_margin, -(PDF_Height*i) +(top_left_margin*4), canvas_image_width, canvas_image_height);
-          }
-          pdf.save("Damián Pumar - Resume.pdf");
-          additionalInformation.hide();
-          $.unblockUI();
-      });
+      html2pdf().set(opt).from(cv[0]).save()
+      .then(function() {
+        additionalInformation.hide();
+        $.unblockUI();
+      })
     });
   }
 };
