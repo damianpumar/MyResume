@@ -129,18 +129,20 @@ export const utilities = {
   loadDownloadeableResume: () => {
     let additionalInformation = $(".only-for-cv-paper");
     additionalInformation.hide();
-    let cv = $("#cv");
-    let resume = $('#resume');
-    cv.css('background-color', resume.css('background-color'));
-
-    var opt = {
-      filename:     'Damián Pumar - Resume',
-      image:        { type: 'jpeg', quality: 0.98 },
-      jsPDF:        { unit: 'cm', format: 'a4', orientation: 'landscape' },
-      pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-    };
 
     $("#download-resume").click(()=> {
+      let resumeColor = $("#resume").css('background-color');
+      let cv = $("#cv");
+      cv.css('background-color', resumeColor);
+
+      var opt = {
+        filename:  'Damián Pumar - Resume',
+        image:     { type: 'jpeg', quality: 0.98 },
+        jsPDF:     { unit: 'cm', format: 'a4', orientation: 'landscape' },
+        backgroundColor: resumeColor,
+        pagebreak: { mode: ['avoid-all', 'ccs', 'legacy'] }
+      };
+
       $.blockUI({ message: '<h5>Creating CV...</h5>' });
       additionalInformation.show();
 
