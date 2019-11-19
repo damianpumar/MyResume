@@ -138,7 +138,7 @@ export const utilities = {
       var opt = {
         filename:  'Damián Pumar - Resume',
         image:     { type: 'jpeg', quality: 0.98 },
-        jsPDF:     { unit: 'cm', format: 'a4', orientation: 'landscape' },
+        jsPDF:     { unit: 'pt', format: 'a4', orientation: 'landscape' },
         backgroundColor: resumeColor,
         pagebreak: { mode: ['avoid-all', 'ccs', 'legacy'] }
       };
