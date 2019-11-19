@@ -4546,6 +4546,13 @@
   border-radius: 10% 10% 0% 0%;
 }
 
+.flags {
+    border-radius: 1em;
+    width: 1em;
+    margin-bottom: 0.2em;
+    height: 1em;
+}
+
 @-webkit-keyframes fadein {
     from {bottom: 0; opacity: 0;} 
     to {bottom: 30px; opacity: 1;}

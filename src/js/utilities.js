@@ -62,12 +62,24 @@ export const utilities = {
     window.addEventListener("pageChanged", function(e) {
       if (!initialized && e && e.detail == "resume") {
         $(".bar").each(function() {
-          var bar = $(this);
-          var percent = bar.attr("data-percent");
+          const bar = $(this);
+          const percent = bar.attr("data-percent");
+          const customMessage = bar.attr("data-message");
+          const hastMessage = (customMessage !== undefined)
           bar
             .find(".progress")
-            .css("width", percent + "%")
-            .html("<span>" + percent + "</span>");
+            .css("width", `${percent}%`);
+
+          if (hastMessage) {
+            bar
+              .find(".progress")
+              .html(`<span style="width: auto; border-radius: 20%;"> ${customMessage} </span>`);
+          }
+          else {
+            bar
+              .find(".progress")
+              .html(`<span> ${percent} </span>`);
+          }
         });
         initialized = true;
       }
@@ -138,9 +150,9 @@ export const utilities = {
       var opt = {
         filename:  'Damián Pumar - Resume',
         image:     { type: 'jpeg', quality: 0.98 },
-        jsPDF:     { unit: 'pt', format: 'a4', orientation: 'landscape' },
+        jsPDF:     { unit: 'pt', format: 'a3', orientation: 'portrait' },
         backgroundColor: resumeColor,
-        pagebreak: { mode: ['avoid-all', 'ccs', 'legacy'] }
+        pagebreak: { mode: ['ccs', "legacy"] }
       };
 
       $.blockUI({ message: '<h5>Creating CV...</h5>' });
