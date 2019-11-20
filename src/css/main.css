@@ -4553,6 +4553,11 @@
     height: 1em;
 }
 
+.modal {
+     width: 100% !important;
+     height: 75% !important;
+}
+
 @-webkit-keyframes fadein {
     from {bottom: 0; opacity: 0;} 
     to {bottom: 30px; opacity: 1;}

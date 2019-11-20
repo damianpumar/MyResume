@@ -371,6 +371,10 @@
   .home-section .content > div {
     font-size: 2.5em;
   }
+  .modal {
+     width: 100% !important;
+     height: 85% !important;
+  }
 }
 
 /* IPHONE X */
