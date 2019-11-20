@@ -374,6 +374,7 @@
   .modal {
      width: 100% !important;
      height: 85% !important;
+     margin-top: 3em;
   }
 }
 
