@@ -17,11 +17,14 @@
     "clean": "gulp clean",
     "release": "gulp release",
     "release-preview": "gulp release-preview",
-    "dev": "gulp dev"
+    "dev": "gulp dev",
+    "test": "gulp test",
+    "webdriver": "gulp webdriver-update"
   },
   "devDependencies": {
     "babel-core": "6.26.0",
     "babel-preset-env": "1.6.1",
+    "child_process": "^1.0.2",
     "del": "3.0.0",
     "gulp": "3.9.1",
     "gulp-better-rollup": "3.1.0",
@@ -34,6 +37,7 @@
     "gulp-less": "3.*",
     "gulp-manifest": "^0.1.1",
     "gulp-nunjucks-render": "2.2.2",
+    "gulp-protractor": "^4.1.1",
     "gulp-rename": "1.2.2",
     "gulp-sequence": "1.0.0",
     "gulp-size": "3.0.0",
@@ -47,5 +51,6 @@
     "koa-logger": "3.2.0",
     "koa-static": "4.0.2",
     "rollup-plugin-babel": "3.0.3"
-  }
+  },
+  "dependencies": {}
 }

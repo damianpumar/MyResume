@@ -1,4 +1,7 @@
-const gulp = require("gulp"),
+const 
+  port = 8080
+  address = `http://localhsot:${port}`,
+  gulp = require("gulp"),
   cssClean = require("gulp-clean-css"),
   gulpSequence = require("gulp-sequence"),
   uglify = require("gulp-uglify"),
@@ -10,8 +13,10 @@ const gulp = require("gulp"),
   size = require("gulp-size"),
   nunjucksRender = require("gulp-nunjucks-render"),
   header = require("gulp-header"),
-  manifest = require("gulp-manifest");
-pkg = require("./package.json");
+  manifest = require("gulp-manifest"),
+  pkg = require("./package.json"),
+  protractor = require("gulp-protractor"),
+  spawn = require('child_process').spawn;
 
 let isRelease = false;
 
@@ -181,6 +186,24 @@ gulp.task("release-preview", ["clean"], function() {
   return gulp.start("dev");
 });
 
+gulp.task('test', function() {
+  const dev = gulp.start("dev");
+
+      gulp.src('./src/tests/*.js')
+        .pipe(protractor.protractor({
+            configFile: './src/test.js'
+        }))
+        .on('end', function () {
+            gulp.stop("dev");
+        });
+
+  return dev;
+});
+
+gulp.task('webdriver-update', protractor.webdriver_update);
+
+gulp.task('webdriver-standalone', ['webdriver-update'], protractor.webdriver_standalone);
+
 gulp.task("dev", ["build"], function() {
   gulp.watch("src/css/main.css", ["styles"]);
   gulp.watch("src/css/768.css", ["styles"]);
@@ -199,6 +222,6 @@ function startServer() {
   let app = new Koa();
   app.use(logger());
   app.use(serve("./dist"));
-  app.listen(8080);
-  console.log("Listening on http://localhost:8080");
+  app.listen(port);
+  console.log(`Listening on ${address}`);
 }
