@@ -1,9 +1,8 @@
 const
   port = 8080
-  address = `http://localhost:${port}`,
+address = `http://localhost:${port}`,
   gulp = require("gulp"),
   cssClean = require("gulp-clean-css"),
-  gulpSequence = require("gulp-sequence"),
   uglify = require("gulp-uglify"),
   del = require("del"),
   babel = require("rollup-plugin-babel"),
@@ -183,25 +182,30 @@ gulp.task("dev", gulp.series("build", function () {
   startServer();
 }));
 
-gulp.task("run-test", function () {
-  gulp.src('./src/tests/*.js')
-    .pipe(protractor.protractor({
-      configFile: './src/test.js'
-    }))
-    .on('end', function () {
-      gulp.stop("dev");
-    });
-})
-
-gulp.task('test', gulp.parallel("dev", "run-test"));
-
 gulp.task("release", gulp.series("build", "appCache", "robots"), function () {
   isRelease = true;
 });
 
-gulp.task("release-preview", gulp.series("dev"), function () {
-  isRelease = true;
+gulp.task('test', function (testDone) {
+  const test = gulp.series("release", function (releaseDone) {
+    startServer();
+
+    return gulp
+      .src('./src/tests/*.js')
+      .pipe(protractor.protractor({
+        configFile: './src/test.js'
+      }))
+      .on("end", function () {
+        stopServer();
+        releaseDone();
+        testDone();
+      });
+  });
+
+  return test();
 });
+
+let server;
 
 function startServer() {
   const Koa = require("koa"),
@@ -211,6 +215,11 @@ function startServer() {
   let app = new Koa();
   app.use(logger());
   app.use(serve("./dist"));
-  app.listen(port);
+  server = app.listen(port);
   console.log(`Listening on ${address}`);
+}
+
+function stopServer() {
+  server.close();
+  console.log(`Listening stoped on ${address}`);
 }
