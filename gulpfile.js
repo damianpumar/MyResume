@@ -1,4 +1,4 @@
-const 
+const
   port = 8080
   address = `http://localhost:${port}`,
   gulp = require("gulp"),
@@ -25,12 +25,12 @@ let date = new Date();
 const banner = [
   "/*!\n",
   " * <%= pkg.title %> v." +
-    date.getDay() +
-    "." +
-    date.getMonth() +
-    "." +
-    date.getFullYear() +
-    "+ (<%= pkg.homepage %>)\n",
+  date.getDay() +
+  "." +
+  date.getMonth() +
+  "." +
+  date.getFullYear() +
+  "+ (<%= pkg.homepage %>)\n",
   " * Copyright " + date.getFullYear(),
   " <%= pkg.author %>\n",
   " * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n",
@@ -54,7 +54,6 @@ let tasks = {
     src: [
       "src/css/main.css",
       "src/css/animations.css",
-      "src/css/align.css",
       "src/css/768.css"
     ],
     dest: "dist/css",
@@ -103,46 +102,42 @@ function createTask(title) {
   return gulpTask.pipe(gulp.dest(task.dest)).on("error", console.log);
 }
 
-gulp.task("html", function() {
+gulp.task("html", function () {
   return createTask("html");
 });
 
-gulp.task("favicon", function() {
-  return gulp.src("src/favicon.ico").pipe(gulp.dest("dist"));
-});
-
-gulp.task("images", ["favicon"], function() {
+gulp.task("images", function () {
   return createTask("images");
 });
 
-gulp.task("styles", function() {
+gulp.task("styles", function () {
   return createTask("styles");
 });
 
-gulp.task("javascript", function() {
+gulp.task("javascript", function () {
   return createTask("javascript");
 });
 
-gulp.task("vendorJS", function() {
+gulp.task("vendorJS", function () {
   return createTask("vendorJS");
 });
 
-gulp.task("vendorCSS", function() {
+gulp.task("vendorCSS", function () {
   return createTask("vendorCSS");
 });
 
-gulp.task("portfolio", function() {
+gulp.task("portfolio", function () {
   return createTask("portfolio");
 });
 
-gulp.task("robots", function() {
-  gulp.src("src/robots.txt")
-  .pipe(gulp.dest("dist"))
+gulp.task("robots", function () {
+  return gulp.src("src/robots.txt")
+    .pipe(gulp.dest("dist"))
 })
 
-gulp.task("appCache", function() {
-  gulp
-    .src(["dist/**/*"])
+gulp.task("appCache", function () {
+  return gulp
+    .src("dist/**/*")
     .pipe(
       manifest({
         hash: true,
@@ -155,15 +150,15 @@ gulp.task("appCache", function() {
     .pipe(gulp.dest("dist"));
 });
 
-gulp.task("clean", function() {
+gulp.task("clean", function () {
   return del("dist/**/*");
 });
 
-gulp.task("css", gulpSequence("vendorCSS", "styles"));
+gulp.task("css", gulp.parallel("vendorCSS", "styles"));
 
 gulp.task(
   "build",
-  gulpSequence(
+  gulp.series(
     "clean",
     "html",
     "portfolio",
@@ -174,44 +169,38 @@ gulp.task(
   )
 );
 
-gulp.task("release", ["clean"], function() {
-  isRelease = true;
-
-  return gulp.start(gulpSequence("build", "appCache", "robots"));
-});
-
-gulp.task("release-preview", ["clean"], function() {
-  isRelease = true;
-
-  return gulp.start("dev");
-});
-
-gulp.task('test', function() {
-  const dev = gulp.start("dev");
-
-      gulp.src('./src/tests/*.js')
-        .pipe(protractor.protractor({
-            configFile: './src/test.js'
-        }))
-        .on('end', function () {
-            gulp.stop("dev");
-        });
-
-  return dev;
-});
-
 gulp.task('webdriver-update', protractor.webdriver_update);
 
-gulp.task('webdriver-standalone', ['webdriver-update'], protractor.webdriver_standalone);
+gulp.task('webdriver-standalone', gulp.series("webdriver-update", protractor.webdriver_standalone));
 
-gulp.task("dev", ["build"], function() {
-  gulp.watch("src/css/main.css", ["styles"]);
-  gulp.watch("src/css/768.css", ["styles"]);
-  gulp.watch("src/js/*.js", ["javascript"]);
-  gulp.watch("src/**/*.html", ["html", "portfolio"]);
-  gulp.watch("src/images/**/*", ["images"]);
+gulp.task("dev", gulp.series("build", function () {
+  gulp.watch("src/css/main.css", gulp.series("styles"));
+  gulp.watch("src/css/768.css", gulp.series("styles"));
+  gulp.watch("src/js/*.js", gulp.series("javascript"));
+  gulp.watch("src/**/*.html", gulp.series("html", "portfolio"));
+  gulp.watch("src/images/**/*", gulp.series("images"));
 
   startServer();
+}));
+
+gulp.task("run-test", function () {
+  gulp.src('./src/tests/*.js')
+    .pipe(protractor.protractor({
+      configFile: './src/test.js'
+    }))
+    .on('end', function () {
+      gulp.stop("dev");
+    });
+})
+
+gulp.task('test', gulp.parallel("dev", "run-test"));
+
+gulp.task("release", gulp.series("build", "appCache", "robots"), function () {
+  isRelease = true;
+});
+
+gulp.task("release-preview", gulp.series("dev"), function () {
+  isRelease = true;
 });
 
 function startServer() {
