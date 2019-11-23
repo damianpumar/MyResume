@@ -1,6 +1,6 @@
 const 
   port = 8080
-  address = `http://localhsot:${port}`,
+  address = `http://localhost:${port}`,
   gulp = require("gulp"),
   cssClean = require("gulp-clean-css"),
   gulpSequence = require("gulp-sequence"),

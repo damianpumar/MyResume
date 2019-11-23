@@ -19,7 +19,7 @@
     "release-preview": "gulp release-preview",
     "dev": "gulp dev",
     "test": "gulp test",
-    "webdriver": "gulp webdriver-update"
+    "postinstall": "gulp webdriver-update"
   },
   "devDependencies": {
     "babel-core": "6.26.0",
@@ -51,6 +51,5 @@
     "koa-logger": "3.2.0",
     "koa-static": "4.0.2",
     "rollup-plugin-babel": "3.0.3"
-  },
-  "dependencies": {}
+  }
 }
