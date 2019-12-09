@@ -1,6 +1,5 @@
 import { loader } from "./loader";
 import { masonry } from "./masonry";
-import { lightbox } from "./lightbox";
 
 var current = 0;
 var classicLayout = false;
@@ -130,8 +129,6 @@ export const page = {
   setup: () => {
     masonry.setup();
 
-    lightbox.setup();
-
     $(".tabs").each(function() {
       if (!$(this).find(".tab-titles li a.active").length) {
         $(this)
@@ -214,14 +211,6 @@ export const page = {
     });
     if ($("iframe,video").length) {
       $("html").fitVids();
-    }
-    $(
-      "select:not([multiple]), input:checkbox, input:radio, input:file"
-    ).uniform();
-    var ua = navigator.userAgent.toLowerCase();
-    var isAndroid = ua.indexOf("android") > -1;
-    if (isAndroid) {
-      $("html").addClass("android");
     }
   },
 
