@@ -136,7 +136,7 @@ gulp.task("robots", function () {
 
 gulp.task("appCache", function () {
   return gulp
-    .src("dist/**/*")
+    .src(["dist/**/*", "!dist/portfolio/**", "!dist/images/portfolio/*-*"])
     .pipe(
       manifest({
         hash: true,
