@@ -44,10 +44,6 @@ export const header = {
       }
       return false;
     });
-
-    $(
-      "select:not([multiple]), input:checkbox, input:radio, input:file"
-    ).uniform();
     var ua = navigator.userAgent.toLowerCase();
     var isAndroid = ua.indexOf("android") > -1;
     if (isAndroid) {

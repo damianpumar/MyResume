@@ -7,7 +7,7 @@ export const masonry = {
     masonry.setup();
   },
   setup: () => {
-    var masonryElement = $(".masonry, .gallery");
+    var masonryElement = $(".masonry");
     if (masonryElement.length) {
       masonryElement.each(function(index, el) {
         masonry.refresh();
