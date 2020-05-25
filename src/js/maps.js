@@ -3,7 +3,7 @@ export const maps = {
     var mapCanvas = $("#map-canvas");
 
     if (mapCanvas.length) {
-      google.maps.event.addDomListener(window, "load", initializeMap);
+      //google.maps.event.addDomListener(window, "load", initializeMap);
     }
 
     function initializeMap() {
