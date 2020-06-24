@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js single-page-layout" data-classic-layout="false" data-mobile-only-classic-layout="true"
+  data-inAnimation="fadeInUp" data-outAnimation="fadeOutDownBig">
+
+<head>
+  {% include "src/partials/head.html" %}
+</head>
+
+<body>
+  <div class="container" id="container">
+    <header class="header">
+
+      <img src="/images/site/avatar.jpg" alt="avatar">
+      <h1>{{ myName }}</h1>
+      <p>Software Craftsman</p>
+
+      <ul class="vs-nav">
+
+        <li><a href="#/portfolio" id="portfolioToHome"><i title="back to portfolio" class="icon-left-open tooltip"
+              data-tooltip-pos="left"></i></a></li>
+        <li><a href="#/about" id="portfolioToHome"><i title="go to home" class="icon-home-1 tooltip"
+              data-tooltip-pos="right"></i></a></li>
+
+      </ul>
+      <div class="header-search">
+        <form role="search" method="get" id="search-form" action="#">
+          <input type="text" value="" name="s" id="search" placeholder="Enter Keyword">
+          <input type="submit" id="search-submit" title="Search" value="→">
+        </form>
+      </div>
+    </header>
+
+    <div class="wrapper">
+
+      <div class="portfolio-single">
+
+        <div class="row">
+
+          <div class="col-md-8 portfolio-field portfolio-title">
+            <h2>
+              {{data.name}}
+            </h2>
+          </div>
+
+          <div class="col-md-4 portfolio-field portfolio-nav">
+            {% if data.detail.prev %}
+            <a class="icon button prev ajax" href="{{data.detail.prev}}"></a>
+            {% endif %}
+
+            {% if data.detail.next %}
+            <a class="icon button next ajax" href="{{data.detail.next}}"></a>
+            {% endif %}
+
+            <a class="button back" href="#/portfolio"></a>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-8 portfolio-field">
+          {% if data.detail.slider %}
+
+            <div class="flexslider" data-autoplay="true" data-interval="2000" data-animation="slide" data-direction="horizontal"
+                data-animationSpeed="600" data-pauseOnHover="true">
+
+                <ul class="slides">
+                    {% for image in data.detail.images %}
+                    <li>
+                        <img src="../images/portfolio/{{image}}" alt="slide">
+                        {% if loop.index == 0 %}
+                          <p class="flex-title">{{title}}</p>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+
+            </div>
+
+          {% else %}
+            {% for image in data.detail.images %}
+              <img src="../images/portfolio/{{image}}" />
+            {% endfor %}
+          {% endif %}
+          </div>
+
+          <div class="col-md-4 portfolio-field">
+            <h3>Description</h3>
+
+            {% for description in data.detail.descriptions %}
+            <p>
+              {{description}}
+            </p>
+            {% endfor %}
+
+            {% if data.detail.links.length %}
+            <div class="launch">
+              {% for link in data.detail.links %}
+              <a target="_blank" class="button primary" href="{{link.url}}">{{link.title}}</a>
+              {% endfor %}
+            </div>
+            {% endif %}
+
+            <h3>Technology</h3>
+            <ul class="tags">
+              {% for tag in data.detail.tags %}
+              <li><a>{{tag}}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-12 portfolio-field portfolio-nav bottom">
+            {% if data.detail.prev %}
+            <a class="icon button prev ajax" href="{{data.detail.prev}}"></a>
+            {% endif %}
+
+            {% if data.detail.next %}
+            <a class="icon button next ajax" href="{{data.detail.next}}"></a>
+            {% endif %}
+
+            <a class="button back" href="#/portfolio"></a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  </div>
+  <script>
+    $(window).load(function () {
+      $("#portfolioToHome")
+        .attr("href", window.location.origin + "#about");
+
+      $("#backToPortfolio").attr("href", window.location.origin + "#portfolio");
+    });
+  </script>
+
+  {% include "src/partials/footer.html" %}
+
+</body>
+
+</html>

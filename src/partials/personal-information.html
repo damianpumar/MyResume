@@ -1,0 +1,31 @@
+<h2><i class="icon-person"></i>PERSONAL INFO</h2>
+<div class="event">
+    <span class="date"><i class="icon-info"></i></span>
+    <p>
+        {% for nationality in nationalities %}
+        <h4>{{nationality}}</h4>
+        {% endfor %}
+    </p>
+</div>
+<div class="event">
+    <span class="date"><i class="icon-info"></i></span>
+    <div class="skillset no-padding">
+        {% for language in languages %}
+            <h4>{{language.name}}</h4>
+            <p>
+            <div class="skill-unit">
+                <h4>{{language.level}}</h4>
+                <div class="bar" data-percent="{{language.progress}}">
+                    <div class="progress"></div>
+                </div>
+            </div>
+            <p>
+        {% endfor %}
+    </div>
+</div>
+<div class="event">
+    <span class="date">{{born.year}}</span>
+    <h4>BORN</h4>
+    <h4 id="age">years old</h4>
+    <h5>{{born.date}}</h5>
+</div>

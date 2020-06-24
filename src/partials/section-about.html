@@ -1,0 +1,270 @@
+<section id="about" class="page">
+  <div class="content">
+
+    <div class="row">
+
+      <div class="col-md-8">
+
+        <h2 class="section-title"><span><i class="icon-guest"></i>A LITTLE ABOUT ME</span></h2>
+
+        <div class="intro">
+
+          <h2>
+            Hello 👋 I am
+            <span class="rotate-words">
+              {% for myRole in myRoles %}
+                <span>{{myRole}}</span>
+              {% endfor %}
+             </span>
+            <br>
+            I live in {{myLocation}}. I was born in {{myBornLocation}}.
+            <br>
+            I am software passionate and clean code lover.
+          </h2>
+
+        </div>
+
+      </div>
+
+      <div class="col-md-4">
+
+        <h2 class="section-title"><span><i class="icon-twitter"></i>LATEST TWEETS</span></h2>
+
+        <div id="latest-tweets" class="widget-twitter" data-twitter-name="{{socials | getObject("twitter") | getKey("userName")}}" data-tweet-count="1"
+          data-include-retweets="false"></div>
+
+      </div>
+
+
+    </div>
+
+    <h2 class="section-title"><span><i class="fa fa-magic"></i>SERVICES</span></h2>
+
+    <div class="row">
+
+      {% for myService in myServices %}
+
+      <div class="col-sm-6 col-md-3">
+
+        <div class="service {{myService.color}}">
+          <i class="fa {{myService.icon}}"></i>
+          <h4>{{myService.title}}</h4>
+          <p>
+            {{myService.description}}
+          </p>
+        </div>
+
+      </div>
+
+      {% endfor %}
+
+    </div>
+
+    <h2 class="section-title"><span><i class="icon-layers-alt"></i>WORK PROCESS</span></h2>
+
+    <div class="row">
+
+      <div class="col-xs-6 col-sm-4 col-md-2">
+
+        <div class="process">
+
+          <div class="process-box">
+            <i class="icon-lamp"></i>
+            <h4>IDEA</h4>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-xs-6 col-sm-4 col-md-2">
+
+        <div class="process">
+          <div class="process-box">
+            <i class="fa fa-puzzle-piece"></i>
+            <h4>CONCEPT</h4>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-xs-6 col-sm-4 col-md-2">
+
+        <div class="process">
+
+          <div class="process-box">
+            <i class="icon-brush"></i>
+            <h4>DESIGN</h4>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-xs-6 col-sm-4 col-md-2">
+
+        <div class="process">
+
+          <div class="process-box">
+            <i class="fa fa-cube"></i>
+            <h4>DEVELOP</h4>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-xs-6 col-sm-4 col-md-2">
+
+        <div class="process">
+
+          <div class="process-box">
+            <i class="fa fa-bug"></i>
+            <h4>TEST</h4>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-xs-6 col-sm-4 col-md-2">
+
+        <div class="process">
+
+          <div class="process-box">
+            <i class="fa fa-rocket"></i>
+            <h4>LAUNCH</h4>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <h2 class="section-title"><span>FUN FACT</span></h2>
+
+    <div class="row">
+
+      <div class="col-sm-6 col-md-3">
+
+        <div class="fun-fact">
+          <i class="icon-clock"></i>
+          <h4 id="hoursWorked"></h4>
+        </div>
+
+      </div>
+
+      <div class="col-sm-6 col-md-3">
+
+        <div class="fun-fact">
+          <i class="icon-paper-plane"></i>
+          <h4>{{projectsCompleted}} PROJECTS COMPLETED</h4>
+        </div>
+
+      </div>
+
+      <div class="col-sm-6 col-md-3">
+
+        <div class="fun-fact">
+          <i class="icon-lightbulb"></i>
+          <h4>{{awardsWon}} AWARDS WON</h4>
+        </div>
+
+      </div>
+
+      <div class="col-sm-6 col-md-3">
+
+
+        <div class="fun-fact">
+          <i class="icon-book-2"></i>
+          <h4>{{coursesDictated}} COURSES DICTATED</h4>
+        </div>
+
+
+      </div>
+
+
+    </div>
+    <!-- 
+    <h2 class="section-title"><span>CLIENTS</span></h2>
+
+    <div class="row">
+
+      <div class="col-xs-6 col-sm-4 col-md-2">
+
+        <div class="client">
+          <a href="index.html#">
+            <img src="images/clients/client-01.png" alt="client">
+          </a>
+        </div>
+
+      </div>
+
+      <div class="col-xs-6 col-sm-4 col-md-2">
+
+
+        <div class="client">
+          <a href="index.html#">
+            <img src="images/clients/client-02.png" alt="client">
+          </a>
+        </div>
+
+
+      </div>
+
+      <div class="col-xs-6 col-sm-4 col-md-2">
+
+
+        <div class="client">
+          <a href="index.html#">
+            <img src="images/clients/client-03.png" alt="client">
+          </a>
+        </div>
+
+
+      </div>
+
+      <div class="col-xs-6 col-sm-4 col-md-2">
+
+        <div class="client">
+          <a href="index.html#">
+            <img src="images/clients/client-04.png" alt="client">
+          </a>
+        </div>
+
+      </div>
+
+      <div class="col-xs-6 col-sm-4 col-md-2">
+
+        <div class="client">
+          <a href="index.html#">
+            <img src="images/clients/client-05.png" alt="client">
+          </a>
+        </div>
+
+      </div>
+
+
+      <div class="col-xs-6 col-sm-4 col-md-2">
+
+        <div class="client">
+          <a href="index.html#">
+            <img src="images/clients/client-06.png" alt="client">
+          </a>
+        </div>
+
+      </div>
+
+    </div> -->
+
+    <h2 class="section-title"><span>OTHER PAGES</span></h2>
+
+    <p>
+      <a class="button" href="https://curtme.org" target="_blank">Curtme.org</a>
+      <a class="button" href="https://homemeet.in" target="_blank">HomeMeet</a>
+      <a class="button" href="{{socials | getObject("github") | getKey("url")}}" target="_blank">My Github</a>
+    </p>
+
+  </div>
+</section>

@@ -1,10 +1,10 @@
 export const loader = {
   initialize: () => {
-	loader.show();
+    loader.show();
 
-	$(window).load(function() {
-	  loader.hide();
-	});
+    $(window).load(function () {
+      loader.hide();
+    });
   },
 
   show: () => {

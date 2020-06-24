@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js one-page-layout" data-classic-layout="false" data-mobile-only-classic-layout="true"
+  data-inAnimation="fadeInUp" data-outAnimation="fadeOutDownBig">
+
+<head>
+  {% include "src/partials/head.html" %}
+</head>
+
+<body>
+
+  <div class="content">
+
+    <div class="row">
+
+        <div class="col-md-8">
+
+            {% include "src/partials/contact-information.html" %}
+
+        </div>
+
+        <div class="col-md-4">
+
+            <ul class="social">
+                {% include "src/partials/social.html" %}
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="timeline">
+
+          {% include "src/partials/work-history.html" %}
+
+          {% include "src/partials/education.html" %}
+
+          {% include "src/partials/personal-information.html" %}
+
+        </div>
+
+      </div>
+
+      <div class="col-md-6">
+
+        {% include "src/partials/skills.html" %}
+
+        {% include "src/partials/testimonials.html" %}
+
+        <h2 class="section-title"><span><i class="icon-linkedin"></i>VIEW MY LINKEDIN PROFILE</span></h2>
+
+        <p>
+          You can view my LinkedIn profile.
+        </p>
+
+        <div class="download-button">
+          <a href="{{socials | getObject("linkedin") | getKey("url")}}" class="button primary" target="_blank">MY LINKEDIN PROFILE</a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+    {% include "src/partials/footer.html" %}
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+{
+    "workHistory": [
+        {
+            "name": "K-Lagan",
+            "period": "Jan 2020 - Current",
+            "role": "Senior Software Engineer",
+            "url": "https://www.k-lagan.com/",
+            "description": "Today I work at K-Lagan as a senior software engineer working for a client applying my strong XP, TDD, and technical lead knowledge."
+        },
+        {
+            "name": "Codurance",
+            "period": "Jun 2019 - Dec 2019",
+            "role": "Software Craftsman",
+            "url": "https://www.codurance.com",
+            "description": "I worked in codurance for 6 months, I grew my skills as Software Craftsman improving every day my XP, TDD and refactoring practices."
+        },
+        {
+            "name": "NEORIS Argentina",
+            "period": "Jan 2019 - Jun 2019",
+            "role": "Training and Development Lead",
+            "url": "https://www.neoris.com/",
+            "description": "Responsible for the coordination, execution of training plans of the 5 offices that Neoris has in Argentina."
+        },
+        {
+            "name": "NEORIS Argentina",
+            "period": "Jan 2017 - Jan 2019",
+            "role": "Technical Lead .NET",
+            "url": "https://www.neoris.com/",
+            "description": "I worked for NEORIS Argentina as the technical leader, Among my tasks was to create architecture components for the solution, responsible for the quality and technology used in the application we built."
+        },
+        {
+            "name": "NEORIS Argentina",
+            "period": "Jan 2015 - Jan 2017",
+            "role": "Sr. Software Developer",
+            "url": "https://www.neoris.com/",
+            "description": "I have given training courses teaching and promoting best software development practices. I was very happy working there, but I need new challenges.I worked in several projects in NEORIS:",
+            "details": [
+                {
+                    "name": "YARD",
+                    "descriptions": [
+                        "FrontEnd: Angular 5 with typescript",
+                        "BackEnd: WebApi 2 with .NET FWK 4.7 and MS-SQLServer"
+                    ]
+                },
+                {
+                    "name": "FyO Granos",
+                    "descriptions": [
+                        "FrontEnd: Desktop application C#, XAML(WPF)",
+                        "BackEnd: WCF, MS-SQLServer, .NET FWK 4.5.1"
+                    ]
+                },
+                {
+                    "name": "Bolsa de Comercio",
+                    "descriptions": [
+                        "FrontEnd: Desktop application C#, XAML(WPF)",
+                        "BackEnd: WCF, MS-SQLServer, .NET FWK 4.5.1"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "FullCoders",
+            "period": "Jan 2014 - Current",
+            "role": "Founder",
+            "url": "https://www.fullcoders.com/",
+            "description": "I work as Freelance Developer with technologies Desktop, Web and Mobile."
+        },
+        {
+            "name": "Grupo Oleum S.R.L",
+            "period": "Jul 2014 - Dec 2014",
+            "role": "Developer .NET",
+            "description": "I worked at Grupo Oleum S.R.L for only 6 months, where I have stood out because of my predisposition, responsibility and willingness to face new challenges. In Grupo Oleum S.R.L I worked maintaining software used in service stations throughout Argentina."
+        },
+        {
+            "name": "DPTechnik",
+            "period": "May 2011 - Jun 2014",
+            "role": "Owner",
+            "description": "Sales and Repair computers."
+        }
+    ]
+}

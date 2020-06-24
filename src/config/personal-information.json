@@ -1,0 +1,63 @@
+{
+    "myName": "Damián Pumar",
+    "myCurrentRole": "Software Craftsman",
+    "myLocation": "Barcelona, Spain",
+    "myBornLocation": "Argentina",
+    "myRoles": [
+        "a Sr. software engineer.",
+        "a Full stack developer.",
+        "a Software craftsman.",
+        "a Freelancer developer."
+    ],
+    "myEmail": "damianpumar @ gmail.com",
+    "myPhone": "664 109 973",
+    "coursesDictated": 8,
+    "awardsWon": 4,
+    "projectsCompleted": 11,
+    "myServices": [
+        {
+            "title": "FULL TIME",
+            "icon": "fa-clock-o",
+            "color": "color1",
+            "description": "I have solid knowledge in different programming languages, I started at age 14 to study computer science and programming. Software engineering is a full-time passion"
+        },
+        {
+            "title": "PROFESSIONAL",
+            "icon": "fa-laptop",
+            "color": "color2",
+            "description": "I have skills in different technologies, I am characterized by being proactive, perfectionist, self-demanding and responsible in my work."
+        },
+        {
+            "title": "MANAGEMENT",
+            "icon": "fa-tasks",
+            "color": "color3",
+            "description": "I am a person who has the ability to self-manage in a team, without losing sight of the main objective."
+        },
+        {
+            "title": "PROBLEM SOLVER",
+            "icon": "fa-line-chart",
+            "color": "color4",
+            "description": "I have great ability to find different solutions to the same problem and apply the most efficient one."
+        }
+    ],
+    "born": {
+        "year": "1991",
+        "date": "November 6, 1991 9:30 am."
+    },
+    "nationalities": [
+        "🇦🇷 Argentinian",
+        "🇮🇹 Italian"
+    ],
+    "languages": [
+        {
+            "name": "Spanish",
+            "level": "Native",
+            "progress": 100
+        },
+        {
+            "name": "English",
+            "level": "Professional working proficiency",
+            "progress": 80
+        }
+    ]
+}

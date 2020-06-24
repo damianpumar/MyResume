@@ -1,52 +1,28 @@
-{% include "src/partials/portfolio-header.html" %}
-
-<style>
-	.page-layout {
-		background: #d3d3d8 !important;
-	}
-	.p-overlay {
-		background: #d3d3d8 !important;
-	}
-</style>
-
-<article
-	id="post-310"
-	class="hentry post-310 portfolio type-portfolio status-publish has-post-thumbnail portfolio-category-design"
->
-	<header class="entry-header">
-		<div class="portfolio-nav">
-			<span><a href="fastlist" rel="prev" class="prev ajax"></a></span>
-			<a class="back" href="#"></a>
-			<span><a href="i18njs-lib" rel="next" class="next ajax"></a></span>
-		</div>
-		<h1 class="entry-title">Droguería 20 de Junio</h1>
-	</header>
-
-	<div class="entry-content">
-		<p>
-			<img
-				class="alignnone size-full rounded"
-				src="../images/portfolio/20dejunio-01.jpg"
-			/>
-		</p>
-		<div class="mini-text">
-			<h5>ABOUT THE PROJECT</h5>
-			<h6>MOBILE</h6>
-			<p><b>Language:</b> Xamarin C#</p>
-			<p><b>Framework:</b> MVVM CROSS</p>
-			<p><b>Local DB:</b> LiteDB</p>
-			<p><b>Platform:</b> Android</p>
-			<h6>BACKEND</h6>
-			<p><b>Language:</b>C#</p>
-			<p><b>Framework:</b> WEBAPI 2, ASP.NET MVC 5, EntityFramework</p>
-			<p><b>DB:</b> Microsoft SQL Server</p>
-		</div>
-		<div class="portfolio-nav bottom">
-			<span><a href="fastlist" rel="prev" class="prev ajax"></a></span>
-			<a class="back" href="#"></a>
-			<span><a href="i18njs-lib" rel="next" class="next ajax"></a></span>
-		</div>
-	</div>
-</article>
-
-{% include "src/partials/portfolio-footer.html" %}
+{% set data = {
+ "name": "Droguería 20 de Junio",
+ "description": "Logistics Mobile & Web application",
+ "url": "20dejunio",
+ "type": "mobile",
+ "image": "/images/portfolio/20dejunio.png",
+ "detail": {
+  "tags": [
+   "C#",
+   "Xamarin",
+   "MVVMCross",
+   "LiteDB",
+   "WEBAPI 2",
+   "ASP .NET MVC 5",
+   "Entity Framework",
+   "MS-SQL server"
+  ],
+  "images": [
+   "20dejunio-01.jpg"
+  ],
+  "descriptions": [
+   "A mobile application for Android and a Web Api were made to control logistics and product picking."
+  ],
+  "prev": "fastlist",
+  "next": "i18njs-lib"
+ }
+} %}
+		{% extends "src/partials/portfolio-base.html" %}

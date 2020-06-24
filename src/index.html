@@ -1,20 +1,14 @@
 <!DOCTYPE html>
-<html
-  lang="en"
-  class="one-page-layout modern-layout"
-  data-mobile-classic-layout="true"
-  data-classic-layout="false"
-  data-prev-animation="16"
-  data-next-animation="15"
-  data-random-animation="false"
-  manifest="/manifest.appcache"
->
-  <head>
-    {% include "src/partials/head.html" %}
-  </head>
+<html lang="en" class="no-js one-page-layout" data-classic-layout="false" data-mobile-only-classic-layout="true"
+  data-inAnimation="fadeInUp" data-outAnimation="fadeOutDownBig">
 
-  <body>
-    {% include "src/partials/main.html" %} {% include "src/partials/footer.html"
-    %}
-  </body>
+<head>
+  {% include "src/partials/head.html" %}
+</head>
+
+<body style="display: none;">
+  {% include "src/partials/main.html" %}
+  {% include "src/partials/footer.html" %}
+</body>
+
 </html>

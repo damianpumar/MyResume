@@ -1,6 +1,4 @@
 import { initializer } from "./initializer";
-
-(function($) {
-  "use strict";
-  initializer.initialize();
+(function ($) {
+	initializer.initialize();
 })(jQuery);

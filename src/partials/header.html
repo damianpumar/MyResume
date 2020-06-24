@@ -1,32 +1,13 @@
-<header id="masthead" class="header" role="banner">
-  <a class="menu-toggle toggle-link"></a>
-  <h1 class="site-title mobile-title">Damián Pumar</h1>
-  <div class="header-wrap">
-    {% include "src/partials/photo.html" %}
-    <nav
-      id="primary-navigation"
-      class="site-navigation primary-navigation"
-      role="navigation"
-    >
-      {% include "src/partials/menu.html" %}
-    </nav>
-    <div class="header-search">
-      <form role="search" method="get" id="search-form" action="#">
-        <input
-          type="text"
-          value=""
-          name="s"
-          id="search"
-          placeholder="enter word"
-        />
-        <input type="submit" id="search-submit" title="Search" value="→" />
-      </form>
-    </div>
-    <div class="header-bottom">
-      {% include "src/partials/social.html" %}
-      <div class="copy-text">
-        <p>&copy; 2019 DP</p>
-      </div>
-    </div>
+<header class="header">
+  {% include "src/partials/photo.html" %}
+  <p>{{myCurrentRole}}</p>
+
+  {% include "src/partials/menu.html" %}
+
+  <div class="header-search">
+    <form role="search" method="get" id="search-form" action="#">
+      <input type="text" value="" name="s" id="search" placeholder="Enter Keyword">
+      <input type="submit" id="search-submit" title="Search" value="→">
+    </form>
   </div>
 </header>

@@ -1,0 +1,33 @@
+<h2><i class="fa fa-flask"></i>WORK HISTORY</h2>
+{% for work in workHistory %}
+  {% if loop.first %}
+  <div class="event current">
+  {% else %}
+    <div class="event">
+  {% endif %}
+    <span class="date">{{work.period | getDate }}</span>
+    <h3>{{work.period}}</h3>
+    <h4>{{work.role}}</h4>
+    <h5>
+      {% if work.url %}
+        <a href="{{work.url}}" target="_blank">{{work.name}}</a>
+      {% else %}
+      {{work.name}}
+      {% endif %}
+    </h5>
+    <p>
+      {{work.description}}
+        <ul>
+        {% for detail in work.details %}
+          <li>{{detail.name}}:
+            <ul>
+            {% for description in detail.descriptions %}
+              <li>{{description}}</li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% endfor %}
+        </ul>
+    </p>
+  </div>
+{% endfor %}

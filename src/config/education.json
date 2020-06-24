@@ -1,0 +1,22 @@
+{
+    "education": [
+        {
+            "name": "Universidad Abierta Interamericana",
+            "period": "2011 - 2014",
+            "subject": "Software Engineering",
+            "description": "I'm missing only one subject."
+        },
+        {
+            "name": "Universidad Tecnológica Nacional",
+            "period": "2010 - 2011",
+            "subject": "Software Engineering",
+            "description": "I attended only the first year."
+        },
+        {
+            "name": "San Francisco Solano",
+            "period": "2001 - 2009",
+            "subject": "Information System",
+            "description": "High school"
+        }
+    ]
+}

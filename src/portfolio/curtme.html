@@ -1,55 +1,43 @@
-{% include "src/partials/portfolio-header.html" %}
-
-<style>
-	.page-layout {
-		background: #efac28 !important;
-	}
-	.p-overlay {
-		background: #efac28 !important;
-	}
-</style>
-
-<article
-	id="post-310"
-	class="hentry post-310 portfolio type-portfolio status-publish has-post-thumbnail portfolio-category-design"
->
-	<header class="entry-header">
-		<div class="portfolio-nav">
-			<a class="back" href="#"></a>
-			<span><a href="emailsender" rel="next" class="next ajax"></a></span>
-		</div>
-		<h1 class="entry-title">Curtme.org</h1>
-	</header>
-
-	<div class="entry-content">
-		<p>
-			<img
-				class="alignnone size-full rounded"
-				src="../images/portfolio/curtme.org-01.png"
-			/>
-		</p>
-		<div class="mini-text">
-			<h5>ABOUT THE PROJECT</h5>
-			<h6>
-				Free, Open source and Unlimited link shorter
-			</h6>
-			<h6>Service</h6>
-			<p><b>Language:</b> C# netcore 3.0</p>
-			<p><b>Database:</b> Mongodb</p>
-			<p>
-				<a target="_blank" class="button medium" href="https://curtme.org/PNEBUAM"
-					>Official site</a
-				>
-				<a target="_blank" class="button medium" href="https://curtme.org/86YZQL9"
-					>Github</a
-				>
-			</p>
-		</div>
-		<div class="portfolio-nav bottom">
-			<a class="back" href="#"></a>
-			<span><a href="emailsender" rel="next" class="next ajax"></a></span>
-		</div>
-	</div>
-</article>
-
-{% include "src/partials/portfolio-footer.html" %}
+{% set data = {
+ "name": "Curtme.org",
+ "description": "Free Open source and Unlimited link shortener",
+ "url": "curtme",
+ "type": "services",
+ "image": "/images/portfolio/curtme.org.png",
+ "detail": {
+  "tags": [
+   "C#",
+   "netcore 3.0",
+   "Mongo db",
+   "svelte",
+   "javascript"
+  ],
+  "slider": true,
+  "images": [
+   "curtme.org-01.png",
+   "curtme.org-02.png"
+  ],
+  "descriptions": [
+   "Free Open source and Unlimited link shortener",
+   "Curtme is a shortener link written, maintained and hosted by me, it is totally free and open source. I invite you to collaborate on this beautiful project on my github.",
+   "I have written the backend in netcore 3.0, it has a Mongo db, the frontend is written with svelte in javascript. I also made a small extension for google chrome, in my github you will find everything.",
+   "You can also visit the developer documentation below if you are interested in implementing it on your system."
+  ],
+  "links": [
+   {
+    "url": "https://curtme.org/PNEBUAM",
+    "title": "Official site"
+   },
+   {
+    "url": "https://curtme.org/86YZQL9",
+    "title": "Github"
+   },
+   {
+    "url": "https://curtme.org/developer",
+    "title": "Developer"
+   }
+  ],
+  "next": "emailsender"
+ }
+} %}
+		{% extends "src/partials/portfolio-base.html" %}

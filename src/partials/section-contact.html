@@ -1,0 +1,62 @@
+<section id="contact" class="page">
+  <div class="content">
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <h2 class="section-title"><span><i class="icon-address-book"></i>LET'S GET IN TOUCH</span></h2>
+
+        {% include "src/partials/contact-information.html" %}
+
+      </div>
+
+      <div class="col-md-6">
+
+        <h2 class="section-title"><span><i class="icon-chat"></i>LET'S SOCIALIZE</span></h2>
+
+        <ul class="social">
+          {% include "src/partials/social.html" %}
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-12">
+
+        <h2 class="section-title"><span><i class="icon-paper-plane"></i>DROP ME A LINE</span></h2>
+
+        <div class="contact-form">
+
+          <form id="contact-form" class="validate-form"
+            action="https://server.fullcoders.com/EmailMagic/email/send/LPGScT8HA4D7JJ0DvLC2" method="post">
+
+            <p>
+              <label for="name">NAME</label>
+              <input type="text" name="name" id="name" class="required">
+            </p>
+
+            <p>
+              <label for="email">EMAIL</label>
+              <input type="text" name="email" id="email" class="required email">
+            </p>
+
+            <p>
+              <label for="message">MESSAGE</label>
+              <textarea name="message" id="message" class="required"></textarea>
+            </p>
+
+            <p>
+              <input type="submit" class="submit button primary" value="SEND">
+            </p>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

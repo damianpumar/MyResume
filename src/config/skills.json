@@ -1,0 +1,145 @@
+{
+    "skills": [
+        {
+            "title": "Coding skills",
+            "unit": [
+                {
+                    "name": "C#",
+                    "progress": "98"
+                },
+                {
+                    "name": "TypeScript",
+                    "progress": "90"
+                },
+                {
+                    "name": "Javascript",
+                    "progress": "90"
+                },
+                {
+                    "name": "Ruby",
+                    "progress": "85"
+                },
+                {
+                    "name": "HTML5",
+                    "progress": "90"
+                },
+                {
+                    "name": "CSS3",
+                    "progress": "60"
+                },
+                {
+                    "name": "Java",
+                    "progress": "35"
+                }
+            ]
+        },
+        {
+            "title": "Crafts Practices",
+            "unit": [
+                {
+                    "name": "XP values & practices",
+                    "progress": "98"
+                },
+                {
+                    "name": "TDD",
+                    "progress": "98"
+                },
+                {
+                    "name": "Pair programming",
+                    "progress": "98"
+                },
+                {
+                    "name": "Agile Estimation",
+                    "progress": "98"
+                },
+                {
+                    "name": "Continuous integration",
+                    "progress": "98"
+                },
+                {
+                    "name": "GRASP",
+                    "progress": "98"
+                },
+                {
+                    "name": "SOLID principles",
+                    "progress": "98"
+                }
+            ]
+        },
+        {
+            "title": "Fwks & Libs skills",
+            "unit": [
+                {
+                    "name": ".NET Core",
+                    "progress": "90"
+                },
+                {
+                    "name": "ASP.NET Core",
+                    "progress": "90"
+                },
+                {
+                    "name": ".NET Framework",
+                    "progress": "98"
+                },
+                {
+                    "name": "ASP.NET MVC",
+                    "progress": "98"
+                },
+                {
+                    "name": "Sails js",
+                    "progress": "75"
+                },
+                {
+                    "name": "Angular 5",
+                    "progress": "60"
+                },
+                {
+                    "name": "Angular js",
+                    "progress": "90"
+                },
+                {
+                    "name": "WPF",
+                    "progress": "98"
+                },
+                {
+                    "name": "Entity Framework",
+                    "progress": "90"
+                },
+                {
+                    "name": "Moq",
+                    "progress": "98"
+                },
+                {
+                    "name": "Xamarin (IOS, Android & WP)",
+                    "progress": "90"
+                }
+            ]
+        },
+        {
+            "title": "Databases",
+            "unit": [
+                {
+                    "name": "SQL",
+                    "progress": "98"
+                },
+                {
+                    "name": "Mongo db",
+                    "progress": "75"
+                }
+            ]
+        },
+        {
+            "title": "Version Control",
+            "unit": [
+                {
+                    "name": "TFS",
+                    "progress": "98"
+                },
+                {
+                    "name": "GIT",
+                    "progress": "90"
+                }
+            ]
+        }
+    ]
+}

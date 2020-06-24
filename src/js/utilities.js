@@ -1,7 +1,7 @@
 // The magic number: 31557600000 is 24 * 3600 * 365.25 * 1000
 // Which is the length of a year, the length of a year is 365 days and 6 hours
 // which is 0.25 day.
-const maginNumber = 31557600000;
+const magicNumber = 31557600000;
 
 export const utilities = {
   loadImagesAsync: () => {
@@ -31,7 +31,7 @@ export const utilities = {
   },
 
   initializeHoursWorked: () => {
-    $(window).load(function() {
+    $(window).load(function () {
       var startWork = new Date(2011, 1, 1, 0, 0);
       var now = new Date();
       var daysDifference = now.getTime() - startWork.getTime();
@@ -43,70 +43,63 @@ export const utilities = {
       var hoursWorkedMask = Math.trunc(hoursWorked)
         .toString()
         .replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-      $("#hoursWorked").text(hoursWorkedMask + " Working Hours");
+      $("#hoursWorked").text(hoursWorkedMask + " WORKING HOURS");
     });
   },
 
   initializeAge: () => {
-    $(window).load(function() {
-      var birthday = Date.parse("1991/11/06");
-      var age = ~~((Date.now() - birthday) / maginNumber);
+    $(window).load(function () {
+      const birthday = Date.parse("1991/11/06");
+      const age = ~~((Date.now() - birthday) / magicNumber);
+      const text = $("#age").text();
 
-      $("#age").text(age + " years old");
+      $("#age").text(`${age} ${text}`);
     });
   },
 
   initializeFillBars: () => {
-    var initialized = false;
 
-    window.addEventListener("pageChanged", function(e) {
-      if (!initialized && e && e.detail == "resume") {
-        $(".bar").each(function() {
-          const bar = $(this);
-          const percent = bar.attr("data-percent");
-          const customMessage = bar.attr("data-message");
-          const hastMessage = (customMessage !== undefined)
-          bar
-            .find(".progress")
-            .css("width", `${percent}%`);
+    $(".bar").each(function () {
+      const bar = $(this);
+      const percent = bar.attr("data-percent");
+      const customMessage = bar.attr("data-message");
+      const hastMessage = (customMessage !== undefined)
+      bar
+        .find(".progress")
+        .css("width", `${percent}%`);
 
-          if (hastMessage) {
-            bar
-              .find(".progress")
-              .html(`<span style="width: auto; border-radius: 20%;"> ${customMessage} </span>`);
-          }
-          else {
-            bar
-              .find(".progress")
-              .html(`<span> ${percent} </span>`);
-          }
-        });
-        initialized = true;
+      if (hastMessage) {
+        bar
+          .find(".progress")
+          .html(`<span style="width: auto; border-radius: 20%;"> ${customMessage} </span>`);
+      }
+      else {
+        bar.find(".progress")
       }
     });
   },
 
   initializeStamp: () => {
-    $(window).load(function() {
+    $(window).load(function () {
       console.clear();
       utilities.printStamp();
     });
   },
 
   printStamp: () => {
-    if(window.location.href.includes("portfolio/")){
+    if (window.location.href.includes("portfolio/")) {
       return;
     }
 
-    const whereILive = $("#contact .fun-fact h4")[0].innerHTML;
+    const whereILive = $("#where-i-live ").text();
     const myName = "【﻿Ｄａｍｉáｎ Ｐｕｍａｒ】";
-    const myLastJob = $(".event p")[1].innerHTML.trim();
+    const myCurrentJob = $(".event.current p")[0].innerHTML.trim();
     const otherServer = utilities.getOtherServer();
 
     console.log("Sorry, I cleared console because I wanted show you this message below")
     console.log(myName);
-    console.log(`I live in ${ whereILive }`);
-    console.log(myLastJob);
+    console.log(`I live in ${whereILive}`);
+    console.log(myCurrentJob);
     console.log("Code: https://github.com/damianpumar/myresume");
     console.log(`Other server: ${otherServer}`);
     utilities.printSocialLinks();
@@ -118,51 +111,39 @@ export const utilities = {
       return self.indexOf(value) === index
     };
 
+
+    const upperFirstLetter = word => {
+      return `${word[0].toUpperCase()}${word.substring(1, word.length)}`;
+    }
+
     const socialLinks = [];
 
-    $(".social a").each(function(){
-      const link =$(this).attr("href")
-      if(link.includes("http")){
-        socialLinks.push(link);
+    $(".social a").each(function () {
+      const url = $(this).attr("href")
+      if (url.includes("http")) {
+        socialLinks.push({ name: this.className.split(" ")[0], url: url });
       }
     });
-      
-    socialLinks.filter(unique).forEach(function(link) {
-      console.log(`• ${link}`);
+
+    socialLinks.filter(unique).forEach(function (link) {
+      console.log(`• ${upperFirstLetter(link.name)}: ${link.url}`);
     })
   },
 
   getOtherServer: () => {
     const gitHubServer = "https://damianpumar.github.io";
-    const ownServer= "https://damianpumar.com";
+    const ownServer = "https://damianpumar.com";
     return window.location.href.includes("github") ? ownServer : gitHubServer;
   },
+  loadTooltips: () => {
+    $('.tooltip').each(function (index, element) {
+      $(this).tooltipster({
+        fixedWidth: 300,
+        offsetX: 0,
+        animation: "grow",
+        delay: 50
+      });
 
-  loadDownloadeableResume: () => {
-    let additionalInformation = $(".only-for-cv-paper");
-    additionalInformation.hide();
-
-    $("#download-resume").click(()=> {
-      let resumeColor = $("#resume").css('background-color');
-      let cv = $("#cv");
-      cv.css('background-color', resumeColor);
-
-      var opt = {
-        filename:  'Damián Pumar - Resume',
-        image:     { type: 'jpeg', quality: 0.98 },
-        jsPDF:     { unit: 'pt', format: 'a3', orientation: 'portrait' },
-        backgroundColor: resumeColor,
-        pagebreak: { mode: ['ccs', "legacy"] }
-      };
-
-      $.blockUI({ message: '<h5>Creating CV...</h5>' });
-      additionalInformation.show();
-
-      html2pdf().set(opt).from(cv[0]).save()
-      .then(function() {
-        additionalInformation.hide();
-        $.unblockUI();
-      })
     });
   }
 };

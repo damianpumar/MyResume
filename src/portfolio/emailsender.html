@@ -1,54 +1,28 @@
-{% include "src/partials/portfolio-header.html" %}
-
-<style>
-	.page-layout {
-		background: #b9d7f0 !important;
-	}
-	.p-overlay {
-		background: #b9d7f0 !important;
-	}
-</style>
-
-<article
-	id="post-310"
-	class="hentry post-310 portfolio type-portfolio status-publish has-post-thumbnail portfolio-category-design"
->
-	<header class="entry-header">
-		<div class="portfolio-nav">
-			<span><a href="curtme" rel="prev" class="prev ajax"></a></span>
-			<a class="back" href="#"></a>
-			<span><a href="fastlist" rel="next" class="next ajax"></a></span>
-		</div>
-		<h1 class="entry-title">Email Sender</h1>
-	</header>
-
-	<div class="entry-content">
-		<p>
-			<img
-				class="alignnone size-full rounded"
-				src="../images/portfolio/emailsender-01.png"
-			/>
-		</p>
-		<div class="mini-text">
-			<h5>ABOUT THE PROJECT</h5>
-			<h6>
-				Free email sender from html form, very easy installation, you just need to change
-				the action of your forms
-			</h6>
-			<h6>Service</h6>
-			<p><b>Language:</b> C# netcore 3.0</p>
-			<p>
-				<a target="_blank" class="button medium" href="https://curtme.org/R4L4WBW"
-					>Github</a
-				>
-			</p>
-		</div>
-		<div class="portfolio-nav bottom">
-			<span><a href="curtme" rel="prev" class="prev ajax"></a></span>
-			<a class="back" href="#"></a>
-			<span><a href="fastlist" rel="next" class="next ajax"></a></span>
-		</div>
-	</div>
-</article>
-
-{% include "src/partials/portfolio-footer.html" %}
+{% set data = {
+ "name": "Email sender",
+ "description": "Email sender from html form",
+ "url": "emailsender",
+ "type": "services",
+ "image": "/images/portfolio/emailsender.png",
+ "detail": {
+  "tags": [
+   "C#",
+   "netcore 3.0"
+  ],
+  "images": [
+   "emailsender-01.png"
+  ],
+  "descriptions": [
+   "Free email sender from html form, very easy installation, you just need to change the action of your forms"
+  ],
+  "links": [
+   {
+    "url": "https://curtme.org/RZ9KP6O",
+    "title": "Github"
+   }
+  ],
+  "prev": "curtme",
+  "next": "fastlist"
+ }
+} %}
+		{% extends "src/partials/portfolio-base.html" %}

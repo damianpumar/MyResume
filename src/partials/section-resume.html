@@ -1,0 +1,52 @@
+<section id="resume" class="page">
+  <div class="content">
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="timeline">
+
+          {% include "src/partials/work-history.html" %}
+
+          {% include "src/partials/education.html" %}
+
+          {% include "src/partials/personal-information.html" %}
+
+        </div>
+
+      </div>
+
+      <div class="col-md-6">
+
+        {% include "src/partials/skills.html" %}
+
+        {% include "src/partials/testimonials.html" %}
+
+        <h2 class="section-title"><span><i class="icon-linkedin"></i>VIEW MY LINKEDIN PROFILE</span></h2>
+
+        <p>
+          You can view my LinkedIn profile.
+        </p>
+
+        <div class="download-button">
+          <a href="{{socials | getObject("linkedin") | getKey("url")}}" class="button primary" target="_blank">MY LINKEDIN PROFILE</a>
+        </div>
+
+        {% if isEnabledDownloadCV %}
+          <h2 class="section-title"><span><i class="icon-doc-alt"></i>DOWNLOAD MY CV</span></h2>
+
+          <p>You can download my CV in pdf format.</p>
+
+          <div class="download-button">
+            <a href="https://curtme.org/AUYMW5H" class="button primary" target="_blank">DOWNLOAD CV</a>
+          </div>
+        {% endif %}
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

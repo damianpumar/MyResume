@@ -1,14 +1,16 @@
-<div id="page" class="hfeed site">
+<div class="container" id="container">
   {% include "src/partials/header.html" %}
 
-  <div id="main" class="site-main">
-    {% include "src/partials/home.html" %} {% include "src/partials/about.html"
-    %} {% include "src/partials/resume.html" %} {% include
-    "src/partials/portfolio.html" %} {% include "src/partials/contact.html" %}
-    {% include "src/partials/snackbar.html" %}
+  <div class="wrapper">
+    {% include "src/partials/section-about.html" %}
+    {% include "src/partials/section-portfolio.html" %}
+    {% include "src/partials/section-contact.html" %}
+    {% include "src/partials/section-blog.html" %}
+    {% include "src/partials/section-resume.html" %}
   </div>
-
-  <div class="p-overlay "></div>
-  <div class="p-overlay "></div>
-  <div class="site-alert animated "></div>
 </div>
+
+<div class="p-overlay"></div>
+<div class="p-overlay"></div>
+
+<div class="site-alert animated"></div>

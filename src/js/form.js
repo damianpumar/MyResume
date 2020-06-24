@@ -3,7 +3,7 @@ export const form = {
     $("#contact-form").addClass("validate-form");
     $("#contact-form")
       .find("input,textarea")
-      .each(function(index, element) {
+      .each(function (index, element) {
         if ($(this).attr("aria-required") === "true") {
           $(this).addClass("required");
         }
@@ -13,20 +13,9 @@ export const form = {
       });
 
     if ($(".validate-form").length) {
-      $(".validate-form").each(function() {
+      $(".validate-form").each(function () {
         $(this).validate({
-          ignore: ".ignore",
-          rules: {
-            hiddenRecaptcha: {
-              required: function() {
-                if (grecaptcha.getResponse() == "") {
-                  return true;
-                } else {
-                  return false;
-                }
-              }
-            }
-          }
+          ignore: ".ignore"
         });
       });
     }

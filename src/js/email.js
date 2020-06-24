@@ -3,7 +3,7 @@ export const email = {
     var contactForm = $("#contact-form");
     var $alert = $(".site-alert");
     var $submit = contactForm.find(".submit");
-    contactForm.submit(function(event) {
+    contactForm.submit(function (event) {
       event.preventDefault();
       sendEmail(contactForm);
     });
@@ -19,26 +19,26 @@ export const email = {
           crossDomain: true,
           contentType: "application/json; charset=utf-8",
           data: JSON.stringify(contactForm.serializeObject()),
-          success: function(data) {
+          success: function (data) {
             contactForm.clearForm();
           },
-          error: function(textStatus, errorThrown) {
+          error: function (textStatus, errorThrown) {
             $alert.addClass("error");
           },
-          complete: function() {
+          complete: function () {
             NProgress.done();
             $alert.show();
-            setTimeout(function() {
+            setTimeout(function () {
               $alert.hide();
-            }, 6000);
+            }, 3000);
           }
         });
       }
     }
-    $.fn.serializeObject = function() {
+    $.fn.serializeObject = function () {
       var o = {};
       var a = this.serializeArray();
-      $.each(a, function() {
+      $.each(a, function () {
         if (o[this.name] !== undefined) {
           if (!o[this.name].push) {
             o[this.name] = [o[this.name]];
@@ -50,11 +50,10 @@ export const email = {
       });
       return o;
     };
-    $.fn.clearForm = function() {
-      grecaptcha.reset();
+    $.fn.clearForm = function () {
       $(".contact-form #name").focus();
 
-      return this.each(function() {
+      return this.each(function () {
         var type = this.type,
           tag = this.tagName.toLowerCase();
         if (tag == "form") return $(":input", this).clearForm();

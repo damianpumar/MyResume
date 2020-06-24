@@ -1,57 +1,28 @@
-{% include "src/partials/portfolio-header.html" %}
-
-<style>
-	.page-layout {
-		background: #46b2da !important;
-	}
-	.p-overlay {
-		background: #46b2da !important;
-	}
-</style>
-
-<article
-	id="post-310"
-	class="hentry post-310 portfolio type-portfolio status-publish has-post-thumbnail portfolio-category-design"
->
-	<header class="entry-header">
-		<div class="portfolio-nav">
-			<span><a href="awesomeserializer-lib" rel="prev" class="prev ajax"></a></span>
-			<a class="back" href="#"></a>
-			<span><a href="svelte-collaboration" rel="next" class="next ajax"></a></span>
-		</div>
-		<h1 class="entry-title">Share Xamarin Plugin</h1>
-	</header>
-
-	<div class="entry-content">
-		<p>
-			<img
-				class="alignnone size-full rounded"
-				src="../images/portfolio/xamarinplugin-01.png"
-			/>
-		</p>
-		<div class="mini-text">
-			<h5>ABOUT THE PROJECT</h5>
-			<h6>
-				Share Xamarin Plugin is a plugin to share images written in C# for Xamarin. Is
-				compatible with MVVM CROSS or Android PCL
-			</h6>
-			<h6>Library</h6>
-			<p><b>Language:</b> Xamarin C#</p>
-			<p>
-				<a
-					target="_blank"
-					class="button medium"
-					href="https://github.com/damianpumar/Xamarin-Plugins"
-					>Github</a
-				>
-			</p>
-		</div>
-		<div class="portfolio-nav bottom">
-			<span><a href="awesomeserializer-lib" rel="prev" class="prev ajax"></a></span>
-			<a class="back" href="#"></a>
-			<span><a href="svelte-collaboration" rel="next" class="next ajax"></a></span>
-		</div>
-	</div>
-</article>
-
-{% include "src/partials/portfolio-footer.html" %}
+{% set data = {
+ "name": "Share Xamarin Plugin",
+ "description": "Xamarin plugin to share images",
+ "url": "xamarinplugin-lib",
+ "type": "lib",
+ "image": "/images/portfolio/xamarinplugin.png",
+ "detail": {
+  "tags": [
+   "C#",
+   "Xamarin"
+  ],
+  "images": [
+   "xamarinplugin-01.png"
+  ],
+  "descriptions": [
+   "Share Xamarin Plugin is a plugin to share images written in C# for Xamarin. Is compatible with MVVM CROSS or Android PCL"
+  ],
+  "links": [
+   {
+    "url": "https://curtme.org/OVCCQP5",
+    "title": "Github"
+   }
+  ],
+  "prev": "awesomeserializer-lib",
+  "next": "moq-collaboration"
+ }
+} %}
+		{% extends "src/partials/portfolio-base.html" %}

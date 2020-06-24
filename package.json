@@ -10,18 +10,16 @@
     "url": "https://github.com/damianpumar/MyResume.git"
   },
   "scripts": {
-    "build": "gulp build",
     "clean": "gulp clean",
-    "release": "gulp release",
-    "release-preview": "gulp release-preview",
-    "dev": "gulp dev",
+    "release": "gulp --env=release release",
+    "release-preview": "gulp --env=release release-preview",
+    "dev": "gulp --env=dev dev",
     "test": "gulp test",
     "postinstall": "gulp webdriver-update"
   },
   "devDependencies": {
     "babel-core": "6.26.0",
     "babel-preset-env": "1.6.1",
-    "child_process": "^1.0.2",
     "del": "3.0.0",
     "gulp": "git://github.com/gulpjs/gulp.git#6d71a658c61edb3090221579d8f97dbe086ba2ed",
     "gulp-better-rollup": "3.1.0",
@@ -35,7 +33,8 @@
     "gulp-protractor": "^4.1.1",
     "gulp-size": "3.0.0",
     "gulp-svgmin": "^2.2.0",
-    "gulp-uglify": "3.0.0",
+    "gulp-terser": "^1.2.0",
+    "gulp-util": "^3.0.8",
     "imagemin-gifsicle": "^6.0.1",
     "imagemin-jpegtran": "^6.0.0",
     "imagemin-optipng": "^7.1.0",
