@@ -71,6 +71,10 @@ gulp.task(
 	gulp.series("webdriver-update", protractor.webdriver_standalone)
 );
 
+gulp.task("cv", function () {
+	return createTask("cv");
+});
+
 gulp.task(
 	"dev",
 	gulp.series("build", function () {

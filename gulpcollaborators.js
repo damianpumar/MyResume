@@ -40,6 +40,12 @@ const tasks = {
         fun: () => nunjucksRender(nunjucksConfig),
         min: () => htmlmin({ collapseWhitespace: true, removeComments: true }),
     },
+    cv: {
+        src: "src/partials/cv.html",
+        dest: "dist",
+        fun: () => nunjucksRender(nunjucksConfig),
+        min: () => htmlmin({ collapseWhitespace: true, removeComments: true }),
+    },
     images: {
         src: "src/images/**/*",
         dest: "dist/images",

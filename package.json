@@ -12,6 +12,7 @@
   "scripts": {
     "clean": "gulp clean",
     "release": "gulp --env=release release",
+    "cv": "gulp --env=release cv",
     "release-preview": "gulp --env=release release-preview",
     "dev": "gulp --env=dev dev",
     "test": "gulp test",
