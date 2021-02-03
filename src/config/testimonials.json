@@ -15,6 +15,13 @@
             "testimonial": "Working with Damián I could see both his great technical skills, especially in the backend and C# world, and most importantly his empathy and ability to work with the team. He is smart and always kind with his teammates. Together we delivered the prototype of the app in time and we did it without falling down the pressure of the deadline."
         },
         {
+            "name": "Pedro La Rosa",
+            "role": "Frontend Engineer at CornerJob",
+            "linkedin": "https://www.linkedin.com/in/pedro-la-rosa-a9b2a5103/",
+            "image": "7.jpg",
+            "testimonial": "Damián is a highly motivated software craftsman. He is one of those inspiring people that motivates you to keep giving the best at work and never stop developing your potential. He has demonstrated to have a high skill level in software design and Extreme programming, plus his deep background knowledge in Dotnet and C# helped him to learn JavaScript/Typescript and React in record time. We worked at the same team on an extremely risky and ambitious project that we managed to carry out successfully in AXA assistance. Damián is an awesome team member and a leader. He would perfectly fit to match any project requirement. I will miss his enriching tech talks!"
+        },
+        {
             "name": "Alejandro Dreyer",
             "role": "SR. Developer at San Cristóbal Seguros",
             "linkedin": "https://www.linkedin.com/in/alejandro-dreyer-10402853/",
@@ -30,7 +37,7 @@
         },
         {
             "name": "Santiago Garabaya",
-            "role": "Software developer at NEORIS",
+            "role": "Software Engineer at SessionM",
             "linkedin": "https://www.linkedin.com/in/santiago-garabaya-274725a7/",
             "image": "4.jpg",
             "testimonial": "Damián is very focused on his work, responsible and always willing to help a teammate who needs it. He has a lot of technical and theoretical knowledge, and he is always willing to acquire more."
