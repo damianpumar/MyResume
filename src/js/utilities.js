@@ -3,7 +3,7 @@ export const utilities = {
     "use strict";
     const objects = document.getElementsByClassName("asyncImage");
 
-    Array.from(objects).map(item => {
+    Array.from(objects).map((item) => {
       const img = new Image();
 
       function applySrc(src) {
@@ -49,8 +49,8 @@ export const utilities = {
       const month = today.getMonth() - birthday.getMonth();
       let age = today.getFullYear() - birthday.getFullYear();
 
-      if(month < 0 || (month === 0 && today.getDate() < birthday.getDate())) {
-        age = age -1;
+      if (month < 0 || (month === 0 && today.getDate() < birthday.getDate())) {
+        age = age - 1;
       }
 
       const text = $("#age").text();
@@ -60,23 +60,21 @@ export const utilities = {
   },
 
   initializeFillBars: () => {
-
     $(".bar").each(function () {
       const bar = $(this);
       const percent = bar.attr("data-percent");
       const customMessage = bar.attr("data-message");
-      const hastMessage = (customMessage !== undefined)
-      bar
-        .find(".progress")
-        .css("width", `${percent}%`);
+      const hastMessage = customMessage !== undefined;
+      bar.find(".progress").css("width", `${percent}%`);
 
       if (hastMessage) {
         bar
           .find(".progress")
-          .html(`<span style="width: auto; border-radius: 20%;"> ${customMessage} </span>`);
-      }
-      else {
-        bar.find(".progress")
+          .html(
+            `<span style="width: auto; border-radius: 20%;"> ${customMessage} </span>`
+          );
+      } else {
+        bar.find(".progress");
       }
     });
   },
@@ -94,11 +92,20 @@ export const utilities = {
     }
 
     const whereILive = $("#where-i-live ").text();
-    const myName = "【﻿Ｄａｍｉáｎ Ｐｕｍａｒ】";
-    const myCurrentJob = $(".event.current p")[0].innerHTML.trim();
+    const myName = "【Ｄａｍｉáｎ Ｐｕｍａｒ】";
+    const currentJobDescription = $(".event.current p")[0].innerHTML.trim();
+    const jobTags = $(".event.current ul.tags li a")
+      .toArray()
+      .map((tag) => `• ${tag.innerHTML}`)
+      .join(", ");
+
+    const myCurrentJob = `${currentJobDescription} \n${jobTags}`;
+
     const otherServer = utilities.getOtherServer();
 
-    console.log("Sorry, I cleared console because I wanted show you this message below")
+    console.log(
+      "Sorry, I cleared console because I wanted show you this message below"
+    );
     console.log(myName);
     console.log(`I live in ${whereILive}`);
     console.log(myCurrentJob);
@@ -108,20 +115,18 @@ export const utilities = {
   },
 
   printSocialLinks: () => {
-
     const unique = (value, index, self) => {
-      return self.indexOf(value) === index
+      return self.indexOf(value) === index;
     };
 
-
-    const upperFirstLetter = word => {
+    const upperFirstLetter = (word) => {
       return `${word[0].toUpperCase()}${word.substring(1, word.length)}`;
-    }
+    };
 
     const socialLinks = [];
 
     $(".social a").each(function () {
-      const url = $(this).attr("href")
+      const url = $(this).attr("href");
       if (url.includes("http")) {
         socialLinks.push({ name: this.className.split(" ")[0], url: url });
       }
@@ -129,7 +134,7 @@ export const utilities = {
 
     socialLinks.filter(unique).forEach(function (link) {
       console.log(`• ${upperFirstLetter(link.name)}: ${link.url}`);
-    })
+    });
   },
 
   getOtherServer: () => {
@@ -138,14 +143,13 @@ export const utilities = {
     return window.location.href.includes("github") ? ownServer : gitHubServer;
   },
   loadTooltips: () => {
-    $('.tooltip').each(function (index, element) {
+    $(".tooltip").each(function (index, element) {
       $(this).tooltipster({
         fixedWidth: 300,
         offsetX: 0,
         animation: "grow",
-        delay: 50
+        delay: 50,
       });
-
     });
-  }
+  },
 };

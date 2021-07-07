@@ -17,17 +17,26 @@
     </h5>
     <p>
       {{work.description}}
-        <ul>
-        {% for detail in work.details %}
-          <li>{{detail.name}}:
-            <ul>
-            {% for description in detail.descriptions %}
-              <li>{{description}}</li>
-              {% endfor %}
-            </ul>
-          </li>
+      {% if work.details.length %}
+          <ul>
+          {% for detail in work.details %}
+            <li><p>{{detail.name}}:</p>
+              <ul>
+              {% for description in detail.descriptions %}
+                <li><p>{{description}}</p></li>
+                {% endfor %}
+              </ul>
+            </li>
+            {% endfor %}
+          </ul>
+      {% endif %}
+      {% if work.tags.length %}
+        <ul class="tags">
+          {% for tag in work.tags %}
+          <li><a>{{tag}}</a></li>
           {% endfor %}
         </ul>
+      {% endif %}
     </p>
   </div>
 {% endfor %}
