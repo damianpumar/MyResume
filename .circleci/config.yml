@@ -9,9 +9,9 @@ jobs:
       - run:
           name: Install node packages
           command: |
-             npm install
-             npm run release
-             ls
+            npm install
+            npm run release
+            npm run cv
       - run:
           name: Clone Public domain
           working_directory: ~/workdir
