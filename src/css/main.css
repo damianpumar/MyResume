@@ -166,7 +166,7 @@ code {
 }
 ol,ul {
 	margin: .2em 0 1em 0;
-	line-height: 1.8;
+	line-height: 1.6;
 }
 ul {
 	list-style: circle
@@ -1078,8 +1078,8 @@ h2 i[class^="icon-"]:before,h2 i[class*=" icon-"]:before,h2 i.fa:before {
 }
 .event {
 	position: relative;
-	padding: 26px 32px;
-	margin-bottom: 3em;
+	padding: 10px 30px;
+	margin-bottom: 2em;
 	background: #ffffff;
 	border: 3px solid #EDF1F3;
 	border-radius: 6px;
@@ -1148,6 +1148,7 @@ h2 i[class^="icon-"]:before,h2 i[class*=" icon-"]:before,h2 i.fa:before {
 	margin: .6em 0 .2em 0;
 	font-size: 14px;
 	letter-spacing: .02em;
+	text-align: justify;
 }
 .event p:before {
 	display: block;
@@ -1248,6 +1249,7 @@ h2 i[class^="icon-"]:before,h2 i[class*=" icon-"]:before,h2 i.fa:before {
 	font-size: 14px;
 	line-height: 150%;
 	color: #6A7686;
+	text-align: justify;
 }
 .download-button {
 	margin-bottom: 4em;

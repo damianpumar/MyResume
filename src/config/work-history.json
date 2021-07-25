@@ -1,11 +1,36 @@
 {
     "workHistory": [
         {
+            "name": "EXEAL",
+            "period": "Jul 2021 - Current",
+            "role": "Technical Coach",
+            "url": "https://www.exeal.com/",
+            "description": "As a really passionate developer, I decided to move my career to the next level, today I work as a Technical Coach helping teams to improve their technical skills like:",
+            "tags": [
+                "Pair programming",
+                "Mob programming",
+                "TDD",
+                "BDD",
+                "Unit tests",
+                "Integration tests",
+                "E2E tests",
+                "IDE Productivity",
+                "Simple design",
+                "SOLID",
+                "Design patterns",
+                "How to work with legacy code",
+                "Continuous Integration",
+                "Continuous Delivery",
+                "Devops things",
+                "Infrastructure monitoring"
+            ]
+        },
+        {
             "name": "K-Lagan",
-            "period": "Jan 2020 - Current",
-            "role": "Senior Software Engineer",
+            "period": "Jan 2020 - Jul 2021",
+            "role": "Sr. Software Engineer",
             "url": "https://www.k-lagan.com/",
-            "description": "Today I work at K-Lagan as a senior software engineer working for a client applying my strong XP, TDD, and technical lead knowledge."
+            "description": "I worked at K-Lagan as a senior software engineer working for a client applying my strong XP, TDD, and technical lead knowledge."
         },
         {
             "name": "Codurance",
