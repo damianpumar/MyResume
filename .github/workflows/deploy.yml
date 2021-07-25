@@ -21,6 +21,7 @@ jobs:
         run: |
           npm install
           npm run release
+          npm run cv
       - name: FTP Deployment
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
