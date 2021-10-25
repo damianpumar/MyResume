@@ -3,7 +3,10 @@
     <span class="date"><i class="icon-info"></i></span>
     <p>
         {% for nationality in nationalities %}
-        <h4>{{nationality}}</h4>
+        <h4>
+            <img src="/images/flags/{{nationality.flag}}.png" />
+            {{nationality.name}}
+        </h4>
         {% endfor %}
     </p>
 </div>
