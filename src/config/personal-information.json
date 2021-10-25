@@ -45,8 +45,14 @@
         "date": "November 6, 1991 9:30 am."
     },
     "nationalities": [
-        "🇦🇷 Argentinian",
-        "🇮🇹 Italian"
+        {
+            "name": "Argentinian",
+            "flag": "ar"
+        },
+        {
+            "name": "Italian",
+            "flag": "it"
+        }
     ],
     "languages": [
         {

@@ -9,15 +9,11 @@
                 },
                 {
                     "name": "TypeScript",
-                    "progress": "90"
+                    "progress": "95"
                 },
                 {
                     "name": "Javascript",
-                    "progress": "90"
-                },
-                {
-                    "name": "Ruby",
-                    "progress": "85"
+                    "progress": "95"
                 },
                 {
                     "name": "HTML5",
@@ -25,11 +21,15 @@
                 },
                 {
                     "name": "CSS3",
-                    "progress": "60"
+                    "progress": "80"
+                },
+                {
+                    "name": "Ruby",
+                    "progress": "85"
                 },
                 {
                     "name": "Java",
-                    "progress": "35"
+                    "progress": "50"
                 }
             ]
         },
@@ -45,7 +45,7 @@
                     "progress": "98"
                 },
                 {
-                    "name": "Pair programming",
+                    "name": "Pair & Mob programming",
                     "progress": "98"
                 },
                 {
@@ -71,7 +71,7 @@
             "unit": [
                 {
                     "name": ".NET Core",
-                    "progress": "90"
+                    "progress": "95"
                 },
                 {
                     "name": "ASP.NET Core",
@@ -87,19 +87,15 @@
                 },
                 {
                     "name": "React - Redux",
-                    "progress": "85"
+                    "progress": "90"
                 },
                 {
                     "name": "Sails js",
                     "progress": "75"
                 },
                 {
-                    "name": "Angular 5",
-                    "progress": "60"
-                },
-                {
-                    "name": "Angular js",
-                    "progress": "90"
+                    "name": "Angular",
+                    "progress": "80"
                 },
                 {
                     "name": "WPF",
@@ -128,7 +124,7 @@
                 },
                 {
                     "name": "Mongo db",
-                    "progress": "75"
+                    "progress": "80"
                 }
             ]
         },

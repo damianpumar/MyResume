@@ -1160,6 +1160,9 @@ h2 i[class^="icon-"]:before,h2 i[class*=" icon-"]:before,h2 i.fa:before {
 	width: 4px;
 	background: #F4F6F7;
 }
+.event h4 img {
+	width: 2em;
+}
 .skillset {
 	padding: 0 0 3.2em 0
 }
