@@ -1,15 +1,15 @@
 <div class="letter">
+  <h4 class="letter-title">{{ myName }}</h4>
 
-	<h4 class="letter-title">{{ myName }}</h4>
+  <div class="stamp">
+    <img src="images/site/avatar.jpg" alt="stamp" />
+  </div>
 
-	<div class="stamp">
-		<img src="images/site/avatar.jpg" alt="stamp">
-	</div>
-
-	<div class="letter-info">
-		<p><i class="icon-at"></i>{{myEmail}}</p>
-		<p><i class="icon-phone"></i>{{myPhone}}</p>
-		<p id="where-i-live"><i class="icon-location"></i>{{myLocation}}</p>
-	</div>
-
+  <div class="letter-info">
+    <p><i class="icon-at"></i>{{myEmail}}</p>
+    <p>
+      <a href="{{myPhone}}"><i class="icon-phone"></i>Hidden</a>
+    </p>
+    <p id="where-i-live"><i class="icon-location"></i>{{myLocation}}</p>
+  </div>
 </div>
