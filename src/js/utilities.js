@@ -101,8 +101,6 @@ export const utilities = {
 
     const myCurrentJob = `${currentJobDescription} \n${jobTags}`;
 
-    const otherServer = utilities.getOtherServer();
-
     console.log(
       "Sorry, I cleared console because I wanted show you this message below"
     );
@@ -110,7 +108,6 @@ export const utilities = {
     console.log(`I live in ${whereILive}`);
     console.log(myCurrentJob);
     console.log("Code: https://github.com/damianpumar/myresume");
-    console.log(`Other server: ${otherServer}`);
     utilities.printSocialLinks();
   },
 
@@ -137,11 +134,6 @@ export const utilities = {
     });
   },
 
-  getOtherServer: () => {
-    const gitHubServer = "https://damianpumar.github.io";
-    const ownServer = "https://damianpumar.com";
-    return window.location.href.includes("github") ? ownServer : gitHubServer;
-  },
   loadTooltips: () => {
     $(".tooltip").each(function (index, element) {
       $(this).tooltipster({
