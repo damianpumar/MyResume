@@ -105,7 +105,7 @@ export const utilities = {
       "Sorry, I cleared console because I wanted show you this message below"
     );
     console.log(myName);
-    console.log(`I live in ${whereILive}`);
+    console.log(`I live as a ${whereILive}`);
     console.log(myCurrentJob);
     console.log("Code: https://github.com/damianpumar/myresume");
     utilities.printSocialLinks();
