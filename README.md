@@ -1,6 +1,6 @@
 ## My Resume
 
-### This is my resume, you can find it on 2 servers
+### This is my resume, you can find it
 
 - https://damianpumar.com/
 
