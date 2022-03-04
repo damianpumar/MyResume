@@ -22,7 +22,7 @@ jobs:
           name: Clean old files
           working_directory: ~/workdir/damianpumar.github.io
           command: |
-            rm -rf *
+            find . \! -name 'CNAME' -delete
       - run:
           name: Copy dist into workdir
           working_directory: ~/repo
