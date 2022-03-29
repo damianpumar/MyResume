@@ -4,7 +4,7 @@
             "name": "Kataclism",
             "description": "This project aims to facilitate the life of all the TDD disciples and kata practicioners",
             "url": "kataclism",
-            "type": "services",
+            "type": "collaborations",
             "image": "/images/portfolio/kataclism.png",
             "detail": {
                 "tags": [
