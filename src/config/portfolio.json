@@ -1,6 +1,34 @@
 {
     "portfolios": [
         {
+            "name": "Kataclism",
+            "description": "This project aims to facilitate the life of all the TDD disciples and kata practicioners",
+            "url": "kataclism",
+            "type": "services",
+            "image": "/images/portfolio/kataclism.png",
+            "detail": {
+                "tags": [
+                    "typescript"
+                ],
+                "images": [
+                    "kataclism-01.png"
+                ],
+                "descriptions": [
+                    "A violent upheaval that causes your terminal to scaffold an entire new kata"
+                ],
+                "links": [
+                    {
+                        "url": "https://github.com/glippi/kataclism",
+                        "title": "Github"
+                    },
+                    {
+                        "url": "https://github.com/damianpumar/kataclism",
+                        "title": "Forked"
+                    }
+                ]
+            }
+        },
+        {
             "name": "Curtme.org",
             "description": "Free Open source and Unlimited link shortener",
             "url": "curtme",
@@ -306,31 +334,6 @@
                     {
                         "url": "https://github.com/damianpumar/website",
                         "title": "Github"
-                    }
-                ]
-            }
-        },
-        {
-            "name": "Kataclism",
-            "description": "This project aims to facilitate the life of all the TDD disciples and kata practicioners",
-            "url": "kataclism",
-            "type": "services",
-            "image": "/images/portfolio/kataclism.png",
-            "detail": {
-                "tags": [
-                    "typescript"
-                ],
-                "descriptions": [
-                    "A violent upheaval that causes your terminal to scaffold an entire new kata"
-                ],
-                "links": [
-                    {
-                        "url": "https://github.com/glippi/kataclism",
-                        "title": "Github"
-                    },
-                    {
-                        "url": "https://github.com/damianpumar/kataclism",
-                        "title": "Forked"
                     }
                 ]
             }
