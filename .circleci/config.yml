@@ -9,6 +9,7 @@ jobs:
       - run:
           name: Install node packages
           command: |
+            git config --global url."https://".insteadOf git://
             npm install
             npm run release
             npm run cv
