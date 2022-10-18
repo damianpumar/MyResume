@@ -9,7 +9,7 @@
                 },
                 {
                     "name": "TypeScript",
-                    "progress": "95"
+                    "progress": "99"
                 },
                 {
                     "name": "Javascript",
@@ -70,6 +70,14 @@
             "title": "Fwks & Libs skills",
             "unit": [
                 {
+                    "name": "React",
+                    "progress": "99"
+                },
+                {
+                    "name": "React Native",
+                    "progress": "99"
+                },
+                {
                     "name": ".NET Core",
                     "progress": "95"
                 },
@@ -84,10 +92,6 @@
                 {
                     "name": "ASP.NET MVC",
                     "progress": "98"
-                },
-                {
-                    "name": "React - Redux",
-                    "progress": "90"
                 },
                 {
                     "name": "Sails js",

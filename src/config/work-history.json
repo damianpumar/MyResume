@@ -1,6 +1,13 @@
 {
     "workHistory": [
         {
+            "name": "CodeScouts",
+            "period": "Oct 2022 - Current",
+            "role": "Technical Coach",
+            "url": "https://codescouts.academy/",
+            "description": "Today I am part of a great team working as a Technical Coach at CodeScouts Academy helping software developing teams improving the way to deliver value with agile practices."
+        },
+        {
             "name": "EXEAL",
             "period": "Jul 2021 - Current",
             "role": "Technical Coach",
