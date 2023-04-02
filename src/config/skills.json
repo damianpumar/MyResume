@@ -9,27 +9,19 @@
                 },
                 {
                     "name": "TypeScript",
-                    "progress": "99"
+                    "progress": "98"
                 },
                 {
                     "name": "Javascript",
-                    "progress": "95"
+                    "progress": "98"
                 },
                 {
-                    "name": "HTML5",
-                    "progress": "90"
-                },
-                {
-                    "name": "CSS3",
+                    "name": "Java",
                     "progress": "80"
                 },
                 {
                     "name": "Ruby",
                     "progress": "85"
-                },
-                {
-                    "name": "Java",
-                    "progress": "50"
                 }
             ]
         },
@@ -63,6 +55,14 @@
                 {
                     "name": "SOLID principles",
                     "progress": "98"
+                },
+                {
+                    "name": "MOB & Pair programming",
+                    "progress": "98"
+                },
+                {
+                    "name": "Refactoring & Productivity",
+                    "progress": "98"
                 }
             ]
         },
@@ -75,6 +75,10 @@
                 },
                 {
                     "name": "React Native",
+                    "progress": "99"
+                },
+                {
+                    "name": "Next Js",
                     "progress": "99"
                 },
                 {
@@ -108,10 +112,6 @@
                 {
                     "name": "Entity Framework",
                     "progress": "90"
-                },
-                {
-                    "name": "Moq",
-                    "progress": "98"
                 },
                 {
                     "name": "Xamarin (IOS, Android & WP)",

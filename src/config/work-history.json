@@ -5,14 +5,7 @@
             "period": "Oct 2022 - Current",
             "role": "Technical Coach",
             "url": "https://codescouts.academy/",
-            "description": "Today I am part of a great team working as a Technical Coach at CodeScouts Academy helping software developing teams improving the way to deliver value with agile practices."
-        },
-        {
-            "name": "EXEAL",
-            "period": "Jul 2021 - Oct 2022",
-            "role": "Technical Coach",
-            "url": "https://www.exeal.com/",
-            "description": "As a really passionate developer, I decided to move my career to the next level, today I work as a Technical Coach helping teams to improve their technical skills like:",
+            "description": "Today I am part of a great team working as a Technical Coach at CodeScouts Academy helping software developing teams improving the way to deliver value with agile practices.",
             "tags": [
                 "Pair programming",
                 "Mob programming",
@@ -24,13 +17,24 @@
                 "IDE Productivity",
                 "Simple design",
                 "SOLID",
+                "GRASP",
+                "Distributed architectures",
+                "Clean architecture in Frontend",
                 "Design patterns",
+                "Evolutionary Design",
                 "How to work with legacy code",
                 "Continuous Integration",
                 "Continuous Delivery",
                 "Devops things",
                 "Infrastructure monitoring"
             ]
+        },
+        {
+            "name": "EXEAL",
+            "period": "Jul 2021 - Oct 2022",
+            "role": "Technical Coach",
+            "url": "https://www.exeal.com/",
+            "description": "As a really passionate developer, I decided to move my career to the next level, today I work as a Technical Coach helping teams to improve their technical skills like:"
         },
         {
             "name": "K-Lagan",
