@@ -14,7 +14,9 @@
     "release": "gulp --env=release release",
     "cv": "gulp --env=release cv",
     "release-preview": "gulp --env=release release-preview",
-    "dev": "gulp --env=dev dev"
+    "dev": "gulp --env=dev dev",
+    "test": "gulp test",
+    "postinstall": "gulp webdriver-update"
   },
   "devDependencies": {
     "babel-core": "6.26.0",
