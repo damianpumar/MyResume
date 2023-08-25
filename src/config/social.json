@@ -1,17 +1,17 @@
 {
   "socials": [
     {
-      "name": "twitter",
-      "url": "https://twitter.com/DamianPumar",
-      "userName": "damianpumar"
+      "name": "linkedin",
+      "url": "https://www.linkedin.com/in/damianpumar/"
     },
     {
       "name": "github",
       "url": "https://github.com/damianpumar"
     },
     {
-      "name": "linkedin",
-      "url": "https://www.linkedin.com/in/damianpumar/"
+      "name": "twitter",
+      "url": "https://twitter.com/DamianPumar",
+      "userName": "damianpumar"
     }
   ]
 }
