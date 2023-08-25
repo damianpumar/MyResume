@@ -90,7 +90,7 @@ gulp.task(
 	})
 );
 
-gulp.task("release", gulp.series("build", "robots", "appCache"));
+gulp.task("release", gulp.series("build", "robots"));
 
 gulp.task("test", function (testDone) {
 	const test = gulp.series("release", function (releaseDone) {
