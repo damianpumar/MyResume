@@ -1,0 +1,49 @@
+---
+import { Button, Card } from "@eliancodes/brutal-ui";
+import { Image } from "astro:assets";
+
+import { Fragment } from "astro/dist/runtime/server";
+import { personal, work } from "src/configuration";
+---
+
+<section id="about" class="grid md:grid-cols-8 gap-8 mt-4">
+	<h2 class="hidden">About {personal.name}</h2>
+	<div class="flex flex-col md:col-span-6">
+		<Card>
+			<p class="mt-4 outfit text-2xl md:text-5xl lg:text-7xl">
+        {work[0].name} <a class="underline underline-blue"
+													href={work[0].web}
+													target="_blank">{work[0].at}</a>
+			</p>
+			{work.slice(1).map((work) => (
+				<p class="sanchez mt-4 mb-8 text-md md:text-lg lg:text-2xl">
+					{work.name} <a class="underline underline-blue"
+													href={work.web}
+													target="_blank">{work.at}</a>
+				</p>
+			))}
+			{personal.titles.map((bio) => (
+				<p class="mt-4 outfit text-xl md:text-xl lg:text-2xl">
+					{bio}
+				</p>
+			))}
+			<p class="sanchez mt-4 mb-8 text-lg md:text-xl lg:text-2xl flex flex-row gap-lg">
+				I live in {personal.live.where} {personal.live.image}, but I was born in {personal.born.where} {personal.born.image}
+			</p>
+			<!-- <Button target={'_self'} href='/blog/'>
+        Check out the blog &rarr;
+      </Button> -->
+
+			<Button target={'_self'} href='/events/'>
+        Check out the events &rarr;
+      </Button>
+		</Card>
+	</div>
+	<Image
+		class="object-cover h-full w-full rounded-lg md:col-span-2 border-3 border-black card-shadow"
+		src={personal.profile}
+    alt='Damián Pumar'
+    width={800}
+    height={50}
+	/>
+</section>

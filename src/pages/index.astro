@@ -1,0 +1,21 @@
+---
+import Layout from '@layouts/Default.astro';
+import MobileSocials from '@components/home/MobileSocials.astro';
+import { Fragment } from 'astro/dist/runtime/server';
+import AboutMe from '@components/home/AboutMe.astro';
+import Description from '@components/home/Description.astro';
+import { personal } from 'src/configuration';
+---
+
+<Layout
+  title='Home'
+  pageTitle={`${personal.name} | Home`}
+  description={`${personal.name} resume, blog and events website.`}
+>
+  <main class='bg-yellow p-6'>
+    <MobileSocials />
+    <AboutMe />
+    <Description />
+    <!-- <RecentBlogPosts /> -->
+  </main>
+</Layout>
