@@ -38,10 +38,12 @@ import { personal, work } from "src/configuration";
       </Button>
 		</Card>
 	</div>
-	<Image
-		class="object-cover object-top aspect-2 h-full w-full rounded-lg md:col-span-2 border-3 border-black card-shadow"
-		src={personal.profile}
-    alt={personal.name}
-		width={900}
-	/>
+	<div class="md:col-span-2 rounded-lg border-3 border-black card-shadow">
+		<Image
+			class="object-cover object-top aspect-2 h-full w-full rounded"
+			src={personal.profile}
+			alt={personal.name}
+			width={450}
+		/>
+	</div>
 </section>
