@@ -1,0 +1,48 @@
+<style>
+  .card-padding {
+    padding: 1rem;
+  }
+  .bg-color-dy {
+    background-color: var(--color);
+  }
+</style>
+
+<div class="card-shadow bg-color-dy card-padding">
+  <slot />
+</div>
+
+<script>
+  const colors = [
+    "#c084fc",
+    "#f472b6",
+    "#fb7185",
+    "#e879f9",
+    "#a78bfa",
+    "#818cf8",
+    "#60a5fa",
+    "#38bdf8",
+    "#22d3ee",
+    "#2dd4bf",
+    "#34d399",
+    "#4ade80",
+    "#a3e635",
+    "#facc15",
+    "#fb923c",
+    "#f87171"
+  ];
+
+  setRandomColor();
+
+  document.addEventListener("animationstart", setRandomColor);
+
+  function setRandomColor() {
+    const cards = document.querySelectorAll<HTMLElement>('.bg-color-dy');
+
+    cards.forEach((card) => {
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      if(card.style.getPropertyValue('--color')) return;;
+
+      card.style.setProperty('--color', color);
+    });
+  }
+</script>
