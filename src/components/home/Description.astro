@@ -1,16 +1,15 @@
 ---
-import CardColor from "@components/generic/CardColor.astro";
-import { Pill } from "@eliancodes/brutal-ui";
+import { Card, Pill } from "@eliancodes/brutal-ui";
 import { personal } from "src/configuration";
 ---
 
 <section class="mt-8 grid md:grid-cols-2 gap-8">
-	<CardColor>
+	<Card color="#fb7185">
 		<h2 class="text-2xl md:text-4xl lg:text-6xl mb-4 dm-serif">Who am I?</h2>
 		<p class="poppins line-height-loose"set:html={personal.bio} />
 		</p>
-	</CardColor>
-	<CardColor>
+	</Card>
+	<Card color="#818cf8">
 		<h2 class="text-2xl md:text-4xl lg:text-6xl mb-2 dm-serif">
 			What's keeping me busy?
 		</h2>
@@ -32,5 +31,5 @@ import { personal } from "src/configuration";
 				}
 			</ul>
 		))}
-	</CardColor>
+	</Card>
 </section>
