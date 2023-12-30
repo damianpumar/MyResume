@@ -1,10 +1,12 @@
 ---
 import { navigationItems } from "src/configuration";
+
+const commitVersion = import.meta.env.RELEASE_VERSION
 ---
 
-<footer class='bg-black text-white p-6'>
+<footer class='bg-black sanchez p-6 flex flex-row justify-between'>
   <h2 class='hidden'>Footer</h2>
-  <div class='outfit'>
+  <div class="text-white">
     |
     {navigationItems.map((item) => (
           <a class='text-blue'
@@ -16,5 +18,8 @@ import { navigationItems } from "src/configuration";
           <span>|</span>
       ))}
       {new Date().getFullYear()} |
+  </div>
+  <div class="text-gray">
+    {commitVersion}
   </div>
 </footer>

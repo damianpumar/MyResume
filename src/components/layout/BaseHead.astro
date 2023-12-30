@@ -1,5 +1,7 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
+const commitVersion = import.meta.env.RELEASE_VERSION;
+const commitDate = import.meta.env.RELEASE_DATE;
 
 interface Props {
   title: string;
@@ -41,6 +43,9 @@ const { title, description, ogImage } = Astro.props;
   <meta property='twitter:title' content={title} />
   <meta property='twitter:description' content={description} />
   <meta property='twitter:image' content={ogImage} />
+
+  <meta name="release-version" content={commitDate} />
+  <meta name="release-date" content={commitVersion} />
 
   <link rel='canonical' href={canonicalURL} />
   <link rel='icon' type='image/png' href='/favicon.png' />
