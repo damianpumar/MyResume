@@ -4,6 +4,9 @@ import UnoCSS from "unocss/astro";
 
 export default defineConfig({
   site: "https://www.damianpumar.com/",
+  build: {
+    assets: "assets",
+  },
   trailingSlash: "ignore",
   integrations: [sitemap(), UnoCSS({ injectReset: true })],
   vite: {
