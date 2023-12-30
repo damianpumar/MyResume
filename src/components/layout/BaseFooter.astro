@@ -1,0 +1,22 @@
+---
+import { Fragment } from "astro/dist/runtime/server";
+import { navigationItems } from "src/configuration";
+
+---
+
+<footer class='bg-black text-white p-6'>
+  <h2 class='hidden'>Footer</h2>
+  <div class='outfit'>
+    |
+    {navigationItems.map((item) => (
+          <a class='text-blue'
+            href={item.url}
+            target={'_self'}
+            title={`Go to ${item.name}`} >
+            {item.name}
+          </a>
+          <span>|</span>
+      ))}
+      {new Date().getFullYear()} |
+  </div>
+</footer>

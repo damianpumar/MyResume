@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '@layouts/Default.astro';
+import BlogList from '@components/blog/BlogList.astro';
+import { Fragment } from 'astro/dist/runtime/server';
+import { personal } from 'src/configuration';
+
+const posts = await getCollection('blog').then((collection) =>
+  collection.reverse()
+);
+---
+
+<Layout
+  title='Blog'
+  pageTitle={`${personal.name} - Blog`}
+	description="Share my knowledge and experience in this blog."
+>
+  <main class='bg-lightblue p-6'>
+    <BlogList posts={posts} />
+  </main>
+</Layout>

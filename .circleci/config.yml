@@ -11,8 +11,7 @@ jobs:
           command: |
             git config --global url."https://".insteadOf git://
             npm install
-            npm run release
-            npm run cv
+            npm run build
       - run:
           name: Clone Public domain
           working_directory: ~/workdir
