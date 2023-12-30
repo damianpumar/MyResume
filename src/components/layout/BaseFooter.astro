@@ -6,7 +6,7 @@ import { navigationItems } from "src/configuration";
 
 <footer class='bg-black text-white p-6'>
   <h2 class='hidden'>Footer</h2>
-  <p class='outfit'>
+  <div class='outfit'>
     |
     {navigationItems.map((item) => (
           <a class='text-blue'
@@ -18,5 +18,5 @@ import { navigationItems } from "src/configuration";
           <span>|</span>
       ))}
       {new Date().getFullYear()} |
-  </p>
+  </div>
 </footer>
