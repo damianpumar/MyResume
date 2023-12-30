@@ -3,10 +3,7 @@ import sitemap from "@astrojs/sitemap";
 import UnoCSS from "unocss/astro";
 
 export default defineConfig({
-  site:
-    process.env.VERCEL_ENV === "production"
-      ? "https://www.damianpumar.com/"
-      : "http://localhost:4321/",
+  site: "https://www.damianpumar.com/",
   trailingSlash: "ignore",
   integrations: [sitemap(), UnoCSS({ injectReset: true })],
   vite: {
