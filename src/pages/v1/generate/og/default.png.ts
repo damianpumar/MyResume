@@ -13,7 +13,7 @@ const height = 630;
 const width = 1200;
 
 export const GET: APIRoute = async () => {
-  const link = "https://brutal.elian.codes";
+  const link = "https://www.damianpumar.com";
   const html = toReactElement(`
   <div style="background-color: white; display: flex; flex-direction: column; height: 100%; padding: 3rem; width: 100%">
     <div style="display:flex; height: 100%; width: 100%; background-color: white; border: 6px solid black; border-radius: 0.5rem; padding: 2rem; filter: drop-shadow(6px 6px 0 rgb(0 0 0 / 1));">
