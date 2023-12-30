@@ -2,7 +2,6 @@
 import { getCollection } from 'astro:content';
 import Layout from '@layouts/Default.astro';
 import BlogList from '@components/blog/BlogList.astro';
-import { Fragment } from 'astro/dist/runtime/server';
 import { personal } from 'src/configuration';
 
 const posts = await getCollection('blog').then((collection) =>

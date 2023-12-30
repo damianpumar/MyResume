@@ -1,5 +1,6 @@
----import { Fragment } from 'astro/dist/runtime/server';
-import { navigationItems, personal, social } from 'src/configuration';
+---
+import { socials } from '@components/home/MobileSocials.astro';
+import { navigationItems, personal } from 'src/configuration';
 
 interface Props {
   pageTitle?: string;
@@ -30,7 +31,7 @@ const { pageTitle } = Astro.props;
         ))
       }
       {
-        social.map((item) => (
+        socials.map((item) => (
           <li>
             <a
               href={item.url}

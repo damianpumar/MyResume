@@ -68,25 +68,3 @@ export const navigationItems = [
   { name: "Events", url: "/events/", mobile: true },
   { name: "Contact", url: "mailto:pumar@duck.com", mobile: false },
 ];
-
-export const social = [
-  {
-    name: "GitHub",
-    url: "https://github.com/damianpumar",
-    icon: "i-uil-github",
-    mobile: true,
-  },
-  {
-    name: "Twitter",
-    url: "https://twitter.com/damianpumar",
-    icon: "i-uil-twitter",
-    mobile: true,
-  },
-  {
-    name: "Linkedin",
-    url: "https://www.linkedin.com/in/damianpumar/",
-    icon: "i-uil-linkedin",
-    mobile: true,
-  },
-  { name: "RSS", url: "/feed.xml", icon: "i-uil-rss", mobile: false },
-];

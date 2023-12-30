@@ -1,6 +1,5 @@
 ---
 import { Card, Pill } from "@eliancodes/brutal-ui";
-import { Fragment } from "astro/dist/runtime/server";
 import { personal } from "src/configuration";
 ---
 
@@ -21,7 +20,7 @@ import { personal } from "src/configuration";
 					value.map((item) => (
 						<li class="sanchez">
 							<Pill>
-								{item.url ?
+								{"url" in item ?
 									<a href={item.url} target="_blank" title={`Go to ${item.name}`}>
 										{item.name}
 									</a>

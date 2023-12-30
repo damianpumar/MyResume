@@ -2,7 +2,6 @@
 import { Button, Card } from "@eliancodes/brutal-ui";
 import { Image } from "astro:assets";
 
-import { Fragment } from "astro/dist/runtime/server";
 import { personal, work } from "src/configuration";
 ---
 
@@ -42,8 +41,7 @@ import { personal, work } from "src/configuration";
 	<Image
 		class="object-cover object-top aspect-2 h-full w-full rounded-lg md:col-span-2 border-3 border-black card-shadow"
 		src={personal.profile}
-    alt='Damián Pumar'
-		width={800}
-		height={400}
+    alt={personal.name}
+		width={900}
 	/>
 </section>
