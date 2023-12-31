@@ -1,5 +1,6 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
+import { personal } from 'src/configuration';
 const commitVersion = import.meta.env.RELEASE_VERSION;
 const commitDate = import.meta.env.RELEASE_DATE;
 
@@ -29,7 +30,7 @@ const { title, description, ogImage } = Astro.props;
     type='application/rss+xml'
   />
 
-  <meta name='title' content={`Brutal Theme | ${title}`} />
+  <meta name='title' content={`${personal.name} | ${title}`} />
   <meta name='description' content={description} />
 
   <meta property='og:type' content='website' />

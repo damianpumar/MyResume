@@ -3,6 +3,7 @@ import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import satori from "satori";
 import { html as toReactElement } from "satori-html";
+import { personal } from "src/configuration";
 
 const fontFile = await fetch(
   "https://og-playground.vercel.app/inter-latin-ext-700-normal.woff"
@@ -30,7 +31,7 @@ export const GET: APIRoute = async ({ params, props }) => {
       <div style="display: flex; flex-direction: column; justify-content: space-between; width: 100%; filter: drop-shadow()">
         <div style="display: flex; justify-content: space-between;">
           <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-            <p style="font-size: 48px;">Brutal theme for Astro</p>
+            <p style="font-size: 48px;">${personal.name}</p>
             <p style="font-size: 38px;">${title}</p>
           </div>
           <img src="https://media.licdn.com/dms/image/D4E03AQGQ_hWwM5N40A/profile-displayphoto-shrink_400_400/0/1702933946472?e=1709164800&v=beta&t=00sp8HuF7heFQyJ22bvscFzrqoa3yLn5AdOQtQPSk_M" width="200px" height="200px" style="border: 3px solid black; border-radius: 0.5rem;" />
