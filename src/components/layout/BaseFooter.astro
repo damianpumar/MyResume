@@ -6,8 +6,8 @@ const commitVersion = import.meta.env.RELEASE_VERSION
 
 <footer class='bg-black sanchez p-6 flex flex-row justify-between'>
   <h2 class='hidden'>Footer</h2>
-  <div class="text-white">
-    |
+  <div class="text-white flex flex-row justify-between w-full sm-w-xs">
+    <span>|</span>
     {navigationItems.map((item) => (
           <a class='text-blue'
             href={item.url}
@@ -17,9 +17,10 @@ const commitVersion = import.meta.env.RELEASE_VERSION
           </a>
           <span>|</span>
       ))}
-      {new Date().getFullYear()} |
+      {new Date().getFullYear()}
+      <span>|</span>
   </div>
-  <div class="text-gray">
+  <div class="text-gray hidden md:inline-block">
     {commitVersion}
   </div>
 </footer>

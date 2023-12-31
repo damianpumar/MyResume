@@ -48,14 +48,14 @@ const { pageTitle } = Astro.props;
   </nav>
   <nav class='md:hidden flex'>
     <h2 class='hidden'>Mobile Navigation</h2>
-    <ul>
+    <ul class="flex flex-row gap-3">
       {
         navigationItems.filter(n=> n.mobile).map((item) => (
           <li>
             <a href={item.url}>
               {item.name}
             </a>
-          </li>
+            </li>
         ))
       }
     </ul>
