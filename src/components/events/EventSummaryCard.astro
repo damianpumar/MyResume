@@ -10,12 +10,12 @@ export interface Props {
 const { event } = Astro.props;
 const { data } = event;
 ---
-
 <SummaryCard
 	title={data.title}
 	imgSrc={data.img}
 	imgAlt={data.title}
 	description={data.abstract}
+	imageClass={data.imageClass}
 >
 	<p class="mt-2">
 		<a

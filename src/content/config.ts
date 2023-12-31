@@ -9,6 +9,7 @@ const blogCollection = defineCollection({
       description: z.string(),
       pubDate: z.string().transform((str) => new Date(str)),
       imgUrl: image(),
+      imageClass: z.array(z.string()).optional(),
       draft: z.boolean().optional().default(false),
     }),
 });
@@ -22,6 +23,7 @@ const eventCollection = defineCollection({
       link: z.string(),
       name: z.string(),
       img: image(),
+      imageClass: z.array(z.string()).optional(),
     }),
 });
 
