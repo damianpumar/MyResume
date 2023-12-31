@@ -64,7 +64,7 @@ export const work = [
 
 export const navigationItems = [
   { name: "Home", url: "/", mobile: false },
-  // { name: "Blog", url: "/blog/", mobile: true  },
+  { name: "Blog", url: "/blog/", mobile: true },
   { name: "Events", url: "/events/", mobile: true },
   { name: "Contact", url: "mailto:pumar@duck.com", mobile: false },
 ];

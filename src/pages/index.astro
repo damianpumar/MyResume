@@ -3,6 +3,8 @@ import Layout from '@layouts/Default.astro';
 import MobileSocials from '@components/home/MobileSocials.astro';
 import AboutMe from '@components/home/AboutMe.astro';
 import Description from '@components/home/Description.astro';
+import RecentBlogPosts from '@components/generic/RecentBlogPosts.astro';
+
 import { personal } from 'src/configuration';
 ---
 <Layout
@@ -14,6 +16,6 @@ import { personal } from 'src/configuration';
     <MobileSocials />
     <AboutMe />
     <Description />
-    <!-- <RecentBlogPosts /> -->
+    <RecentBlogPosts />
   </main>
 </Layout>
