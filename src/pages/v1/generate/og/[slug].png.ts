@@ -34,7 +34,7 @@ export const GET: APIRoute = async ({ params, props }) => {
             <p style="font-size: 48px;">${personal.name}</p>
             <p style="font-size: 38px;">${title}</p>
           </div>
-          <img src="https://media.licdn.com/dms/image/D4E03AQGQ_hWwM5N40A/profile-displayphoto-shrink_400_400/0/1702933946472?e=1709164800&v=beta&t=00sp8HuF7heFQyJ22bvscFzrqoa3yLn5AdOQtQPSk_M" width="200px" height="200px" style="border: 3px solid black; border-radius: 0.5rem;" />
+          <img src="https://media.licdn.com/dms/image/D4D03AQE9Z84F3DJD6g/profile-displayphoto-shrink_800_800/0/1704028128023?e=1709769600&v=beta&t=gy7ObKMHXkuZCuika2Taudatu03sly39yTLa3e52Ljo" width="200px" height="200px" style="border: 3px solid black; border-radius: 0.5rem;" />
         </div>
         <div style="display: flex;">
           <p style="font-size: 24px;">${description}</p>
