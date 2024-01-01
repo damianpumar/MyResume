@@ -1,7 +1,5 @@
 ---
 import { navigationItems } from "src/configuration";
-
-const commitVersion = import.meta.env.RELEASE_VERSION
 ---
 
 <footer class='bg-black sanchez p-6 flex flex-row justify-between'>
@@ -19,8 +17,5 @@ const commitVersion = import.meta.env.RELEASE_VERSION
       ))}
       {new Date().getFullYear()}
       <span>|</span>
-  </div>
-  <div class="text-gray hidden md:inline-block">
-    {commitVersion}
   </div>
 </footer>

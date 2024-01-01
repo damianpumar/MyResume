@@ -19,6 +19,13 @@ if (Astro.props.ogImage === undefined) {
 const { title, description, ogImage } = Astro.props;
 ---
 
+<script define:vars={{personal,  commitVersion, commitDate }}>
+  const color = "color: #f87171";
+  console.log(`%c Hi developer! 👋. I'm ${personal.name}`, color)
+  console.log(`%c Release date: ${commitDate}`, color);
+  console.log(`%c Release version: ${commitVersion}`, color);
+</script>
+
 <head>
   <meta charset='utf-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -51,7 +58,7 @@ const { title, description, ogImage } = Astro.props;
   <link rel='canonical' href={canonicalURL} />
   <link rel='icon' type='image/png' href='/favicon.png' />
 
-  <title>Damián Pumar | {title}</title>
+  <title>{personal.name} | {title}</title>
 
   <ViewTransitions />
 
