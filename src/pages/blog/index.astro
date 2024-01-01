@@ -4,9 +4,9 @@ import Layout from '@layouts/Default.astro';
 import BlogList from '@components/blog/BlogList.astro';
 import { personal } from 'src/configuration';
 
-const posts = await getCollection('blog').then((collection) =>
-  collection.reverse()
-);
+const posts = (await getCollection("blog")).sort(
+  (a, b) => a.data.date.getTime() - b.data.date.getTime()
+).reverse();
 ---
 
 <Layout

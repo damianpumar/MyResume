@@ -10,9 +10,9 @@ interface Props {
 
 const { count } = Astro.props;
 
-const posts = await getCollection('blog').then((posts) =>
-  posts.reverse().slice(0, count ?? 3)
-);
+const posts = (await getCollection("blog")).sort(
+  (a, b) => a.data.date.getTime() - b.data.date.getTime()
+).reverse().slice(0, count ?? 3)
 ---
 
 <section class='mt-8'>
