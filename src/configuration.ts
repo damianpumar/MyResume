@@ -33,7 +33,7 @@ export const personal = {
       { name: "React", url: "https://reactjs.org/" },
       { name: "Qwik", url: "https://qwik.builder.io/" },
       { name: "Next", url: "https://nextjs.org/" },
-      { name: "Go", url: "https://go.dev/" },
+      { name: "Go lang", url: "https://go.dev/" },
       { name: "Vue", url: "https://vuejs.org/" },
       { name: "Azure", url: "https://azure.microsoft.com" },
       { name: "Docker", url: "https://www.docker.com" },
@@ -47,20 +47,19 @@ export const personal = {
       { name: "R2wc", url: "https://github.com/damianpumar/r2wc" },
     ],
   },
+  work: [
+    {
+      name: "Technical coach",
+      at: "@CodeScouts",
+      web: "https://www.codescouts.academy/",
+    },
+    {
+      name: "Lead Frontend Engineer",
+      at: "@Argilla",
+      web: "https://argilla.io/",
+    },
+  ],
 };
-
-export const work = [
-  {
-    name: "Technical coach",
-    at: "@CodeScouts",
-    web: "https://www.codescouts.academy/",
-  },
-  {
-    name: "Lead Frontend Engineer",
-    at: "@Argilla",
-    web: "https://argilla.io/",
-  },
-];
 
 export const navigationItems = [
   { name: "Home", url: "/", mobile: false },
