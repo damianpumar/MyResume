@@ -3,6 +3,7 @@ import profile from "./assets/me.jpg";
 export const personal = {
   name: "Damián Pumar",
   profile: profile,
+  email: "pumar@duck.com",
   titles: [
     "🏗️ Software Architect ~ 🧮 Software Engineer",
     "🥋 Software Craftsman ~ 🎤 Speaker",
@@ -65,5 +66,5 @@ export const navigationItems = [
   { name: "Home", url: "/", mobile: false },
   { name: "Blog", url: "/blog/", mobile: true },
   { name: "Events", url: "/events/", mobile: true },
-  { name: "Contact", url: "mailto:pumar@duck.com", mobile: false },
+  { name: "Contact", url: `mailto:${personal.email}`, mobile: false },
 ];
