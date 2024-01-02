@@ -6,13 +6,14 @@ import { Button } from '@eliancodes/brutal-ui';
 
 interface Props {
   count?: number;
+  exclude?: string[];
 }
 
-const { count } = Astro.props;
+const { count, exclude} = Astro.props;
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => a.data.date.getTime() - b.data.date.getTime()
-).reverse().slice(0, count ?? 3)
+).reverse().slice(0, count ?? 3).filter((post) => !exclude?.includes(post.slug));
 ---
 
 <section class='mt-8'>
