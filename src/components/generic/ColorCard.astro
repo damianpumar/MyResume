@@ -1,0 +1,21 @@
+---
+import { Card } from "@eliancodes/brutal-ui";
+
+interface Props {
+  color: keyof typeof colors;
+}
+
+const colors = {
+  primary: "#22d3ee",
+  secondary: "#fb7185",
+  tertiary:"#818cf8",
+  quaternary: "#4ade80",
+}
+
+const color = colors[Astro.props.color];
+---
+
+
+<Card color={color}>
+  <slot />
+</Card>
