@@ -53,7 +53,12 @@ import { personal } from "src/configuration";
       class="object-cover object-top aspect-1 md-aspect-2 h-full w-full rounded"
       src={personal.profile}
       alt={personal.name}
-      width={650}
+      quality={"mid"}
+      width={personal.profile.width / 3}
+      widths={[240, 540, 720, personal.profile.width / 3]}
+      sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${
+        personal.profile.width / 3
+      }px`}
       draggable={false}
     />
   </div>

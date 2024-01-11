@@ -35,8 +35,12 @@ const { title, imgAlt, description, imgSrc, imageClass = [] } = Astro.props;
       class:list={imageClass}
       src={imgSrc}
       alt={imgAlt}
-      width={800}
-      height={400}
+      quality={"mid"}
+      width={imgSrc.width / 3}
+      widths={[240, 540, 720, imgSrc.width / 3]}
+      sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${
+        imgSrc.width / 3
+      }px`}
       draggable={false}
     />
   </div>
