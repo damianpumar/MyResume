@@ -1,6 +1,6 @@
 ---
-import { socials } from '@components/home/MobileSocials.astro';
-import { navigationItems, personal } from 'src/configuration';
+import { socials } from "@components/home/MobileSocials.astro";
+import { navigationItems, personal } from "src/configuration";
 
 interface Props {
   pageTitle?: string;
@@ -9,19 +9,21 @@ interface Props {
 const { pageTitle } = Astro.props;
 ---
 
-<header class='border-b-4 border-black flex justify-between p-6 items-center'>
-  {pageTitle && <h1 class='hidden'>{pageTitle}</h1>}
-  <a href='/' title='Home'>
-    <p class='righteous md:text-5xl select-none'>{personal.name}</p>
+<header class="border-b-4 border-black flex justify-between p-6 items-center">
+  {pageTitle && <h1 class="hidden">{pageTitle}</h1>}
+  <a href="/" title="Home">
+    <p class="righteous text-2xl md:text-5xl select-none">
+      {personal.name}
+    </p>
   </a>
-  <nav class='hidden md:inline-block'>
-    <h2 class='hidden'>Navigation</h2>
-    <ul class='flex gap-8 poppins'>
+  <nav class="hidden md:inline-block">
+    <h2 class="hidden">Navigation</h2>
+    <ul class="flex gap-8 poppins">
       {
         navigationItems.map((item) => (
           <li>
             <a
-              class='text-lg font-medium hover:text-green hover:underline transition-all duration-150 ease-in-out select-none'
+              class="text-lg font-medium hover:text-green hover:underline transition-all duration-150 ease-in-out select-none"
               href={item.url}
               title={`Go to ${item.name}`}
             >
@@ -35,28 +37,28 @@ const { pageTitle } = Astro.props;
           <li>
             <a
               href={item.url}
-              class='hover:text-green hover:underline transition-all duration-150 ease-in-out'
-              target='_blank'
+              class="hover:text-green hover:underline transition-all duration-150 ease-in-out"
+              target="_blank"
               title={`See @DamianPumar on ${item.name}`}
             >
-              <div class:list={[item.icon, 'w-6 h-6']} />
+              <div class:list={[item.icon, "w-6 h-6"]} />
             </a>
           </li>
         ))
       }
     </ul>
   </nav>
-  <nav class='md:hidden flex'>
-    <h2 class='hidden'>Mobile Navigation</h2>
-    <ul class="flex flex-row gap-3">
+  <nav class="md:hidden flex">
+    <h2 class="hidden">Mobile Navigation</h2>
+    <ul class="flex flex-row gap-4 text-xl">
       {
-        navigationItems.filter(n=> n.mobile).map((item) => (
-          <li>
-            <a href={item.url}>
-              {item.name}
-            </a>
+        navigationItems
+          .filter((n) => n.mobile)
+          .map((item) => (
+            <li>
+              <a href={item.url}>{item.name}</a>
             </li>
-        ))
+          ))
       }
     </ul>
   </nav>
