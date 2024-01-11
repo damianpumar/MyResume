@@ -2,59 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "DM Serif Text";
-  font-style: normal;
-  font-display: swap;
-  src: url("/fonts/dm-serif.ttf") format("truetype");
+html {
+  scroll-behavior: smooth;
 }
 
-@font-face {
-  font-family: "Outfit";
-  font-style: normal;
-  font-display: swap;
-  src: url("/fonts/outfit.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Poppins";
-  font-style: normal;
-  font-display: swap;
-  src: url("/fonts/poppins.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Righteous";
-  font-style: normal;
-  font-display: swap;
-  src: url("/fonts/righteous.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Sanchez";
-  font-style: normal;
-  font-display: swap;
-  src: url("/fonts/sanchez.ttf") format("truetype");
-}
-
-.outfit {
-  font-family: "Outfit", sans-serif;
-}
-.righteous {
-  font-family: "Righteous", sans-serif;
-}
-.dm-serif {
-  font-family: "DM Serif Text", serif;
-}
-.fredoka {
-  font-family: "Fredoka One", sans-serif;
-}
-.poppins {
-  font-family: "Poppins", sans-serif;
-}
-.sanchez {
-  font-family: "Sanchez", serif;
-}
 .card-shadow {
   border-radius: 0.5rem;
   border: 3px solid black;
@@ -71,21 +22,14 @@
   box-shadow: 5px 5px 0px 0px rgb(0 0 0 / 1);
 }
 
+/*
 :root {
-  /* ---- ⚫️ Colors ⚪️ ---- */
-  /* Base Tokens */
   --sys-color-white: #ffffff;
   --sys-color-black: #000000;
-
-  /* Theme Tokens */
   --primary: var(--sys-color-white);
   --secondary: var(--sys-color-black);
 }
 
-html {
-  scroll-behavior: smooth;
-}
-/* 
 ::-webkit-scrollbar {
   width: 22px;
   background-color: var(--primary);
