@@ -3,42 +3,43 @@ import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 
 export interface Props {
-	title: string;
-	imgSrc: ImageMetadata;
-	imgAlt: string;
-	description: string;
-	imageClass?: string[];
+  title: string;
+  imgSrc: ImageMetadata;
+  imgAlt: string;
+  description: string;
+  imageClass?: string[];
 }
 
 const { title, imgAlt, description, imgSrc, imageClass = [] } = Astro.props;
 ---
 
 <style>
-	div.card {
-		filter: drop-shadow(10px 10px 0 rgb(0 0 0 / 1));
-		transition: all;
-		transition-duration: 0.5s;
-		animation: ease-in-out;
-	}
+  div.card {
+    filter: drop-shadow(10px 10px 0 rgb(0 0 0 / 1));
+    transition: all;
+    transition-duration: 0.5s;
+    animation: ease-in-out;
+  }
 
-	div.card:hover {
-		filter: drop-shadow(5px 5px 0 rgb(0 0 0 / 1));
-	}
+  div.card:hover {
+    filter: drop-shadow(5px 5px 0 rgb(0 0 0 / 1));
+  }
 </style>
 <div
-	class="card bg-white border-3 border-black rounded-lg p-4 h-full flex flex-col justify-between"
+  class="card bg-white border-3 border-black rounded-lg p-4 h-full flex flex-col justify-between"
 >
-	<h3 class="poppins text-lg md:text-xl">{title}</h3>
-	<div class="rounded-lg border-3 border-black my-4 h-56">
-		<Image
-			class="rounded h-full w-full object-cover object-top"
-			class:list={imageClass}
-			src={imgSrc}
-			alt={imgAlt}
-			width={800}
-			height={400}
-		/>
-	</div>
-	<p class="poppins">{description}</p>
-	<slot />
+  <h3 class="poppins text-lg md:text-xl">{title}</h3>
+  <div class="rounded-lg border-3 border-black my-4 h-56">
+    <Image
+      class="rounded h-full w-full object-cover object-top select-none"
+      class:list={imageClass}
+      src={imgSrc}
+      alt={imgAlt}
+      width={800}
+      height={400}
+      draggable={false}
+    />
+  </div>
+  <p class="poppins">{description}</p>
+  <slot />
 </div>
