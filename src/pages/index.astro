@@ -1,18 +1,19 @@
 ---
-import Layout from '@layouts/Default.astro';
-import MobileSocials from '@components/home/MobileSocials.astro';
-import AboutMe from '@components/home/AboutMe.astro';
-import Description from '@components/home/Description.astro';
-import RecentBlogPosts from '@components/generic/RecentBlogPosts.astro';
+import Layout from "@layouts/Default.astro";
+import MobileSocials from "@components/home/MobileSocials.astro";
+import AboutMe from "@components/home/AboutMe.astro";
+import Description from "@components/home/Description.astro";
+import RecentBlogPosts from "@components/generic/RecentBlogPosts.astro";
 
-import { personal } from 'src/configuration';
+import { personal } from "src/configuration";
 ---
+
 <Layout
-  title='Home'
+  title="Home"
   pageTitle={`${personal.name} | Home`}
   description={`${personal.name} resume, blog and events website.`}
 >
-  <main class='bg-yellow p-6'>
+  <main class="bg-yellow p-6">
     <MobileSocials />
     <AboutMe />
     <Description />
