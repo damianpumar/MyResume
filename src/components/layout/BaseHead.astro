@@ -1,6 +1,6 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
-import { personal } from 'src/configuration';
+import { ViewTransitions } from "astro:transitions";
+import { personal } from "src/configuration";
 const commitVersion = import.meta.env.RELEASE_VERSION;
 const commitDate = import.meta.env.RELEASE_DATE;
 
@@ -13,54 +13,53 @@ interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 if (Astro.props.ogImage === undefined) {
-  Astro.props.ogImage = new URL('/v1/generate/og/default.png', Astro.url);
+  Astro.props.ogImage = new URL("/v1/generate/og/default.png", Astro.url);
 }
 
 const { title, description, ogImage } = Astro.props;
+const { name: myName } = personal;
 ---
 
-<script define:vars={{personal,  commitVersion, commitDate }}>
+<script define:vars={{ myName, commitVersion, commitDate }}>
   const color = "color: #f87171";
-  console.log(`%c Hi developer! 👋. I'm ${personal.name}`, color)
+  console.log(`%c Hi developer! 👋. I'm ${myName}`, color);
   console.log(`%c Release date: ${commitDate}`, color);
   console.log(`%c Release version: ${commitVersion}`, color);
 </script>
 
 <head>
-  <meta charset='utf-8' />
-  <meta name='viewport' content='width=device-width, initial-scale=1' />
-  <meta name='generator' content={Astro.generator} />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <link
-    rel='alternate'
-    href='https://www.damianpumar.com/blog.xml'
-    type='application/rss+xml'
+    rel="alternate"
+    href="https://www.damianpumar.com/blog.xml"
+    type="application/rss+xml"
   />
 
-  <meta name='title' content={`${personal.name} | ${title}`} />
-  <meta name='description' content={description} />
+  <meta name="title" content={`${myName} | ${title}`} />
+  <meta name="description" content={description} />
 
-  <meta property='og:type' content='website' />
-  <meta property='og:url' content={canonicalURL} />
-  <meta property='og:title' content={title} />
-  <meta property='og:description' content={description} />
-  <meta property='og:image' content={ogImage} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImage} />
 
-  <meta property='twitter:card' content='summary_large_image' />
-  <meta property='twitter:url' content={canonicalURL} />
-  <meta property='twitter:title' content={title} />
-  <meta property='twitter:description' content={description} />
-  <meta property='twitter:image' content={ogImage} />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content={canonicalURL} />
+  <meta property="twitter:title" content={title} />
+  <meta property="twitter:description" content={description} />
+  <meta property="twitter:image" content={ogImage} />
 
   <meta name="release-date" content={commitDate} />
   <meta name="release-version" content={commitVersion} />
 
-  <link rel='canonical' href={canonicalURL} />
-  <link rel='icon' type='image/png' href='/favicon.png' />
+  <link rel="canonical" href={canonicalURL} />
+  <link rel="icon" type="image/png" href="/favicon.png" />
 
-  <title>{personal.name} | {title}</title>
+  <title>{myName} | {title}</title>
 
   <ViewTransitions />
-
   <slot />
 </head>
