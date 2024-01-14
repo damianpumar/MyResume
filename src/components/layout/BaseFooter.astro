@@ -2,20 +2,26 @@
 import { navigationItems } from "src/configuration";
 ---
 
-<footer class='bg-black sanchez p-6 flex flex-row justify-between'>
-  <h2 class='hidden'>Footer</h2>
+<footer class="bg-black poppins p-6 flex flex-row justify-between">
+  <h2 class="hidden">Footer</h2>
   <div class="text-white flex flex-row justify-between w-full sm-w-xs">
     <span>|</span>
-    {navigationItems.map((item) => (
-          <a class='text-blue'
+    {
+      navigationItems.map((item) => (
+        <>
+          <a
+            class="text-blue"
             href={item.url}
-            target={'_self'}
-            title={`Go to ${item.name}`} >
+            target={"_self"}
+            title={`Go to ${item.name}`}
+          >
             {item.name}
           </a>
           <span>|</span>
-      ))}
-      {new Date().getFullYear()}
-      <span>|</span>
+        </>
+      ))
+    }
+    {new Date().getFullYear()}
+    <span>|</span>
   </div>
 </footer>
