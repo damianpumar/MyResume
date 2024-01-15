@@ -5,24 +5,24 @@ import { getCollection } from "astro:content";
 import { personal } from "src/configuration";
 
 const events = await getCollection("events").then((events) =>
-	events.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()),
+  events.sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
 );
 ---
 
 <Layout
-	title="Events"
-	pageTitle={`${personal.name} - Events`}
-	description="See upcoming and past events."
+  title="Events"
+  pageTitle={`${personal.name} - Events`}
+  description="See upcoming and past events."
 >
-	<main class="bg-lightblue p-6">
-		<ul class="grid sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-8">
-			{
-				events.map((event) => (
-					<li>
-						<EventSummaryCard event={event} />
-					</li>
-				))
-			}
-		</ul>
-	</main>
+  <main class="bg-lightblue p-6">
+    <ul class="grid sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-8">
+      {
+        events.map((event) => (
+          <li>
+            <EventSummaryCard event={event} />
+          </li>
+        ))
+      }
+    </ul>
+  </main>
 </Layout>

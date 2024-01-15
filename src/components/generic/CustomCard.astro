@@ -1,0 +1,51 @@
+---
+import { colors } from "./colors";
+
+interface Props {
+  color?: string;
+  full?: boolean;
+  space?: boolean;
+}
+
+if (Astro.props.color === undefined) {
+  Astro.props.color = colors[Math.floor(Math.random() * colors.length)];
+}
+
+const { color, full, space } = Astro.props;
+const classes = [];
+
+if (!!full) {
+  classes.push("full");
+}
+if (!!space) {
+  classes.push("space");
+}
+---
+
+<style define:vars={{ color }}>
+  div.custom-card {
+    background-color: var(--color);
+    border-radius: 0.5rem;
+    border: 3px solid black;
+    filter: drop-shadow(7px 7px 0 rgb(0 0 0 / 1));
+    transition: all;
+    padding: 1rem;
+    transition-duration: 0.5s;
+    animation: ease-in-out;
+  }
+  div.custom-card:hover {
+    filter: drop-shadow(5px 5px 0 rgb(0 0 0 / 1));
+  }
+  div.full {
+    height: 100%;
+  }
+  div.space {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+</style>
+
+<div class="custom-card" class:list={classes}>
+  <slot />
+</div>

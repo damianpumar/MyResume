@@ -17,7 +17,7 @@ const { data } = post;
   imgAlt={data.title}
   imgSrc={data.image}
   description={data.description}
-  imageClass={data.imageClass}
+  imgPosition={data.imagePosition}
 >
   <div class="flex justify-end my-4">
     <Button href={`/blog/${post.slug}/`}>Read post &rarr;</Button>
@@ -28,7 +28,7 @@ const { data } = post;
     <div class="flex justify-between items-center">
       <ul class="inline-flex flex-wrap gap-3 mt-2">
         {
-          post.data.tags.map((tag) => {
+          data.tags.map((tag) => {
             return (
               <li>
                 <a class="sanchez" href={`/blog/tags/${tag.toLowerCase()}/`}>
@@ -40,7 +40,7 @@ const { data } = post;
         }
       </ul>
       {
-        post.data.draft && (
+        data.draft && (
           <span class="bg-green rounded-full border-2 py-1 px-4 text-sm border-black card-shadow">
             Draft
           </span>

@@ -1,38 +1,47 @@
 ---
+import CustomButton from "@components/generic/CustomButton.astro";
 import SummaryCard from "@components/generic/SummaryCard.astro";
-import { Button } from "@eliancodes/brutal-ui";
 import type { CollectionEntry } from "astro:content";
 
 export interface Props {
-	event: CollectionEntry<"events">;
+  event: CollectionEntry<"events">;
 }
 
 const { event } = Astro.props;
 const { data } = event;
 ---
+
 <SummaryCard
-	title={data.title}
-	imgSrc={data.img}
-	imgAlt={data.title}
-	description={data.description}
-	imageClass={data.imageClass}
+  title={data.title}
+  imgSrc={data.image}
+  imgAlt={data.title}
+  description={data.description}
+  imgPosition={data.imagePosition}
 >
-	<p class="mt-2">
-		<a
-			target="_blank"
-			href={data.link}
-			title={data.title}
-			class="hover:text-yellow transition-color duration-150 ease-in-out"
-			>{data.name}</a
-		> - {
-			data.date.toLocaleDateString("en-BE", {
-				year: "numeric",
-				month: "long",
-				day: "numeric",
-			})
-		}
-	</p>
-	<div class="md:flex justify-end gap-4 mt-4 hidden">
-		<Button target="_blank" href={data.link}>See event</Button>
-	</div>
+  <p class="mt-2">
+    <a
+      target="_blank"
+      href={data.link}
+      title={data.title}
+      class="hover:text-yellow transition-color duration-150 ease-in-out select-none"
+      >{data.name}</a
+    > - {
+      data.date.toLocaleDateString("en-BE", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
+    }
+  </p>
+  <div class="md:flex justify-end gap-4 mt-4 hidden">
+    {
+      data.link ? (
+        <CustomButton target="_blank" href={data.link}>
+          See event
+        </CustomButton>
+      ) : (
+        <CustomButton>TBD</CustomButton>
+      )
+    }
+  </div>
 </SummaryCard>

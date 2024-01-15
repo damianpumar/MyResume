@@ -1,0 +1,51 @@
+---
+import { colors } from "./colors";
+
+interface Props {
+  href?: string;
+  target?: "_blank" | "_self";
+  color?: string | undefined;
+}
+
+if (Astro.props.target === undefined) {
+  Astro.props.target = "_self";
+}
+
+if (Astro.props.color === undefined) {
+  Astro.props.color = colors[Math.floor(Math.random() * colors.length)];
+}
+
+const { href, target, color } = Astro.props;
+const isButton = !href;
+---
+
+<style define:vars={{ color: color }}>
+  .custom-btn {
+    filter: drop-shadow(5px 5px 0 rgb(0 0 0 / 1));
+    background-color: white;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 2px solid black;
+    transition: all;
+    transition-duration: 0.5s;
+    animation: ease-in-out;
+    font-family: "Sanchez", serif;
+    user-select: none;
+  }
+  .custom-btn:hover {
+    filter: drop-shadow(3px 3px 0 rgb(0 0 0 / 1));
+    background-color: var(--color);
+  }
+</style>
+
+{
+  isButton ? (
+    <button class="custom-btn">
+      <slot />
+    </button>
+  ) : (
+    <a href={href} target={target} class="custom-btn">
+      <slot />
+    </a>
+  )
+}

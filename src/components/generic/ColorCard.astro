@@ -1,21 +1,18 @@
 ---
-import { Card } from "@eliancodes/brutal-ui";
+import { pallete } from "./colors";
+import CustomCard from "./CustomCard.astro";
 
 interface Props {
-  color: keyof typeof colors;
+  color?: keyof typeof pallete;
+  full?: boolean;
+  space?: boolean;
 }
 
-const colors = {
-  primary: "#22d3ee",
-  secondary: "#fb7185",
-  tertiary:"#818cf8",
-  quaternary: "#4ade80",
-}
+const { color = "base", full, space } = Astro.props;
 
-const color = colors[Astro.props.color];
+const selectedColor = pallete[color];
 ---
 
-
-<Card color={color}>
+<CustomCard color={selectedColor} full={full} space={space}>
   <slot />
-</Card>
+</CustomCard>

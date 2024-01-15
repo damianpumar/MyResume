@@ -1,0 +1,26 @@
+export const colors = [
+  "#c084fc",
+  "#f472b6",
+  "#fb7185",
+  "#e879f9",
+  "#a78bfa",
+  "#818cf8",
+  "#60a5fa",
+  "#38bdf8",
+  "#22d3ee",
+  "#2dd4bf",
+  "#34d399",
+  "#4ade80",
+  "#a3e635",
+  "#facc15",
+  "#fb923c",
+  "#f87171",
+];
+
+export const pallete = {
+  base: "#ffffff",
+  primary: "#22d3ee",
+  secondary: "#fb7185",
+  tertiary: "#818cf8",
+  quaternary: "#4ade80",
+};

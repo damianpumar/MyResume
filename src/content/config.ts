@@ -9,7 +9,7 @@ const blogCollection = defineCollection({
       author: z.string(),
       tags: z.array(z.string()),
       image: image(),
-      imageClass: z.array(z.string()).optional(),
+      imagePosition: z.enum(["left", "right", "center"]).optional(),
       draft: z.boolean().optional().default(false),
     }),
 });
@@ -20,10 +20,10 @@ const eventCollection = defineCollection({
       title: z.string(),
       description: z.string(),
       date: z.date().or(z.string().transform((str) => new Date(str))),
-      link: z.string(),
+      link: z.string().optional(),
       name: z.string(),
-      img: image(),
-      imageClass: z.array(z.string()).optional(),
+      image: image(),
+      imagePosition: z.enum(["left", "right", "center"]).optional(),
     }),
 });
 
