@@ -1,8 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import BlogList from "../blog/BlogList.astro";
-import { Button } from "@eliancodes/brutal-ui";
 import ColorCard from "./ColorCard.astro";
+import CustomButton from "./CustomButton.astro";
 
 interface Props {
   count?: number;
@@ -25,10 +25,10 @@ const posts = (await getCollection("blog"))
         Recent Blogposts
       </h2>
       <div class="hidden md:block">
-        <Button href="/blog/">Go to blog &rarr;</Button>
+        <CustomButton href="/blog/">Go to blog &rarr;</CustomButton>
       </div>
       <div class="block md:hidden">
-        <Button href="/blog/">to blog</Button>
+        <CustomButton href="/blog/">to blog</CustomButton>
       </div>
     </div>
     <BlogList posts={posts} />

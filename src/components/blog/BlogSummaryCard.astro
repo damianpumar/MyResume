@@ -1,8 +1,8 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { Pill } from "@eliancodes/brutal-ui";
 import SummaryCard from "../generic/SummaryCard.astro";
-import { Button } from "@eliancodes/brutal-ui";
+import CustomButton from "@components/generic/CustomButton.astro";
+import CustomPill from "@components/generic/CustomPill.astro";
 
 interface Props {
   post: CollectionEntry<"blog">;
@@ -20,7 +20,7 @@ const { data } = post;
   imgPosition={data.imagePosition}
 >
   <div class="flex justify-end my-4">
-    <Button href={`/blog/${post.slug}/`}>Read post &rarr;</Button>
+    <CustomButton href={`/blog/${post.slug}/`}>Read post &rarr;</CustomButton>
   </div>
 
   <div class="hidden sm:inline-block">
@@ -32,7 +32,7 @@ const { data } = post;
             return (
               <li>
                 <a class="sanchez" href={`/blog/tags/${tag.toLowerCase()}/`}>
-                  <Pill>{tag}</Pill>
+                  <CustomPill>{tag}</CustomPill>
                 </a>
               </li>
             );

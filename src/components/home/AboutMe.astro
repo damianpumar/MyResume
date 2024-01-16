@@ -1,6 +1,6 @@
 ---
 import ColorCard from "@components/generic/ColorCard.astro";
-import { Button } from "@eliancodes/brutal-ui";
+import CustomButton from "@components/generic/CustomButton.astro";
 import { Image } from "astro:assets";
 import { personal } from "src/configuration";
 ---
@@ -40,13 +40,13 @@ import { personal } from "src/configuration";
         {personal.born.image}
       </p>
 
-      <!-- <Button target={'_self'} href='/blog/'>
+      <!-- <CustomButton target={'_self'} href='/blog/'>
           Check out the blog &rarr;
-        </Button> -->
+        </CustomButton> -->
 
-      <Button target={"_self"} href="/events/">
+      <CustomButton target={"_self"} href="/events/">
         Check out the events &rarr;
-      </Button>
+      </CustomButton>
     </ColorCard>
   </div>
   <div class="md:col-span-2 card-shadow">
