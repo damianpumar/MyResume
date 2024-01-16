@@ -1,6 +1,7 @@
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 import { personal } from 'src/configuration';
+import { homepage } from "package.json";
 
 export async function GET(context) {
   const blog = await getCollection('blog');
@@ -16,6 +17,6 @@ export async function GET(context) {
       link: `/blog/${post.slug}/`,
     })),
     customData: '<language>en-us</language>',
-    canonicalUrl: 'https://www.damianpumar.com',
+    canonicalUrl: homepage,
   });
 }

@@ -1,6 +1,5 @@
 ---
-import ColorCard from "@components/generic/ColorCard.astro";
-import CustomButton from "@components/generic/CustomButton.astro";
+import { ColorCard, Button } from "@components/generic";
 import { Image } from "astro:assets";
 import { personal } from "src/configuration";
 ---
@@ -44,9 +43,9 @@ import { personal } from "src/configuration";
           Check out the blog &rarr;
         </CustomButton> -->
 
-      <CustomButton target={"_self"} href="/events/">
+      <Button target={"_self"} href="/events/">
         Check out the events &rarr;
-      </CustomButton>
+      </Button>
     </ColorCard>
   </div>
   <div class="md:col-span-2 card-shadow">

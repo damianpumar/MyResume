@@ -1,6 +1,7 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import { personal } from "src/configuration";
+
 const commitVersion = import.meta.env.RELEASE_VERSION;
 const commitDate = import.meta.env.RELEASE_DATE;
 
@@ -33,7 +34,7 @@ const { name: myName } = personal;
 
   <link
     rel="alternate"
-    href="https://www.damianpumar.com/blog.xml"
+    href=`${Astro.site}feed.xml`
     type="application/rss+xml"
   />
 

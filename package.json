@@ -6,9 +6,9 @@
   "author": {
     "name": "Damián Pumar",
     "email": "pumar@duck.com",
-    "url": "http://www.damianpumar.com"
+    "url": "https://www.damianpumar.com"
   },
-  "homepage": "http://www.damianpumar.com",
+  "homepage": "https://www.damianpumar.com",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

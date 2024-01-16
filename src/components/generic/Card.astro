@@ -7,7 +7,7 @@ interface Props {
   space?: boolean;
 }
 
-if (Astro.props.color === undefined) {
+if (!Astro.props.color) {
   Astro.props.color = colors[Math.floor(Math.random() * colors.length)];
 }
 

@@ -3,6 +3,7 @@ import type { APIRoute } from "astro";
 import satori from "satori";
 import { html as toReactElement } from "satori-html";
 import { personal } from "src/configuration";
+import { homepage } from "package.json";
 
 const fontFile = await fetch(
   "https://og-playground.vercel.app/inter-latin-ext-700-normal.woff"
@@ -14,7 +15,7 @@ const height = 630;
 const width = 1200;
 
 export const GET: APIRoute = async () => {
-  const link = "https://www.damianpumar.com";
+  const link = homepage;
   const html = toReactElement(`
   <div style="background-color: white; display: flex; flex-direction: column; height: 100%; padding: 3rem; width: 100%">
     <div style="display:flex; height: 100%; width: 100%; background-color: white; border: 6px solid black; border-radius: 0.5rem; padding: 2rem; filter: drop-shadow(6px 6px 0 rgb(0 0 0 / 1));">

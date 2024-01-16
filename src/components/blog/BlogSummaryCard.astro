@@ -1,8 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import SummaryCard from "../generic/SummaryCard.astro";
-import CustomButton from "@components/generic/CustomButton.astro";
-import CustomPill from "@components/generic/CustomPill.astro";
+import { SummaryCard, Button, Pill } from "@components/generic";
 
 interface Props {
   post: CollectionEntry<"blog">;
@@ -20,7 +18,7 @@ const { data } = post;
   imgPosition={data.imagePosition}
 >
   <div class="flex justify-end my-4">
-    <CustomButton href={`/blog/${post.slug}/`}>Read post &rarr;</CustomButton>
+    <Button href={`/blog/${post.slug}/`}>Read post &rarr;</Button>
   </div>
 
   <div class="hidden sm:inline-block">
@@ -32,7 +30,7 @@ const { data } = post;
             return (
               <li>
                 <a class="sanchez" href={`/blog/tags/${tag.toLowerCase()}/`}>
-                  <CustomPill>{tag}</CustomPill>
+                  <Pill>{tag}</Pill>
                 </a>
               </li>
             );

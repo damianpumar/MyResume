@@ -1,8 +1,7 @@
 ---
 import { getCollection } from "astro:content";
-import BlogList from "../blog/BlogList.astro";
-import ColorCard from "./ColorCard.astro";
-import CustomButton from "./CustomButton.astro";
+import BlogList from "./BlogList.astro";
+import { ColorCard, Button } from "@components/generic";
 
 interface Props {
   count?: number;
@@ -25,10 +24,10 @@ const posts = (await getCollection("blog"))
         Recent Blogposts
       </h2>
       <div class="hidden md:block">
-        <CustomButton href="/blog/">Go to blog &rarr;</CustomButton>
+        <Button href="/blog/">Go to blog &rarr;</Button>
       </div>
       <div class="block md:hidden">
-        <CustomButton href="/blog/">to blog</CustomButton>
+        <Button href="/blog/">to blog</Button>
       </div>
     </div>
     <BlogList posts={posts} />

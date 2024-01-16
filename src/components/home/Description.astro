@@ -1,6 +1,5 @@
 ---
-import ColorCard from "@components/generic/ColorCard.astro";
-import CustomPill from "@components/generic/CustomPill.astro";
+import { ColorCard, Pill } from "@components/generic";
 import { personal } from "src/configuration";
 ---
 
@@ -20,7 +19,7 @@ import { personal } from "src/configuration";
           <ul class="flex gap-4 mb-3 flex-wrap">
             {value.map((item) => (
               <li class="sanchez">
-                <CustomPill>
+                <Pill>
                   {"url" in item ? (
                     <a
                       href={item.url}
@@ -32,7 +31,7 @@ import { personal } from "src/configuration";
                   ) : (
                     item.name
                   )}
-                </CustomPill>
+                </Pill>
               </li>
             ))}
           </ul>

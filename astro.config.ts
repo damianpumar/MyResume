@@ -2,8 +2,10 @@ import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import UnoCSS from "unocss/astro";
 
+import { homepage } from "./package.json";
+
 export default defineConfig({
-  site: "https://www.damianpumar.com/",
+  site: homepage,
   build: {
     assets: "assets",
   },

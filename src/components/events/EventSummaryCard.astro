@@ -1,6 +1,5 @@
 ---
-import CustomButton from "@components/generic/CustomButton.astro";
-import SummaryCard from "@components/generic/SummaryCard.astro";
+import { Button, SummaryCard } from "@components/generic";
 import type { CollectionEntry } from "astro:content";
 
 export interface Props {
@@ -36,11 +35,11 @@ const { data } = event;
   <div class="md:flex justify-end gap-4 mt-4 hidden">
     {
       data.link ? (
-        <CustomButton target="_blank" href={data.link}>
+        <Button target="_blank" href={data.link}>
           See event
-        </CustomButton>
+        </Button>
       ) : (
-        <CustomButton>TBD</CustomButton>
+        <Button>TBD</Button>
       )
     }
   </div>
