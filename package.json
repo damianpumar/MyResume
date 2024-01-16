@@ -1,15 +1,14 @@
 {
-  "name": "brutal",
-  "version": "1.2.0",
+  "name": "damian-pumary-resume",
+  "version": "0.0.1",
   "private": false,
   "type": "module",
-  "packageManager": "pnpm@8.6.0",
   "author": {
-    "name": "Elian Van Cutsem",
-    "email": "hello@elian.codes",
-    "url": "https://www.elian.codes/"
+    "name": "Damián Pumar",
+    "email": "pumar@duck.com",
+    "url": "http://www.damianpumar.com"
   },
-  "homepage": "https://brutal.elian.codes",
+  "homepage": "http://www.damianpumar.com",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -21,7 +20,6 @@
   "dependencies": {
     "@astrojs/rss": "^4.0.1",
     "@astrojs/sitemap": "^3.0.3",
-    "@eliancodes/brutal-ui": "^0.2.3",
     "@unocss/astro": "^0.57.7",
     "astro": "^4.0.6",
     "satori": "^0.5.0",
