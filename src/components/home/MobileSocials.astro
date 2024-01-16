@@ -18,21 +18,29 @@ export const socials = [
     icon: "i-uil-linkedin",
     mobile: true,
   },
+  {
+    name: "Sessionize",
+    url: "https://sessionize.com/damianpumar",
+    icon: "i-uil-football",
+    mobile: false,
+  },
   { name: "RSS", url: "/feed.xml", icon: "i-uil-rss", mobile: false },
 ];
-
 ---
-<section class='md:hidden'>
-  <h2 class='hidden'>Socials section</h2>
-  <ul class='flex justify-between'>
+
+<section class="md:hidden">
+  <h2 class="hidden">Socials section</h2>
+  <ul class="flex justify-between">
     {
-      socials.filter(s => s.mobile).map((item) => (
-        <li class='bg-white px-4 py-2 text-green card-shadow'>
-          <a href={item.url} target='_blank' title={`Go to ${item.name}`}>
-            <div class:list={[item.icon, 'p-6']} />
-          </a>
-        </li>
-      ))
+      socials
+        .filter((s) => s.mobile)
+        .map((item) => (
+          <li class="bg-white px-4 py-2 text-green card-shadow">
+            <a href={item.url} target="_blank" title={`Go to ${item.name}`}>
+              <div class:list={[item.icon, "p-6"]} />
+            </a>
+          </li>
+        ))
     }
   </ul>
 </section>
