@@ -3,6 +3,12 @@ import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 import ColorCard from "./ColorCard.astro";
 
+const positions = {
+  left: "important-object-left",
+  right: "important-object-right",
+  center: "important-object-center",
+};
+
 export interface Props {
   title: string;
   imgSrc: ImageMetadata;
@@ -16,7 +22,7 @@ const { title, imgAlt, description, imgSrc, imgPosition } = Astro.props;
 const classes = [];
 
 if (imgPosition) {
-  classes.push(`important-object-${imgPosition}`);
+  classes.push(positions[imgPosition]);
 }
 ---
 
