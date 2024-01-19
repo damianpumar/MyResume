@@ -8,7 +8,7 @@ export interface Props {
 
 const { event } = Astro.props;
 const { data } = event;
-const commingSoon = data.date > new Date();
+const comingSoon = data.date > new Date();
 ---
 
 <SummaryCard
@@ -35,7 +35,7 @@ const commingSoon = data.date > new Date();
   </p>
   <div class="md:flex justify-between flex-items-center gap-4 mt-4 hidden">
     <div>
-      {commingSoon && <Pill>Comming soon</Pill>}
+      {comingSoon && <Pill>Coming soon</Pill>}
     </div>
     {
       data.link && (
