@@ -1,5 +1,5 @@
 ---
-import { Button, SummaryCard } from "@components/generic";
+import { Button, Pill, SummaryCard } from "@components/generic";
 import type { CollectionEntry } from "astro:content";
 
 export interface Props {
@@ -8,6 +8,7 @@ export interface Props {
 
 const { event } = Astro.props;
 const { data } = event;
+const commingSoon = data.date > new Date();
 ---
 
 <SummaryCard
@@ -32,14 +33,15 @@ const { data } = event;
       })
     }
   </p>
-  <div class="md:flex justify-end gap-4 mt-4 hidden">
+  <div class="md:flex justify-between flex-items-center gap-4 mt-4 hidden">
+    <div>
+      {commingSoon && <Pill>Comming soon</Pill>}
+    </div>
     {
-      data.link ? (
+      data.link && (
         <Button target="_blank" href={data.link}>
           See event
         </Button>
-      ) : (
-        <Button>TBD</Button>
       )
     }
   </div>
