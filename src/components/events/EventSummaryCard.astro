@@ -6,7 +6,7 @@ export interface Props {
   event: CollectionEntry<"events">;
 }
 
-const { event } = Astro.props;
+const { event, collapsed } = Astro.props;
 const { data } = event;
 const comingSoon = data.date > new Date();
 ---
@@ -17,6 +17,7 @@ const comingSoon = data.date > new Date();
   imgAlt={data.title}
   description={data.description}
   imgPosition={data.imagePosition}
+  collapsed={collapsed}
 >
   <p class="mt-2">
     <a

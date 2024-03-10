@@ -1,0 +1,24 @@
+---
+import { getCollection } from "astro:content";
+import EventSummaryCard from "@components/events/EventSummaryCard.astro";
+
+interface Props {
+  count?: number;
+  exclude?: string[];
+}
+
+const events = (await getCollection("events"))
+  .sort((a, b) => a.data.date.getTime() - b.data.date.getTime())
+  .reverse()
+  .slice(0, 1)
+---
+
+<section>
+  <ul class="grid sm:grid-cols-1">
+  {
+    events.map((event) => (
+      <EventSummaryCard event={event} collapsed={true} />
+    ))
+  }
+  </ul>
+</section>

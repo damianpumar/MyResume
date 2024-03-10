@@ -15,9 +15,10 @@ export interface Props {
   imgAlt: string;
   description: string;
   imgPosition?: "left" | "right" | "center";
+  collapsed: boolean;
 }
 
-const { title, imgAlt, description, imgSrc, imgPosition } = Astro.props;
+const { title, imgAlt, description, imgSrc, imgPosition, collapsed } = Astro.props;
 
 const classes = [];
 
@@ -31,7 +32,7 @@ if (imgPosition) {
     {title}
   </h3>
 
-  <div class="rounded-lg border-3 border-black my-4 h-56">
+  <div class="rounded-lg border-3 border-black h-75 my-1">
     <Image
       class="rounded h-full w-full object-cover object-top select-none"
       class:list={classes}
@@ -45,6 +46,8 @@ if (imgPosition) {
       draggable={false}
     />
   </div>
-  <p class="poppins">{description}</p>
-  <slot />
+  {!collapsed &&
+    <p class="poppins">{description}</p>
+    <slot />
+  }
 </ColorCard>

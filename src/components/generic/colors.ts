@@ -23,4 +23,5 @@ export const pallete = {
   secondary: "#fb7185",
   tertiary: "#818cf8",
   quaternary: "#4ade80",
+  quinary: "#fb923c",
 };
