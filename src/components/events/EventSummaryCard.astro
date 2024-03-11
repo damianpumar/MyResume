@@ -4,9 +4,10 @@ import type { CollectionEntry } from "astro:content";
 
 export interface Props {
   event: CollectionEntry<"events">;
+  collapsed?: boolean;
 }
 
-const { event, collapsed } = Astro.props;
+const { event, collapsed = false } = Astro.props;
 const { data } = event;
 const comingSoon = data.date > new Date();
 ---
@@ -27,7 +28,7 @@ const comingSoon = data.date > new Date();
       class="hover:text-yellow transition-color duration-150 ease-in-out select-none"
       >{data.name}</a
     > - {
-      data.date.toLocaleDateString("en-BE", {
+      data.date.toLocaleDateString("en", {
         year: "numeric",
         month: "long",
         day: "numeric",

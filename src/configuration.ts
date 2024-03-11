@@ -42,10 +42,14 @@ export const personal = {
       { name: "Playwright", url: "https://playwright.dev/" },
     ],
     openSource: [
-      { name: "Argilla", url: "https://github.com/argilla-io/argilla" },
-      { name: "Ts-injecty", url: "https://github.com/damianpumar/ts-injecty" },
-      { name: "Svelte", url: "https://github.com/sveltejs/svelte" },
-      { name: "R2wc", url: "https://github.com/damianpumar/r2wc" },
+      { name: "Argilla 🤖", url: "https://github.com/argilla-io/argilla" },
+      {
+        name: "Ts-injecty 💉",
+        url: "https://github.com/damianpumar/ts-injecty",
+      },
+      { name: "Svelte ⏳", url: "https://github.com/sveltejs/svelte" },
+      { name: "R2wc ⚛️", url: "https://github.com/damianpumar/r2wc" },
+      { name: "Hono 🚀", url: "https://github.com/damianpumar/hono" },
     ],
   },
   work: [
