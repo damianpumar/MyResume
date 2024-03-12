@@ -95,19 +95,6 @@ layout: "../../layouts/Course.astro"
     - Injecting units easily
 - 🙌 Feedback → ⏲️**10min**
 
-## 💪 Consulting Day (8 hours of work together)
-
-This day is to work hand in hand with the team, the main objective is to land the concepts and practices learned in the course in the current project, also review the following points next to the team.
-
-- 🤔 Current Architecture Consulting
-- 😭 Pain Points review
-- 🤜 Recommendations
-- 🕸️ Refactorization
-- 🦾 Improvement margin
-- 🧩 Review of potential modules a prioritize the test
-- 🕵️ Code base and improvement suggestions
-- 💣 Rigid design, separation of clear responsibilities?
-
 # 🥋 Coach
 
 Damián Pumar
