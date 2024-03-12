@@ -82,24 +82,6 @@ layout: "../../layouts/Course.astro"
 - 🎾 Exercise 2 - Generic architecture components → ⏲️**90min**
 - 🤔 Reflection - Advantages and Disadvantages of TDD in Frontend → ⏲️**10min**
 
-## 5️⃣ Day 5 - E2E & Clean Architecture
-
-- 🤝 Doubts of yesterday → ⏲️**5min**-**E2e Tests**
-  - 🐞 What are we looking for with an E2E test?→ ⏲️**30min**
-    - Review of E2E Rameworks, pros and cons.
-    - Gherkin in E2E
-    - Could our product Owner create them?
-  - 🖥️ Exercise 1 - Testing as a user.→ ⏲️**60min**
-    - E2E test with playwright.
-- 🥐 Break → ⏲️**10min**-**CLEAN ARCHITECTURE BRONDD**
-  - 🤔 Why Clean Architecture and what is the relationship with the tests?→ ⏲️**25min**
-  - 🖌️ Exercise 2 - Testing components with Clean Architecture → ⏲️**90min**
-    - TDD with Clean Architecture
-    - Testing domain behaviors
-    - Delimiting the scope of the test to the domain services.
-    - Injecting units easily
-- 🙌 Feedback → ⏲️**10min**
-
 # 🥋 Coach
 
 Damián Pumar
