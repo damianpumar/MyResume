@@ -69,7 +69,7 @@ export const personal = {
 export const navigationItems = [
   { name: "Home", url: "/", mobile: false },
   { name: "Events", url: "/events/", mobile: true },
-  // { name: "Courses", url: "/courses/", mobile: true },
+  { name: "Courses", url: "/courses/", mobile: true },
   { name: "Blog", url: "/blog/", mobile: false },
   { name: "Contact", url: `mailto:${personal.email}`, mobile: false },
 ];
