@@ -10,12 +10,12 @@ layout: "../../layouts/Course.astro"
 
 # 🙌 Proposal
 
-- 5 days of online course, 4 hours per day (morning or afternoon) ⏰
-- 1 Office work (8 hours of office work) 💼
-- Team
+- ⏰ 5 days of online course, 4 hours per day (morning or afternoon)
+- 💼 1 Office work (8 hours of office work)
+- 👨‍💻 Team
   - 6-10 people
   - Mid/senior
-- Price
+- 💶 Price
   - To define.
   - Discount by Fundae (only spain) → [https://www.fundae.es/](https://www.fundae.es/)
 
