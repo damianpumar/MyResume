@@ -107,14 +107,14 @@ layout: "../../layouts/Course.astro"
 
 ## 5️⃣ Day 5 - E2E & Clean Architecture
 
-- 🤝 Doubts of yesterday → ⏲️**5min** -**E2e Tests**
+- 🤝 Doubts of yesterday → ⏲️**5min**-**E2e Tests**
   - 🐞 What are we looking for with an E2E test?→ ⏲️**30min**
     - Review of E2E Rameworks, pros and cons.
     - Gherkin in E2E
     - Could our product Owner create them?
   - 🖥️ Exercise 1 - Testing as a user.→ ⏲️**60min**
     - E2E test with playwright.
-- 🥐 Break → ⏲️**10min** -**CLEAN ARCHITECTURE BRONDD**
+- 🥐 Break → ⏲️**10min**-**CLEAN ARCHITECTURE BRONDD**
   - 🤔 Why Clean Architecture and what is the relationship with the tests?→ ⏲️**25min**
   - 🖌️ Exercise 2 - Testing components with Clean Architecture → ⏲️**90min**
     - TDD with Clean Architecture
@@ -138,11 +138,11 @@ This day is to work hand in hand with the team, the main objective is to land th
 
 # 🥋 Coach
 
-## Damián Pumar
+Damián Pumar
 
 ![Damián Pumar](https://file.notion.so/f/f/ba17bbad-ae59-467a-bb77-35c3709ee3c2/2cb40dec-e22b-4199-b592-bebbadc94a3e/53083954438_49bb5babf0_c.jpg?id=17b5ddfe-998c-4ced-ba79-dda069a7a11f&table=block&spaceId=ba17bbad-ae59-467a-bb77-35c3709ee3c2&expirationTimestamp=1710331200000&signature=nF-wN4cfgqwizcIhY-M5cuLTbdYpuX6NbEg9EH-ZXo0&downloadName=53083954438_49bb5babf0_c.jpg)
 
-### Technical coach / Software craftsman / Speaker
+Technical coach / Software craftsman / Speaker
 
 🌐 [https://damianpumar.com/](https://damianpumar.com/)
 

@@ -5,6 +5,7 @@ interface Props {
   content: any;
   back: {
     href: string;
+    title: string;
   };
   published?: boolean;
 }
@@ -20,8 +21,7 @@ const date = new Date(content.date).toLocaleDateString("en-US", {
 ---
 
 <article class="prose-slate w-sm md:w-prose md:prose poppins">
-  <a href={`/${back.href}`} title={`Back to ${title}`}>&larr; Back to {title}</a
-  >
+  <a href={`/${back.href}`}>&larr; Back to {back.title}</a>
   {
     published && (
       <p class="text-slate text-sm md:text-base">
@@ -37,6 +37,5 @@ const date = new Date(content.date).toLocaleDateString("en-US", {
       >Let me know</a
     > 🙏
   </p>
-  <a href={`/${back.href}`} title={`Back to ${title}`}>&larr; Back to {title}</a
-  >
+  <a href={`/${back.href}`}>&larr; Back to {back.title}</a>
 </article>

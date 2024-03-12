@@ -1,0 +1,115 @@
+---
+title: DDD, Hexagonal Architecture and TDD
+description: You want to create high quality applications, reducing bugs and increasing development speed when scaling or maintaining your frontend, this course is for you!.
+image: "../../assets/courses/ddd.jpeg"
+layout: "../../layouts/Course.astro"
+---
+
+# Curso de Arquitectura hexagonal con Domain-Driven design y TDD
+
+# 🙌 Proposal
+
+- 4 days of online course, 4 hours per day (morning or afternoon) ⏰
+- Team
+  - 6-10 people
+  - Mid/senior
+- Price
+  - To define.
+  - Discount by Fundae (only spain) → [https://www.fundae.es/](https://www.fundae.es/)
+
+> 🤞 Requirements
+>
+> - ⌨️ Development environment working
+> - 🏃 Java, C# or Typescript
+> - 📜 git
+> - 🕸️ I repo in common, all with access to it.
+
+> 🏋🏼 The work modality will be with [https://www.codescouts.academy/blog/mob-programming/](https://www.codescouts.academy/blog/mob-programming/)
+
+> 💡Opional: Each class will be recorded and uploaded to the Codescouts Campus automatically at the end of each session (private workspace for you) So students can review the classes, or see them if they have not been able to attend → [https: //campus.codescouts.Academy/] (https://campus.codescouts.academy/)
+
+# 📋 Agenda
+
+## 1️⃣ Day 1 - Domain-Driven Design 🤔
+
+- 🤝 Presentation → ⏲️**15min**
+- 🤲 Introduction to the Explanation course of the 4 -day agenda → ⏲️**10min**
+- 🤔 What is Domain-Driven Design?→ ⏲️**10min**
+- 🧱 Key DDD concepts → ⏲️**40min**
+  - 🎙️ Ubiquitous Language
+  - 🏞️ Domain, Entities and Value Objects Model
+  - ⛽️ Domain services
+  - 𝌞 Bounded Context
+  - 💾 Domain Model VS Database Model
+- 🎾 DDD practice → ⏲️**3hs**
+  - From a predefined problem we will make**2 groups of 4 people maximum**where they must develop the domain model, understand and detect what the entity model is, detect the value objects and assume the responsibility of both of each of each one of eachthey.
+  - They must correctly model the domain model based on an interaction diagram that explains in detail what the flow of a user in a certain context.
+
+## 2️⃣ Day 2 -Hexagonal Architecture 👀
+
+- ⬡ Hexagonal architecture → ⏲️**40min**
+  - 🧩 What are your components?
+  - 🤝 How do we relate DDD with hexagonal architecture?
+  - 🤔 What advantages and disadvantages do you have?
+  - 🛳️ Why so many ports?
+- ⚽️ Practice → ⏲️**3hs**
+  - ⏳ Change implementations in execution time
+  - 🧪 We test our domain
+  - 🧪 Easy to do integration tests
+  - 🖲️ Implementation in Backend
+- 🎯 Review of an example code that I will leave to analyze and finish →**⏲️20min**
+
+## 3️⃣ Day 3 - Hexagonal Architecture & DDD 👀
+
+- 👀 Review and correction of the exercise to be finished ⏲️**1h**
+- We continue with hexagonal architecture
+- ⚽️ Practice → ⏲️**3hs**
+  - 🎯 Good practices when making tests to integrate our adapters
+  - 🚨 Domain events
+  - 🖲️ Implementation in Backend
+  - 🧑‍💻 Implementation in Frond
+  - 🏟️ Use cases and when hexagonal architecture is not recommended
+
+## 4️⃣ day 4 - TDD 🏃
+
+- 🔴🟢🔵 Test-Driven Design → ⏲️**1hs**
+  - What is TDD?
+  - Repeat after me, TDD is not a testing technique...
+  - Baby Steps
+  - TDD laws
+  - Red, Green, What?
+  - outside-in / London School
+  - Inside-Out / Chicago School
+  - Mockist
+  - AAA / Given, When, Then
+- 🏈 Kata Roman Numbers → ⏲️**3hs**
+- 😢 In this course **No** You can explain the outside-in technique, since it is a slightly more complex technique and time will not reach.
+- 🦉 Feedback → ⏲️**10min**
+
+## 💪 Consulting Day (8 hours of work together)
+
+This day is to work hand in hand with the team, the main objective is to land the concepts and practices learned in the course in the current project, also review the following points next to the team.
+
+- 🤔 Current Architecture Consulting
+- 😭 Pain Points review
+- 🤜 Recommendations
+- 🕸️ Refactorization
+- 🦾 Improvement margin
+- 🧩 Review of potential modules a prioritize the test
+- 🕵️ Code base and improvement suggestions
+- 💣 Rigid design, separation of clear responsibilities?
+
+# 🥋 Coach
+
+Damián Pumar
+
+![Damián Pumar](https://file.notion.so/f/f/ba17bbad-ae59-467a-bb77-35c3709ee3c2/2cb40dec-e22b-4199-b592-bebbadc94a3e/53083954438_49bb5babf0_c.jpg?id=17b5ddfe-998c-4ced-ba79-dda069a7a11f&table=block&spaceId=ba17bbad-ae59-467a-bb77-35c3709ee3c2&expirationTimestamp=1710331200000&signature=nF-wN4cfgqwizcIhY-M5cuLTbdYpuX6NbEg9EH-ZXo0&downloadName=53083954438_49bb5babf0_c.jpg)
+
+Technical coach / Software craftsman / Speaker
+
+🌐 [https://damianpumar.com/](https://damianpumar.com/)
+
+🐦 [https://twitter.com/damianpumar](https://twitter.com/damianpumar)
+
+> 🎤Latest speaker conference 👉
+> [https://www.damianpumar.com/events/](https://www.damianpumar.com/events/)
