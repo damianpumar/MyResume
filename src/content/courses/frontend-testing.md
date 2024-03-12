@@ -1,6 +1,7 @@
 ---
 title: Frontend testing
 description: You want to create high quality applications, reducing bugs and increasing development speed when scaling or maintaining your frontend, this course is for you!.
+order: 2
 image: "../../assets/courses/frontend-testing.png"
 layout: "../../layouts/Course.astro"
 ---
@@ -21,8 +22,8 @@ layout: "../../layouts/Course.astro"
 > 🤞 Requirements
 >
 > - ⌨️ Node +14
+> - 🏃 Typescript
 > - 📜 git
-> - 🕸️ I repo in common, all with access to it.
 
 > 🏋🏼 The work modality will be with [https://www.codescouts.academy/blog/mob-programming/](https://www.codescouts.academy/blog/mob-programming/)
 

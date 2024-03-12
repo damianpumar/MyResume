@@ -1,6 +1,7 @@
 ---
 title: DDD, Hexagonal Architecture and TDD
 description: "In this course we will learn how to design a domain model, how to implement it in a hexagonal architecture and how to test it with TDD."
+order: 6
 image: "../../assets/courses/ddd.jpeg"
 layout: "../../layouts/Course.astro"
 ---
@@ -22,7 +23,6 @@ layout: "../../layouts/Course.astro"
 > - ⌨️ Development environment working
 > - 🏃 Java, C# or Typescript
 > - 📜 git
-> - 🕸️ I repo in common, all with access to it.
 
 > 🏋🏼 The work modality will be with [https://www.codescouts.academy/blog/mob-programming/](https://www.codescouts.academy/blog/mob-programming/)
 

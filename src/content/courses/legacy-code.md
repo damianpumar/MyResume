@@ -1,8 +1,8 @@
 ---
-title: Test-Driven Development
-description: Do you want to create high quality code, with a really good design, with 100% test coverage and what is easy to maintain? In this course you will learn to do it with TDD.
-order: 4
-image: "../../assets/courses/tdd.png"
+title: Legacy Code
+description: In this course you will learn how to deal with legacy code, how to refactor it and how to add tests to it to make it more maintainable and scalable.
+order: 3
+image: "../../assets/courses/legacy-code.jpeg"
 layout: "../../layouts/Course.astro"
 ---
 
@@ -20,7 +20,9 @@ layout: "../../layouts/Course.astro"
 
 > 🤞 Requirements
 >
-> 🌎 Browser
+> - ⌨️ Node +14
+> - 🏃 Java, C# or Typescript
+> - 📜 git
 
 > 🏋🏼 The work modality will be with [https://www.codescouts.academy/blog/mob-programming/](https://www.codescouts.academy/blog/mob-programming/)
 
@@ -28,10 +30,46 @@ layout: "../../layouts/Course.astro"
 
 # 📋 Agenda
 
-## 1️⃣ Day 1 - What is TDD? 🤔
+## 1️⃣ Day 1 - Techniques to work with legacy code 🤔
 
 - 🤝 Presentation → ⏲️**10min**
-- 🤲 Enter the Explanation course of the 5 days agenda → ⏲️**10min**
+- 🤲 Enter the Explanation course of the 5 -day agenda → ⏲️**10min**
+- 📕 Theory → ⏲️**30min**
+  - 🤔 Code smells
+  - ⠊ Design patterns
+  - 📦 Refactoring
+- 🏉 Exercise 1 - Code Smells ⏲️**90min**
+- 🥐 Break → ⏲️**10min**
+- ⚽️ Exercise 2 - Refactoring to patterns ⏲️**90min**
+- 🤔 Reflection → ⏲️**10min**
+
+## 2️⃣ Day 2 - Coupling and cohesion 👀
+
+- 🤝 Doubts of yesterday → ⏲️**5min**
+- 📕 Theory → ⏲️**30min**
+  - 🧩 Como desacoplarnos de una librería/framework.
+  - 💉 Inversión de dependencias.
+- 🏉 Exercise 1 - Moving away from frameworks ⏲️**90min**
+- 🥐 Break → ⏲️**10min**
+- ⚽️ Exercise 2 - Inversion of dependency ⏲️**90min**
+- 🤔 Reflection → ⏲️**10min**
+
+## 3️⃣ Day 3 - Test legacy code 👀
+
+- 🤝 Doubts of yesterday → ⏲️**5min**
+- 📕 Theory → ⏲️**30min**
+  - 🦾 How add new code in legacy code
+  - 🙌 Golden master technique
+  - 🧪 Approval testing
+- 🎯 Exercise 1 - Create tests before to add code → ⏲️**90min**
+- 🥐 Break → ⏲️**10min**
+- 🎳 Exercise 2 - Advanced testing techniques → ⏲️**90min**
+- 🤔 Reflection → ⏲️**10min**
+
+## 4️⃣ Day 4 -Test-Driven Development? 🤔
+
+- 🤝 Presentation → ⏲️**10min**
+- 🤲 Enter the Explanation course of the 5 -day agenda → ⏲️**10min**
 - 📕 Theory → ⏲️**30min**
   - 👁️‍🗨️ The three laws of the TDD and the Red-Green-Refactor cycle.
   - 🐣 Baby Steps.
@@ -42,41 +80,6 @@ layout: "../../layouts/Course.astro"
 - 🥐 Break → ⏲️**10min**
 - ⚽️ Exercise 2 - Leap year Kata ⏲️**90min**
 - 🤔 Reflection → ⏲️**10min**
-
-## 2️⃣ Day 2 - Habits of TDD 👀
-
-- 🤝 Doubts of yesterday → ⏲️**5min**
-- 📕 Theory → ⏲️**30min**
-  - 💯 Principles of unit tests: First.
-  - 🏛️ Test structure: Given/When/Than.
-  - 🦾 Program from assertion.
-  - 🌊 Identify and test different axes of functionality.
-- 🏉 Exercise 1 - String calculator Kata ⏲️**90min**
-- 🥐 Break → ⏲️**10min**
-- ⚽️ Exercise 2 - Anagrams Kata ⏲️**90min**
-- 🤔 Reflection → ⏲️**10min**
-
-## 3️⃣ Day 3 - Transformation priority premise 👀
-
-- 🤝 Doubts of yesterday → ⏲️**5min**
-- 📕 Theory → ⏲️**30min**
-  - 🙄 TPP: A systematic method to determine the obvious implementation.
-- 🎯 Exercise 1 - Roman numerals Kata → ⏲️**90min**
-- 🥐 Break → ⏲️**10min**
-- 🎳 Exercise 2 - Bowling Kata → ⏲️**90min**
-- 🤔 Reflection → ⏲️**10min**
-
-## 4️⃣ Day 4 - Object oriented design with TDD 🏃
-
-- 🤝 Doubts of yesterday → ⏲️**5min**
-- 📕 Theory → ⏲️**30min**
-  - Why TDD is not enough to write clean code.
-  - Object Calisthenics: 10 Rules to write better object oriented code.
-  - Heuristics: Tell Don’t Ask, Law of Demeter.
-- 🎳 Exercise 1 - Tic Tac Toe Kata → ⏲️**90min**
-- 🥐 Break → ⏲️**10min**
-- 🎾 Exercise 2 - Game of life Kata → ⏲️**90min**
-- 🤔 Reflection - Advantages and Disadvantages of TDD in Frontend → ⏲️**10min**
 
 # 🥋 Coach
 

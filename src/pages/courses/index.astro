@@ -4,7 +4,9 @@ import { getCollection } from "astro:content";
 import { personal } from "src/configuration";
 import CoursesSummaryCard from "@components/courses/CoursesSummaryCard.astro";
 
-const courses = await getCollection("courses").then((events) => events);
+const courses = await getCollection("courses").then((events) =>
+  events.sort((a, b) => a.data.order - b.data.order)
+);
 ---
 
 <Layout
