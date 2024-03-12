@@ -1,6 +1,6 @@
 ---
 title: DDD, Hexagonal Architecture and TDD
-description: You want to create high quality applications, reducing bugs and increasing development speed when scaling or maintaining your frontend, this course is for you!.
+description: "In this course we will learn how to design a domain model, how to implement it in a hexagonal architecture and how to test it with TDD."
 image: "../../assets/courses/ddd.jpeg"
 layout: "../../layouts/Course.astro"
 ---
@@ -70,7 +70,7 @@ layout: "../../layouts/Course.astro"
   - 🧑‍💻 Implementation in Frond
   - 🏟️ Use cases and when hexagonal architecture is not recommended
 
-## 4️⃣ day 4 - TDD 🏃
+## 4️⃣ Day 4 - TDD 🏃
 
 - 🔴🟢🔵 Test-Driven Design → ⏲️**1hs**
   - What is TDD?

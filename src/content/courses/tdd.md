@@ -1,16 +1,15 @@
 ---
-title: Frontend testing
-description: You want to create high quality applications, reducing bugs and increasing development speed when scaling or maintaining your frontend, this course is for you!.
-image: "../../assets/courses/frontend-testing.png"
+title: Test-Driven Development
+description: Do you want to create high quality code, with a really good design, with 100% test coverage and what is easy to maintain? In this course you will learn to do it with TDD.
+image: "../../assets/courses/tdd.png"
 layout: "../../layouts/Course.astro"
 ---
 
-# Frontend Testing with React, Jest, React Testing Library and Playwright
+# Test-Driven Development
 
 # 🙌 Proposal
 
-- 5 days of online course, 4 hours per day (morning or afternoon) ⏰
-- 1 Office work (8 hours of office work) 💼
+- 4 days of online course, 4 hours per day (morning or afternoon) ⏰
 - Team
   - 6-10 people
   - Mid/senior
@@ -20,9 +19,7 @@ layout: "../../layouts/Course.astro"
 
 > 🤞 Requirements
 >
-> - ⌨️ Node +14
-> - 📜 git
-> - 🕸️ I repo in common, all with access to it.
+> - 🌎 Browser
 
 > 🏋🏼 The work modality will be with [https://www.codescouts.academy/blog/mob-programming/](https://www.codescouts.academy/blog/mob-programming/)
 
@@ -30,80 +27,55 @@ layout: "../../layouts/Course.astro"
 
 # 📋 Agenda
 
-## 1️⃣ Day 1 - Logic or component test 🤔
+## 1️⃣ Day 1 - Wha is TDD? 🤔
 
 - 🤝 Presentation → ⏲️**10min**
 - 🤲 Enter the Explanation course of the 5 -day agenda → ⏲️**10min**
 - 📕 Theory → ⏲️**30min**
-  - 🤔 What do we look for with the Testing Frontend?
-  - 🦿 Types of tests, review of the testing pyramid.
-  - 👀 Jest Methods
-  - 😡 All our problems are in design
-- 🏉 Exercise 1 - Disruptive test ⏲️**90min**
-  - Our domain is right.
-  - What else does if the component is visible or not
+  - 👁️‍🗨️ The three laws of the TDD and the Red-Green-Refactor cycle.
+  - 🐣 Baby Steps.
+  - ➿ Eliminate duplicity by refactoring: the rule of three.
+  - 3️⃣ The three ways of moving from red to green.
+  - 🚦 Writing independent tests of the implementation.
+- 🏉 Exercise 1 - Fizz buzz Kata ⏲️**90min**
 - 🥐 Break → ⏲️**10min**
-- ⚽️ Exercise 2 - A good test ⏲️**90min**
-  - Good practices for your component to be easy to test.
-  - Tests and rigid design, to refactorize ...
+- ⚽️ Exercise 2 - Leap year Kata ⏲️**90min**
 - 🤔 Reflection → ⏲️**10min**
-  - Does it cost a lot of effort to test?
-  - Design/architecture problems?
-    - When the equipment has trouble testing their applications, 2 things can occur.
-      - The team does not know how to do automated tests 🤦
-      - Project architecture has serious problems 🏗️
 
-## 2️⃣ Day 2 - Component tests, testing everything?👀
+## 2️⃣ Day 2 - Habits of TDD 👀
 
 - 🤝 Doubts of yesterday → ⏲️**5min**
 - 📕 Theory → ⏲️**30min**
-  - How we define the scope of a test
-  - Good practices in component tests
-- 🏉 Exercise 1 - Behavior test ⏲️**90min**
-  - When using mock, spy, stub
-  - Recommendations when using React Testing Library
+  - 💯 Principles of unit tests: First.
+  - 🏛️ Test structure: Given/When/Than.
+  - 🦾 Program from assertion.
+  - 🌊 Identify and test different axes of functionality.
+- 🏉 Exercise 1 - String calculator Kata ⏲️**90min**
 - 🥐 Break → ⏲️**10min**
-- ⚽️ Exercise 2 - Visulization test ⏲️**90min**
-  - Good practices when designing a testable border component
-  - When to use and when not Snapshots
+- ⚽️ Exercise 2 - Anagrams Kata ⏲️**90min**
 - 🤔 Reflection → ⏲️**10min**
-  - You prefer to test behavior or visualization, is one consequence of the other?
-  - Snapshots or `tohaveencalledimes`
 
-## 3️⃣ Day 3 - Designing for Tests 👀
+## 3️⃣ Day 3 - Transformation priority premise 👀
 
 - 🤝 Doubts of yesterday → ⏲️**5min**
 - 📕 Theory → ⏲️**30min**
-  - 🎡 Relationship between the architecture of our project and the tests that we do
-    - Rigidity of the design, stiffness of the tests
-    - Design stiffness, more expensive tests
-    - Injecting units, simplifying tests
-- 🎯 Exercise 1 - Refactorizing components to test them → ⏲️**90min**
-  - Component refactorization techniques to be able to test
-  - Atomizing components
+  - 🙄 TPP: A systematic method to determine the obvious implementation.
+- 🎯 Exercise 1 - Roman numerals Kata → ⏲️**90min**
 - 🥐 Break → ⏲️**10min**
-- ⛳️ Exercise 2 - Tests contributing VS VS Lost time → ⏲️**90min**
-  - Creating tests that provide value
-  - Security network tests
-  - Reliability
+- 🎳 Exercise 2 - Bowling Kata → ⏲️**90min**
 - 🤔 Reflection → ⏲️**10min**
-  - What type of tests are those that provide value?
-  - How can we do more reliable tests?
 
-## 4️⃣ Day 4 - Testing to design 🏃
+## 4️⃣ Day 4 - Object oriented design with TDD 🏃
 
 - 🤝 Doubts of yesterday → ⏲️**5min**
-- 🧩 What is Development Test-Driven?→ ⏲️**30min**
-  - It's not test!It is design.
-- 🎳 Exercise 1 - How to think about your components with TDD → ⏲️**90min**
-  - Reviewing the bases
-  - Recommendations
-  - Mnemonic tricks
+- 📕 Theory → ⏲️**30min**
+  - Why TDD is not enough to write clean code.
+  - Object Calisthenics: 10 Rules to write better object oriented code.
+  - Heuristics: Tell Don’t Ask, Law of Demeter.
+- 🎳 Exercise 1 - Tic Tac Toe Kata → ⏲️**90min**
 - 🥐 Break → ⏲️**10min**
-- 🎾 Exercise 2 - TDD applied to our domain → ⏲️**90min**
+- 🎾 Exercise 2 - Game of life Kata → ⏲️**90min**
 - 🤔 Reflection - Advantages and Disadvantages of TDD in Fronnd → ⏲️**10min**
-  - Why don't I recommend TDD for components.
-    - They do not contribute so much value vs. the effort it implies.
 
 ## 5️⃣ Day 5 - E2E & Clean Architecture
 
