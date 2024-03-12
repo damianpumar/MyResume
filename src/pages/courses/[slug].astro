@@ -1,0 +1,21 @@
+---
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+export async function getStaticPaths() {
+  const courseEntries = await getCollection("courses");
+  return courseEntries.map((course) => ({
+    params: { slug: course.slug },
+    props: { course },
+  }));
+}
+
+interface Props {
+  course: CollectionEntry<"courses">;
+}
+
+const { course } = Astro.props;
+const { Content } = await course.render();
+---
+
+<Content />
