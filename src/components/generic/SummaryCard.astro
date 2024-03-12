@@ -15,10 +15,11 @@ export interface Props {
   imgAlt: string;
   description: string;
   imgPosition?: "left" | "right" | "center";
-  collapsed: boolean;
+  collapsed?: boolean;
 }
 
-const { title, imgAlt, description, imgSrc, imgPosition, collapsed } = Astro.props;
+const { title, imgAlt, description, imgSrc, imgPosition, collapsed } =
+  Astro.props;
 
 const classes = [];
 
@@ -46,8 +47,12 @@ if (imgPosition) {
       draggable={false}
     />
   </div>
-  {!collapsed &&
-    <p class="poppins">{description}</p>
-    <slot />
+  {
+    !collapsed && (
+      <>
+        <p class="poppins">{description}</p>
+        <slot />
+      </>
+    )
   }
 </ColorCard>

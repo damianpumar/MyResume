@@ -32,12 +32,7 @@ const coursesCollection = defineCollection({
     z.object({
       title: z.string(),
       description: z.string(),
-      date: z.string().transform((str) => new Date(str)),
-      author: z.string(),
-      tags: z.array(z.string()),
       image: image(),
-      imagePosition: z.enum(["left", "right", "center"]).optional(),
-      draft: z.boolean().optional().default(false),
     }),
 });
 

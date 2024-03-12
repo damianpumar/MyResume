@@ -4,15 +4,13 @@ import { getCollection } from "astro:content";
 import { personal } from "src/configuration";
 import CoursesSummaryCard from "@components/courses/CoursesSummaryCard.astro";
 
-const courses = await getCollection("courses").then((events) =>
-  events.sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-);
+const courses = await getCollection("courses").then((events) => events);
 ---
 
 <Layout
   title="Courses"
   pageTitle={`${personal.name} - Courses`}
-  description="See upcoming and past events."
+  description="My courses"
 >
   <main class="bg-lightblue p-6">
     <h2 class="text-3xl md:text-4xl lg:text-6xl mb-4 dm-serif">My courses</h2>

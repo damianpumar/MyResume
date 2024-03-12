@@ -1,20 +1,20 @@
 ---
-import { getCollection } from 'astro:content';
-import Layout from '@layouts/Default.astro';
-import BlogList from '@components/blog/BlogList.astro';
-import { personal } from 'src/configuration';
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Default.astro";
+import BlogList from "@components/blog/BlogList.astro";
+import { personal } from "src/configuration";
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => a.data.date.getTime() - b.data.date.getTime()
-).reverse();
+const posts = (await getCollection("blog"))
+  .sort((a, b) => a.data.date.getTime() - b.data.date.getTime())
+  .reverse();
 ---
 
 <Layout
-  title='Blog'
+  title="Blog"
   pageTitle={`${personal.name} - Blog`}
-	description="Share my knowledge and experience in this blog."
+  description="Share my knowledge and experience in this blog."
 >
-  <main class='bg-green p-6'>
+  <main class="bg-green p-6">
     <BlogList posts={posts} />
   </main>
 </Layout>
