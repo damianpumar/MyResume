@@ -30,8 +30,8 @@ const date = new Date(content.date).toLocaleDateString("en-US", {
     )
   }
   <slot />
-  <p class="text-slate">Written by {content.author}</p>
-  <p>
+  {content.author && <p class="text-slate">Written by {content.author}</p>}
+  <p class="mt-20">
     Something wrong? <a
       href=`mailto:${personal.email}?subject=Feedback about ${title}`
       >Let me know</a
