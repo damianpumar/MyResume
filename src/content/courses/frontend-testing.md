@@ -5,138 +5,136 @@ image: "../../assets/courses/frontend-testing.png"
 layout: "../../layouts/Course.astro"
 ---
 
-# Frontend testing with React, Jest, React testing library and Playwright
+# Frontend Testing with React, Jest, React Testing Library and Playwright
 
-# 🙌 Propuesta
+# 🙌 Proposal
 
-- 5 días de curso online, 4 horas por día (mañana o tarde) ⏰
-- 1 día presencial (8 horas de trabajo en oficina) 💼
-- Equipo
-  - 6-10 personas
-  - Mid/Senior
-- Precio
-  - A definir.
-  - Bonificable por FUNDAE → [https://www.fundae.es/](https://www.fundae.es/)
+- 5 days of online course, 4 hours per day (morning or afternoon) ⏰
+- 1 Office work (8 hours of office work) 💼
+- Team
+  - 6-10 people
+  - Mid/senior
+- Price
+  - To define.
+  - Discount by Fundae (only spain) → [https://www.fundae.es/](https://www.fundae.es/)
 
-> 🤞 Requisitos
+> 🤞 Requirements
 >
 > - ⌨️ Node +14
-> - 📜 Git
-> - 🕸️ Repo en común, todos con acceso al mismo.
+> - 📜 git
+> - 🕸️ I repo in common, all with access to it.
 
-> 🏋🏼 La modalidad de trabajo será con [https://www.codescouts.academy/blog/mob-programming/](https://www.codescouts.academy/blog/mob-programming/)
+> 🏋🏼 The work modality will be with [https://www.codescouts.academy/blog/mob-programming/](https://www.codescouts.academy/blog/mob-programming/)
 
-> 💡Opcional: Cada clase será grabada y subida al campus de CodeScouts automáticamente al finalizar cada sesión (workspace privado para ti) así los alumnos pueden repasar las clases, o verlas si no han podido asistir → [https://campus.codescouts.academy/](https://campus.codescouts.academy/)
+> 💡Opional: Each class will be recorded and uploaded to the Codescouts Campus automatically at the end of each session (private workspace for you) So students can review the classes, or see them if they have not been able to attend → [https: //campus.codescouts.Academy/] (https://campus.codescouts.academy/)
 
-# 📋 Temario
+# 📋 Agenda
 
-## 1️⃣ Día 1 - Test de lógica o de componentes 🤔
+## 1️⃣ Day 1 - Logic or component test 🤔
 
-- 🤝 Presentación → ⏲️**10min**
-- 🤲 Intro al curso explicación de la agenda de los 5 días → ⏲️**10min**
-- 📕 Teoría → ⏲️**30min**
-  - 🤔 ¿Qué es lo que buscamos con el testing frontend?
-  - 🦿 Tipos de tests, repaso de la pirámide de testing.
-  - 👀 Jest methods
-  - 😡 Todos nuestros problemas están en el diseño
-- 🏉 Ejercicio 1 - Test disruptivo ⏲️**90min**
-  - Nuestro dominio tiene la razón.
-  - Qué más da si el componente es visible o no
+- 🤝 Presentation → ⏲️**10min**
+- 🤲 Enter the Explanation course of the 5 -day agenda → ⏲️**10min**
+- 📕 Theory → ⏲️**30min**
+  - 🤔 What do we look for with the Testing Frontend?
+  - 🦿 Types of tests, review of the testing pyramid.
+  - 👀 Jest Methods
+  - 😡 All our problems are in design
+- 🏉 Exercise 1 - Disruptive test ⏲️**90min**
+  - Our domain is right.
+  - What else does if the component is visible or not
 - 🥐 Break → ⏲️**10min**
-- ⚽️ Ejercicio2 - Un buen test ⏲️**90min**
-  - Buenas prácticas para que tu componente sea fácil de testear.
-  - Tests y diseño rígido, a refactorizar…
-- 🤔 Reflexión →⏲️**10min**
-  - ¿Cuesta mucho esfuerzo testear?
-  - ¿Problemas de diseño/arquitectura?
-    - Cuando los equipos tienen problemas para testear sus aplicaciones pueden ocurrir 2 cosas.
-      - El equipo no sabe hacer tests automatizados 🤦
-      - La arquitectura del proyecto tiene graves problemas 🏗️
+- ⚽️ Exercise2 - A good test ⏲️**90min**
+  - Good practices for your component to be easy to test.
+  - Tests and rigid design, to refactorize ...
+- 🤔 Reflection → ⏲️**10min**
+  - Does it cost a lot of effort to test?
+  - Design/architecture problems?
+    - When the equipment has trouble testing their applications, 2 things can occur.
+      - The team does not know how to do automated tests 🤦
+      - Project architecture has serious problems 🏗️
 
-## 2️⃣ Día 2 - Tests de componentes, ¿testeando todo? 👀
+## 2️⃣ Day 2 - Component tests, testing everything?👀
 
-- 🤝 Dudas de ayer → ⏲️**5min**
-- 📕 Teoría → ⏲️**30min**
-  - Cómo definimos el scope de un test
-  - Buenas prácticas en tests de componentes
-- 🏉 Ejercicio 1 - Test de comportamiento ⏲️**90min**
-  - Cuando usar Mock, Spy, Stub
-  - Recomendaciones al usar React testing library
+- 🤝 Doubts of yesterday → ⏲️**5min**
+- 📕 Theory → ⏲️**30min**
+  - How we define the scope of a test
+  - Good practices in component tests
+- 🏉 Exercise 1 - Behavior test ⏲️**90min**
+  - When using mock, spy, stub
+  - Recommendations when using React Testing Library
 - 🥐 Break → ⏲️**10min**
-- ⚽️ Ejercicio2 - Test de visulización ⏲️**90min**
-  - Buenas prácticas al diseñar un componente frontend testable
-  - Cuando usar y cuando no Snapshots
-- 🤔 Reflexión →⏲️**10min**
-  - Prefieres testear comportamiento o visualización, ¿uno es consecuencia de lo otro?
-  - Snapshots o `toHaveBeenCalledTimes`
+- ⚽️ Exercise2 - Visulization test ⏲️**90min**
+  - Good practices when designing a testable border component
+  - When to use and when not Snapshots
+- 🤔 Reflection → ⏲️**10min**
+  - You prefer to test behavior or visualization, is one consequence of the other?
+  - Snapshots or `tohaveencalledimes`
 
-## 3️⃣ Día 3 - Diseñando para tests 👀
+## 3️⃣ Day 3 - Designing for Tests 👀
 
-- 🤝 Dudas de ayer → ⏲️**5min**
-- 📕 Teoría → ⏲️**30min**
-  - 🎡 Relación entre la arquitectura de nuestro proyecto y los tests que hagamos
-    - Rigidez del diseño, rigidez de los tests
-    - Rigidez de diseño, tests más costosos
-    - Inyectando dependencias, simplificando tests
-- 🎯 Ejercicio 1 - Refactorizando componentes para testearlos → ⏲️**90min**
-  - Técnicas de refactorización de componentes para poder testear
-  - Atomizando componentes
+- 🤝 Doubts of yesterday → ⏲️**5min**
+- 📕 Theory → ⏲️**30min**
+  - 🎡 Relationship between the architecture of our project and the tests that we do
+    - Rigidity of the design, stiffness of the tests
+    - Design stiffness, more expensive tests
+    - Injecting units, simplifying tests
+- 🎯 Exercise 1 - Refactorizing components to test them → ⏲️**90min**
+  - Component refactorization techniques to be able to test
+  - Atomizing components
 - 🥐 Break → ⏲️**10min**
-- ⛳️ Ejercicio 2 - Tests que aportan valor vs Perdida de tiempo → ⏲️**90min**
-  - Creando tests que aporten valor
-  - Tests de red de seguridad
-  - Confiabilidad
-- 🤔 Reflexión →⏲️**10min**
-  - ¿Qué tipo de tests son los que aportan valor?
-  - ¿Cómo podemos hacer tests más confiables?
+- ⛳️ Exercise 2 - Tests contributing VS VS Lost time → ⏲️**90min**
+  - Creating tests that provide value
+  - Security network tests
+  - Reliability
+- 🤔 Reflection → ⏲️**10min**
+  - What type of tests are those that provide value?
+  - How can we do more reliable tests?
 
-## 4️⃣ Día 4 - Testeando para diseñar 🏃
+## 4️⃣ day 4 - Testing to design 🏃
 
-- 🤝 Dudas de ayer → ⏲️**5min**
-- 🧩 ¿Que es Test-Driven development? → ⏲️**30min**
-  - ¡No es test! Es diseño.
-- 🎳 Ejercicio 1 - Cómo pensar tus componentes con TDD → ⏲️**90min**
-  - Repasando las bases
-  - Recomendaciones
-  - Trucos mnemotécnicos
+- 🤝 Doubts of yesterday → ⏲️**5min**
+- 🧩 What is Development Test-Driven?→ ⏲️**30min**
+  - It's not test!It is design.
+- 🎳 Exercise 1 - How to think about your components with TDD → ⏲️**90min**
+  - Reviewing the bases
+  - Recommendations
+  - Mnemonic tricks
 - 🥐 Break → ⏲️**10min**
-- 🎾 Ejercicio 2 - TDD aplicado a nuestro dominio → ⏲️**90min**
-- 🤔 Reflexión - Ventajas y Desventajas de TDD en frontend → ⏲️**10min**
-  - Por qué no recomiendo hacer TDD para componentes.
-    - No aportan tanto valor vs el esfuerzo que implica.
+- 🎾 Exercise 2 - TDD applied to our domain → ⏲️**90min**
+- 🤔 Reflection - Advantages and Disadvantages of TDD in Fronnd → ⏲️**10min**
+  - Why don't I recommend TDD for components.
+    - They do not contribute so much value vs. the effort it implies.
 
-## 5️⃣ Día 5 - E2E & Clean architecture
+## 5️⃣ Day 5 - E2E & Clean Architecture
 
-- 🤝 Dudas de ayer → ⏲️**5min**
-- **E2E tests**
-  - 🐞 ¿Qué buscamos con un test E2E? → ⏲️**30min**
-    - Repaso de rameworks de E2E más utilizados, pros y cons.
-    - Gherkin en E2E
-    - ¿Podría nuestro product owner crearlos?
-  - 🖥️ Ejercicio 1 - Testeando como un usuario. → ⏲️**60min**
-    - Test E2E con playwright.
-- 🥐 Break → ⏲️**10min**
-- **Clean architecture frontend**
-  - 🤔 ¿Porqué clean architecture y qué relación tiene con los tests? → ⏲️**25min**
-  - 🖌️ Ejercicio 2 - Testeando componentes con clean architecture → ⏲️**90min**
-    - TDD con clean architecture
-    - Testeando comportamientos del dominio
-    - Delimitando el scope del tests hasta los servicios de dominio.
-    - Inyectando dependencias facilmente
+- 🤝 Doubts of yesterday → ⏲️**5min** -**E2e Tests**
+  - 🐞 What are we looking for with an E2E test?→ ⏲️**30min**
+    - Review of E2E Rameworks, pros and cons.
+    - Gherkin in E2E
+    - Could our product Owner create them?
+  - 🖥️ Exercise 1 - Testing as a user.→ ⏲️**60min**
+    - E2E test with playwright.
+- 🥐 Break → ⏲️**10min** -**CLEAN ARCHITECTURE BRONDD**
+  - 🤔 Why Clean Architecture and what is the relationship with the tests?→ ⏲️**25min**
+  - 🖌️ Exercise 2 - Testing components with Clean Architecture → ⏲️**90min**
+    - TDD with Clean Architecture
+    - Testing domain behaviors
+    - Delimiting the scope of the test to the domain services.
+    - Injecting units easily
 - 🙌 Feedback → ⏲️**10min**
 
-## 💪 Día de consultoría (8 horas de trabajo juntos)
+## 💪 Consulting Day (8 hours of work together)
 
-Este día consiste en trabajar mano a mano con el equipo, el objetivo principal es aterrizar los conceptos y prácticas aprendidas en el curso en el proyecto actual, también revisar junto al equipo los siguientes puntos.
+This day is to work hand in hand with the team, the main objective is to land the concepts and practices learned in the course in the current project, also review the following points next to the team.
 
-- 🤔 Consultoría de arquitectura actual
-- 😭 Revisión de pain points
-- 🤜 Recomendaciones
-- 🕸️ Refactorización
-- 🦾 Margen de mejora
-- 🧩 Revisión de potenciales módulos a priorizar el test
-- 🕵️ Calidad de base de código y sugerencias de mejora
-- 💣 ¿Diseño rígido, separación de responsabilidades claras?
+- 🤔 Current Architecture Consulting
+- 😭 Pain Points review
+- 🤜 Recommendations
+- 🕸️ Refactorization
+- 🦾 Improvement margin
+- 🧩 Review of potential modules a prioritize the test
+- 🕵️ Code base and improvement suggestions
+- 💣 Rigid design, separation of clear responsibilities?
 
 # 🥋 Coach
 
