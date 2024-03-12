@@ -1,6 +1,6 @@
 ---
 title: Frontend Architecture
-description: In this course you will learn how to deal with legacy code, how to refactor it and how to add tests to it to make it more maintainable and scalable.
+description: In this course I will teach you how to create a robust, scalable and maintainable frontend architecture, after this course your vision about frontend will change for sure!.
 order: 1
 image: "../../assets/courses/frontend-architecture.png"
 layout: "../../layouts/Course.astro"
