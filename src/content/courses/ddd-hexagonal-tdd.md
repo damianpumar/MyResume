@@ -3,7 +3,7 @@ title: DDD, Hexagonal Architecture and TDD
 description: "In this course we will learn how to design a domain model, how to implement it in a hexagonal architecture and how to test it with TDD."
 order: 6
 image: "../../assets/courses/ddd.jpeg"
-layout: "../../layouts/Course.astro"
+layout: "../../layouts/Content.astro"
 ---
 
 # Curso de Arquitectura hexagonal con Domain-Driven design y TDD
@@ -16,7 +16,7 @@ layout: "../../layouts/Course.astro"
   - Mid/senior
 - 💶 Price
   - To define.
-  - Discount by Fundae (only spain) → [https://www.fundae.es/](https://www.fundae.es/)
+  - Discount by Fundae (only Spain) → [https://www.fundae.es/](https://www.fundae.es/)
 
 > 🤞 Requirements
 >
@@ -26,7 +26,7 @@ layout: "../../layouts/Course.astro"
 
 > 🏋🏼 The work modality will be with [https://www.codescouts.academy/blog/mob-programming/](https://www.codescouts.academy/blog/mob-programming/)
 
-> 💡Opional: Each class will be recorded and uploaded to the Codescouts Campus automatically at the end of each session (private workspace for you) So students can review the classes, or see them if they have not been able to attend → [https: //campus.codescouts.Academy/] (https://campus.codescouts.academy/)
+> 💡Optional: Each class will be recorded and uploaded to the Codescouts Campus automatically at the end of each session (private workspace for you) So students can review the classes, or see them if they have not been able to attend → [https: //campus.codescouts.academy/] (https://campus.codescouts.academy/)
 
 # 📋 Agenda
 

@@ -3,7 +3,7 @@ title: Frontend testing
 description: You want to create high quality applications, reducing bugs and increasing development speed when scaling or maintaining your frontend, this course is for you!.
 order: 2
 image: "../../assets/courses/frontend-testing.png"
-layout: "../../layouts/Course.astro"
+layout: "../../layouts/Content.astro"
 ---
 
 # Frontend Testing with React, Jest, React Testing Library and Playwright
@@ -17,7 +17,7 @@ layout: "../../layouts/Course.astro"
   - Mid/senior
 - 💶 Price
   - To define.
-  - Discount by Fundae (only spain) → [https://www.fundae.es/](https://www.fundae.es/)
+  - Discount by Fundae (only Spain) → [https://www.fundae.es/](https://www.fundae.es/)
 
 > 🤞 Requirements
 >
@@ -27,14 +27,14 @@ layout: "../../layouts/Course.astro"
 
 > 🏋🏼 The work modality will be with [https://www.codescouts.academy/blog/mob-programming/](https://www.codescouts.academy/blog/mob-programming/)
 
-> 💡Opional: Each class will be recorded and uploaded to the Codescouts Campus automatically at the end of each session (private workspace for you) So students can review the classes, or see them if they have not been able to attend → [https: //campus.codescouts.Academy/] (https://campus.codescouts.academy/)
+> 💡Optional: Each class will be recorded and uploaded to the Codescouts Campus automatically at the end of each session (private workspace for you) So students can review the classes, or see them if they have not been able to attend → [https: //campus.codescouts.academy/] (https://campus.codescouts.academy/)
 
 # 📋 Agenda
 
 ## 1️⃣ Day 1 - Logic or component test 🤔
 
 - 🤝 Presentation → ⏲️**10min**
-- 🤲 Enter the Explanation course of the 5 -day agenda → ⏲️**10min**
+- 🤲 Enter the Explanation course agenda → ⏲️**10min**
 - 📕 Theory → ⏲️**30min**
   - 🤔 What do we look for with the Testing Frontend?
   - 🦿 Types of tests, review of the testing pyramid.
@@ -69,7 +69,7 @@ layout: "../../layouts/Course.astro"
   - When to use and when not Snapshots
 - 🤔 Reflection → ⏲️**10min**
   - You prefer to test behavior or visualization, is one consequence of the other?
-  - Snapshots or `tohaveencalledimes`
+  - Snapshots or `toHaveBeenCalledTimes`
 
 ## 3️⃣ Day 3 - Designing for Tests 👀
 
@@ -109,14 +109,14 @@ layout: "../../layouts/Course.astro"
 ## 5️⃣ Day 5 - E2E & Clean Architecture
 
 - 🤝 Doubts of yesterday → ⏲️**5min**-**E2e Tests**
-  - 🐞 What are we looking for with an E2E test?→ ⏲️**30min**
-    - Review of E2E Rameworks, pros and cons.
+  - 🐞 What are we looking for with an E2E test? → ⏲️**30min**
+    - Review of E2E frameworks, pros and cons.
     - Gherkin in E2E
-    - Could our product Owner create them?
+    - Could our product owner create them?
   - 🖥️ Exercise 1 - Testing as a user.→ ⏲️**60min**
     - E2E test with playwright.
-- 🥐 Break → ⏲️**10min**-**CLEAN ARCHITECTURE BRONDD**
-  - 🤔 Why Clean Architecture and what is the relationship with the tests?→ ⏲️**25min**
+- 🥐 Break → ⏲️**10min**
+  - 🤔 Why Clean Architecture and what is the relationship with the tests? → ⏲️**25min**
   - 🖌️ Exercise 2 - Testing components with Clean Architecture → ⏲️**90min**
     - TDD with Clean Architecture
     - Testing domain behaviors

@@ -2,30 +2,25 @@
 import Layout from "./Default.astro";
 import BaseSideBar from "@components/layout/BaseSideBar.astro";
 import BaseContent from "@components/layout/BaseContent.astro";
-import RecentBlogPosts from "@components/blog/RecentBlogPosts.astro";
+import type { Code } from "astro:components";
 
 const ogImage = new URL(`/v1/generate/og/${Astro.params.slug}.png`, Astro.url);
 
-const { content, headings } = Astro.props;
-const { title, description } = content;
-const slug = Astro.params.slug!;
+interface Props {
+  content: any;
+  headings: any[];
+  file: string;
+}
+
+const { headings, ...rest } = Astro.props;
+const { title, description } = rest.content;
 ---
 
 <Layout title={title} description={description} ogImage={ogImage}>
   <main class="p-6 lg:grid lg:grid-cols-3 flex justify-center">
     <BaseSideBar headings={headings} />
-    <BaseContent
-      published
-      content={content}
-      back={{
-        href: "blog",
-        title: "Blog",
-      }}
-    >
+    <BaseContent {...rest}>
       <slot />
     </BaseContent>
   </main>
-  <section class="p-6">
-    <RecentBlogPosts count={6} exclude={[slug]} />
-  </section>
 </Layout>

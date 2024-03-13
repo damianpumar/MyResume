@@ -3,7 +3,7 @@ title: Test-Driven Development
 description: Do you want to create high quality code, with a really good design, with 100% test coverage and what is easy to maintain? In this course you will learn to do it with TDD.
 order: 4
 image: "../../assets/courses/tdd.png"
-layout: "../../layouts/Course.astro"
+layout: "../../layouts/Content.astro"
 ---
 
 # Test-Driven Development
@@ -16,7 +16,7 @@ layout: "../../layouts/Course.astro"
   - Mid/senior
 - 💶 Price
   - To define.
-  - Discount by Fundae (only spain) → [https://www.fundae.es/](https://www.fundae.es/)
+  - Discount by Fundae (only Spain) → [https://www.fundae.es/](https://www.fundae.es/)
 
 > 🤞 Requirements
 >
@@ -24,14 +24,14 @@ layout: "../../layouts/Course.astro"
 
 > 🏋🏼 The work modality will be with [https://www.codescouts.academy/blog/mob-programming/](https://www.codescouts.academy/blog/mob-programming/)
 
-> 💡Opional: Each class will be recorded and uploaded to the Codescouts Campus automatically at the end of each session (private workspace for you) So students can review the classes, or see them if they have not been able to attend → [https: //campus.codescouts.Academy/] (https://campus.codescouts.academy/)
+> 💡Optional: Each class will be recorded and uploaded to the Codescouts Campus automatically at the end of each session (private workspace for you) So students can review the classes, or see them if they have not been able to attend → [https: //campus.codescouts.academy/] (https://campus.codescouts.academy/)
 
 # 📋 Agenda
 
 ## 1️⃣ Day 1 - What is TDD? 🤔
 
 - 🤝 Presentation → ⏲️**10min**
-- 🤲 Enter the Explanation course of the 5 days agenda → ⏲️**10min**
+- 🤲 Enter the Explanation course agenda → ⏲️**10min**
 - 📕 Theory → ⏲️**30min**
   - 👁️‍🗨️ The three laws of the TDD and the Red-Green-Refactor cycle.
   - 🐣 Baby Steps.

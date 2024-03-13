@@ -1,22 +1,22 @@
 ---
-title: Design Patterns
-description: Design patterns are formalized best practices that developers can use to improve the structure, readability, and maintainability of their code.
+title: Software design
+description: In this course I have distilled all the knowledge about the software design that I have acquired in the more than 13 years that I have been developing software.
 order: 6
 image: "../../assets/courses/design-pattern.png"
-layout: "../../layouts/Course.astro"
+layout: "../../layouts/Content.astro"
 ---
 
-# Test-Driven Development
+# Software design
 
 # 🙌 Proposal
 
-- ⏰ 2 days of online course, 4 hours per day (morning or afternoon)
+- ⏰ 4 days of online course, 4 hours per day (morning or afternoon)
 - 👨‍💻 Team
   - 6-10 people
   - Mid/senior
 - 💶 Price
   - To define.
-  - Discount by Fundae (only spain) → [https://www.fundae.es/](https://www.fundae.es/)
+  - Discount by Fundae (only Spain) → [https://www.fundae.es/](https://www.fundae.es/)
 
 > 🤞 Requirements
 >
@@ -26,32 +26,57 @@ layout: "../../layouts/Course.astro"
 
 > 🏋🏼 The work modality will be with [https://www.codescouts.academy/blog/mob-programming/](https://www.codescouts.academy/blog/mob-programming/)
 
-> 💡Opional: Each class will be recorded and uploaded to the Codescouts Campus automatically at the end of each session (private workspace for you) So students can review the classes, or see them if they have not been able to attend → [https: //campus.codescouts.Academy/] (https://campus.codescouts.academy/)
+> 💡Optional: Each class will be recorded and uploaded to the Codescouts Campus automatically at the end of each session (private workspace for you) So students can review the classes, or see them if they have not been able to attend → [https: //campus.codescouts.academy/] (https://campus.codescouts.academy/)
 
 # 📋 Agenda
 
-## 1️⃣ Day 1 - GOF, Creational and SStructural patterns 🤔
+## 1️⃣ Day 1 - Software design 🤔
 
 - 🤝 Presentation → ⏲️**10min**
-- 🤲 Enter the Explanation course of the 5 -day agenda → ⏲️**10min**
-- 📕 Theory → ⏲️**30min**
-  - 🍥 What are GOF design patterns?
-  - 🥅 Objectives of design patterns
+- 🤲 Enter the Explanation course agenda → ⏲️**10min**
+- 📕 Theory → ⏲️**1h**
+  - 🪢 What's a software design?
+  - 🥅 Classes, Interfaces, Relations, etc.
   - 📈 Fundamentals of UML
-- 🏉 Exercise 1 - Creational patterns ⏲️**90min**
+- 🏉 Exercise 1 - Designing a problem ⏲️**60min**
 - 🥐 Break → ⏲️**10min**
-- ⚽️ Exercise 2 - Structural patterns ⏲️**90min**
+- ⚽️ Exercise 2 - Land the design ⏲️**90min**
 - 🤔 Reflection → ⏲️**10min**
 
-## 2️⃣ Day 2 - Behavioral patterns and Anti patterns 👀
+## 2️⃣ Day 2 - Design patterns 🤔
 
 - 🤝 Doubts of yesterday → ⏲️**5min**
 - 📕 Theory → ⏲️**30min**
+  - 🪢 What's a Design Patterns?
+  - 🍥 GRASP patterns?
+  - 🥅 Objectives of design patterns
+- 🏉 Exercise 1 - Responsibilities ⏲️**90min**
+- 🥐 Break → ⏲️**10min**
+- ⚽️ Exercise 2 - Dependencies ⏲️**90min**
+- 🤔 Reflection → ⏲️**10min**
+
+## 3️⃣ Day 3 - GOF Patterns 🤔
+
+- 🤝 Doubts of yesterday → ⏲️**5min**
+- 📕 Theory → ⏲️**30min**
+  - 🍥 What are GOF design patterns?
+  - 🧩 Summary of most important design patterns
+- 🏉 Exercise 1 - Coding a pattern ⏲️**90min**
+- 🥐 Break → ⏲️**10min**
+- ⚽️ Exercise 2 - Adapting patterns ⏲️**90min**
+- 🤔 Reflection → ⏲️**10min**
+
+## 4️⃣ Day 4 - Recipe for a good design 👀
+
+- 🤝 Doubts of yesterday → ⏲️**5min**
+- 📕 Theory → ⏲️**1h**
+  - 🪨 SOLID
+  - 🚀 Object calisthenics
   - 🧯 Anti-patterns
   - 💪 Variants and good practices of design patterns
-- 🏉 Exercise 1 - Behavioral patterns ⏲️**90min**
+- 🏉 Exercise 1 - Object calisthenics and SOLID ⏲️**90min**
 - 🥐 Break → ⏲️**10min**
-- ⚽️ Exercise 2 - Complex exercise implementing all of them ⏲️**90min**
+- ⚽️ Exercise 2 - Anti patterns ⏲️**60min**
 - 🤔 Reflection → ⏲️**10min**
 - 🪵 Feedback → ⏲️**10min**
 

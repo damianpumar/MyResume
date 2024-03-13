@@ -3,7 +3,7 @@ title: Legacy Code
 description: In this course you will learn how to deal with legacy code, how to refactor it and how to add tests to it to make it more maintainable and scalable.
 order: 3
 image: "../../assets/courses/legacy-code.jpeg"
-layout: "../../layouts/Course.astro"
+layout: "../../layouts/Content.astro"
 ---
 
 # Test-Driven Development
@@ -16,7 +16,7 @@ layout: "../../layouts/Course.astro"
   - Mid/senior
 - 💶 Price
   - To define.
-  - Discount by Fundae (only spain) → [https://www.fundae.es/](https://www.fundae.es/)
+  - Discount by Fundae (only Spain) → [https://www.fundae.es/](https://www.fundae.es/)
 
 > 🤞 Requirements
 >
@@ -26,14 +26,14 @@ layout: "../../layouts/Course.astro"
 
 > 🏋🏼 The work modality will be with [https://www.codescouts.academy/blog/mob-programming/](https://www.codescouts.academy/blog/mob-programming/)
 
-> 💡Opional: Each class will be recorded and uploaded to the Codescouts Campus automatically at the end of each session (private workspace for you) So students can review the classes, or see them if they have not been able to attend → [https: //campus.codescouts.Academy/] (https://campus.codescouts.academy/)
+> 💡Optional: Each class will be recorded and uploaded to the Codescouts Campus automatically at the end of each session (private workspace for you) So students can review the classes, or see them if they have not been able to attend → [https: //campus.codescouts.academy/] (https://campus.codescouts.academy/)
 
 # 📋 Agenda
 
 ## 1️⃣ Day 1 - Techniques to work with legacy code 🤔
 
 - 🤝 Presentation → ⏲️**10min**
-- 🤲 Enter the Explanation course of the 5 -day agenda → ⏲️**10min**
+- 🤲 Enter the Explanation course agenda → ⏲️**10min**
 - 📕 Theory → ⏲️**30min**
   - 🤔 Code smells
   - ⠊ Design patterns
@@ -66,10 +66,9 @@ layout: "../../layouts/Course.astro"
 - 🎳 Exercise 2 - Advanced testing techniques → ⏲️**90min**
 - 🤔 Reflection → ⏲️**10min**
 
-## 4️⃣ Day 4 -Test-Driven Development? 🤔
+## 4️⃣ Day 4 Test-Driven Development? 🤔
 
-- 🤝 Presentation → ⏲️**10min**
-- 🤲 Enter the Explanation course of the 5 -day agenda → ⏲️**10min**
+- 🤝 Doubts of yesterday → ⏲️**5min**
 - 📕 Theory → ⏲️**30min**
   - 👁️‍🗨️ The three laws of the TDD and the Red-Green-Refactor cycle.
   - 🐣 Baby Steps.

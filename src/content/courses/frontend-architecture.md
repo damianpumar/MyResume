@@ -3,7 +3,7 @@ title: Frontend Architecture
 description: In this course I will teach you how to create a robust, scalable and maintainable frontend architecture, after this course your vision about frontend will change for sure!.
 order: 1
 image: "../../assets/courses/frontend-architecture.png"
-layout: "../../layouts/Course.astro"
+layout: "../../layouts/Content.astro"
 ---
 
 # Test-Driven Development
@@ -16,7 +16,7 @@ layout: "../../layouts/Course.astro"
   - Mid/senior
 - 💶 Price
   - To define.
-  - Discount by Fundae (only spain) → [https://www.fundae.es/](https://www.fundae.es/)
+  - Discount by Fundae (only Spain) → [https://www.fundae.es/](https://www.fundae.es/)
 
 > 🤞 Requirements
 >
@@ -26,14 +26,14 @@ layout: "../../layouts/Course.astro"
 
 > 🏋🏼 The work modality will be with [https://www.codescouts.academy/blog/mob-programming/](https://www.codescouts.academy/blog/mob-programming/)
 
-> 💡Opional: Each class will be recorded and uploaded to the Codescouts Campus automatically at the end of each session (private workspace for you) So students can review the classes, or see them if they have not been able to attend → [https: //campus.codescouts.Academy/] (https://campus.codescouts.academy/)
+> 💡Optional: Each class will be recorded and uploaded to the Codescouts Campus automatically at the end of each session (private workspace for you) So students can review the classes, or see them if they have not been able to attend → [https: //campus.codescouts.academy/] (https://campus.codescouts.academy/)
 
 # 📋 Agenda
 
 ## 1️⃣ Day 1 - Frontend architecture 🤔
 
 - 🤝 Presentation → ⏲️**10min**
-- 🤲 Enter the Explanation course of the 5 -day agenda → ⏲️**10min**
+- 🤲 Enter the Explanation course agenda → ⏲️**10min**
 - 📕 Theory → ⏲️**30min**
   - 🏗️ Architecture fundamentals
   - 🧅 Layer Architecture
