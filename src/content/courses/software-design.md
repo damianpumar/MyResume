@@ -2,7 +2,7 @@
 title: Software design
 description: In this course I have distilled all the knowledge about the software design that I have acquired in the more than 13 years that I have been developing software.
 order: 6
-image: "../../assets/courses/design-pattern.png"
+image: "../../assets/courses/software-design.jpeg"
 layout: "../../layouts/Content.astro"
 ---
 
