@@ -103,7 +103,7 @@ This day is to work hand in hand with the team, the main objective is to land th
 
 Damián Pumar
 
-![Damián Pumar](https://file.notion.so/f/f/ba17bbad-ae59-467a-bb77-35c3709ee3c2/2cb40dec-e22b-4199-b592-bebbadc94a3e/53083954438_49bb5babf0_c.jpg?id=17b5ddfe-998c-4ced-ba79-dda069a7a11f&table=block&spaceId=ba17bbad-ae59-467a-bb77-35c3709ee3c2&expirationTimestamp=1710331200000&signature=nF-wN4cfgqwizcIhY-M5cuLTbdYpuX6NbEg9EH-ZXo0&downloadName=53083954438_49bb5babf0_c.jpg)
+![Damián Pumar](../../assets/conference.jpg)
 
 Technical coach / Software craftsman / Speaker
 
