@@ -1,8 +1,8 @@
 ---
+import CourseList from "@components/courses/CourseList.astro";
 import Layout from "@layouts/Default.astro";
 import { getCollection } from "astro:content";
 import { personal } from "src/configuration";
-import CoursesSummaryCard from "@components/courses/CoursesSummaryCard.astro";
 
 const courses = await getCollection("courses").then((events) =>
   events.sort((a, b) => a.data.order - b.data.order)
@@ -15,21 +15,6 @@ const courses = await getCollection("courses").then((events) =>
   description="My courses"
 >
   <main class="bg-lightblue p-6">
-    <h2 class="text-3xl md:text-4xl lg:text-6xl mb-4 dm-serif">My courses</h2>
-    <h4 class="text-xl lg:text-3xl mb-4 poppins">
-      During all these years developing software I have acquired many skills,
-      and I would love to share them with you
-    </h4>
-    <ul
-      class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-8"
-    >
-      {
-        courses.map((course) => (
-          <li>
-            <CoursesSummaryCard course={course} />
-          </li>
-        ))
-      }
-    </ul>
+    <CourseList courses={courses} />
   </main>
 </Layout>
