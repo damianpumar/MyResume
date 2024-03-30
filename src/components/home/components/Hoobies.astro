@@ -1,0 +1,36 @@
+---
+import { ColorCard, Pill } from "@components/generic";
+import { personal } from "src/configuration";
+---
+
+<ColorCard color="tertiary">
+  <h2 class="text-3xl md:text-4xl lg:text-6xl mb-2 dm-serif">
+    What's keeping me busy?
+  </h2>
+  {
+    Object.entries(personal.love).map(([key, value]) => (
+      <>
+        <h2 class="text-xl mb-2 dm-serif uppercase">{key}</h2>
+        <ul class="flex gap-4 mb-3 flex-wrap">
+          {value.map((item) => (
+            <li class="sanchez">
+              <Pill>
+                {"url" in item ? (
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    title={`Go to ${item.name}`}
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  item.name
+                )}
+              </Pill>
+            </li>
+          ))}
+        </ul>
+      </>
+    ))
+  }
+</ColorCard>

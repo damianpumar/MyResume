@@ -1,0 +1,11 @@
+---
+import { ColorCard } from "@components/generic";
+import { personal } from "src/configuration";
+---
+
+<div class="grid md:grid-cols-1">
+  <ColorCard color="secondary">
+    <h2 class="text-3xl md:text-4xl lg:text-6xl mb-4 dm-serif">Who am I?</h2>
+    <p class="poppins line-height-loose" set:html={personal.bio} />
+  </ColorCard>
+</div>
