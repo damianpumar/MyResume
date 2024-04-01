@@ -6,7 +6,7 @@ image: "../../assets/courses/legacy-code.jpeg"
 layout: "../../layouts/Content.astro"
 ---
 
-# Test-Driven Development
+# Legacy Code
 
 # 🙌 Proposal
 
