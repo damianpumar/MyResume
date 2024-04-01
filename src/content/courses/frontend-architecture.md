@@ -6,7 +6,7 @@ image: "../../assets/courses/frontend-architecture.png"
 layout: "../../layouts/Content.astro"
 ---
 
-# Test-Driven Development
+# Frontend Architecture
 
 # 🙌 Proposal
 
