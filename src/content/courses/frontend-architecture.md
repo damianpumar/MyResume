@@ -62,9 +62,9 @@ layout: "../../layouts/Content.astro"
 
 - 🤝 Doubts of yesterday → ⏲️**5min**
 - 📕 Theory → ⏲️**30min**
-  - 🎭Eventos de dominio
-  - 💉 Inyectando dependencias
-  - ⚛️ Reactividad desde nuestro dominio
+  - 🎭 Domain events
+  - 💉 Dependency injection
+  - ⚛️ Reactivity from our domain
 - 🎯 Exercise 1 - Dependency injection → ⏲️**90min**
 - 🥐 Break → ⏲️**10min**
 - 🎳 Exercise 2 - Domain Events → ⏲️**90min**

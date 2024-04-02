@@ -102,7 +102,7 @@ layout: "../../layouts/Content.astro"
   - Mnemonic tricks
 - 🥐 Break → ⏲️**10min**
 - 🎾 Exercise 2 - TDD applied to our domain → ⏲️**90min**
-- 🤔 Reflection - Advantages and Disadvantages of TDD in Fronnd → ⏲️**10min**
+- 🤔 Reflection - Advantages and Disadvantages of TDD in Frond → ⏲️**10min**
   - Why don't I recommend TDD for components.
     - They do not contribute so much value vs. the effort it implies.
 

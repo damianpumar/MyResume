@@ -66,8 +66,8 @@ layout: "../../layouts/Content.astro"
 - ⚽️ Practice → ⏲️**3hs**
   - 🎯 Good practices when making tests to integrate our adapters
   - 🚨 Domain events
-  - 🖲️ Implementation in Backend
-  - 🧑‍💻 Implementation in Frond
+  - 🖲️ Backend implementation
+  - 🧑‍💻 Frond implementation
   - 🏟️ Use cases and when hexagonal architecture is not recommended
 
 ## 4️⃣ Day 4 - TDD 🏃
@@ -83,7 +83,7 @@ layout: "../../layouts/Content.astro"
   - Mockist
   - AAA / Given, When, Then
 - 🏈 Kata Roman Numbers → ⏲️**3hs**
-- 😢 In this course **No** You can explain the outside-in technique, since it is a slightly more complex technique and time will not reach.
+- 😢 In this course we **won't** explain the outside-in technique, since it is a slightly more complex technique and time will not reach.
 - 🦉 Feedback → ⏲️**10min**
 
 ## 💪 Consulting Day (8 hours of work together)
