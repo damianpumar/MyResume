@@ -13,6 +13,6 @@ const { color = "base", full, space } = Astro.props;
 const selectedColor = pallete[color];
 ---
 
-<CustomCard color={selectedColor} full={full} space={space}>
+<CustomCard color={selectedColor}>
   <slot />
 </CustomCard>
