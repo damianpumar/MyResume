@@ -15,6 +15,7 @@ const classes = [];
 
 <style define:vars={{ color }}>
   div.custom-card {
+    height: 100%;
     background-color: var(--color);
     border-radius: 0.5rem;
     border: 3px solid black;
@@ -30,11 +31,8 @@ const classes = [];
   div.custom-card:hover {
     filter: drop-shadow(5px 5px 0 rgb(0 0 0 / 1));
   }
-  div.full {
-    height: 100%;
-  }
 </style>
 
-<div class="custom-card full">
+<div class="custom-card">
   <slot />
 </div>
