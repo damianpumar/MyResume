@@ -2,7 +2,7 @@
 title: Legacy Code
 description: In this course you will learn how to deal with legacy code, how to refactor it and how to add tests to it to make it more maintainable and scalable.
 order: 3
-image: "../../assets/courses/legacy-code.jpeg"
+image: "../../assets/courses/legacy-code.png"
 layout: "../../layouts/Content.astro"
 ---
 

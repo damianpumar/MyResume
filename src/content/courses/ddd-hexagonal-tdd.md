@@ -2,7 +2,7 @@
 title: DDD, Hexagonal Architecture and TDD
 description: "In this course we will learn how to design a domain model, how to implement it in a hexagonal architecture and how to test it with TDD."
 order: 6
-image: "../../assets/courses/ddd.jpeg"
+image: "../../assets/courses/ddd.png"
 layout: "../../layouts/Content.astro"
 ---
 
