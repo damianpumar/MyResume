@@ -17,7 +17,7 @@ const comingSoon = data.date > new Date();
   imgSrc={data.image}
   imgAlt={data.title}
   description={data.description}
-  imgPosition={data.imagePosition}
+  classes={data.classes}
   collapsed={collapsed}
 >
   <div class="flex flex-col justify-between">
@@ -36,12 +36,12 @@ const comingSoon = data.date > new Date();
         })
       }
     </p>
-    <div class="md:flex justify-between flex-items-center gap-4 hidden">
+    <div class="md:flex justify-between flex-items-center gap-4 hidden mt-2">
       <div>
         {comingSoon && <Pill>Coming soon</Pill>}
       </div>
       {
-        (
+        data.link && (
           <Button target="_blank" href={data.link}>
             See event
           </Button>
