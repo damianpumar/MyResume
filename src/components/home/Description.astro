@@ -4,22 +4,22 @@ import Hoobies from "./components/Hoobies.astro";
 import NextTalk from "./components/NextTalk.astro";
 ---
 
-<section class="lt-lg-hidden mt-8 grid lg:grid-cols-2 gap-8">
+<section class="lt-lg-hidden mt-8 grid lg:grid-cols-3 gap-8">
   <Bio />
 
   <Hoobies />
 
-  <!-- <NextTalk /> -->
+  <NextTalk />
 </section>
 
 <section class="lg-hidden mt-8 grid sm:grid-cols-1 gap-8">
-  <!-- <div class="grid sm:grid-cols-1"> -->
-  <Bio />
-  <!-- </div>
+  <div class="grid sm:grid-cols-1">
+    <Bio />
+  </div>
 
-  <div class="grid sm:grid-cols-1 gap-8"> -->
-  <Hoobies />
+  <div class="grid sm:grid-cols-2 gap-8">
+    <Hoobies />
 
-  <!-- <NextTalk /> -->
-  <!-- </div> -->
+    <NextTalk />
+  </div>
 </section>
