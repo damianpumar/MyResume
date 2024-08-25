@@ -16,16 +16,22 @@ import { personal } from "src/configuration";
           target="_blank">{personal.work[0].at}</a
         >
       </p>
-      {
-        personal.work.slice(1).map((work) => (
-          <p class="sanchez mt-4 mb-8 text-md md:text-lg lg:text-2xl">
-            {work.name}{" "}
-            <a class="underline underline-blue" href={work.web} target="_blank">
-              {work.at}
-            </a>
-          </p>
-        ))
-      }
+      <div class="mb-8">
+        {
+          personal.work.slice(1).map((work) => (
+            <p class="sanchez mt-4 text-md md:text-lg lg:text-2xl">
+              {work.name}{" "}
+              <a
+                class="underline underline-blue"
+                href={work.web}
+                target="_blank"
+              >
+                {work.at}
+              </a>
+            </p>
+          ))
+        }
+      </div>
       {
         personal.titles.map((bio) => (
           <p class="mt-4 outfit text-xl md:text-xl lg:text-2xl">{bio}</p>

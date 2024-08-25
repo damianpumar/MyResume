@@ -59,8 +59,13 @@ export const personal = {
       web: "https://www.codescouts.academy/",
     },
     {
-      name: "Lead Frontend Engineer",
-      at: "@Argilla",
+      name: "Building Argilla at 🤗",
+      at: "HuggingFace",
+      web: "https://huggingface.co",
+    },
+    {
+      name: "Lead Frontend Engineer at 🚀",
+      at: "Argilla",
       web: "https://argilla.io/",
     },
   ],
