@@ -1,4 +1,5 @@
 ---
+import { pallete } from "@components/generic/colors";
 import { ViewTransitions } from "astro:transitions";
 import { personal } from "src/configuration";
 
@@ -37,6 +38,8 @@ const { name: myName } = personal;
     href=`${Astro.site}feed.xml`
     type="application/rss+xml"
   />
+
+  <meta name="“theme-color”" content={pallete.tertiary} />
 
   <meta name="title" content={`${myName} | ${title}`} />
   <meta name="description" content={description} />
