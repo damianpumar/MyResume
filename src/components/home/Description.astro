@@ -1,15 +1,26 @@
 ---
+import { getCollection } from "astro:content";
 import Bio from "./components/Bio.astro";
 import Hoobies from "./components/Hoobies.astro";
 import NextTalk from "./components/NextTalk.astro";
+
+const now = new Date();
+const events = (await getCollection("events"))
+  .filter((e) => e.data.date > now)
+  .sort((a, b) => a.data.date.getTime() - b.data.date.getTime())
+  .slice(0, 1);
+
+const hasEvents = events.length > 0;
 ---
 
-<section class="lt-lg-hidden mt-8 grid lg:grid-cols-3 gap-8">
+<section
+  class={`lt-lg-hidden mt-8 grid lg:grid-cols-${hasEvents ? "3" : "2"} gap-8`}
+>
   <Bio />
 
   <Hoobies />
 
-  <NextTalk />
+  {hasEvents && <NextTalk />}
 </section>
 
 <section class="lg-hidden mt-8 grid sm:grid-cols-1 gap-8">
@@ -17,9 +28,8 @@ import NextTalk from "./components/NextTalk.astro";
     <Bio />
   </div>
 
-  <div class="grid sm:grid-cols-2 gap-8">
-    <Hoobies />
+  <div class={`grid sm:grid-cols-${hasEvents ? "2" : "1"} gap-8`}></div>
+  <Hoobies />
 
-    <NextTalk />
-  </div>
+  {hasEvents && <NextTalk />}
 </section>
