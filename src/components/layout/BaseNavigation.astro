@@ -9,7 +9,9 @@ interface Props {
 const { pageTitle } = Astro.props;
 ---
 
-<header class="border-b-4 border-black flex justify-between p-6 items-center">
+<header
+  class="border-b-4 border-black flex justify-between py-6 px-2 md:px-6 items-center"
+>
   {pageTitle && <h1 class="hidden">{pageTitle}</h1>}
   <a href="/" title="Home">
     <p class="righteous text-3xl md:text-4xl lg:text-5xl select-none">
