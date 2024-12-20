@@ -1,5 +1,6 @@
 ---
 import { ColorCard } from "@components/generic";
+import ContactMe from "./ContactMe.astro";
 import { personal } from "src/configuration";
 ---
 
@@ -7,5 +8,7 @@ import { personal } from "src/configuration";
   <ColorCard color="secondary">
     <h2 class="text-3xl md:text-4xl lg:text-6xl mb-4 dm-serif">Who am I?</h2>
     <p class="poppins line-height-loose" set:html={personal.bio} />
+
+    <ContactMe />
   </ColorCard>
 </div>

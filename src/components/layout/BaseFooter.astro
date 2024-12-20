@@ -1,27 +1,48 @@
 ---
 import { navigationItems } from "src/configuration";
+import { socials } from "src/configuration";
 ---
 
 <footer class="bg-black poppins px-2 py-6 md-p-6 flex flex-row justify-between">
   <h2 class="hidden">Footer</h2>
-  <div class="text-white flex flex-row justify-between w-full md-w-md">
-    <span>|</span>
-    {
-      navigationItems.map((item) => (
-        <>
+  <div
+    class="text-white flex md-flex-row flex-col justify-between w-full gap-4 items-center"
+  >
+    <div class="flex flex-row justify-between md-w-md w-full">
+      <span>|</span>
+      {
+        navigationItems.map((item) => (
+          <>
+            <a
+              class="text-blue"
+              href={item.url}
+              target={"_self"}
+              title={`Go to ${item.name}`}
+            >
+              {item.name}
+            </a>
+            <span>|</span>
+          </>
+        ))
+      }
+      {new Date().getFullYear()}
+      <span>|</span>
+    </div>
+    <div
+      class="flex flex-row justify-between items-center md-w-auto w-1/2 gap-4"
+    >
+      {
+        socials.map((item) => (
           <a
-            class="text-blue"
             href={item.url}
-            target={"_self"}
-            title={`Go to ${item.name}`}
+            class="hover:text-green hover:underline transition-all duration-150 ease-in-out"
+            target="_blank"
+            title={`See @DamianPumar on ${item.name}`}
           >
-            {item.name}
+            <div class:list={[item.icon, "w-6 h-6"]} />
           </a>
-          <span>|</span>
-        </>
-      ))
-    }
-    {new Date().getFullYear()}
-    <span>|</span>
+        ))
+      }
+    </div>
   </div>
 </footer>

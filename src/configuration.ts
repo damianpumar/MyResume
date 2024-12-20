@@ -1,5 +1,39 @@
 import profile from "./assets/me.jpg";
 
+export const socials = [
+  {
+    name: "GitHub",
+    url: "https://github.com/damianpumar",
+    icon: "i-github",
+    header: true,
+  },
+  {
+    name: "Twitter",
+    url: "https://twitter.com/damianpumar",
+    icon: "i-twitter",
+    header: true,
+  },
+  {
+    name: "Blsky",
+    url: "https://bsky.app/profile/damianpumar.hf.co",
+    icon: "i-bsky",
+    header: true,
+  },
+  {
+    name: "Linkedin",
+    url: "https://www.linkedin.com/in/damianpumar/",
+    icon: "i-linkedin",
+    header: true,
+  },
+  {
+    name: "Sessionize",
+    url: "https://sessionize.com/damianpumar",
+    icon: "i-sessionize",
+    header: false,
+  },
+  { name: "RSS", url: "/feed.xml", icon: "i-rss", header: false },
+];
+
 export const personal = {
   name: "Damián Pumar",
   profile: profile,
@@ -8,7 +42,7 @@ export const personal = {
     "🏗️ Software Architect ~ 🧮 Software Engineer",
     "🥋 Software Craftsman ~ 🎤 Speaker",
   ],
-  bio: `I'm a <span class="underline">Software Architect</span> and <span class="underline">Sr. software developer</span> with more than <span class="underline">13 years</span> of experience
+  bio: `I'm a <span class="underline">Software Architect</span> and <span class="underline">Sr. software developer</span> with more than <span class="underline">15 years</span> of experience
     in the industry. I started to work professionally at 2010. I'm a passionate about software development and I love
     sharing my knowledge with others.
     I started my career as a fullstack developer <a href="https://neoris.com/" class="underline" target="_blank">@Neoris</a> after that I worked as a Software Craftsman <a href="https://www.codurance.com/" class="underline" target="_blank">@Codurance</a>.

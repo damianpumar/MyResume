@@ -1,0 +1,83 @@
+---
+import { Pill } from "@components/generic";
+import { personal } from "src/configuration";
+import { socials } from "src/configuration";
+---
+
+<!-- Cal element-click embed code begins -->
+<script type="text/javascript">
+  (function (C, A, L) {
+    let p = function (a, ar) {
+      a.q.push(ar);
+    };
+    let d = C.document;
+    C.Cal =
+      C.Cal ||
+      function () {
+        let cal = C.Cal;
+        let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {};
+          cal.q = cal.q || [];
+          d.head.appendChild(d.createElement("script")).src = A;
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          const api = function () {
+            p(api, arguments);
+          };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === "string") {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            p(cal, ["initNamespace", namespace]);
+          } else p(cal, ar);
+          return;
+        }
+        p(cal, ar);
+      };
+  })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", "10min", { origin: "https://cal.com" });
+
+  // Important: Please add the following attributes to the element that should trigger the calendar to open upon clicking.
+  // `data-cal-link="damianpumar/10min"`
+  // data-cal-namespace="10min"
+  // `data-cal-config='{"layout":"month_view"}'`
+
+  Cal.ns["10min"]("ui", { hideEventTypeDetails: false, layout: "month_view" });
+</script>
+<!-- Cal element-click embed code ends -->
+<section class="poppins line-height-loose">
+  <div class="w-full flex flex-row gap-2 items-center flex-wrap">
+    I'd love to connect on social media
+    <div class="flex items-center gap-1 w-auto flex-wrap">
+      {
+        socials
+          .filter((s) => s.header)
+          .map((item) => (
+            <a
+              href={item.url}
+              class="hover:text-green hover:underline transition-all duration-150 ease-in-out"
+              target="_blank"
+              title={`See @DamianPumar on ${item.name}`}
+            >
+              <Pill color="#818cf8">
+                <div class:list={[item.icon, "w-6 h-6"]} />
+              </Pill>
+            </a>
+          ))
+      }
+    </div>
+  </div>
+  <div class="w-full gap-2 word-break">
+    Or you can also get in touch by
+    <a class="m-1" href=`mailto:${personal.email}`><Pill>email</Pill></a>
+    and also I have an open diary if you want to <span
+      data-cal-link="damianpumar/10min"
+      data-cal-namespace="10min"
+      data-cal-config='{"layout":"month_view"}'
+      ><Pill>book a meeting</Pill></span
+    >.
+  </div>
+</section>
