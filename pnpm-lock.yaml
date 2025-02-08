@@ -37,8 +37,8 @@ importers:
         specifier: ^6.15.0
         version: 6.21.0(eslint@8.57.1)(typescript@5.7.3)
       '@unocss/reset':
-        specifier: ^0.57.7
-        version: 0.57.7
+        specifier: ^0.65.0
+        version: 0.65.4
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -920,6 +920,9 @@ packages:
 
   '@unocss/reset@0.57.7':
     resolution: {integrity: sha512-oN9024WVrMewGbornnAPIpzHeKPIfVmZ5IsZGilWR761TnI5jTjHUkswsVoFx7tZdpCN2/bqS3JK/Ah0aot3NQ==}
+
+  '@unocss/reset@0.65.4':
+    resolution: {integrity: sha512-m685H0KFvVMz6R2i5GDIFv4RS9Z7y2G8hJK7xg2OWli+7w8l2ZMihYvXKofPsst4q/ms8EgKXpWc/qqUOTucvA==}
 
   '@unocss/rule-utils@0.57.7':
     resolution: {integrity: sha512-gLqbKTIetvRynLkhonu1znr+bmWnw+Cl3dFVNgZPGjiqGHd78PGS0gXQKvzuyN0iO2ADub1A7GlCWs826iEHjA==}
@@ -3978,6 +3981,8 @@ snapshots:
       '@unocss/rule-utils': 0.57.7
 
   '@unocss/reset@0.57.7': {}
+
+  '@unocss/reset@0.65.4': {}
 
   '@unocss/rule-utils@0.57.7':
     dependencies:
