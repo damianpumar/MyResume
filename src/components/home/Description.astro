@@ -26,7 +26,7 @@ const hasEvents = events.length > 0;
     <Bio />
   </div>
 
-  <div class="grid grid-flow-col auto-cols-auto gap-8">
+  <div class={`grid sm:grid-cols-${hasEvents ? "2" : "1"} gap-8`}>
     <Hobbies />
 
     {hasEvents && <NextTalk />}
