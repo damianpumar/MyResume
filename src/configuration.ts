@@ -42,19 +42,24 @@ export const personal = {
     "🏗️ Software Architect ~ 🧮 Software Engineer",
     "🥋 Software Craftsman ~ 🎤 Speaker",
   ],
+  work: [
+    {
+      name: "Technical coach",
+      at: "@CodeScouts",
+      web: "https://codescouts.academy/",
+    },
+    {
+      name: "Building 🤖 AI tools",
+      at: "@Hugging Face",
+      web: "https://huggingface.co/",
+    },
+  ],
+  location: "🇦🇷 Argentinean based in 🇪🇸 Spain",
   bio: `I'm a <span class="underline">Software Architect</span> and <span class="underline">Senior Software Developer</span> with over <span class="underline">15 years</span> of experience in the industry. My professional journey began in 2010. I am deeply passionate about software development and enjoy sharing my knowledge with others.  
 
 I started my career as a Full-Stack Developer at <a href="https://neoris.com/" class="underline" target="_blank">@Neoris</a> and later worked as a Software Craftsman at <a href="https://www.codurance.com/" class="underline" target="_blank">@Codurance</a>.  
 
 Currently, my primary focus is on <span class="underline">frontend architecture</span>, where I design components that enhance the simplicity, reusability, and scalability of web applications, such as <a href="https://github.com/damianpumar/ts-injecty" class="underline" target="_blank">ts-injecty</a>. I am also an active speaker at various conferences and meetups.`,
-  live: {
-    where: "Spain",
-    image: "🇪🇸",
-  },
-  born: {
-    where: "Argentina",
-    image: "🇦🇷",
-  },
   love: {
     topics: [
       { name: "Software Architecture" },
@@ -89,23 +94,7 @@ Currently, my primary focus is on <span class="underline">frontend architecture<
       { name: "Hono 🚀", url: "https://github.com/damianpumar/hono" },
     ],
   },
-  work: [
-    {
-      name: "Technical coach",
-      at: "@CodeScouts",
-      web: "https://www.codescouts.academy/",
-    },
-    {
-      name: "Building Argilla at 🤗",
-      at: "HuggingFace",
-      web: "https://huggingface.co",
-    },
-    {
-      name: "Lead Frontend Engineer at 🚀",
-      at: "Argilla",
-      web: "https://argilla.io/",
-    },
-  ],
+
 };
 
 export const navigationItems = [
