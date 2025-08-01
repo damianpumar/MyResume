@@ -10,7 +10,6 @@ if (!Astro.props.color) {
 }
 
 const { color } = Astro.props;
-const classes = [];
 ---
 
 <style define:vars={{ color }}>
@@ -19,20 +18,23 @@ const classes = [];
     background-color: var(--color);
     border-radius: 0.5rem;
     border: 3px solid black;
-    filter: drop-shadow(7px 7px 0 rgb(0 0 0 / 1));
-    transition: all;
-    padding: 1rem;
-    transition-duration: 0.5s;
-    animation: ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: start;
   }
-  div.custom-card:hover {
-    filter: drop-shadow(5px 5px 0 rgb(0 0 0 / 1));
+
+  @media (min-width: 768px) {
+    div.custom-card {
+      filter: drop-shadow(7px 7px 0 rgb(0 0 0 / 1));
+      transition: all 0.5s ease-in-out;
+    }
+
+    div.custom-card:hover {
+      filter: drop-shadow(5px 5px 0 rgb(0 0 0 / 1));
+    }
   }
 </style>
 
-<div class="custom-card">
+<div class="custom-card p-2 md:p-6">
   <slot />
 </div>

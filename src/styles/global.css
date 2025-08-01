@@ -5,17 +5,22 @@ html {
 .card-shadow {
   border-radius: 0.5rem;
   border: 3px solid black;
-  -webkit-box-shadow: 7px 7px 0px 0px rgb(0 0 0 / 1);
-  -moz-box-shadow: 7px 7px 0px 0px rgb(0 0 0 / 1);
-  box-shadow: 7px 7px 0px 0px rgb(0 0 0 / 1);
-  transition: all;
-  transition-duration: 0.5s;
-  animation: ease-in-out;
 }
-.card-shadow:hover {
-  -webkit-box-shadow: 5px 5px 0px 0px rgb(0 0 0 / 1);
-  -moz-box-shadow: 5px 5px 0px 0px rgb(0 0 0 / 1);
-  box-shadow: 5px 5px 0px 0px rgb(0 0 0 / 1);
+
+@media (min-width: 768px) {
+  .card-shadow {
+    -webkit-box-shadow: 7px 7px 0px 0px rgb(0 0 0 / 1);
+    -moz-box-shadow: 7px 7px 0px 0px rgb(0 0 0 / 1);
+    box-shadow: 7px 7px 0px 0px rgb(0 0 0 / 1);
+    transition: all;
+    transition-duration: 0.5s;
+    animation: ease-in-out;
+  }
+  .card-shadow:hover {
+    -webkit-box-shadow: 5px 5px 0px 0px rgb(0 0 0 / 1);
+    -moz-box-shadow: 5px 5px 0px 0px rgb(0 0 0 / 1);
+    box-shadow: 5px 5px 0px 0px rgb(0 0 0 / 1);
+  }
 }
 
 /*

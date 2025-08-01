@@ -14,7 +14,7 @@ const posts = (await getCollection("blog"))
   pageTitle={`${personal.name} - Blog`}
   description="Share my knowledge and experience in this blog."
 >
-  <main class="bg-green p-6">
+  <main class="bg-green md:p-6 md:pt-1 p-2">
     <BlogList posts={posts} />
   </main>
 </Layout>

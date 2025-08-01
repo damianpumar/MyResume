@@ -14,7 +14,7 @@ const events = await getCollection("events").then((events) =>
   pageTitle={`${personal.name} - Events`}
   description="See upcoming and past events."
 >
-  <main class="bg-lightblue p-6">
+  <main class="bg-lightblue p-2 md:p-6">
     <EventList events={events} />
   </main>
 </Layout>
