@@ -50,7 +50,7 @@ layout: "../../layouts/Content.astro"
 - 🤝 Doubts of yesterday → ⏲️**5min**
 - 📕 Theory → ⏲️**30min**
   - 🧹 Clean Architecture
-  - Why should we get away from frameworks / bookstores
+  - 🔌 Why should we get away from frameworks / libraries
   - 🤔 Thinking about domain
   - 🧪 Testebility
 - 🏉 Exercise 1 - Clean architecture ⏲️**90min**
@@ -80,7 +80,7 @@ layout: "../../layouts/Content.astro"
 - 🎳 Exercise 1 - High level domain → ⏲️**90min**
 - 🥐 Break → ⏲️**10min**
 - 🎾 Exercise 2 - Generic architecture components → ⏲️**90min**
-- 🤔 Reflection - Advantages and Disadvantages of TDD in Frontend → ⏲️**10min**
+- 🤔 Reflection → ⏲️**10min**
 
 # 🥋 Coach
 
