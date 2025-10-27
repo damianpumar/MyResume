@@ -1,27 +1,17 @@
 export const colors = [
-  "#c084fc",
-  "#f472b6",
-  "#fb7185",
-  "#e879f9",
-  "#a78bfa",
-  "#818cf8",
-  "#60a5fa",
-  "#38bdf8",
-  "#22d3ee",
-  "#2dd4bf",
-  "#34d399",
-  "#4ade80",
-  "#a3e635",
-  "#facc15",
-  "#fb923c",
-  "#f87171",
+  "#e9d5ff", // lavender
+  "#fce7f3", // pink
+  "#dbeafe", // blue
+  "#d1fae5", // emerald
+  "#fef3c7", // amber
+  "#fecaca", // red
 ];
 
 export const pallete = {
-  base: "#ffffff",
-  primary: "#22d3ee",
-  secondary: "#fb7185",
-  tertiary: "#818cf8",
-  quaternary: "#4ade80",
-  quinary: "#fb923c",
+  base: "#fafafa",
+  primary: "#a5f3fc",
+  secondary: "#fda4af",
+  tertiary: "#e9d5ff",
+  quaternary: "#bbf7d0",
+  accent: "#c7d2fe",
 };

@@ -4,6 +4,7 @@ import {
   presetWind,
   presetTypography,
 } from "unocss";
+import { pallete } from "src/components/generic/colors";
 
 export default defineConfig({
   presets: [
@@ -16,4 +17,9 @@ export default defineConfig({
     }),
     presetTypography(),
   ],
+  theme: {
+    colors: {
+      ...pallete
+    },
+  },
 });

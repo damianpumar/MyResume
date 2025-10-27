@@ -14,7 +14,7 @@ const courses = await getCollection("courses").then((events) =>
   pageTitle={`${personal.name} - Courses`}
   description="My courses"
 >
-  <main class="bg-yellow p-2 md:p-6">
+  <main class="bg-secondary md:p-6">
     <CourseList courses={courses} />
   </main>
 </Layout>
