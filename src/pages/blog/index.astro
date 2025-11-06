@@ -1,6 +1,6 @@
 ---
-import { getCollection } from "astro:content";
 import Layout from "@layouts/Default.astro";
+import { getCollection } from "astro:content";
 import BlogList from "@components/blog/BlogList.astro";
 import { personal } from "src/configuration";
 
@@ -11,10 +11,9 @@ const posts = (await getCollection("blog"))
 
 <Layout
   title="Blog"
+  color="bg-primary"
   pageTitle={`${personal.name} - Blog`}
   description="Share my knowledge and experience in this blog."
 >
-  <main class="bg-primary md:p-6">
-    <BlogList posts={posts} />
-  </main>
+  <BlogList posts={posts} />
 </Layout>

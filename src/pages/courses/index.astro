@@ -1,6 +1,6 @@
 ---
-import CourseList from "@components/courses/CourseList.astro";
 import Layout from "@layouts/Default.astro";
+import CourseList from "@components/courses/CourseList.astro";
 import { getCollection } from "astro:content";
 import { personal } from "src/configuration";
 
@@ -11,10 +11,9 @@ const courses = await getCollection("courses").then((events) =>
 
 <Layout
   title="Courses"
+  color="bg-secondary"
   pageTitle={`${personal.name} - Courses`}
   description="My courses"
 >
-  <main class="bg-secondary md:p-6">
-    <CourseList courses={courses} />
-  </main>
+  <CourseList courses={courses} />
 </Layout>

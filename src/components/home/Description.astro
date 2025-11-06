@@ -13,7 +13,9 @@ const events = (await getCollection("events"))
 const hasEvents = events.length > 0;
 ---
 
-<section class={`lt-lg-hidden mt-8 grid grid-flow-col auto-cols-auto gap-8`}>
+<section
+  class={`lt-lg-hidden grid grid-flow-col auto-cols-auto gap-2 md:gap-8`}
+>
   <Bio />
 
   <Hobbies />
@@ -21,12 +23,12 @@ const hasEvents = events.length > 0;
   {hasEvents && <NextTalk />}
 </section>
 
-<section class="lg-hidden mt-8 grid grid-cols-1 gap-8">
+<section class="lg-hidden grid grid-cols-1 gap-2 md:gap-8">
   <div class="grid grid-cols-1">
     <Bio />
   </div>
 
-  <div class={`grid sm:grid-cols-${hasEvents ? "2" : "1"} gap-8`}>
+  <div class={`grid sm:grid-cols-${hasEvents ? "2" : "1"} gap-2 md:gap-8`}>
     <Hobbies />
 
     {hasEvents && <NextTalk />}

@@ -9,13 +9,15 @@ import "../styles/icons.css";
 
 interface Props {
   title: string;
+  color: string;
   description: string;
   classList?: string;
   pageTitle?: string;
   ogImage?: URL;
 }
 
-const { title, description, classList, pageTitle, ogImage } = Astro.props;
+const { title, color, description, classList, pageTitle, ogImage } =
+  Astro.props;
 ---
 
 <html lang="en" class="h-full">
@@ -23,7 +25,9 @@ const { title, description, classList, pageTitle, ogImage } = Astro.props;
 
   <body class:list={[classList]}>
     <BaseNavigation {pageTitle} />
-    <slot />
+    <main class={`${color} p-1 md:p-6 flex flex-col gap-2 md:gap-8`}>
+      <slot />
+    </main>
     <BaseFooter />
   </body>
 </html>

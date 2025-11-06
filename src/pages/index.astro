@@ -9,12 +9,11 @@ import { personal } from "src/configuration";
 
 <Layout
   title="Home"
+  color="bg-quaternary"
   pageTitle={`${personal.name} | Home`}
   description={`${personal.name} resume, blog and events website.`}
 >
-  <main class="bg-quaternary md:p-6">
-    <AboutMe />
-    <Description />
-    <RecentBlogPosts />
-  </main>
+  <AboutMe />
+  <Description />
+  <RecentBlogPosts />
 </Layout>
